@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-01-05T09:41:08.014Z</updated>
+    <updated>2020-01-11T08:14:05.015Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -10,6 +10,26 @@
     <logo>https://laffitto.github.io/images/avatar.png</logo>
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[信息孤岛]]></title>
+        <id>https://laffitto.github.io/post/xin-xi-gu-dao</id>
+        <link href="https://laffitto.github.io/post/xin-xi-gu-dao">
+        </link>
+        <updated>2020-01-10T12:03:44.000Z</updated>
+        <summary type="html"><![CDATA[<p>现阶段的自己对于信息的一点简短的理解。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>现阶段的自己对于信息的一点简短的理解。</p>
+<!-- more -->
+<p>网上有一张张小龙在2020年微信公开课的视频语言的截图：<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-01-10_20-08-36.jpg" alt="" loading="lazy"><br>
+我不知道张小龙和他微信从哪里来的勇气说出这样的话语，『信息的宽广度与质量』，宽广度始终是一个非常大的话题，而其中非常重要的一点就是要与外<strong>共享</strong>，即用外部的搜索引擎可以得到其平台提供的相关内容。但是很遗憾，微信始终不想这样做，它成功的制造出了一个属于自己的『信息孤岛』，唯有在微信内部进行搜索，或是使用搜狗这种有合作的搜索引擎才能够一探它的真容。而质量也难以保证，不可否认是有许多的优质内容，但实际的鱼目混珠又多到数不胜数。可以毫不夸张的说，如果不是有非常大的订阅群体的公众号，一旦出现10W+阅读量的文章，那么它大概率是一篇深刻抓住人性的文章，里面的内容或多或少会激起人们内心深处的脆弱，从而在成本极低的微信群里疯转传播。而这其中可能会有极大的舆论操纵或利益相关的嫌疑，想要让读者自己去判别，也实在是及其困难。</p>
+<p>实际不只是微信，每家互联网的公司都希望设立属于自己的数据池，优质的内容，只能够从自己的app内部检索到，从而将用户留下自己的产品，但这样，就构成了一个又一个的『信息孤岛』。可能明明是很简单的一件事情，有人已经分享了自己的经验，但是由于各个平台的不公开和反检索机制，有需求的人根本无法轻易的获得自己想要得到的内容，优质内容就这样被淹没在各个公司自己的数据池中。今日头条，酷安，微博，甚至已经死去的即刻，它们的内容不能说不优质，但是它们都是一个个的信息孤岛，在它们沉迷于自己的商业行为时，带给普通用户的却是摄取信息渠道多而杂，检索困难的种种烦恼。一边贩卖着大众的信息过载的焦虑，一边又想着带给用户信息更高宽广度与更好的质量，角度虽不同，但实在是有些荒诞。🤡</p>
+<p>我们无力改变这样的事情，只能够武装起自己来渐渐破局。但显然，微信是想做这一个个『信息孤岛』中最大的岛屿，而尽量阻断与主流内容的联系。我订阅了许多来扩展眼界的公众号，但渐渐的，也在一点一点的取消关注，有些或许有用，但更多的主要目的还是为了引流变现，一天的推送，可能从第一条开始就是30天速成python的广告，60天给你流利口语的恰饭文。不得不说，内容创作者对微信也是既恨又爱，恨他的封闭，爱他的引流。或许这一切的源头可能只是因为时代的改变，7，8年前博客世界的繁荣人人有目共睹，RSS的风靡，而现在谁的手机里还没有个微信呢？🌚<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/pexels-photo-262508.jpeg" alt="" loading="lazy"></p>
+<p>多年后回头看时我可能会再次嘲笑自己的无知，一如现在的自己嘲笑在岛上满足的人们：当我航行在水中，享受着飞溅起的信息的水花，遥望着一座座星罗棋布的岛屿，或大或小，或繁华或平庸，常驻民的眼中或多或少失去了光芒，复杂的表情让人无法估摸；一个个停泊的船只也印证着存在大量像我一样航行游荡的旅人，疲惫又无奈。当我们聚集在<strong>真正</strong>的大陆上，一边充满欢笑着交流自己航行的收获，分享着自己途中的经历与喜悦，一边心中暗念自己的幸运。那时的人们是快乐的，又怎么会想到心心念念真正的大陆，不过也是更大世界的附属岛屿。而往日驰骋的<strong>海</strong>，也不过是那大江大流罢了。<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/pexels-photo.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[为什么要开始写作]]></title>
         <id>https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo</id>
