@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-02-09T10:03:17.477Z</updated>
+    <updated>2020-02-09T13:43:25.038Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://laffitto.github.io/images/avatar.png</logo>
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[记住李文亮先生]]></title>
+        <id>https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng</id>
+        <link href="https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng">
+        </link>
+        <updated>2020-02-09T09:47:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>一个健康的社会不该只有一种声音。<br>
+——李文亮</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一个健康的社会不该只有一种声音。<br>
+——李文亮</p>
+<!-- more -->
+<p>2月7号早上起床，各个媒体平台都充斥着这样一条信息：2019-nCoV最早的『造谣』者之一——李文亮医生受感染不幸去世了。朋友圈，telegram，个人博客都瞬间炸开了锅，有缅怀的，有遗憾的，有愤怒的，当然也有表示冷漠毫不关心的。大破进击博客也写了<a href="https://jesor.me/2020/memorial-for-liwenliang/">一篇文章</a>表示缅怀。伤感，但有警醒力。</p>
+<p>李文亮医生由于自己的特殊性，形成了巨大的社会舆论，一开始他就是2019-nCoV的吹哨人之一，而被政府以散布谣言之名警戒喝茶。但当疫情无法隐瞒之时，又不得不还以他们清白来平息『民愤』。但显然民众并不领情，而他的去世，正是在对的时间点，引发了全民的讨论。但私以为这其中还是有更多的阴谋成分的，一个年纪轻轻的人免疫力不至于扛过？隔离23天才确诊又是什么原因？或许这一切都是什么巧合。但很遗憾，因为人们只会相信自己愿意相信的东西。我只希望，他能够被大家所记住，而不是三天过后淡忘一切，然而事实是，2月9号的今天，我已经不常看到李文亮医生的相关讨论了。</p>
+<p>中途我看到这样一篇<a href="https://archive.ph/PEnrt">存档文章</a>，其中有这么一段话：</p>
+<blockquote>
+<p>如果我觉得我的祖国不好，我会去督促建设他的人，<strong>如果我有这个权利的话</strong>；如果我觉得政府不好，我就去监督治理她的人，<strong>如果我有这个权利的话</strong>；如果我觉得人民没素质，我就去思考人民没素质是如何被允许的，<strong>人民是国家的主人，不是粉丝</strong>；如果我觉得同胞愚昧无知，我会思考<strong>为什么愚昧无知是被统治者所需要的</strong>，<mark>并发出自己的声音</mark>，她有缺点，那么至少请允许“我们”和“他们”一样可以拥有将社会一起变美好的权力。</p>
+</blockquote>
+<p>我们不敢说话，又蠢又坏，只能看到自己的既得利益，关心自己的得失。当终于爆发出<strong>黑天鹅</strong>事件，随即被粉饰的表现瞬间崩坏，脆弱黑暗被抛向表面，我们才终于感觉自己看透了一切，有的愤怒咆哮，有的故作理智。实际都是一直历史的流动，毕竟，<strong>人们只会相信自己愿意相信的东西</strong>，更多的东西，虚虚实实，事不关己，高高挂起。别人宣传什么，就是什么，不假思索的言论，看热闹不嫌事大的心态。或许这是中华民族自身的一种劣根性？如果鲁迅先生在世可以描绘出更精彩的文字，但更大的概率还是会变成安分守己的好公民吧。</p>
+<p>李文亮医生被认定为『造谣者』后被问过以下的话：<br>
+『我们希望你冷静下来好好反思，并郑重告诫你：如果你固执己见，不知悔改，继续进行违法活动，你将会收到法律的制裁！你明白了吗？』<br>
+他的回答是：<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-02-07_08-43-39.jpg" alt="" loading="lazy"></p>
+<p>不要忘记他。同时，还有更多的魔幻现实，Don't stop questioning.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[韩剧“信号“——对时间干涉的思考]]></title>
         <id>https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan</id>
