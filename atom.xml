@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-02-16T14:39:09.483Z</updated>
+    <updated>2020-02-23T14:30:41.460Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -11,9 +11,33 @@
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
     <entry>
+        <title type="html"><![CDATA[詹詹碎言]]></title>
+        <id>https://laffitto.github.io/post/zhan-zhan-sui-yan/</id>
+        <link href="https://laffitto.github.io/post/zhan-zhan-sui-yan/">
+        </link>
+        <updated>2020-02-23T13:28:33.000Z</updated>
+        <content type="html"><![CDATA[<p>看到这样一篇<a href="https://twitter.com/435Hz/status/1231219080360644608">推文</a>：</p>
+<blockquote>
+<p>我们这群人，苦没有真正苦过，爱没有用力爱过。每天受着信息大潮的冲击，三观未定又备受曲折。贫穷不再是正义，又妄图不让金钱成为唯一的追求。过早看到了更大的世界，勤奋却又不过三天。热血透不过键盘和屏幕，回忆止于游戏和高考。像一群没有根的孩子，在别人的经历和精神里吵闹。</p>
+</blockquote>
+<p>推文的作者大概是30~40岁的人，但是这样的话语似乎对我和我后面的一代都适用。我知道，他也是从别的地方摘来的，但是无妨。平平淡淡的文字，透露出的淡淡的悲伤，确实，当我姥姥有时候回忆起1960年代的天灾人祸，讲着讲着就眼角泛红时，即便我已从历史与话语中了解了那些艰苦岁月，但还是难以达到共情；那些轰轰烈烈的，经历过巨大经验而终得成果的爱情，现在看来甚至会沦为笑柄，人们渐渐回归简简单单，甚至有时人们并不爱自己重要的另一半，只是为了生存为了繁衍罢了。</p>
+<p>在信息爆炸的时代，我们变得健忘与麻木，精力也变得愈加分散，我们沉醉于在网络中视奸万象万物，却又无能狂怒变得只能伤害自己身边的人。当文字变化的越来越敏感，行为不得不越来越谨慎，最终思想变得越来越狭隘，眼界被局限于眼前事物，最终变为一个个利己主义者。我们变得疲于生计，忙于奔波，阶级转变变得越来越困难，甚至上一代的思想会深深影响下一代，最后一代代的人都会堕落于命运的轮回而无法挣脱。大的“黑天鹅”事件一旦发生，一切都变得脆弱与偏激，陷入别人的圈套里，思想愈发黑暗而心愈发死。</p>
+<p>上面的都是我瞎扯淡的，真实的我并不会以这种思想去生活，那不过是我内心黑暗的意淫而已，因为无论什么话语都无法全面概括所有人，与其沉迷于上面的悲情，我更赞同下面的<a href="https://twitter.com/435Hz/status/1231103105850212352">观点</a>：</p>
+<blockquote>
+<p>一个人能力的强弱，决定他关心事情的大小。能力越强的人，越注重自己的每一步决策和判断和自己的收益。弱一些的，关心自己所在团队的上升，期望靠别人努力，自己混水摸鱼也多捞些。再弱一些，期待自己院系的上升，再往下是关心城市好坏、关心自己学校排名、关心这个省的收益。</p>
+</blockquote>
+<p>所以，还是自己变强才是王道。记得少数派的Hum在播客里说的一句话（我无法找到准确引用，但大概意思如下）：</p>
+<blockquote>
+<p>确定一些事情优先度的关键在于这件事情对于提高你的<strong>阶级</strong>的影响多大。</p>
+</blockquote>
+<p>听着急功近利，实际真实的一逼。<br>
+愿与君共勉。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[成为宝可梦大师！]]></title>
-        <id>https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi</id>
-        <link href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi">
+        <id>https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/</id>
+        <link href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/">
         </link>
         <updated>2020-02-15T14:34:48.000Z</updated>
         <summary type="html"><![CDATA[<p>精灵宝可梦陪伴一生！！</p>
@@ -56,8 +80,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[记住李文亮先生]]></title>
-        <id>https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng</id>
-        <link href="https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng">
+        <id>https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng/</id>
+        <link href="https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng/">
         </link>
         <updated>2020-02-09T09:47:02.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -85,8 +109,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[韩剧“信号“——对时间干涉的思考]]></title>
-        <id>https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan</id>
-        <link href="https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan">
+        <id>https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan/</id>
+        <link href="https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan/">
         </link>
         <updated>2020-02-01T15:56:19.000Z</updated>
         <summary type="html"><![CDATA[<p>自己看过的一些时空穿越桥段的想法。</p>
@@ -111,8 +135,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[消耗品]]></title>
-        <id>https://laffitto.github.io/post/xiao-hao-pin</id>
-        <link href="https://laffitto.github.io/post/xiao-hao-pin">
+        <id>https://laffitto.github.io/post/xiao-hao-pin/</id>
+        <link href="https://laffitto.github.io/post/xiao-hao-pin/">
         </link>
         <updated>2020-01-25T12:58:53.000Z</updated>
         <summary type="html"><![CDATA[<p>对医疗工作者的一点关心与思考</p>
@@ -138,8 +162,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[长沙吃旅]]></title>
-        <id>https://laffitto.github.io/post/chang-sha-chi-lu</id>
-        <link href="https://laffitto.github.io/post/chang-sha-chi-lu">
+        <id>https://laffitto.github.io/post/chang-sha-chi-lu/</id>
+        <link href="https://laffitto.github.io/post/chang-sha-chi-lu/">
         </link>
         <updated>2020-01-18T13:26:58.000Z</updated>
         <summary type="html"><![CDATA[<p>一次去长沙时的吃货之旅</p>
@@ -229,8 +253,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[信息孤岛]]></title>
-        <id>https://laffitto.github.io/post/xin-xi-gu-dao</id>
-        <link href="https://laffitto.github.io/post/xin-xi-gu-dao">
+        <id>https://laffitto.github.io/post/xin-xi-gu-dao/</id>
+        <link href="https://laffitto.github.io/post/xin-xi-gu-dao/">
         </link>
         <updated>2020-01-10T12:03:44.000Z</updated>
         <summary type="html"><![CDATA[<p>现阶段的自己对于信息的一点简短的理解。</p>
@@ -249,8 +273,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[为什么要开始写作]]></title>
-        <id>https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo</id>
-        <link href="https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo">
+        <id>https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo/</id>
+        <link href="https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo/">
         </link>
         <updated>2020-01-04T12:41:50.000Z</updated>
         <summary type="html"><![CDATA[<p>讲讲现在的自己对于写作的态度与动机。✏️</p>
@@ -292,8 +316,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[2020年flag]]></title>
-        <id>https://laffitto.github.io/post/2020-nian-zhan-wang</id>
-        <link href="https://laffitto.github.io/post/2020-nian-zhan-wang">
+        <id>https://laffitto.github.io/post/2020-nian-zhan-wang/</id>
+        <link href="https://laffitto.github.io/post/2020-nian-zhan-wang/">
         </link>
         <updated>2019-12-31T09:12:09.000Z</updated>
         <summary type="html"><![CDATA[<p>自己对2020年的期待</p>
@@ -322,8 +346,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[2019年终回顾]]></title>
-        <id>https://laffitto.github.io/post/2020-nian-xin-nian-ji-hua</id>
-        <link href="https://laffitto.github.io/post/2020-nian-xin-nian-ji-hua">
+        <id>https://laffitto.github.io/post/2020-nian-xin-nian-ji-hua/</id>
+        <link href="https://laffitto.github.io/post/2020-nian-xin-nian-ji-hua/">
         </link>
         <updated>2019-12-30T13:02:46.000Z</updated>
         <summary type="html"><![CDATA[<p>简单回顾自己的2019年😇</p>
@@ -354,21 +378,6 @@
 <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20190904_152338.jpg" alt="汕大医学楼" loading="lazy"></figure>
 <h2 id="投资计划施行">投资计划施行</h2>
 <p>通过阅读，我对投资这事又有了进一步的了解，虽然在大三的时候有过一次计划，但是当时自己实在是太稚嫩，加上学业与中美贸易战的影响，放弃了定投，实在是太过遗憾。现在在研究生生涯重启计划，跟着也大，孟岩的步伐一步步向前走。不多说，小目标，<strong>三年之后</strong>，待我研究生生涯结束之时，希望收获更多经验，还有金钱。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[just a test]]></title>
-        <id>https://laffitto.github.io/post/just-a-test</id>
-        <link href="https://laffitto.github.io/post/just-a-test">
-        </link>
-        <updated>2019-12-03T13:39:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>这个写作平台有点意思呀</p>
-<h3 id="asdf">asdf</h3>
-]]></summary>
-        <content type="html"><![CDATA[<p>这个写作平台有点意思呀</p>
-<h3 id="asdf">asdf</h3>
-<!-- more -->
-<!-- more -->
 ]]></content>
     </entry>
 </feed>
