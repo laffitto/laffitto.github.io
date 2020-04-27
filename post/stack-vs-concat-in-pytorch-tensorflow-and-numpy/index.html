@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>韩剧“信号“——对时间干涉的思考 - 假正经者       ——詹詹碎言</title>
+<title>Stack vs Concat in PyTorch, TensorFlow &amp; NumPy - 假正经者       ——詹詹碎言</title>
 <link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://laffitto.github.io//media/css/tailwind.css">
 <link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="韩剧“信号“——对时间干涉的思考 - 假正经者       ——詹詹碎言 - Atom Feed" href="https://laffitto.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Stack vs Concat in PyTorch, TensorFlow &amp; NumPy - 假正经者       ——詹詹碎言 - Atom Feed" href="https://laffitto.github.io//atom.xml">
 
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
@@ -23,24 +23,33 @@
   </script>
     
 
-  <meta name="description" content="自己看过的一些时空穿越桥段的想法。
+  <meta name="description" content="最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为这个博客，建议有技术的直接看原文。
 
-这几天窝在家里，把以前积攒的高分韩剧『信号』刷完了。在看的过程中很过瘾，一个个独立的案件实际有所牵连，进而引出主人公过去的故事。当然这也不是什么新颖的情节设计，剧中想表达的观念也颇有几分鸡汤的韵味：不停..." />
-  <meta property="og:title" content="韩剧“信号“——对时间干涉的思考 - 假正经者       ——詹詹碎言">
-  <meta property="og:description" content="自己看过的一些时空穿越桥段的想法。
+Stack与Concatenate的区别
 
-这几天窝在家里，把以前积攒的高分韩剧『信号』刷完了。在看的过程中很过瘾，一个个独立的案件实际有所牵连，进而引出主人公过去的故事。当然这也不是什么新颖的情节设计，剧中想表达的观念也颇有几分鸡汤的韵味：不停..." />
+
+C..." />
+  <meta property="og:title" content="Stack vs Concat in PyTorch, TensorFlow &amp; NumPy - 假正经者       ——詹詹碎言">
+  <meta property="og:description" content="最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为这个博客，建议有技术的直接看原文。
+
+Stack与Concatenate的区别
+
+
+C..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan/" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/laffitto/Pic_bed/master/p2325446308.webp">
+  <meta property="og:url" content="https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/" />
+  <meta property="og:image" content="https://laffitto.github.io//images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="韩剧“信号“——对时间干涉的思考 - 假正经者       ——詹詹碎言">
-  <meta name="twitter:description" content="自己看过的一些时空穿越桥段的想法。
+  <meta name="twitter:title" content="Stack vs Concat in PyTorch, TensorFlow &amp; NumPy - 假正经者       ——詹詹碎言">
+  <meta name="twitter:description" content="最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为这个博客，建议有技术的直接看原文。
 
-这几天窝在家里，把以前积攒的高分韩剧『信号』刷完了。在看的过程中很过瘾，一个个独立的案件实际有所牵连，进而引出主人公过去的故事。当然这也不是什么新颖的情节设计，剧中想表达的观念也颇有几分鸡汤的韵味：不停...">
+Stack与Concatenate的区别
+
+
+C...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan/">
+  <link rel="canonical" href="https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
@@ -60,42 +69,298 @@
     <div class="max-w-4xl w-full mx-auto">
       <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
         <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          韩剧“信号“——对时间干涉的思考
+          Stack vs Concat in PyTorch, TensorFlow &amp; NumPy
         </h1>
         
-          <img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/p2325446308.webp" alt="韩剧“信号“——对时间干涉的思考" class="block w-full mb-8">
-        
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-02-01 · 5 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-04-27 · 6 min read</div>
           
-            <a href="https://laffitto.github.io/tag/TEwJRV8lL/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+            <a href="https://laffitto.github.io/tag/HQ-WIhH4M/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
               <i class="ri-hashtag"></i>
-              剧评
-            </a>
-          
-            <a href="https://laffitto.github.io/tag/r2jJOK6USR/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
-              <i class="ri-hashtag"></i>
-              扯淡
+              python
             </a>
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <p>自己看过的一些时空穿越桥段的想法。</p>
-<!-- more -->
-<p>这几天窝在家里，把以前积攒的高分韩剧<a href="https://movie.douban.com/subject/26310143/">『信号』</a>刷完了。在看的过程中很过瘾，一个个独立的案件实际有所牵连，进而引出主人公过去的故事。当然这也不是什么新颖的情节设计，剧中想表达的观念也颇有几分鸡汤的韵味：不停的奋斗努力，打破黑暗。但是当播放到最后一集出现的开放式结局无疑让人感到惊喜，大团圆吧，感觉差那么点意思；悲惨世界吧，又有点太过于残酷。而开放式结局的魅力就在于引发观众自己的思考，不仅留下了悬念，也留下了拍续集的空间（误）。满分5分的话基本可以给5分了，实在是很不错。总结一下几个有趣且值得思考的点。</p>
-<h3 id="平行世界">平行世界</h3>
-<p>本剧最大的脑洞莫过于朴海英与李材韩相互交流而有时间差的无线对讲机了。在特定的时间，朴海英警卫可以与已经死去的15年（或以上）的李材韩警卫通过无线对讲机进行对话。而通过李材韩警卫对过去的直接的干预，同时会对现在产生影响，记忆与现实都发生变化。而在这一点上，可以有两种理解：</p>
+          <p>最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为<a href="https://deeplizard.com/learn/video/kF2AlpykJGY">这个博客</a>，建议有技术的直接看原文。</p>
 <ol>
-<li>过去<strong>直接</strong>影响未来<br>
-很多关于时间的电影都是这个套路，如<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fmovie.douban.com%2Fsubject%2F1292343%2F&amp;query=%E8%9D%B4%E8%9D%B6%E6%95%88%E5%BA%94&amp;cat_id=1002&amp;type=search&amp;pos=0">『蝴蝶效应』</a>，<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fmovie.douban.com%2Fsubject%2F3011051%2F&amp;query=%E6%81%90%E6%80%96%E6%B8%B8%E8%BD%AE&amp;cat_id=1002&amp;type=search&amp;pos=0">『恐怖游轮』</a>，主人公可以直接通过一些场景穿越回到过去做出改变，进而对现在的世界产生影响。这种会给人一种现实世界只有一个的错觉，如果我当时做出了那样的决定，现在会不会就有所不同了呢？**核心是因为以前的某个事件变化了，进而整个世界发生了变化。**这种想法很奇妙也很通俗，但人类终究生活在三维的空间中，从我们现在的角度实在是难以理解四维空间的原理。</li>
-<li>**多时间线****互不干涉<br>
-这个逻辑的理论代表是<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fmovie.douban.com%2Fsubject%2F4925398%2F&amp;query=%E5%91%BD%E8%BF%90%E7%9F%B3%E4%B9%8B%E9%97%A8&amp;cat_id=1002&amp;type=search&amp;pos=0">『命运石之门』</a>，<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fmovie.douban.com%2Fsubject%2F11537954%2F&amp;query=%E7%91%9E%E5%85%8B%E5%92%8C%E8%8E%AB%E8%92%82&amp;cat_id=1002&amp;type=search&amp;pos=1">『瑞克和莫蒂』</a>。思想是存在多个平行宇宙。假设主人公的主动意识存在与时间线1，即便回到过去进行改变，发生变化的也不是时间线1，而是由于某种原因使他到达时间线2（命运石之门是不同时间线主人公的记忆继承，而瑞克和莫蒂是存在多个平行世界的自己），<strong>核心是主人公自己在不同的世界线中穿梭，而世界线是无限多且相互独立的</strong>。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/u=3141866021,3728710292&amp;fm=26&amp;gp=0.jpg" alt="" loading="lazy"></li>
+<li>Stack与Concatenate的区别</li>
 </ol>
-<p>两种理解更像是角度不同的理解，1是站在外界的角度，改变的是整个世界，而2是站在时空穿越者的角度，改变的仅仅是自己。正因为这些电影的『熏陶』，在只接触1的假设时，我之前一直认为通过现在的是可以预测未来是没有<strong>时间机器</strong>这种东西被发明的，因为我们从未感受到我们周边历史有过大的断层，记忆也不曾发生中断，时间旅行者的痕迹从未出现，我甚至一度怀疑过或许有但在未来有严格的法律去约束这种『维度打击』。但是在接触2的假设之后，一切似乎变得合理了，由于平行世界的存在，我即便用某种方法改变了过去，但由于某种限制，我会跳跃到一条和现在完全不同的时间线中，也就是另一个平行宇宙，而身为旁观者自然就不会觉得有所异样了，一切都合情合理，也是历史的必然。唯一的bug可能是跳跃时存在的方式，是记忆会发生重叠呢，还是另一个世界同样有着一个『自己』？</p>
-<p>回归『信号』这部剧，它的假设更出色，个人理解为朴海英在每次用对讲机对过去进行干涉时，他就会带着记忆跳跃到另外一个平行世界的自己的身体中，记忆会产生重叠。而且每个时间线的相对时间也是有差距的，并不一定同时进行。当然剧中也没有特别明显的暗示，因为本身李材韩与朴海英的年代就有15年的差距。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/u=1290949045,2276840495&amp;fm=26&amp;gp=0.jpg" alt="" loading="lazy"></p>
-<p>再思考一下『机器猫』里面的时光机，大雄经常乘坐时间机回到过去改变一些事情，甚至和过去的自己进行对话，进而对现实进行干涉。很明显，动画里传递的是单一的时间线，类似于理论1。但当他再次回到自己的时代，又有什么可以保证他并没有回到其他的平行世界中？而且是无差的回到自己缺席的时间点？这一切，或许都只有机器猫的科技可以解答了吧！</p>
+<ul>
+<li>Concatenate joins a sequence of tensors along <strong>an existing axis.</strong></li>
+<li>Stack joins a sequence of tensors along <strong>a new axis.</strong></li>
+</ul>
+<ol start="2">
+<li>How to Add or Insert an Axis into a Tensor</li>
+</ol>
+<p>这里先用pytorch进行演示：</p>
+<pre><code class="language-python">import torch
+t1 = torch.tensor([1,1,1])
+</code></pre>
+<ul>
+<li>增加一个维度</li>
+</ul>
+<pre><code class="language-python">&gt; t1.unsqueeze(dim=0)
+tensor([[1, 1, 1]])
+</code></pre>
+<pre><code class="language-python">&gt; t1.unsqueeze(dim=1)
+tensor([[1],
+        [1],       
+        [1]])
+</code></pre>
+<ul>
+<li>观察形状</li>
+</ul>
+<pre><code class="language-python">&gt; print(t1.shape)
+&gt; print(t1.unsqueeze(dim=0).shape)
+&gt; print(t1.unsqueeze(dim=1).shape)
+
+torch.Size([3])  # 注意这里tensor的初始维度！
+torch.Size([1, 3])
+torch.Size([3, 1])
+</code></pre>
+<ol start="3">
+<li>Stack vs Cat in PyTorch</li>
+</ol>
+<pre><code class="language-python">import torch
+t1 = torch.tensor([1,1,1])
+t2 = torch.tensor([2,2,2])
+t3 = torch.tensor([3,3,3])
+</code></pre>
+<ul>
+<li>使用cat</li>
+</ul>
+<pre><code class="language-python">&gt; torch.cat((t1,t2,t3),dim=0)
+
+tensor([1, 1, 1, 2, 2, 2, 3, 3, 3])   # 在原有维度上操作
+</code></pre>
+<ul>
+<li>使用stack</li>
+</ul>
+<pre><code class="language-python">&gt; torch.stack((t1,t2,t3) ,dim=0)
+
+tensor([[1, 1, 1],
+        [2, 2, 2],      
+        [3, 3, 3]])     #  在新增加的维度操作
+</code></pre>
+<ul>
+<li>使用cat来达到与stack相同的效果</li>
+</ul>
+<pre><code class="language-python">&gt; torch.cat((t1.unsqueeze(0),
+            t2.unsqueeze(0),
+            t3.unsqueeze(0)),
+            dim=0)
+
+tensor([[1, 1, 1],       
+        [2, 2, 2],
+        [3, 3, 3]])
+</code></pre>
+<ul>
+<li>试试第二个维度</li>
+</ul>
+<pre><code class="language-python">&gt; torch.stack((t1,t2,t3),dim=1)
+
+tensor([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<pre><code class="language-python">&gt; torch.cat((t1.unsqueeze(1),
+            t2.unsqueeze(1),
+            t3.unsqueeze(1)),
+            dim=1)
+
+tensor([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<ol start="4">
+<li>Stack vs Concat in TensorFlow</li>
+</ol>
+<pre><code class="language-python">import tensorflow as tf
+t1 = tf.constant([1,1,1])
+t2 = tf.constant([2,2,2])
+t3 = tf.constant([3,3,3])
+</code></pre>
+<ul>
+<li>使用concat</li>
+</ul>
+<pre><code class="language-python">&gt; tf.concat((t1,t2,t3),axis=0)
+
+tf.Tensor: id=4, shape=(9,), dtype=int32, numpy=array([1, 1, 1, 2, 2, 2, 3, 3, 3])
+</code></pre>
+<ul>
+<li>使用stack</li>
+</ul>
+<pre><code class="language-python">&gt; tf.stack((t1,t2,t3),axis=0)
+
+tf.Tensor: id=6, shape=(3, 3), dtype=int32, numpy=
+array([[1, 1, 1],       
+        [2, 2, 2],
+        [3, 3, 3]])
+</code></pre>
+<ul>
+<li>使用concat达到与stack相同效果（注意：tensorflow中的expand_dims与Pytorch中的unsqueeze效果相同）</li>
+</ul>
+<pre><code class="language-python">&gt; tf.concat((tf.expand_dims(t1, 1),
+            tf.expand_dims(t2, 1),
+            tf.expand_dims(t3, 1)),
+            axis=1)
+            
+tf.Tensor: id=15, shape=(3, 3), dtype=int32, numpy=
+array([[1, 1, 1],
+       [2, 2, 2],
+       [3, 3, 3]])
+</code></pre>
+<ul>
+<li>试试第二维度</li>
+</ul>
+<pre><code class="language-python">&gt; tf.stack((t1,t2,t3) ,axis=1)
+
+tf.Tensor: id=17, shape=(3, 3), dtype=int32, numpy=
+array([[1, 2, 3],
+       [1, 2, 3],
+       [1, 2, 3]])
+</code></pre>
+<pre><code class="language-python">&gt; tf.concat((tf.expand_dims(t1, 0),
+            tf.expand_dims(t2, 0),
+            tf.expand_dims(t3, 0)),
+            axis=0)
+            
+tf.Tensor: id=26, shape=(3, 3), dtype=int32, numpy=
+array([[1, 2, 3],
+       [1, 2, 3],
+       [1, 2, 3]])
+</code></pre>
+<ol start="5">
+<li>Stack vs Concatenate in NumPy</li>
+</ol>
+<pre><code class="language-python">import numpy as np
+t1 = np.array([1,1,1])
+t2 = np.array([2,2,2])
+t3 = np.array([3,3,3])
+</code></pre>
+<ul>
+<li>使用concatenate</li>
+</ul>
+<pre><code class="language-python">&gt; np.concatenate((t1,t2,t3),axis=0)
+
+array([1, 1, 1, 2, 2, 2, 3, 3, 3])
+</code></pre>
+<ul>
+<li>使用stack</li>
+</ul>
+<pre><code class="language-python">&gt; np.stack((t1,t2,t3),axis=0)
+
+array([[1, 1, 1],
+       [2, 2, 2],
+       [3, 3, 3]])
+</code></pre>
+<ul>
+<li>使用concatenate达到与stack相同效果</li>
+</ul>
+<pre><code class="language-python">&gt; np.concatenate((np.expand_dims(t1, 0),
+                np.expand_dims(t2, 0),
+                np.expand_dims(t3, 0)),
+                axis=0)
+
+array([[1, 1, 1],
+       [2, 2, 2],
+       [3, 3, 3]])
+</code></pre>
+<ul>
+<li>第二维度</li>
+</ul>
+<pre><code class="language-python">&gt; np.stack((t1,t2,t3),axis=1)
+
+array([[1, 2, 3],       
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<pre><code class="language-python">&gt; np.concatenate((np.expand_dims(t1, 1),
+                    np.expand_dims(t2, 1),
+                    np.expand_dims(t3, 1)),
+                    axis=1)
+
+array([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<p>完全相通，注意concatenate名字的区别：</p>
+<table>
+<thead>
+<tr>
+<th>LibraryFunction</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PyTorch</td>
+<td>cat()</td>
+</tr>
+<tr>
+<td>TensorFlow</td>
+<td>concat()</td>
+</tr>
+<tr>
+<td>NumPy</td>
+<td>concatenate()</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>实际例子操作</li>
+</ol>
+<ul>
+<li>将图片加入一个batch中</li>
+</ul>
+<pre><code class="language-python">import torch
+t1 = torch.zeros(3,28,28)
+t2 = torch.zeros(3,28,28)
+t3 = torch.zeros(3,28,28)
+torch.stack((t1,t2,t3),dim=0).shape
+
+## output ##
+torch.Size([3, 3, 28, 28])
+</code></pre>
+<p>这里使用stack操作，因为原图片没有batch_size的维度</p>
+<ul>
+<li>将batches加入一个单独的batch中</li>
+</ul>
+<pre><code class="language-python">import torch
+t1 = torch.zeros(1,3,28,28)
+t2 = torch.zeros(1,3,28,28)
+t3 = torch.zeros(1,3,28,28)
+torch.cat((t1,t2,t3),dim=0).shape
+
+## output ##
+torch.Size([3, 3, 28, 28])
+</code></pre>
+<p>这里使用cat操作，因为原图片已经有batch_size的维度</p>
+<ul>
+<li>将图片加入一个已经存在的batch中</li>
+</ul>
+<pre><code class="language-python">import torch
+batch = torch.zeros(3,3,28,28)
+t1 = torch.zeros(3,28,28)
+t2 = torch.zeros(3,28,28)
+t3 = torch.zeros(3,28,28)
+torch.cat((batch,torch.stack((t1,t2,t3),dim=0)),dim=0).shape
+
+## output ##
+torch.Size([6, 3, 28, 28])
+</code></pre>
+<p>先stack，合并三图片与一个batch中，再cat2个batch或如下操作也可达到相同目的：</p>
+<pre><code class="language-python">import torch
+batch = torch.zeros(3,3,28,28)
+t1 = torch.zeros(3,28,28)
+t2 = torch.zeros(3,28,28)
+t3 = torch.zeros(3,28,28)
+torch.cat((batch,torch.stack((t1,t2,t3),dim=0)),dim=0).shape
+
+## output ##
+torch.Size([6, 3, 28, 28])
+</code></pre>
 
         </div>
         <!-- Share to Twitter, Weibo, Telegram -->
@@ -142,18 +407,7 @@
         </div>
       </div>
       <div class="post-toc-container">
-        <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E5%B9%B3%E8%A1%8C%E4%B8%96%E7%95%8C">平行世界</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+        
       </div>
     </div>
 
