@@ -1,146 +1,236 @@
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>假正经者       ——詹詹碎言</title>
-<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://laffitto.github.io//media/css/tailwind.css">
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>游戏 | 假正经者       ——詹詹碎言</title>
+<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico?v=1587998207611">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="假正经者       ——詹詹碎言 - Atom Feed" href="https://laffitto.github.io//atom.xml">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
 
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-160641909-1');
-  </script>
-    
 
-  <meta name="description" content="Aspire to inspire until I expire" />
 </head>
 <body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            假正经者       ——詹詹碎言
+        </div>
     </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+        <div class="current-tag-container">
+            <h2 class="title gt-c-content-color-first">
+                #游戏
+            </h2>
+        </div>
+        <div class="post-list-container">
+    <div class="post-inner">
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://laffitto.github.io/post/you-xi-bao-ke-meng-jian-dun/">
+                            <span class="post-title gt-c-content-color-first">游戏——宝可梦剑盾</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>直到现在，我才真正明白这个游戏的魅力。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-03-28 ·
+                        </time>
+                        
+                            <a href="https://laffitto.github.io/tag/YfbU3hmd3E/" class="post-tag">
+                                # 游戏
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://laffitto.github.io/post/you-xi-bao-ke-meng-jian-dun/" class="post-feature-image"
+                       style="background-image: url('https://raw.githubusercontent.com/laffitto/Pic_bed/master/timg.jpg')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://laffitto.github.io/post/xin-de-wan-ju-nintendo-switch-kai-xiang/">
+                            <span class="post-title gt-c-content-color-first">新的玩具——Nintendo Switch开箱</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>入手了Nintendo switch，快乐的生活要开始了😌</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-03-15 ·
+                        </time>
+                        
+                            <a href="https://laffitto.github.io/tag/YUsEjhYwh/" class="post-tag">
+                                # 开箱
+                            </a>
+                        
+                            <a href="https://laffitto.github.io/tag/E42cXcjcL/" class="post-tag">
+                                # 杂谈
+                            </a>
+                        
+                            <a href="https://laffitto.github.io/tag/YfbU3hmd3E/" class="post-tag">
+                                # 游戏
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://laffitto.github.io/post/xin-de-wan-ju-nintendo-switch-kai-xiang/" class="post-feature-image"
+                       style="background-image: url('https://raw.githubusercontent.com/laffitto/Pic_bed/master/u=2635956108,2254549470&amp;fm=26&amp;gp=0.jpg')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/">
+                            <span class="post-title gt-c-content-color-first">成为宝可梦大师！</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>精灵宝可梦陪伴一生！！</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-02-15 ·
+                        </time>
+                        
+                            <a href="https://laffitto.github.io/tag/E42cXcjcL/" class="post-tag">
+                                # 杂谈
+                            </a>
+                        
+                            <a href="https://laffitto.github.io/tag/YfbU3hmd3E/" class="post-tag">
+                                # 游戏
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/" class="post-feature-image"
+                       style="background-image: url('https://raw.githubusercontent.com/laffitto/Pic_bed/master/下载.png')">
+                    </a>
+                
+            </div>
+        
+    </div>
+</div>
+        <div class="pagination-container">
     
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
     
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-    <a href="https://laffitto.github.io//atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
 </div>
 
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
-        <i class="ri-hashtag"></i>
-        游戏
-      </h1>
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire</div>
+    <div class="social-container">
         
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://laffitto.github.io/post/you-xi-bao-ke-meng-jian-dun/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          游戏——宝可梦剑盾
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-28</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        <p>直到现在，我才真正明白这个游戏的魅力。</p>
-
-      </div>
-      <a href="https://laffitto.github.io/post/you-xi-bao-ke-meng-jian-dun/" class="btn">
-        Read more
-      </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
     </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/timg.jpg" alt="游戏——宝可梦剑盾">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://laffitto.github.io/post/xin-de-wan-ju-nintendo-switch-kai-xiang/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          新的玩具——Nintendo Switch开箱
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-15</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        <p>入手了Nintendo switch，快乐的生活要开始了😌</p>
-
-      </div>
-      <a href="https://laffitto.github.io/post/xin-de-wan-ju-nintendo-switch-kai-xiang/" class="btn">
-        Read more
-      </a>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
     </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/u=2635956108,2254549470&amp;fm=26&amp;gp=0.jpg" alt="新的玩具——Nintendo Switch开箱">
-    
-  </div>
-
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          成为宝可梦大师！
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-02-15</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        <p>精灵宝可梦陪伴一生！！</p>
-
-      </div>
-      <a href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/" class="btn">
-        Read more
-      </a>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://laffitto.github.io//atom.xml" target="_blank">RSS</a></a>
     </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/下载.png" alt="成为宝可梦大师！">
-    
-  </div>
-  
-      </div>
+</div>
 
-      
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-</footer>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
 
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://laffitto.github.io//media/scripts/main.js"></script>
+</div>
 </body>
 </html>
