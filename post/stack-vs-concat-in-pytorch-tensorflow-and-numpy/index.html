@@ -24,18 +24,10 @@
     
 
   <meta name="description" content="最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为这个博客，建议有技术的直接看原文。
-
-Stack与Concatenate的区别
-
-
-C..." />
+####1. Stack与Concatenate的..." />
   <meta property="og:title" content="Stack vs Concat in PyTorch, TensorFlow &amp; NumPy - 假正经者       ——詹詹碎言">
   <meta property="og:description" content="最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为这个博客，建议有技术的直接看原文。
-
-Stack与Concatenate的区别
-
-
-C..." />
+####1. Stack与Concatenate的..." />
   <meta property="og:type" content="articles">
   <meta property="og:url" content="https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/" />
   <meta property="og:image" content="https://laffitto.github.io//images/avatar.png">
@@ -43,11 +35,7 @@ C..." />
   <meta property="og:image:width" content="1200">
   <meta name="twitter:title" content="Stack vs Concat in PyTorch, TensorFlow &amp; NumPy - 假正经者       ——詹詹碎言">
   <meta name="twitter:description" content="最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为这个博客，建议有技术的直接看原文。
-
-Stack与Concatenate的区别
-
-
-C...">
+####1. Stack与Concatenate的...">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/">
 
@@ -55,7 +43,7 @@ C...">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
  
   
-    <link rel="stylesheet" href="https://laffitto.github.io//media/css/prism-github.css">
+    <link rel="stylesheet" href="https://laffitto.github.io//media/css/prism-vs-light.css">
   
 
   
@@ -83,17 +71,13 @@ C...">
         </div>
         <div class="markdown mb-8" v-pre>
           <p>最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为<a href="https://deeplizard.com/learn/video/kF2AlpykJGY">这个博客</a>，建议有技术的直接看原文。</p>
-<ol>
-<li>Stack与Concatenate的区别</li>
-</ol>
+<p>####1. Stack与Concatenate的区别</p>
 <ul>
 <li>Concatenate joins a sequence of tensors along <strong>an existing axis.</strong></li>
 <li>Stack joins a sequence of tensors along <strong>a new axis.</strong></li>
 </ul>
-<ol start="2">
-<li>How to Add or Insert an Axis into a Tensor<br>
-这里先用pytorch进行演示：</li>
-</ol>
+<p>####2. How to Add or Insert an Axis into a Tensor<br>
+这里先用pytorch进行演示：</p>
 <pre><code class="language-python">import torch
 t1 = torch.tensor([1,1,1])
 </code></pre>
@@ -119,9 +103,7 @@ torch.Size([3])  # 注意这里tensor的初始维度！
 torch.Size([1, 3])
 torch.Size([3, 1])
 </code></pre>
-<ol start="3">
-<li>Stack vs Cat in PyTorch</li>
-</ol>
+<p>####3. Stack vs Cat in PyTorch</p>
 <pre><code class="language-python">import torch
 t1 = torch.tensor([1,1,1])
 t2 = torch.tensor([2,2,2])
@@ -173,9 +155,7 @@ tensor([[1, 2, 3],
         [1, 2, 3],
         [1, 2, 3]])
 </code></pre>
-<ol start="4">
-<li>Stack vs Concat in TensorFlow</li>
-</ol>
+<p>####4. Stack vs Concat in TensorFlow</p>
 <pre><code class="language-python">import tensorflow as tf
 t1 = tf.constant([1,1,1])
 t2 = tf.constant([2,2,2])
@@ -231,9 +211,7 @@ array([[1, 2, 3],
        [1, 2, 3],
        [1, 2, 3]])
 </code></pre>
-<ol start="5">
-<li>Stack vs Concatenate in NumPy</li>
-</ol>
+<p>####5. Stack vs Concatenate in NumPy</p>
 <pre><code class="language-python">import numpy as np
 t1 = np.array([1,1,1])
 t2 = np.array([2,2,2])
@@ -308,9 +286,7 @@ array([[1, 2, 3],
 </tr>
 </tbody>
 </table>
-<ol start="6">
-<li>实际例子操作</li>
-</ol>
+<p>####6. 实际例子操作</p>
 <ul>
 <li>将图片加入一个batch中</li>
 </ul>
