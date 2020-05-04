@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-04-27T14:51:00.878Z</updated>
+    <updated>2020-05-04T13:20:15.498Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>https://laffitto.github.io/images/avatar.png</logo>
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[后浪]]></title>
+        <id>https://laffitto.github.io/post/hou-lang/</id>
+        <link href="https://laffitto.github.io/post/hou-lang/">
+        </link>
+        <updated>2020-05-04T12:26:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>五四青年节又来了。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>五四青年节又来了。</p>
+<!-- more -->
+<p>又是一年的五四青年节，我依旧感觉麻木不仁。<br>
+不可否认，这是一个重要的日子，这是中国历史上纪念伟大的五四运动的日子。在101年前的今天，真正出现了以青年学生为主，外加一些其他阶级共同参与的爱国运动。如果真正存活于那个年代，当时才能真切的感受到满腔的热血。<br>
+时间回到现在，早晨打开bilibili，便看见一则名为“<a href="https://www.bilibili.com/video/BV1FV411d7u7?spm_id_from=333.851.b_696e7465726e6174696f6e616c486561646572.36">后浪</a>”的广告。说是广告，实际其自诩为青年宣传片。在这样一个特殊的日子里，发布一个这样关于青年的视频，结果可想而知。一天下来，777万的播放量，100万的点赞，弹幕中充斥着溢美之词。大家觉得，b站有出息，青年者有出息，未来一片光明热血。但实际不过是满地鸡血而已。<br>
+b站视频里体现出来的后浪，充斥着娱乐至死的态度，摄影师，游戏测评，舞蹈演员。而这也是当代中国青年最为致命的表现，在中国这个大环境下，好的文化作品微乎其微，b站的创作者平均水平虽然能够排在中国其他媒体前列，但实际仍然不够自由。大多数我们幻想着那些up主们的理想状态，然而更多的时候只是图一乐而已。可以说，他们代表不了青年，真正的青年，应该是那些真正奋斗在各自岗位上的平凡人，他们没有所谓“现代文明的成果被层层打开，可以尽情地享用”的权利，更没有什么”我们曾经梦寐以求的权利——选择的权利“。口中说着”你们把自己的热爱变成了一个和成千上万的人分享快乐的事业“，然而大多数的我们根本不曾拥有。大多数的青年无法做出他们想要的选择，更无法活出他们想要的模样。<br>
+另外，看到一则<a href="https://twitter.com/eter2ity/status/1257147599666069504?s=09">twitter</a>，可以说是优秀至极了。图片如下：<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-05-04_21-09-15.jpg" alt="" loading="lazy"></p>
+<p>然而我相信，大多数的青年，看到这样的鸡血视频，他们能够真正认清自己的身份，而回之以微微一笑。真正的后浪，并不像视频中那样的光鲜亮丽，而视频中的话语，也不过是华丽的空话罢了。正如B站评论区的一则不起眼的留言：</p>
+<blockquote>
+<p>不需要让青少年有判断力和批判力。只要给他们汽车摩托、美丽的明星、 刺激的音乐、流行的服饰，以及对同伴的竞争意识就行了。<br>
+无须青少年的独立思考力，根植他们服从指导者命令的服从心。让他们对批判国家、社会和领袖抱着一种憎恶。让他们深信那是少数派和异端者的罪恶，让他们认为想法和大家不同的就是国家敌人。，，，，， 两个世界互不相同，继续搬砖。</p>
+</blockquote>
+<p>现代青年，或只是后浪韭菜，等待着为国接盘。🙃<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-05-04_21-13-30.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stack vs Concat in PyTorch, TensorFlow & NumPy]]></title>
         <id>https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/</id>
@@ -470,34 +495,6 @@ torch.Size([6, 3, 28, 28])
 <p>而我们无能的原因是什么呢？为何经济科技是如此的发达（至少从表面上是的），而思想确如此幼稚与乖戾。情况很复杂，但我们的眼界是一个问题，我们始终只能看到外面已有的形式在自己身边山寨再现。可以说中国许多东西完全不必创新，仅仅抄袭国外就可以继续繁荣10多年，而现实是我们的文化少的可怜，艺术与思想更是停滞不前。我们看不到真正的东西，有两堵墙很多的人都无法跨越，一是真实存在的”伟大“的防火墙，二是名为语言的英语的高墙。大部分的翻译读物，由于各种各样的原因，方式能够正式出版的，都被监管者严格审查过，我们或许有时候会诧异于翻译的诡异，但很少怀疑翻译的是否完全于公正。唯有会英语，才能看见一点真正的世界。<br>
 <img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-03-04_21-58-34.jpg" alt="" loading="lazy"></p>
 <p>统治者崇尚反智，民众愈加愚蠢，这样就愈好管制。民众忙于生计，就没有闲工夫想东想西。束缚愈加锁紧，我们无力改变环境，唯有改变自己，而在这种反智时代中更好更有头脑的生存下去。加油吧，为了你爱于爱你的人。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[詹詹碎言]]></title>
-        <id>https://laffitto.github.io/post/zhan-zhan-sui-yan/</id>
-        <link href="https://laffitto.github.io/post/zhan-zhan-sui-yan/">
-        </link>
-        <updated>2020-02-23T13:28:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>大可当作无病呻吟</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>大可当作无病呻吟</p>
-<!-- more -->
-<p>看到这样一篇<a href="https://twitter.com/435Hz/status/1231219080360644608">推文</a>：</p>
-<blockquote>
-<p>我们这群人，苦没有真正苦过，爱没有用力爱过。每天受着信息大潮的冲击，三观未定又备受曲折。贫穷不再是正义，又妄图不让金钱成为唯一的追求。过早看到了更大的世界，勤奋却又不过三天。热血透不过键盘和屏幕，回忆止于游戏和高考。像一群没有根的孩子，在别人的经历和精神里吵闹。</p>
-</blockquote>
-<p>推文的作者大概是30~40岁的人，但是这样的话语似乎对我和我后面的一代都适用。我知道，他也是从别的地方摘来的，但是无妨。平平淡淡的文字，透露出的淡淡的悲伤，确实，当我姥姥有时候回忆起1960年代的天灾人祸，讲着讲着就眼角泛红时，即便我已从历史与话语中了解了那些艰苦岁月，但还是难以达到共情；那些轰轰烈烈的，经历过巨大经验而终得成果的爱情，现在看来甚至会沦为笑柄，人们渐渐回归简简单单，甚至有时人们并不爱自己重要的另一半，只是为了生存为了繁衍罢了。</p>
-<p>在信息爆炸的时代，我们变得健忘与麻木，精力也变得愈加分散，我们沉醉于在网络中视奸万象万物，却又无能狂怒变得只能伤害自己身边的人。当文字变化的越来越敏感，行为不得不越来越谨慎，最终思想变得越来越狭隘，眼界被局限于眼前事物，最终变为一个个利己主义者。我们变得疲于生计，忙于奔波，阶级转变变得越来越困难，甚至上一代的思想会深深影响下一代，最后一代代的人都会堕落于命运的轮回而无法挣脱。大的“黑天鹅”事件一旦发生，一切都变得脆弱与偏激，陷入别人的圈套里，思想愈发黑暗而心愈发死。</p>
-<p>上面的都是我瞎扯淡的，真实的我并不会以这种思想去生活，那不过是我内心黑暗的意淫而已，因为无论什么话语都无法全面概括所有人，与其沉迷于上面的悲情，我更赞同下面的<a href="https://twitter.com/435Hz/status/1231103105850212352">观点</a>：</p>
-<blockquote>
-<p>一个人能力的强弱，决定他关心事情的大小。能力越强的人，越注重自己的每一步决策和判断和自己的收益。弱一些的，关心自己所在团队的上升，期望靠别人努力，自己混水摸鱼也多捞些。再弱一些，期待自己院系的上升，再往下是关心城市好坏、关心自己学校排名、关心这个省的收益。</p>
-</blockquote>
-<p>所以，还是自己变强才是王道。记得少数派的Hum在播客里说的一句话（我无法找到准确引用，但大概意思如下）：</p>
-<blockquote>
-<p>确定一些事情优先度的关键在于这件事情对于提高你的<strong>阶级</strong>的影响多大。</p>
-</blockquote>
-<p>听着急功近利，实际真实的一逼。<br>
-愿与君共勉。</p>
 ]]></content>
     </entry>
 </feed>
