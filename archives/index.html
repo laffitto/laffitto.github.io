@@ -1,295 +1,521 @@
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>假正经者       ——詹詹碎言</title>
-<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://laffitto.github.io//media/css/tailwind.css">
+<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico?v=1590224013601">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="假正经者       ——詹詹碎言 - Atom Feed" href="https://laffitto.github.io//atom.xml">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
 
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-160641909-1');
-  </script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  <meta name="description" content="Aspire to inspire until I expire" />
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
 </head>
 <body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            假正经者       ——詹詹碎言
+        </div>
     </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://laffitto.github.io/tag/E42cXcjcL/" class="menu gt-a-link">
+                            标签“杂谈”测试
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+        
+
+<div class="archives-container">
     
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
+        <h2 class="year gt-c-cotent-color-first">2020</h2>
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/ji-zhang-ti-xi-1/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-05-18&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            记账体系 #1
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/tou-zi-zheng-li/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-05-09&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            投资整理 #1
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/hou-lang/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-05-04&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            后浪
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-27&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            Stack vs Concat in PyTorch, TensorFlow &amp; NumPy
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/liang-nian-qian-de-zao-yao-zhe/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-19&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            两年前的“造谣者”
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/ping-xing-xiang-jie-ju-man-hua-wo-men-wu-fa-yi-qi-xue-xi-de-you-qu-tan-suo/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            平行向结局——漫画“我们无法一起学习”的有趣探索
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/zhan-zhan-sui-yan-er/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-04&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            詹詹碎言 #2
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/you-xi-bao-ke-meng-jian-dun/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-03-28&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            游戏——宝可梦剑盾
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/ji-ti-yu-ge-ren/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-03-21&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            集体与个人
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/xin-de-wan-ju-nintendo-switch-kai-xiang/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-03-15&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            新的玩具——Nintendo Switch开箱
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/my-home-hero/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-03-07&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            MY HOME HERO
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/fan-zhi-shi-dai/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-03-02&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            反智时代
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/zhan-zhan-sui-yan/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-02-23&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            詹詹碎言 #2
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-02-15&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            成为宝可梦大师！
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-02-09&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            记住李文亮先生
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-02-01&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            韩剧“信号“——对时间干涉的思考
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/xiao-hao-pin/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-01-25&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            消耗品
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/chang-sha-chi-lu/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-01-18&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            长沙吃旅
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/xin-xi-gu-dao/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-01-10&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            信息孤岛
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-01-04&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            为什么要开始写作
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
     
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
+        <h2 class="year gt-c-cotent-color-first">2019</h2>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/2020-nian-zhan-wang/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2019-12-31&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            2020年flag
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/2020-nian-xin-nian-ji-hua/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2019-12-30&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            2019年终回顾
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/just-a-test/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2019-12-03&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            just a test
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+        
     
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
+        <h2 class="year gt-c-cotent-color-first">2018</h2>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <article class="post">
+                    <a href="https://laffitto.github.io/post/hello-gridea/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2018-12-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            Hello Gridea
+                        </div>
+                    </a>
+                </article>
+            
+        
     
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-      <a href="https://laffitto.github.io/tag/E42cXcjcL/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签“杂谈”测试
-      </a>
-    
-    <a href="https://laffitto.github.io//atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
 </div>
 
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/ji-zhang-ti-xi-1/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                记账体系 #1
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/tou-zi-zheng-li/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                投资整理 #1
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/hou-lang/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                后浪
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/stack-vs-concat-in-pytorch-tensorflow-and-numpy/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                Stack vs Concat in PyTorch, TensorFlow &amp; NumPy
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/liang-nian-qian-de-zao-yao-zhe/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                两年前的“造谣者”
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/ping-xing-xiang-jie-ju-man-hua-wo-men-wu-fa-yi-qi-xue-xi-de-you-qu-tan-suo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                平行向结局——漫画“我们无法一起学习”的有趣探索
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/zhan-zhan-sui-yan-er/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                詹詹碎言 #2
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/you-xi-bao-ke-meng-jian-dun/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                游戏——宝可梦剑盾
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/ji-ti-yu-ge-ren/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                集体与个人
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/xin-de-wan-ju-nintendo-switch-kai-xiang/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                新的玩具——Nintendo Switch开箱
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/my-home-hero/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                MY HOME HERO
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/fan-zhi-shi-dai/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                反智时代
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/zhan-zhan-sui-yan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                詹詹碎言 #2
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/cheng-wei-bao-ke-meng-da-shi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                成为宝可梦大师！
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/ji-nian-li-wen-liang-xian-sheng/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                记住李文亮先生
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/han-ju-xin-hao-guan-hou-gan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                韩剧“信号“——对时间干涉的思考
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/xiao-hao-pin/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                消耗品
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/chang-sha-chi-lu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                长沙吃旅
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/xin-xi-gu-dao/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                信息孤岛
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/wei-shi-me-yao-kai-shi-xie-zuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                为什么要开始写作
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/2020-nian-zhan-wang/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                2020年flag
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/2020-nian-xin-nian-ji-hua/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                2019年终回顾
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/just-a-test/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                just a test
-              </a>
-            </div>
-          </div>
-        
-          <div class="px-8 pb-5 flex relative overflow-hidden">
-            
-            <div class="flex-1">
-              <a href="https://laffitto.github.io/post/hello-gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-                Hello Gridea
-              </a>
-            </div>
-          </div>
-        
-      </div>
+        <div class="pagination-container">
+    
+    
+</div>
 
-      
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-</footer>
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://laffitto.github.io//media/scripts/main.js"></script>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://laffitto.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
 </body>
 </html>
