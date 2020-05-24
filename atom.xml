@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-05-24T04:13:13.353Z</updated>
+    <updated>2020-05-24T04:14:28.958Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -36,7 +36,7 @@
 </li>
 </ol>
 <h3 id="显示特定谋篇文章">显示特定谋篇文章</h3>
-<p>这个更加简单，地址就写「博客域名/post/文章 URL」即可，实际上“关于”就是一个很好的例子，</p>
+<p>这个更加简单，地址就写「博客域名/post/文章 URL」即可。例如手动添加“友链“文章，直接找到GitHub中的文章地址就行。<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/yzlm.png" alt="yzlm" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
