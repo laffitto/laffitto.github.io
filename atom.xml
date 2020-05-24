@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-05-24T08:57:36.263Z</updated>
+    <updated>2020-05-24T09:06:34.415Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -24,26 +24,25 @@
 <img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/jpmm.png" alt="" loading="lazy"></p>
 <h3 id="关于在tab中新增特定标签内容">关于在tab中新增特定标签内容</h3>
 <p>方法实际很简单，如果想显示带那个标签的所有文章的列表，地址就写**「博客域名/tag/标签 ID」**即可，例如：<br>
-我想显示自己标签中一个叫“杂谈”的标签，直接这样定义就好了：<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/tuli.png" alt="" loading="lazy"></p>
+我想显示自己标签中一个叫“杂谈”的标签，直接这样定义就好了：</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/tuli.png" alt="" loading="lazy"></figure>
 <p>其中，<strong>laffitto.github.io</strong>为自己的博客域名，tag固定，<strong>E42cXcjcL</strong>表示“杂谈”标签的ID。这个ID可以这样寻找：</p>
 <ol>
 <li>打开自己的github博客的仓库并点击<strong>tag</strong>文件夹，可以看见有许多数字+字母的文件夹，每个文件夹下都有一个名为<strong>index.html</strong>的文件。</li>
 </ol>
-<p>![tag folder](https://raw.githubusercontent.com/laffitto/Pic_bed/master/tag folder.png)</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/folder.png" alt="" loading="lazy"></figure>
 <ol start="2">
-<li>
-<p>寻找需要的标签。打开里面的index.html文件往下寻找，会出现各个文件夹代表的标签名称。例如这里在<strong>E42cXcjcL</strong>的index.html文件中找到了“杂谈”字段，即“杂谈”标签的ID为E42cXcjcL。</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/tag.png" alt="tag" loading="lazy"></figure>
-</li>
-<li>
-<p>组合写下即可。</p>
-</li>
+<li>寻找需要的标签。打开里面的index.html文件往下寻找，会出现各个文件夹代表的标签名称。例如这里在<strong>E42cXcjcL</strong>的index.html文件中找到了“杂谈”字段，即“杂谈”标签的ID为E42cXcjcL。</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/tag.png" alt="tag" loading="lazy"></figure>
+<ol start="3">
+<li>组合写下即可。</li>
 </ol>
 <h3 id="显示特定谋篇文章">显示特定谋篇文章</h3>
-<p>这个更加简单，地址就写「博客域名/post/文章 URL」即可。例如手动添加“友链“文章，直接找到GitHub中的文章地址就行。<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/yzlm.png" alt="yzlm" loading="lazy"></p>
+<p>这个更加简单，地址就写「博客域名/post/文章 URL」即可。例如手动添加“友链“文章，直接找到GitHub中的文章地址就行。<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/yzlm.png" alt="yzlm" loading="lazy"></p>
 <p>其它特定的页面（某些主题的友链页面、豆瓣读书观影页面等内容）就直接写那个特定页面的 URL即可。（下面为网友的例子）</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-05-24_15-01-29.jpg" alt="photo_2020-05-24_15-01-29" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-05-24_15-01-29.jpg" alt="photo_2020-05-24_15-01-29" loading="lazy"></figure>
 <h3 id="总结">总结</h3>
 <p>实际上很简单，基本就是找到想要的链接然后把地址填在后面即可。自己多研究一下是可以解决的。<br>
 <img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/result.png" alt="" loading="lazy"></p>
