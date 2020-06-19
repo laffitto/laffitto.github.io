@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-06-14T10:24:17.893Z</updated>
+    <updated>2020-06-19T16:27:22.655Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -11,6 +11,77 @@
     <logo>https://laffitto.github.io/images/avatar.png</logo>
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[Samsung watch 安装 tpk 文件教程]]></title>
+        <id>https://laffitto.github.io/post/samsung-watch-an-zhuang-tpk-wen-jian-jiao-cheng/</id>
+        <link href="https://laffitto.github.io/post/samsung-watch-an-zhuang-tpk-wen-jian-jiao-cheng/">
+        </link>
+        <updated>2020-06-19T14:24:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>一个给samsung watch 安装检测血压软件的小教程</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一个给samsung watch 安装检测血压软件的小教程</p>
+<!-- more -->
+<p>偶然看见三星还未推出的<a href="https://news.samsung.com/global/samsung-announces-blood-pressure-monitoring-application-for-galaxy-watch-devices">手表血压测量软件</a>，且近日已经在韩国本土<a href="https://news.samsung.com/global/samsung-launches-the-samsung-health-monitor-application-with-blood-pressure-measurement">正式推出</a>，觉得十分有趣。但是自己的手表是国行的，推送过来估计都猴年马月了，抱着折腾致死的心态，一番搜索后终于安装成功，包含手表端的tpk软件包与手机端的apk软件包。有网上能力的建议直接看<a href="https://forum.xda-developers.com/showpost.php?p=82502465&amp;postcount=208">原xda网站</a>和其配套的<a href="https://www.youtube.com/watch?v=bTni4d832XE">视频教程</a>。这里大致写一下中文教程。</p>
+<p><strong>注意</strong>，搞机有风险，下手请谨慎！<br>
+<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620002403.jpg" alt="三星心率软件" loading="lazy"></p>
+<h2 id="准备所需文件">准备所需文件</h2>
+<p>首先需要准备四个文件，分别为tizen studio，sdb工具，手机端apk，手表端tpk。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200619230718.png" alt="image-20200619230703819" loading="lazy"></figure>
+<p>下载地址如下：</p>
+<p><a href="https://developer.tizen.org/development/tizen-studio/download">tizen studio</a> 选择<strong>Tizen Studio 3.7 with IDE installer</strong>，608M</p>
+<p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013509&amp;d=1588841964">sdb工具</a></p>
+<p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013507&amp;d=1588841964">手表端tpk文件</a></p>
+<p><a href="https://drive.google.com/u/0/uc?id=1w1flxQu7sZp7vtOdAGbxZ3SPg9sHPgBW">手机端apk文件</a></p>
+<h2 id="tpk文件安装教程以三星血压检测软件为例">tpk文件安装教程（以三星血压检测软件为例）</h2>
+<p>这里手表系统调成的是英文界面，注意对照。</p>
+<ol>
+<li>
+<p>打开debugging：进入setting--about watch，翻到最下面，将debugging打开。</p>
+</li>
+<li>
+<p>打开developer mode：进入setting--about watch--software，连续点击software version（大约7次），可以看见 developer mode turned on 的提示。</p>
+</li>
+<li>
+<p>手表连接WiFi网络（注意此时要与电脑连接到同一个WiFi），<strong>关闭蓝牙连接</strong>。</p>
+</li>
+<li>
+<p>解压sdb文件与tpk文件，安装tizen studio软件。</p>
+</li>
+<li>
+<p>连接手表与电脑：打开Tizen Studio，在顶部会看到一个写有“No target”的框，点击下拉菜单，选择“Launch Remote Device Manager”，点击“Scan”，你会找到你的手表。点击connect进行连接。</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001941.png" alt="image-20200619233406983" loading="lazy"></figure>
+</li>
+</ol>
+<p>如果无法扫描到你的手表，可以手动添加IP地址，ip地址获取方法：手表端setting--connections--WLAN--WLAN networks--自己连接的wifi名称--IP address，这里我自己的是192.168.0.102，填上点击add即可。</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001934.png" alt="image-20200619234410284" loading="lazy"></figure>
+<p>如果连接不成功，尝试<strong>重新启动手表连接</strong>，<strong>多手动添加几次</strong>等操作基本可以解决问题。</p>
+<ol start="6">
+<li>
+<p>安装tpk软件：将tpk软件复制到sdb2260\sdb\data\tools文件目录下，点击ansicon.exe文件，输入命令：</p>
+<pre><code class="language-shell">sdb install bp.tpk
+</code></pre>
+<p>即可安装成功，手表上也可以看见对应的软件。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001925.png" alt="image-20200620000418691" loading="lazy"></figure>
+<ol start="7">
+<li>配套安装手机端的apk即可使用。</li>
+</ol>
+<hr>
+<h2 id="附不用tizen-studio安装的方法">附：不用tizen studio安装的方法</h2>
+<p>网上找了找，似乎不用tizen studio也可以直接安装，并且我这边成功运行，分享一下。</p>
+<p>上面1到4步相同，接着直接将tpk软件复制到sdb2260\sdb\data\tools文件目录下，点击ansicon.exe文件，输入命令：</p>
+<pre><code class="language-shell">sdb connect 192.168.xxx.xxx
+</code></pre>
+<p>其中192.168.xxx.xxx替换成自己手表的ip地址<br>
+如下图，显示连接成功：</p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001908.png" alt="image-20200620001720019" loading="lazy"></figure>
+<p>再次输入</p>
+<pre><code class="language-shell">sdb install bp.tpk
+</code></pre>
+<p>即可直接安装。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[找书指南]]></title>
         <id>https://laffitto.github.io/post/zhao-shu-zhi-nan/</id>
@@ -749,26 +820,6 @@ torch.Size([6, 3, 28, 28])
 <p>然而，谁又知道我是不是个造谣者？有些造谣者迷失了自我，社会有时也跟着迷失。他们的话语变成了权威，他们的痴人说梦变成了指导。他们欺骗了所有人，并无法打破，甚至根本没有人察觉。或许这一切并不要紧，因为所有人都是造谣者，只是一些谣言变成了真理，一些变成了风，呼哧了几下，人们咒骂了几句，也就算了。</p>
 <hr>
 <p>我也不知道自己当时是收到了什么刺激而写下这段文字，居然连实际都没有结合，但我知道这不符合我当年头脑简单的作风。但同时现在的我也可能无法意识到自己的头脑简单。总之，会思考，咋样都是一种进步。就这样吧。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[平行向结局——漫画“我们无法一起学习”的有趣探索]]></title>
-        <id>https://laffitto.github.io/post/ping-xing-xiang-jie-ju-man-hua-wo-men-wu-fa-yi-qi-xue-xi-de-you-qu-tan-suo/</id>
-        <link href="https://laffitto.github.io/post/ping-xing-xiang-jie-ju-man-hua-wo-men-wu-fa-yi-qi-xue-xi-de-you-qu-tan-suo/">
-        </link>
-        <updated>2020-04-12T08:35:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>一部作品的结局向来都是十分重要的，也是很多读者对最终评价作品的重要点。“我们无法一起学习&quot;用很独特的方式结局，值得让人回味。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一部作品的结局向来都是十分重要的，也是很多读者对最终评价作品的重要点。“我们无法一起学习&quot;用很独特的方式结局，值得让人回味。</p>
-<!-- more -->
-<p>无论是文学，漫画，电影，剧集，结局的精彩程度或多或少导致了作品整体的评价。其中电影由于其时长的短小而显得尤为重要。人们通常会抱怨一部作品烂尾。在其运用大量的伏笔与技巧对故事进行描述和推进之后，一切似乎都水到渠成，观众被这种酣畅淋漓的体验吊足了胃口，然而最后的结尾却平平无奇。不禁让人觉得差强人意。值得注意的是，这里的平平无奇，对于每个人都是不同的。1000个读者就有1000个哈姆雷特。当人们将自己带入一部作品时。他们或多或少会在内心构筑出自己一个理想的结局。当这其中产生偏差时，他们难免会失望。所以很多的作品会选择一些让人难以带入的题材。即便我的结局不符合你的胃口，或许在其他人的观点加持下，你也会觉得有可圈可点之处。但对于具有强带入型的作品来说，如何结局必然是一个痛苦的思考构思过程。</p>
-<p>这里单从漫画这一载体来论述。我是看过很多很多烂尾的神作。漫画家这一行业门槛还是挺高的。优秀的编剧水平加上出色的绘画能力。使得攀登在顶层之人确实让人值得驻足仰望。又由于其连载的机制，作者不得不去迎合大众与编辑。甚至与自己最初的想法差之前。最终只导致漫画虎头蛇尾，最终烂尾或惨遭腰斩。这里我觉得的几部作品是“银魂”，“东京食尸鬼”和“七大罪”。简直就是到了最后感觉，这作品怎么会变得这么扯淡，还是快点完结让大家都解脱的这样一种感觉。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/qidazv.jpg" alt="七大罪到最后真是崩坏" loading="lazy"></p>
-<p>有很多带入型的漫画，其描述的视角很容易将读者引入漫画，幻想成为主人公或其他角色。当过于沉迷时，难免会口中说出一些剧中人物的招式或台词。我想大多数的中二病就由此而来。还有一些后宫型的漫画。例如“伪恋”，“五等分的花嫁”和“我们无法一起学习”。在这些漫画里，人人都想当男主。体验着被众多漂亮女生包围的幸福喜悦。他们一个共同的套路就是：男主始终不敢正视自己的内心，总是同时与多个女主保持着比较暧昧的关系。这就让粉丝读者掀起了巨大的“谁才是正宫撕逼现场”和“股票交易市场”。当这些作品完结之时，讨论便迎来高潮，现场一阵腥风血雨，各家的股东会为自己的老婆正名。然而结局只有唯一，这就难免会让人失望与沮丧。看见自己支持的老婆从此落幕，心中很不是滋味。一边心中强忍着fuck，一边打出差评。</p>
-<p>然而最近的我们无法一起学习，却让我看到了一个不同的解决方法。作者<s>卑鄙</s>巧妙地使用了一个平行宇宙的方法。让男主和所有的妹子都能在不同的平行时空里拥有幸福的结局。看到这里简直是把我震惊了。居然还有一种解决方法？不仅能够继续连载一阵子<s>骗稿费</s>，而且还把最重要的每个人的精神支持问题给解决了。当看到明明不可能自己却超级喜欢的妹子能够跟男主修成正果时。眼泪不禁慢慢地流了下来。（顺便插一句，我是文乃股和老师股的持有者😙）。这确实是一个独特而巧妙的处理方式。之前只见过偷星九月天那种双结局的强硬结局方式，但那个真的是蠢，况且那不是后宫型漫画，作者当时是完全没有能力去构建一个精彩的结局。两者性质不同，故实际上无法比较。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-03-09_00-33-38.jpg" alt="" loading="lazy"></p>
-<p>这部漫画实际上有5个后宫。除了第1个正宫的完结外，还有4个后宫正在进行。我不得不说这实际很让人期待。作者通过一个关键剧情烟火大会作为转折点。在此之后，所有的故事都是在平行世界发生的。什么东西扯到平行世界，一切都显得那么顺理成章了。因为许多矛盾，它自己就会凭空消失。但我想这个套路只能用在漫画中。文学电影剧集中如果出现那种多结局的情况，还是会显得很唐突的。但可能会有编剧能够很好的处理这个问题，使其变为一个突出的特点。不得不说这的确是一个有趣的探索，也是作品可以未来延伸的一种方式。这着实是令人期待了。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/images.jpg" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>
