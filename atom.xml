@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-06-19T16:27:22.655Z</updated>
+    <updated>2020-06-19T16:33:41.335Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -32,6 +32,7 @@
 <p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013509&amp;d=1588841964">sdb工具</a></p>
 <p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013507&amp;d=1588841964">手表端tpk文件</a></p>
 <p><a href="https://drive.google.com/u/0/uc?id=1w1flxQu7sZp7vtOdAGbxZ3SPg9sHPgBW">手机端apk文件</a></p>
+<p>分享一下sdb+tpk+apk的<a href="https://laffitto.lanzous.com/iVAzZduf5gj">蓝奏云链接</a></p>
 <h2 id="tpk文件安装教程以三星血压检测软件为例">tpk文件安装教程（以三星血压检测软件为例）</h2>
 <p>这里手表系统调成的是英文界面，注意对照。</p>
 <ol>
