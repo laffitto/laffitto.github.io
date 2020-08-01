@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-07-27T15:23:03.704Z</updated>
+    <updated>2020-08-01T15:25:27.714Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -11,6 +11,209 @@
     <logo>https://laffitto.github.io/images/avatar.png</logo>
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[3种用TensorFlow 2.0构建Keras模型的方法]]></title>
+        <id>https://laffitto.github.io/post/3-chong-yong-tensorflow-20-gou-jian-keras-mo-xing-de-fang-fa/</id>
+        <link href="https://laffitto.github.io/post/3-chong-yong-tensorflow-20-gou-jian-keras-mo-xing-de-fang-fa/">
+        </link>
+        <updated>2020-08-01T13:35:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>这三种方法分别是序列模型，函数模型，子类化模型。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这三种方法分别是序列模型，函数模型，子类化模型。</p>
+<!-- more -->
+<p>在回忆tensorflow构建深度模型的代码时，发现Keras有许多种构建模型的方法，这里查阅资料稍作整理。主要参考的是<a href="https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/">这篇</a>，里面有这篇文章中的很多完整代码。<br>
+模型整体分类如下：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231528.png" alt="" loading="lazy"></p>
+<h2 id="序列模型sequential-api">序列模型（Sequential API）</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231634.png" alt="Sequential model" loading="lazy"><br>
+这种模型主要是一层一层的构建，它是最简单的方法，就如同CONV--&gt;Batch Normalization--&gt;ReLU--&gt;POOLING。模型中没有分支，单输入，单输出。</p>
+<p>通常比较容易就可以用Sequential API构建的模型有：</p>
+<ul>
+<li>LeNet</li>
+<li>AlexNet</li>
+<li>VGGNet</li>
+</ul>
+<p>下面是Sequential model的一个简单例子：</p>
+<pre><code class="language-python">def shallownet_sequential(width, height, depth, classes):
+	# initialize the model along with the input shape to be
+	# &quot;channels last&quot; ordering
+	model = Sequential()
+	inputShape = (height, width, depth)
+	# define the first (and only) CONV =&gt; RELU layer
+	model.add(Conv2D(32, (3, 3), padding=&quot;same&quot;,
+		input_shape=inputShape))
+	model.add(Activation(&quot;relu&quot;))
+	# softmax classifier
+	model.add(Flatten())
+	model.add(Dense(classes))
+	model.add(Activation(&quot;softmax&quot;))
+	# return the constructed network architecture
+	return model
+</code></pre>
+<p>在Keras中只要模型是Sequential类，那就是使用了序列模型。后面用model.add的形式加入其他层。</p>
+<h2 id="函数模型functional-api">函数模型（Functional API）</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231737.png" alt="function model" loading="lazy"><br>
+使用函数模型有以下优点：</p>
+<ul>
+<li>可以构建多输入多输出模型</li>
+<li>可以轻易的构建分支结构（如Inception block, ResNet block）</li>
+<li>可以轻易共享架构内部的层</li>
+</ul>
+<p>通常比较容易就可以用Function API构建的模型（包含层间的分支）有：</p>
+<ul>
+<li>ResNet</li>
+<li>GoogLeNet/Inception</li>
+<li>Xception</li>
+<li>SqueezeNet</li>
+<li>DenseNet</li>
+</ul>
+<p>此处看一下原文中的例子MiniGoogLeNet：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231856.png" alt="MiniGoogLeNet" loading="lazy"><br>
+看起来很复杂，但是模块化后显得十分清晰，代码如下：</p>
+<pre><code class="language-python">def minigooglenet_functional(width, height, depth, classes):
+	def conv_module(x, K, kX, kY, stride, chanDim, padding=&quot;same&quot;):
+		# define a CONV =&gt; BN =&gt; RELU pattern
+		x = Conv2D(K, (kX, kY), strides=stride, padding=padding)(x)
+		x = BatchNormalization(axis=chanDim)(x)
+		x = Activation(&quot;relu&quot;)(x)
+		# return the block
+		return x
+
+    def inception_module(x, numK1x1, numK3x3, chanDim):
+        # define two CONV modules, then concatenate across the
+        # channel dimension
+        conv_1x1 = conv_module(x, numK1x1, 1, 1, (1, 1), chanDim)
+        conv_3x3 = conv_module(x, numK3x3, 3, 3, (1, 1), chanDim)
+        x = concatenate([conv_1x1, conv_3x3], axis=chanDim)
+        # return the block
+        return x
+
+    def downsample_module(x, K, chanDim):
+		# define the CONV module and POOL, then concatenate
+		# across the channel dimensions
+	    conv_3x3 = conv_module(x, K, 3, 3, (2, 2), chanDim,
+			padding=&quot;valid&quot;)
+		pool = MaxPooling2D((3, 3), strides=(2, 2))(x)
+		x = concatenate([conv_3x3, pool], axis=chanDim)
+		# return the block
+		return x
+
+    
+	# initialize the input shape to be &quot;channels last&quot; and the
+	# channels dimension itself
+	inputShape = (height, width, depth)
+	chanDim = -1
+	# define the model input and first CONV module
+	inputs = Input(shape=inputShape)
+	x = conv_module(inputs, 96, 3, 3, (1, 1), chanDim)
+	# two Inception modules followed by a downsample module
+	x = inception_module(x, 32, 32, chanDim)
+	x = inception_module(x, 32, 48, chanDim)
+	x = downsample_module(x, 80, chanDim)
+	# four Inception modules followed by a downsample module
+	x = inception_module(x, 112, 48, chanDim)
+	x = inception_module(x, 96, 64, chanDim)
+	x = inception_module(x, 80, 80, chanDim)
+	x = inception_module(x, 48, 96, chanDim)
+	x = downsample_module(x, 96, chanDim)
+	# two Inception modules followed by global POOL and dropout
+	x = inception_module(x, 176, 160, chanDim)
+	x = inception_module(x, 176, 160, chanDim)
+	x = AveragePooling2D((7, 7))(x)
+	x = Dropout(0.5)(x)
+	# softmax classifier
+	x = Flatten()(x)
+	x = Dense(classes)(x)
+	x = Activation(&quot;softmax&quot;)(x)
+	# create the model
+	model = Model(inputs, x, name=&quot;minigooglenet&quot;)
+	# return the constructed network architecture
+	return model
+</code></pre>
+<p>结合图片一看，一目了然。</p>
+<h2 id="子类化模型model-subclassing">子类化模型（Model subclassing）</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801232226.png" alt="Model subclassing" loading="lazy"><br>
+这种方式的定义在tensorflow1.x版本中不太常见，不过熟悉pytorch的肯定对这种定义方法烂熟于胸，因为pytorch基本都是根据这个方法构建模型的。即<strong>面向对象编程的思想（object-oriented programming）</strong>。</p>
+<p>实际这种方法要比上面两种麻烦许多，但是还是有优点，这里引用原文解释：</p>
+<blockquote>
+<p>Exotic architectures or custom layer/model implementations, <strong>especially those utilized by researchers</strong>, can be extremely challenging, if not impossible, to implement using the standard Sequential or Functional APIs.<br>
+Instead, researchers wish to have control over every nuance of the network and training process — and that’s exactly what model subclassing provides them.</p>
+</blockquote>
+<p>精髓即是：研究人员可以控制网络和培训过程的每个细微差别。</p>
+<p>这里看一下VGGNet模型的表达方法：</p>
+<pre><code class="language-python">class MiniVGGNetModel(Model):
+	def __init__(self, classes, chanDim=-1):
+		# call the parent constructor
+		super(MiniVGGNetModel, self).__init__()
+		# initialize the layers in the first (CONV =&gt; RELU) * 2 =&gt; POOL
+		# layer set
+		self.conv1A = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act1A = Activation(&quot;relu&quot;)
+		self.bn1A = BatchNormalization(axis=chanDim)
+		self.conv1B = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act1B = Activation(&quot;relu&quot;)
+		self.bn1B = BatchNormalization(axis=chanDim)
+		self.pool1 = MaxPooling2D(pool_size=(2, 2))
+		# initialize the layers in the second (CONV =&gt; RELU) * 2 =&gt; POOL
+		# layer set
+		self.conv2A = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act2A = Activation(&quot;relu&quot;)
+		self.bn2A = BatchNormalization(axis=chanDim)
+		self.conv2B = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act2B = Activation(&quot;relu&quot;)
+		self.bn2B = BatchNormalization(axis=chanDim)
+		self.pool2 = MaxPooling2D(pool_size=(2, 2))
+		# initialize the layers in our fully-connected layer set
+		self.flatten = Flatten()
+		self.dense3 = Dense(512)
+		self.act3 = Activation(&quot;relu&quot;)
+		self.bn3 = BatchNormalization()
+		self.do3 = Dropout(0.5)
+		# initialize the layers in the softmax classifier layer set
+		self.dense4 = Dense(classes)
+		self.softmax = Activation(&quot;softmax&quot;)
+
+
+    def call(self, inputs):
+		# build the first (CONV =&gt; RELU) * 2 =&gt; POOL layer set
+		x = self.conv1A(inputs)
+		x = self.act1A(x)
+		x = self.bn1A(x)
+		x = self.conv1B(x)
+		x = self.act1B(x)
+		x = self.bn1B(x)
+		x = self.pool1(x)
+		# build the second (CONV =&gt; RELU) * 2 =&gt; POOL layer set
+		x = self.conv2A(x)
+		x = self.act2A(x)
+		x = self.bn2A(x)
+		x = self.conv2B(x)
+		x = self.act2B(x)
+		x = self.bn2B(x)
+		x = self.pool2(x)
+		# build our FC layer set
+		x = self.flatten(x)
+		x = self.dense3(x)
+		x = self.act3(x)
+		x = self.bn3(x)
+		x = self.do3(x)
+		# build the softmax classifier
+		x = self.dense4(x)
+		x = self.softmax(x)
+		# return the constructed model
+		return x
+</code></pre>
+<p>可能很难理解为什么要这样，我也说不明白，这就是面向对象编程的一种思想，可以说是换了一种看待问题的方式。虽然它本质上是可以序列模型，但是仍然可以实现复杂的旁路结构，和多输入多输出的情况。</p>
+<p>以后我对这块有了更深入的思考会加上的（挖坑）🤣。</p>
+<p>以上就是3种用TensorFlow 2.0构建Keras模型的方法，可以说是各有千秋，但是刚接触的人可能就会疑惑为什么构建模型的形式千奇百怪，一会官方文档用的是序列模型，某某教程用的又是函数模型甚至子类化模型。希望看了这个后，能对大家有所帮助。也更能进一步思考。</p>
+<p>参考：</p>
+<ol>
+<li><a href="https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/">3 ways to create a Keras model with TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/58825020">TensorFlow2.0教程-Keras 快速入门</a></li>
+<li><a href="https://deeplizard.com/learn/video/k4jY9L8H89U">Build PyTorch CNN - Object Oriented Neural Networks</a></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[智商在线的反派们——漫画「夏日重现」]]></title>
         <id>https://laffitto.github.io/post/zhi-shang-zai-xian-de-fan-pai-men-man-hua-xia-ri-chong-xian/</id>
@@ -487,44 +690,6 @@ PS：英语，加油吧😕</p>
 <a href="https://tieba.baidu.com/f?kw=%C8%FD%BA%CD%B4%F3%C9%F1&amp;fr=ala0&amp;tpl=5">百度贴吧-三和大神吧</a><br>
 <a href="https://www.bilibili.com/video/BV1UJ411V7Vp?from=search&amp;seid=5050509904158933714">B站视频-人间失格:三和大神的故事</a></p>
 <p>在这种帖子的评论区里，声音大多是对故事真实性的质疑与对三和大神的批判。的确，我们很难拥有<strong>共情</strong>。我们很难站在他们的角度去看着这毫无希望的世界。自诩为站在道德的制高点，指点江山，甚至都不想去了解他们背后的故事，就对他们进行质疑与指点。那也是对生活的长长叹息。三和大神无非是一个标签。一个代表着慵懒与腐坏的标签。或许人人都是三和大神，但人人又不是三和大神。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于Gridea自定义tab的尝试]]></title>
-        <id>https://laffitto.github.io/post/guan-yu-gridea-zi-ding-yi-tab-de-chang-shi/</id>
-        <link href="https://laffitto.github.io/post/guan-yu-gridea-zi-ding-yi-tab-de-chang-shi/">
-        </link>
-        <updated>2020-05-23T13:10:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>一个小技巧</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一个小技巧</p>
-<!-- more -->
-<p>这半年来，也陆陆续续用Gridea写了一点文章了，但是如果我想在已有的四个tab中添加新的内容，还是需要一点点操作的，以下感谢gridea的tg群中@Benjamin和@Yuko Amamiya的帮助解答。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/jpmm.png" alt="" loading="lazy"></p>
-<h3 id="关于在tab中新增特定标签内容">关于在tab中新增特定标签内容</h3>
-<p>方法实际很简单，如果想显示带那个标签的所有文章的列表，地址就写**「博客域名/tag/标签 ID」**即可，例如：<br>
-我想显示自己标签中一个叫“杂谈”的标签，直接这样定义就好了：</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/tuli.png" alt="" loading="lazy"></figure>
-<p>其中，<strong>laffitto.github.io</strong>为自己的博客域名，tag固定，<strong>E42cXcjcL</strong>表示“杂谈”标签的ID。这个ID可以这样寻找：</p>
-<ol>
-<li>打开自己的github博客的仓库并点击<strong>tag</strong>文件夹，可以看见有许多数字+字母的文件夹，每个文件夹下都有一个名为<strong>index.html</strong>的文件。</li>
-</ol>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/folder.png" alt="" loading="lazy"></figure>
-<ol start="2">
-<li>寻找需要的标签。打开里面的index.html文件往下寻找，会出现各个文件夹代表的标签名称。例如这里在<strong>E42cXcjcL</strong>的index.html文件中找到了“杂谈”字段，即“杂谈”标签的ID为E42cXcjcL。</li>
-</ol>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/tag.png" alt="tag" loading="lazy"></figure>
-<ol start="3">
-<li>组合写下即可。</li>
-</ol>
-<h3 id="显示特定谋篇文章">显示特定谋篇文章</h3>
-<p>这个更加简单，地址就写「博客域名/post/文章 URL」即可。例如手动添加“友链“文章，直接找到GitHub中的文章地址就行。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/yzlm.png" alt="yzlm" loading="lazy"></p>
-<p>其它特定的页面（某些主题的友链页面、豆瓣读书观影页面等内容）就直接写那个特定页面的 URL即可。（下面为网友的例子）</p>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/photo_2020-05-24_15-01-29.jpg" alt="photo_2020-05-24_15-01-29" loading="lazy"></figure>
-<h3 id="总结">总结</h3>
-<p>实际上很简单，基本就是找到想要的链接然后把地址填在后面即可。自己多研究一下是可以解决的。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/result.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>
