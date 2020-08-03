@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-08-01T15:25:27.714Z</updated>
+    <updated>2020-08-03T07:20:47.774Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -450,6 +450,9 @@ Instead, researchers wish to have control over every nuance of the network and t
 ]]></summary>
         <content type="html"><![CDATA[<p>一篇大量参考的转载的寻找图书的文章，记录备用</p>
 <!-- more -->
+<p>2020.8.3更新：<br>
+增加一个网站，收录了不少书：<a href="https://ebook.ipfs-lab.com/">EBOOK</a>，值得收藏。</p>
+<hr>
 <p>原链接为这里：<a href="https://mp.weixin.qq.com/s/JVjokE_iAOnuymi6_onRZQ">3 分钟找书指南 v7.0</a><br>
 这里在自己的基础上测试整理一下：</p>
 <p>找书指南更新了，现在来到了 7.0 版本，此次更新主要在<strong>统一文案逻辑和阅读体验，新增 5 个新文档渠道</strong>，<strong>删除包括小书屋在内的 3 个失效渠道</strong>。总计 23 个文档搜索渠道。欢迎转发给需要的朋友们，建议收藏备用。</p>
