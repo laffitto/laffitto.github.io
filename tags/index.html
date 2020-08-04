@@ -1,227 +1,223 @@
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 <title>假正经者       ——詹詹碎言</title>
-<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://laffitto.github.io//media/css/tailwind.css">
+
+<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico?v=1596555435250">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="假正经者       ——詹詹碎言 - Atom Feed" href="https://laffitto.github.io//atom.xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
 
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-160641909-1');
-  </script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  <meta name="description" content="Aspire to inspire until I expire
-一个小小的个人博客" />
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
 </head>
 <body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            假正经者       ——詹詹碎言
+        </div>
     </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="https://laffitto.github.io/tag/0riEa61BG/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        精选
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于与留言
-      </a>
-    
-      <a href="https://laffitto.github.io/post/you-lian" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        友链
-      </a>
-    
-    <a href="https://laffitto.github.io//atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://laffitto.github.io/tag/0riEa61BG/" class="menu gt-a-link">
+                            精选
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://laffitto.github.io/post/you-lian" class="menu gt-a-link">
+                            友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1596555435250" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+        <div class="post-container">
+            <div class="post-detail gt-bg-theme-color-first">
+                <article class="gt-post-content">
+                    <h2 class="post-title">标签</h2>
+        <div class="tags-container">
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/i1-Jje_9N/">#study</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/HQ-WIhH4M/">#python</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/LdYV3S-j4/">#comic</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/E42cXcjcL/">#杂谈</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/MbeaYBjQP/">#book</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/uoTMg6m9B/">#生活</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/glJntuOz9/">#思考</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/dYYbM3igh/">#无病呻吟</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/NnAU2qWAh/">#折腾</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/0riEa61BG/">#star</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/gridea/">#Gridea</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/TnlQft1Ba/">#记账</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/2HKnlhG5I/">#投资</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/TEwJRV8lL/">#剧评</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/r2jJOK6USR/">#扯淡</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/YfbU3hmd3E/">#游戏</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/YUsEjhYwh/">#开箱</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/hSKx9PIw9/">#纪念</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/z49QuQGKA/">#旅行</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/MzaJBEIWp/">#年度计划</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://laffitto.github.io/tag/dMNRahaIW/">#年终总结</a>
+            
+        </div>
+    </article>
 </div>
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+</div>
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire
+一个小小的个人博客</div>
+    <div class="social-container">
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/i1-Jje_9N/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              study（2）
-            </a>
-          </div>
+            
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/HQ-WIhH4M/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              python（2）
-            </a>
-          </div>
+            
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/LdYV3S-j4/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              comic（3）
-            </a>
-          </div>
+            
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/E42cXcjcL/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              杂谈（6）
-            </a>
-          </div>
+            
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/MbeaYBjQP/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              book（2）
-            </a>
-          </div>
+            
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/uoTMg6m9B/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              生活（1）
-            </a>
-          </div>
+            
         
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/glJntuOz9/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              思考（12）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/dYYbM3igh/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              无病呻吟（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/NnAU2qWAh/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              折腾（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/0riEa61BG/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              star（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              Gridea（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/TnlQft1Ba/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              记账（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/2HKnlhG5I/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              投资（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/TEwJRV8lL/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              剧评（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/r2jJOK6USR/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              扯淡（3）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/YfbU3hmd3E/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              游戏（3）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/YUsEjhYwh/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              开箱（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/hSKx9PIw9/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              纪念（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/z49QuQGKA/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              旅行（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/MzaJBEIWp/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              年度计划（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://laffitto.github.io/tag/dMNRahaIW/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              年终总结（1）
-            </a>
-          </div>
-        
-      </div>
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-</footer>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://laffitto.github.io//media/scripts/main.js"></script>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://laffitto.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
 </body>
 </html>

@@ -1,30 +1,26 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>我的朋友们 | 假正经者       ——詹詹碎言</title>
-<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico?v=1596551385034">
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<title>友情链接 - 假正经者       ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico?v=1596555435250">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
 <!-- DEMO JS -->
 <!--<script src="media/scripts/index.js"></script>-->
 
@@ -42,11 +38,12 @@
     </script>
 
 
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+</head>
+
+<body>
+<div class="main gt-bg-theme-color-first">
+        <div class="main-content">
+            <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -102,63 +99,56 @@
             
                 <div class="nav-item">
                     
-                        <a href="https://laffitto.github.io/friends/" class="menu gt-a-link">
+                        <a href="https://laffitto.github.io/post/you-lian" class="menu gt-a-link">
                             友链
                         </a>
                     
                 </div>
             
         </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1596555435250" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
     </div>
 </nav>
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">我的朋友们</h2>
 
-            <div class="post-content-wrapper">
-              <div class="post-content">
-              
+            <div class="post-container">
+                <div class="post-detail">
+                    <article>
+                        <!-- <div class="post-content-wrapper"> -->
+                            <div class="post-content">
+                                <div class="friends-desc">
+                                    
+                                </div>
+                                <h3 id="linklist">友链列表</h3>
+                                
+                                    
+                                
+                            </div>
+                        <!-- </div> -->
+                    </article>
+                </div>
                 
-                  <div class="friend-box">
-                    <img class="friend-avatar" src="">
-                    <div class="flink-info">
-                      <a href="222" target="_blank">灯光</a>
-                      <br/>
-                      
-                    </div>
-                  </div>
-                
-              
-              </div>
             </div>
-          </article>
-        </div>
 
-        <div class="site-footer gt-c-content-color-first">
+
+
+            <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire
 一个小小的个人博客</div>
     <div class="social-container">
         
             
-                <a href="https://github.com/laffitto" target="_blank">
-                    <i class="fab fa-github gt-c-content-color-first"></i>
-                </a>
-            
-        
-            
-                <a href="https://twitter.com/LaffitteRat" target="_blank">
-                    <i class="fab fa-twitter gt-c-content-color-first"></i>
-                </a>
-            
         
             
         
             
         
             
-                <a href="https://t.me/laffitto" target="_blank">
-                    <i class="fab fa-telegram gt-c-content-color-first"></i>
-                </a>
+        
             
         
             
@@ -174,11 +164,11 @@
 </div>
 
 <script>
-    hljs.initHighlightingOnLoad()
+  hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
+        </div>
     </div>
-  </body>
-</html>
+</body>
 
+</html>
