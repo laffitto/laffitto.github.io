@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.github.io/</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-08-05T10:29:38.560Z</updated>
+    <updated>2020-08-08T15:40:40.343Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.github.io/"/>
     <link rel="self" href="https://laffitto.github.io/atom.xml"/>
@@ -11,6 +11,38 @@
     <logo>https://laffitto.github.io/images/avatar.png</logo>
     <icon>https://laffitto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[数字货币DBC]]></title>
+        <id>https://laffitto.github.io/post/shu-zi-huo-bi-dbc/</id>
+        <link href="https://laffitto.github.io/post/shu-zi-huo-bi-dbc/">
+        </link>
+        <updated>2020-08-08T13:08:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>一个关于人工智能的数字货币。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一个关于人工智能的数字货币。</p>
+<!-- more -->
+<p>最近由于算力的原因，一直在找深度学习的云平台，在多方的寻找查阅下，找到了一个叫<a href="https://www.1024gpu.top/">1024lab</a>的租用GPU算力的平台，注册时发现平台是基于数字货币DBC进行支付使用的，这让我充满了兴趣。</p>
+<p><a href="https://www.deepbrainchain.org/">DBC</a>全称为DeepBrain Chair，中文称为深脑链（听起来怪怪的）。现在具体的交易情况可以在<a href="https://www.coingecko.com/zh/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/%E6%B7%B1%E8%84%91%E9%93%BE">这里</a>或<a href="https://coinmarketcap.com/zh/currencies/deepbrain-chain/">这里</a>查到。之前虽然研究过一些数字货币，但都没有深入，自己也注册过<a href="https://token.im/">imtoken数字钱包</a>，却基本上没有用过，这次由于涉及到一些小项目，需要算力充值，也算是重新倒弄了一番。</p>
+<p>数字货币构建于区中心化的网络，依托于区块链，可以得到很好监督作用，最具代表性且被熟知的是比特币（BTC），在我需要对DBC进行充值的时候，根据<a href="https://www.1024gpu.top/howBuy?address_user=">1024lab的帮助文档</a>，发现有很多种充值方式，但其精髓都是先用实体货币兑换成比较通用的几种数字货币，例如：比特币（BTC），以太坊（ETH），泰达币（USDT）等，而其中BTC是最为通用的（不愧是老大）。实际上这些平台就提供了一个实体兑换数字货币的担保，尽可能减小跑路的风险。</p>
+<p>我在浏览之后，选择了<a href="https://www.huobi.me/en-us/">火币网</a>这个平台（也是因为很早之前就听说过）。在一系列的注册后，映入眼帘的是类似于股票交易的界面，在探索了各个板块后，真的基本上和股票的交易系统有很高的相似性（或者说港股/美股实际更准确）。各种数字货币，对应的即是各种股票，而像比特币，以太坊这种通用型，更像是美元，港币，因此你在兑换它们的时候是有一些汇率差的。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-225412_Huobi%20Pro.jpg" alt="火币网主界面" loading="lazy"></p>
+<p>抱着好奇的心态，我用支付宝买了100元的比特币，实际支付方式之多，速度之快，操作之便捷让我大开眼界。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-230525_Huobi%20Pro.jpg" alt="多种支付方式" loading="lazy"></p>
+<p>买完后在我的比特币钱包中便有了对应的数额，这时便可以用比特币进行DBC的交易。这个界面，委托，条件单真的和股市没太大区别🤣，选定交易数量啥之后可以成交。不过也有一些区别，我从网上找了几条（此处仅对应火币网）：</p>
+<ol>
+<li>交易时间：7*24小时全年无休市。</li>
+<li>T+0：股票是T+1交易，即当天买入股票，下一个交易日才可卖出。而比特币是T+0交易，当天买入当天即可卖出。</li>
+<li>无涨跌停： 比特币交易无涨跌停限制，股票有涨跌停限制，例如：5月28日比特币单日涨幅超20%。</li>
+<li>交易单位：最小可买0.0001BTC（约0.6元），没有股票最少买一手（100股）的买入限制。</li>
+<li>提币无时间限制：随时提币提现，资金流动性高。<br>
+看完后觉得666，就是一个强化版的股票交易市场，很好奇服务器维护啥的在啥时候进行。😅<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-224748_Huobi%20Pro.jpg" alt="购买其他货币界面" loading="lazy"></li>
+</ol>
+<p>当然，我也可以把买到的比特币转到更其他的数字钱包（例如imtoken），在“资产”界面，点击“提币”，输入对应的钱包地址，转出即可。DBC转到1024lab平台也是相同的操作，只要知道钱包的地址就可以了，真的很方便。不过我觉得之前没有接触过这些概念的人难免是会一头雾水的😵。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-231547_Huobi%20Pro.jpg" alt="转到其他数字钱包" loading="lazy"></p>
+<p>在我个人看来，现在数字货币并没有被广泛的使用，大家对于数字货币仅仅是知道其名字而不太了解的情况下，究其原因还是其依附于区块链，去中心化。没有任何国家会赞同自己的货币可以随意流通，那样运行会受到巨大的打击。国家也难以进行控制。然而我相信，历史总是会向前的，这个东西在未来必然会渐渐发展起来。**这更像是一种契约，一种想要战胜挑战垄断建立平等的契约。**现在的社会与企业追求利益至上，我又想起了以前的一个都市传说：用水作为燃料的汽车早就已经被发明出来了，让利益的驱动无限制的将这种革新技术扼杀与封锁，终究将其归为妄想。而数字货币之于未来，必会蓬勃发展。商业政治首脑去只接受它只是时间上的问题，或者只是在等待能够重新构建他们的获利体系罢了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[3种用TensorFlow 2.0构建Keras模型的方法]]></title>
         <id>https://laffitto.github.io/post/3-chong-yong-tensorflow-20-gou-jian-keras-mo-xing-de-fang-fa/</id>
@@ -670,29 +702,6 @@ PS：英语，加油吧😕</p>
 <img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/Screenshot_20200607-234436_Journey.jpg" alt="日记往年今日回顾" loading="lazy"></p>
 <h2 id="晨间日记于我的意义">晨间日记于我的意义</h2>
 <p>自从记日记以来，总会更多的去回想生活中事情。有些或许印象深刻。有些或许平平淡淡。但如果你不去注意，他们终究会从你的生命与记忆中匆匆走远。而日记会给你机会，看见一年或几年前的日子。我会感动于我这个时候毕业。我会惊喜于这个时候被研究生学校录取。我会惊讶于自己那个时候会想出这么奇奇怪怪的事情。我会懊悔于自己那个时候没有做出更多改变去抓住一些重要的人。日记更像是一个时光机，它记录了过去的高兴，懊恼，友谊，泪水。可能多年后回看自己会觉得当时是如此的幼稚，但同时也会感激于自己迈出的每一步。日子一天天的记起来，便记成了人生。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[三和大神]]></title>
-        <id>https://laffitto.github.io/post/san-he-da-shen/</id>
-        <link href="https://laffitto.github.io/post/san-he-da-shen/">
-        </link>
-        <updated>2020-05-31T15:08:09.000Z</updated>
-        <summary type="html"><![CDATA[<p>或许人人都是三和大神，但人人又不是三和大神。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>或许人人都是三和大神，但人人又不是三和大神。</p>
-<!-- more -->
-<p>近几天在b站上很偶然的看到了一个关于键盘侠的视频。而我在翻评论的时候看见了一个很有趣的名词，<strong>三和大神</strong>。怀着一颗好奇的心，我就查了一下这个名词，也大致肤浅地看见了这个名词代表的人们的生活。</p>
-<p>所谓三和大神。是指在深圳龙华区三河人才市场附近靠日散工活的人。在这片地区物价惊人的低。一碗挂逼面只要5元，一瓶大白蓝水只要两元。夜间睡一晚的床位只需要15元。网吧一块钱包一小时。10块钱包夜。对他们来说这里就是天堂，做着工资日结的工作。打一天工可以去玩三天。他们可以看得上是中国人民最底层的缩影。<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200531233825.jpg" alt="" loading="lazy"><br>
-或许多数人看到这个描述会觉得非常的丧。他们是真正的活在当下。过一天是一天，甚至从未考虑过未来。我们可能会鄙视他们。痛恨他们的目光短浅。他们存在于最原始状态，像极了非洲的野兽，打工便是他们的捕食，而在后面几天，他们可能便会消停去放纵。等到肚子又饿了，他们再次踏上捕食之旅。循环往复，为了<strong>生存而奔波</strong>，更多的时候是停下脚步。</p>
-<p>然而你翻开贴吧或b站的个别记录贴，你有时会看见他们一步步走上这里的原因。没有人来到这里就是甘于堕落的。只能说这个地区充满了堕落之气。低廉的奢靡的物价，肮脏的毫无信用的黑中介，相互失去信任而互相伤害的三和大神们。他们也曾经有过希望，但或是陷于赌博中的快感而失去劳作的精力。或是之前的生活发生变故而麻醉于此甘于堕落。这就像是一个泥沼，陷入这里你就再也无法脱身。以下是几个例子：</p>
-<p><a href="https://www.youtube.com/watch?v=YcidornQ7rU">NHK纪录片-三和人材市場～中国・日給１５００円の若者たち～</a><br>
-<a href="https://zhuanlan.zhihu.com/p/45495541">一代三和大神陨落日记-上</a><br>
-<a href="https://zhuanlan.zhihu.com/p/45632328">一代三和大神陨落日记-下</a><br>
-<a href="https://tieba.baidu.com/f?kw=%C8%FD%BA%CD%B4%F3%C9%F1&amp;fr=ala0&amp;tpl=5">百度贴吧-三和大神吧</a><br>
-<a href="https://www.bilibili.com/video/BV1UJ411V7Vp?from=search&amp;seid=5050509904158933714">B站视频-人间失格:三和大神的故事</a></p>
-<p>在这种帖子的评论区里，声音大多是对故事真实性的质疑与对三和大神的批判。的确，我们很难拥有<strong>共情</strong>。我们很难站在他们的角度去看着这毫无希望的世界。自诩为站在道德的制高点，指点江山，甚至都不想去了解他们背后的故事，就对他们进行质疑与指点。那也是对生活的长长叹息。三和大神无非是一个标签。一个代表着慵懒与腐坏的标签。或许人人都是三和大神，但人人又不是三和大神。</p>
 ]]></content>
     </entry>
 </feed>
