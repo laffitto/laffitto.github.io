@@ -1,25 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://laffitto.github.io/</id>
-    <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-08-22T13:28:21.846Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://laffitto.github.io/"/>
-    <link rel="self" href="https://laffitto.github.io/atom.xml"/>
-    <subtitle>Aspire to inspire until I expire 🎸
-也扯淡，也思考，也生活</subtitle>
-    <logo>https://laffitto.github.io/images/avatar.png</logo>
-    <icon>https://laffitto.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
-    <entry>
-        <title type="html"><![CDATA[深度学习优化算法总结]]></title>
-        <id>https://laffitto.github.io/post/shen-du-xue-xi-you-hua-suan-fa-zong-jie/</id>
-        <link href="https://laffitto.github.io/post/shen-du-xue-xi-you-hua-suan-fa-zong-jie/">
-        </link>
-        <updated>2020-08-22T13:11:29.000Z</updated>
-        <summary type="html"><![CDATA[<p>基本上是转载了，别人写的很不错，回顾一遍的同时，明白了一点架构，自己也正好拿来应付一下一门比较水的课程的报告😱</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>基本上是转载了，别人写的很不错，回顾一遍的同时，明白了一点架构，自己也正好拿来应付一下一门比较水的课程的报告😱</p>
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>深度学习优化算法总结 | 假正经者       ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://laffitto.github.io//favicon.ico?v=1598102897506">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://laffitto.github.io//styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            假正经者       ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://laffitto.github.io/tag/0riEa61BG/" class="menu gt-a-link">
+                            精选
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1598102897506" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    深度学习优化算法总结
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-08-22 ·
+                    </time>
+                    
+                        <a href="https://laffitto.github.io/tag/znfJoDdWX/" class="post-tags">
+                            # 部分转载
+                        </a>
+                    
+                        <a href="https://laffitto.github.io/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>基本上是转载了，别人写的很不错，回顾一遍的同时，明白了一点架构，自己也正好拿来应付一下一门比较水的课程的报告😱</p>
 <!-- more -->
 <p>在刚开始研究深度学习的时候，学习过许多的优化算法，但是当时仅仅停留在理论了解的部分。同样，在后面进行深度学习程序的测试时，由于较为高度集成的编程环境（例如tensorflow，pytorch等），很多优化算法的部分仅仅停留在用一句简短的命令直接调用相关的优化算法，更多的时候只是无脑的设置为Adam，但对其选择原因和更深层的原理理解都不知不觉进行了忽略。总体来说，就是理论学习和实践环节由于工具的原因出现了较大的脱节，此次正好借助这门课的机会，重新回顾一遍深度学习中常用的优化算法，结合自己之前的笔记和网络上的相关资料对这块重新进行温习总结。</p>
 <p>这里引用一则网络上的类比，深度学习的日常就像是炼丹的过程，药材即是数据，各式的炉子即是模型，而火候等就像是类似优化算法一类的变量。因此，优化算法对于整体模型训练的效果是至关重要的。而这其中的优化算法最先想到的应该是SGD（stochastic gradient descent），接着可以大致看成在此基础上渐渐加入一些其他成分，最终构成多种多样的优化算法。大致的发展流程大概是SGD -&gt; SGDM -&gt; NAG -&gt;AdaGrad -&gt; AdaDelta -&gt; Adam -&gt; Nadam 。</p>
@@ -192,484 +307,97 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p><a href="https://arxiv.org/abs/1712.07628">Improving Generalization Performance by Switching from Adam to SGD</a></p>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[开源]]></title>
-        <id>https://laffitto.github.io/post/kai-yuan/</id>
-        <link href="https://laffitto.github.io/post/kai-yuan/">
-        </link>
-        <updated>2020-08-16T10:53:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>对待开源的态度也能反映一些对待生活的态度🤔</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>对待开源的态度也能反映一些对待生活的态度🤔</p>
-<!-- more -->
-<p>看到阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2020/08/weekly-issue-120.html">周报</a>，他表达了一些自己对于开源的看法。<a href="https://www.redhat.com/zh/topics/open-source/what-is-open-source">开源</a>实际是一个很新的词汇，至少它是诞生于计算机发展之后的，从最开始大家熟悉的 nuix 系统开始，到后面百花齐放的各种 linux 变体，开源使得它们百花齐放而又各有各的特色。同样，我们也要感谢 Google 对 Android 源码的开源，即便 Google 自己被拦在巨大的城墙之外，城墙内的手机厂商也能通过这一开源项目构建出各种自己且符合国人习惯的「OS」。与睾贵的苹果公司不同，Android 代表的更多的是一种自由，一种开放，纵然吹捧 ios 的万般丝滑，多么多么的智能，但现在的我觉得这是一种态度的选择，一种开源的创新和闭源的豢养之间的选择。纵然之后可能会拥抱 ios，那是的我可能会变得比现在更保守了。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200816194014.webp" alt="linux" loading="lazy"></p>
-<p>同样还有一点，似乎只有在计算机领域才是崇尚「开源」的，总是觉得这是一件很神奇的事情。当然在这里指的「开源」意义会更广一些，可以把它理解为<strong>行业知识的共享</strong>。在所有行业都恨不得把自己那点东西藏着掖着，不让外人知道的时候，程序员社区居然可以将重要的东西共享开源出来。即便当时他们花费了大量的时间精力去研究这这些工作，但是当他们共享出来后却没有感到后悔，世界上的各种编程语言，各种代码库，在开源的助力下，基本都在不断变得更好更易用。这确实是开源的魅力，它让从事相关行业的人自觉的注意，自觉的奉献自己的一份力，这股合力进而让事情变得更美好。尽管大家都水平良莠不齐，但实际都朝着更好的目标望去，且不要求回报，做到真正的「用爱发电」。这可能也是各位企业家最想看到的结果，但是这种行为却自发形成了，实在是有趣。这个行业从诞生之初就是一个崇尚「自由」的职业，虽然现在由于各种商业政治原因变得愈加封闭，但是其魅力仍然让人着迷。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200816194038.png" alt="开源软件社区froid" loading="lazy"></p>
-<p>说了这么多，对待开源的态度，也像是自己对待世界的态度，你是会沉醉在别人给你的温暖中，但是却失去选择的权利温顺而舒服的活下去，还是会将选择权掌握在自己手中，但是路途却可能艰辛苦涩。这是我们需要思考的问题，或许你想找到一个合适的平衡点，但那种难度需要大量的阅历和知识才可以克服。这样想想，也许有些「强迫症」的牛人之所以成功，他们对待所有都追求极端，免去了一些切换决策的烦恼，这样何尝又不是一种捷径？😄</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数字货币DBC]]></title>
-        <id>https://laffitto.github.io/post/shu-zi-huo-bi-dbc/</id>
-        <link href="https://laffitto.github.io/post/shu-zi-huo-bi-dbc/">
-        </link>
-        <updated>2020-08-08T13:08:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>一个关于人工智能的数字货币。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一个关于人工智能的数字货币。</p>
-<!-- more -->
-<p>最近由于算力的原因，一直在找深度学习的云平台，在多方的寻找查阅下，找到了一个叫<a href="https://www.1024gpu.top/">1024lab</a>的租用GPU算力的平台，注册时发现平台是基于数字货币DBC进行支付使用的，这让我充满了兴趣。</p>
-<p><a href="https://www.deepbrainchain.org/">DBC</a>全称为DeepBrain Chair，中文称为深脑链（听起来怪怪的）。现在具体的交易情况可以在<a href="https://www.coingecko.com/zh/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/%E6%B7%B1%E8%84%91%E9%93%BE">这里</a>或<a href="https://coinmarketcap.com/zh/currencies/deepbrain-chain/">这里</a>查到。之前虽然研究过一些数字货币，但都没有深入，自己也注册过<a href="https://token.im/">imtoken数字钱包</a>，却基本上没有用过，这次由于涉及到一些小项目，需要算力充值，也算是重新倒弄了一番。</p>
-<p>数字货币构建于区中心化的网络，依托于区块链，可以得到很好监督作用，最具代表性且被熟知的是比特币（BTC），在我需要对DBC进行充值的时候，根据<a href="https://www.1024gpu.top/howBuy?address_user=">1024lab的帮助文档</a>，发现有很多种充值方式，但其精髓都是先用实体货币兑换成比较通用的几种数字货币，例如：比特币（BTC），以太坊（ETH），泰达币（USDT）等，而其中BTC是最为通用的（不愧是老大）。实际上这些平台就提供了一个实体兑换数字货币的担保，尽可能减小跑路的风险。</p>
-<p>我在浏览之后，选择了<a href="https://www.huobi.me/en-us/">火币网</a>这个平台（也是因为很早之前就听说过）。在一系列的注册后，映入眼帘的是类似于股票交易的界面，在探索了各个板块后，真的基本上和股票的交易系统有很高的相似性（或者说港股/美股实际更准确）。各种数字货币，对应的即是各种股票，而像比特币，以太坊这种通用型，更像是美元，港币，因此你在兑换它们的时候是有一些汇率差的。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-225412_Huobi%20Pro.jpg" alt="火币网主界面" loading="lazy"></p>
-<p>抱着好奇的心态，我用支付宝买了100元的比特币，实际支付方式之多，速度之快，操作之便捷让我大开眼界。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-230525_Huobi%20Pro.jpg" alt="多种支付方式" loading="lazy"></p>
-<p>买完后在我的比特币钱包中便有了对应的数额，这时便可以用比特币进行DBC的交易。这个界面，委托，条件单真的和股市没太大区别🤣，选定交易数量啥之后可以成交。不过也有一些区别，我从网上找了几条（此处仅对应火币网）：</p>
-<ol>
-<li>交易时间：7*24小时全年无休市。</li>
-<li>T+0：股票是T+1交易，即当天买入股票，下一个交易日才可卖出。而比特币是T+0交易，当天买入当天即可卖出。</li>
-<li>无涨跌停： 比特币交易无涨跌停限制，股票有涨跌停限制，例如：5月28日比特币单日涨幅超20%。</li>
-<li>交易单位：最小可买0.0001BTC（约0.6元），没有股票最少买一手（100股）的买入限制。</li>
-<li>提币无时间限制：随时提币提现，资金流动性高。<br>
-看完后觉得666，就是一个强化版的股票交易市场，很好奇服务器维护啥的在啥时候进行。😅<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-224748_Huobi%20Pro.jpg" alt="购买其他货币界面" loading="lazy"></li>
-</ol>
-<p>当然，我也可以把买到的比特币转到更其他的数字钱包（例如imtoken），在“资产”界面，点击“提币”，输入对应的钱包地址，转出即可。DBC转到1024lab平台也是相同的操作，只要知道钱包的地址就可以了，真的很方便。不过我觉得之前没有接触过这些概念的人难免是会一头雾水的😵。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed@latest/Screenshot_20200808-231547_Huobi%20Pro.jpg" alt="转到其他数字钱包" loading="lazy"></p>
-<p>在我个人看来，现在数字货币并没有被广泛的使用，大家对于数字货币仅仅是知道其名字而不太了解的情况下，究其原因还是其依附于区块链，去中心化。没有任何国家会赞同自己的货币可以随意流通，那样运行会受到巨大的打击。国家也难以进行控制。然而我相信，历史总是会向前的，这个东西在未来必然会渐渐发展起来。<strong>这更像是一种契约，一种想要战胜挑战垄断建立平等的契约</strong>。现在的社会与企业追求利益至上，我又想起了以前的一个都市传说：用水作为燃料的汽车早就已经被发明出来了，让利益的驱动无限制的将这种革新技术扼杀与封锁，终究将其归为妄想。而数字货币之于未来，必会蓬勃发展。商业政治首脑去只接受它只是时间上的问题，或者只是在等待能够重新构建他们的获利体系罢了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3种用TensorFlow 2.0构建Keras模型的方法]]></title>
-        <id>https://laffitto.github.io/post/3-chong-yong-tensorflow-20-gou-jian-keras-mo-xing-de-fang-fa/</id>
-        <link href="https://laffitto.github.io/post/3-chong-yong-tensorflow-20-gou-jian-keras-mo-xing-de-fang-fa/">
-        </link>
-        <updated>2020-08-01T13:35:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>这三种方法分别是序列模型，函数模型，子类化模型。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>这三种方法分别是序列模型，函数模型，子类化模型。</p>
-<!-- more -->
-<p>在回忆tensorflow构建深度模型的代码时，发现Keras有许多种构建模型的方法，这里查阅资料稍作整理。主要参考的是<a href="https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/">这篇</a>，里面有这篇文章中的很多完整代码。<br>
-模型整体分类如下：<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231528.png" alt="" loading="lazy"></p>
-<h2 id="序列模型sequential-api">序列模型（Sequential API）</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231634.png" alt="Sequential model" loading="lazy"><br>
-这种模型主要是一层一层的构建，它是最简单的方法，就如同CONV--&gt;Batch Normalization--&gt;ReLU--&gt;POOLING。模型中没有分支，单输入，单输出。</p>
-<p>通常比较容易就可以用Sequential API构建的模型有：</p>
-<ul>
-<li>LeNet</li>
-<li>AlexNet</li>
-<li>VGGNet</li>
-</ul>
-<p>下面是Sequential model的一个简单例子：</p>
-<pre><code class="language-python">def shallownet_sequential(width, height, depth, classes):
-	# initialize the model along with the input shape to be
-	# &quot;channels last&quot; ordering
-	model = Sequential()
-	inputShape = (height, width, depth)
-	# define the first (and only) CONV =&gt; RELU layer
-	model.add(Conv2D(32, (3, 3), padding=&quot;same&quot;,
-		input_shape=inputShape))
-	model.add(Activation(&quot;relu&quot;))
-	# softmax classifier
-	model.add(Flatten())
-	model.add(Dense(classes))
-	model.add(Activation(&quot;softmax&quot;))
-	# return the constructed network architecture
-	return model
-</code></pre>
-<p>在Keras中只要模型是Sequential类，那就是使用了序列模型。后面用model.add的形式加入其他层。</p>
-<h2 id="函数模型functional-api">函数模型（Functional API）</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231737.png" alt="function model" loading="lazy"><br>
-使用函数模型有以下优点：</p>
-<ul>
-<li>可以构建多输入多输出模型</li>
-<li>可以轻易的构建分支结构（如Inception block, ResNet block）</li>
-<li>可以轻易共享架构内部的层</li>
-</ul>
-<p>通常比较容易就可以用Function API构建的模型（包含层间的分支）有：</p>
-<ul>
-<li>ResNet</li>
-<li>GoogLeNet/Inception</li>
-<li>Xception</li>
-<li>SqueezeNet</li>
-<li>DenseNet</li>
-</ul>
-<p>此处看一下原文中的例子MiniGoogLeNet：<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231856.png" alt="MiniGoogLeNet" loading="lazy"><br>
-看起来很复杂，但是模块化后显得十分清晰，代码如下：</p>
-<pre><code class="language-python">def minigooglenet_functional(width, height, depth, classes):
-	def conv_module(x, K, kX, kY, stride, chanDim, padding=&quot;same&quot;):
-		# define a CONV =&gt; BN =&gt; RELU pattern
-		x = Conv2D(K, (kX, kY), strides=stride, padding=padding)(x)
-		x = BatchNormalization(axis=chanDim)(x)
-		x = Activation(&quot;relu&quot;)(x)
-		# return the block
-		return x
 
-    def inception_module(x, numK1x1, numK3x3, chanDim):
-        # define two CONV modules, then concatenate across the
-        # channel dimension
-        conv_1x1 = conv_module(x, numK1x1, 1, 1, (1, 1), chanDim)
-        conv_3x3 = conv_module(x, numK3x3, 3, 3, (1, 1), chanDim)
-        x = concatenate([conv_1x1, conv_3x3], axis=chanDim)
-        # return the block
-        return x
+                </div>
+            </article>
+        </div>
 
-    def downsample_module(x, K, chanDim):
-		# define the CONV module and POOL, then concatenate
-		# across the channel dimensions
-	    conv_3x3 = conv_module(x, K, 3, 3, (2, 2), chanDim,
-			padding=&quot;valid&quot;)
-		pool = MaxPooling2D((3, 3), strides=(2, 2))(x)
-		x = concatenate([conv_3x3, pool], axis=chanDim)
-		# return the block
-		return x
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://laffitto.github.io/post/kai-yuan/" class="post-title gt-a-link">
+                    开源
+                </a>
+            </div>
+        
 
-    
-	# initialize the input shape to be &quot;channels last&quot; and the
-	# channels dimension itself
-	inputShape = (height, width, depth)
-	chanDim = -1
-	# define the model input and first CONV module
-	inputs = Input(shape=inputShape)
-	x = conv_module(inputs, 96, 3, 3, (1, 1), chanDim)
-	# two Inception modules followed by a downsample module
-	x = inception_module(x, 32, 32, chanDim)
-	x = inception_module(x, 32, 48, chanDim)
-	x = downsample_module(x, 80, chanDim)
-	# four Inception modules followed by a downsample module
-	x = inception_module(x, 112, 48, chanDim)
-	x = inception_module(x, 96, 64, chanDim)
-	x = inception_module(x, 80, 80, chanDim)
-	x = inception_module(x, 48, 96, chanDim)
-	x = downsample_module(x, 96, chanDim)
-	# two Inception modules followed by global POOL and dropout
-	x = inception_module(x, 176, 160, chanDim)
-	x = inception_module(x, 176, 160, chanDim)
-	x = AveragePooling2D((7, 7))(x)
-	x = Dropout(0.5)(x)
-	# softmax classifier
-	x = Flatten()(x)
-	x = Dense(classes)(x)
-	x = Activation(&quot;softmax&quot;)(x)
-	# create the model
-	model = Model(inputs, x, name=&quot;minigooglenet&quot;)
-	# return the constructed network architecture
-	return model
-</code></pre>
-<p>结合图片一看，一目了然。</p>
-<h2 id="子类化模型model-subclassing">子类化模型（Model subclassing）</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801232226.png" alt="Model subclassing" loading="lazy"><br>
-这种方式的定义在tensorflow1.x版本中不太常见，不过熟悉pytorch的肯定对这种定义方法烂熟于胸，因为pytorch基本都是根据这个方法构建模型的。即<strong>面向对象编程的思想（object-oriented programming）</strong>。</p>
-<p>实际这种方法要比上面两种麻烦许多，但是还是有优点，这里引用原文解释：</p>
-<blockquote>
-<p>Exotic architectures or custom layer/model implementations, <strong>especially those utilized by researchers</strong>, can be extremely challenging, if not impossible, to implement using the standard Sequential or Functional APIs.<br>
-Instead, researchers wish to have control over every nuance of the network and training process — and that’s exactly what model subclassing provides them.</p>
-</blockquote>
-<p>精髓即是：研究人员可以控制网络和培训过程的每个细微差别。</p>
-<p>这里看一下VGGNet模型的表达方法：</p>
-<pre><code class="language-python">class MiniVGGNetModel(Model):
-	def __init__(self, classes, chanDim=-1):
-		# call the parent constructor
-		super(MiniVGGNetModel, self).__init__()
-		# initialize the layers in the first (CONV =&gt; RELU) * 2 =&gt; POOL
-		# layer set
-		self.conv1A = Conv2D(32, (3, 3), padding=&quot;same&quot;)
-		self.act1A = Activation(&quot;relu&quot;)
-		self.bn1A = BatchNormalization(axis=chanDim)
-		self.conv1B = Conv2D(32, (3, 3), padding=&quot;same&quot;)
-		self.act1B = Activation(&quot;relu&quot;)
-		self.bn1B = BatchNormalization(axis=chanDim)
-		self.pool1 = MaxPooling2D(pool_size=(2, 2))
-		# initialize the layers in the second (CONV =&gt; RELU) * 2 =&gt; POOL
-		# layer set
-		self.conv2A = Conv2D(32, (3, 3), padding=&quot;same&quot;)
-		self.act2A = Activation(&quot;relu&quot;)
-		self.bn2A = BatchNormalization(axis=chanDim)
-		self.conv2B = Conv2D(32, (3, 3), padding=&quot;same&quot;)
-		self.act2B = Activation(&quot;relu&quot;)
-		self.bn2B = BatchNormalization(axis=chanDim)
-		self.pool2 = MaxPooling2D(pool_size=(2, 2))
-		# initialize the layers in our fully-connected layer set
-		self.flatten = Flatten()
-		self.dense3 = Dense(512)
-		self.act3 = Activation(&quot;relu&quot;)
-		self.bn3 = BatchNormalization()
-		self.do3 = Dropout(0.5)
-		# initialize the layers in the softmax classifier layer set
-		self.dense4 = Dense(classes)
-		self.softmax = Activation(&quot;softmax&quot;)
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
 
 
-    def call(self, inputs):
-		# build the first (CONV =&gt; RELU) * 2 =&gt; POOL layer set
-		x = self.conv1A(inputs)
-		x = self.act1A(x)
-		x = self.bn1A(x)
-		x = self.conv1B(x)
-		x = self.act1B(x)
-		x = self.bn1B(x)
-		x = self.pool1(x)
-		# build the second (CONV =&gt; RELU) * 2 =&gt; POOL layer set
-		x = self.conv2A(x)
-		x = self.act2A(x)
-		x = self.bn2A(x)
-		x = self.conv2B(x)
-		x = self.act2B(x)
-		x = self.bn2B(x)
-		x = self.pool2(x)
-		# build our FC layer set
-		x = self.flatten(x)
-		x = self.dense3(x)
-		x = self.act3(x)
-		x = self.bn3(x)
-		x = self.do3(x)
-		# build the softmax classifier
-		x = self.dense4(x)
-		x = self.softmax(x)
-		# return the constructed model
-		return x
-</code></pre>
-<p>可能很难理解为什么要这样，我也说不明白，这就是面向对象编程的一种思想，可以说是换了一种看待问题的方式。虽然它本质上是可以序列模型，但是仍然可以实现复杂的旁路结构，和多输入多输出的情况。</p>
-<p>以后我对这块有了更深入的思考会加上的（挖坑）🤣。</p>
-<p>以上就是3种用TensorFlow 2.0构建Keras模型的方法，可以说是各有千秋，但是刚接触的人可能就会疑惑为什么构建模型的形式千奇百怪，一会官方文档用的是序列模型，某某教程用的又是函数模型甚至子类化模型。希望看了这个后，能对大家有所帮助。也更能进一步思考。</p>
-<p>参考：</p>
-<ol>
-<li><a href="https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/">3 ways to create a Keras model with TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/58825020">TensorFlow2.0教程-Keras 快速入门</a></li>
-<li><a href="https://deeplizard.com/learn/video/k4jY9L8H89U">Build PyTorch CNN - Object Oriented Neural Networks</a></li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[智商在线的反派们——漫画「夏日重现」]]></title>
-        <id>https://laffitto.github.io/post/zhi-shang-zai-xian-de-fan-pai-men-man-hua-xia-ri-chong-xian/</id>
-        <link href="https://laffitto.github.io/post/zhi-shang-zai-xian-de-fan-pai-men-man-hua-xia-ri-chong-xian/">
-        </link>
-        <updated>2020-07-26T14:56:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>反派也应该有脑子啦！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>反派也应该有脑子啦！</p>
-<!-- more -->
-<p>近期又看到一部非常有意思的漫画——<a href="https://zh.moegirl.org.cn/index.php?title=%E5%A4%8F%E6%97%A5%E9%87%8D%E7%8E%B0&amp;mobileaction=toggle_view_desktop">夏日重现</a>。作者田中靖规。<br>
-(PS:萌娘百科真是一个好百科😚)</p>
-<p>不得不说这是很难得的反派智力在线的作品。主要讲述了主角遇到可以复制他人的影子人。为了能够拯救小岛上的居民而展现的斗智斗勇的过程，这其中蕴含着许多轮回的过程，即存在着主角团大量被团灭，再去绝望中找寻生机的过程。在一次一次的轮转中，条件变得越来越苛刻，同时boss影子人在应对的主角团时也采取了对应不同的行动。</p>
-<p>于我而言，这部作品的吸引之处在于以下2点。</p>
-<ol>
-<li>
-<p>独特的世界架构导致可以任意的画死主角。<br>
-这是这部作品精妙的地方。由于主角的特殊性，所以能够穿越回溯一定的时间。加上boss团的强大实力，初期主角一行人经常动不动全体身亡。这从某种程度上来说，真的是看着很爽。很多漫画的主角都有个强大的主角光环，尤其是各种民工漫，无论与敌人差距悬殊多么大。到最后各种嘴炮，各种开挂，最后总能莫名其妙的战胜对手。不知不觉主角的战力后期就会溢出。这在龙珠海贼王的漫画上都有很明显的体现。因此主角的死亡与失败实在是一件难得的事情。<br>
-下面分享几张主角疯狂嗝屁图：<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200727231144.png" alt="嗝屁1" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200727231212.png" alt="嗝屁2" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200727231235.png" alt="嗝屁3" loading="lazy"><br>
-真是太惨了🤣，虽然会复活但还是好惨🤣！</p>
-</li>
-<li>
-<p>反派的智商在线。<br>
-这是非常非常重要的事情。特别是智斗与邪道漫画中。反派的强大才能从侧面衬托出主角的冷静与果断。但是很多漫画都是虎头蛇尾。一开始反派都很有魅力，但后来随着主角的变强，主角反派的智力是直线下降。你甚至有些怀疑对方一开始就使出了王炸，后面直接变瘪三。毕竟剧本写的好，画画得好的漫画家还是很少的。</p>
-</li>
-</ol>
-<p>现在作品的剧情进入到一个白热化的阶段。主角也渐渐被加上了各种buff。然而战力还是没有很严重的倾向。这既是精彩之处，也是可贵之处。从某种程度上来说小说，电视剧，漫画，他们都是有着可能烂尾的特点。而作为食用者的我们，或是重视营养或是喜欢不同的口感，这些也都不太一样吧。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[医学图像处理领域重要的期刊与会议]]></title>
-        <id>https://laffitto.github.io/post/yi-xue-tu-xiang-chu-li-ling-yu-chong-yao-de-qi-kan-yu-hui-yi/</id>
-        <link href="https://laffitto.github.io/post/yi-xue-tu-xiang-chu-li-ling-yu-chong-yao-de-qi-kan-yu-hui-yi/">
-        </link>
-        <updated>2020-07-19T09:22:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>根据网上其他人的经验总结的一些医学图像处理领域的期刊和会议😘</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>根据网上其他人的经验总结的一些医学图像处理领域的期刊和会议😘</p>
-<!-- more -->
-<h1 id="期刊">期刊</h1>
-<ol>
-<li>
-<p><a href="https://www.journals.elsevier.com/medical-image-analysis/">Medical Image Analysis</a><br>
-简称MIA，影响因子11.1，有RSS订阅，推荐用inoreader进行订阅<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719181424.jpg" alt="MIA" loading="lazy"></p>
-</li>
-<li>
-<p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42">IEEE Transactions on Medical Imaging</a><br>
-简称TMI，影响因子6.685，同样有RSS订阅<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719181659.png" alt="TMI" loading="lazy"></p>
-</li>
-<li>
-<p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10">IEEE Transactions on Biomedical Engineering</a><br>
-简称TBME，影响因子4.42，有RSS订阅，相较于上面两个期刊稍微差一点<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719182033.png" alt="TBME" loading="lazy"></p>
-</li>
-</ol>
-<p>配合inoreader可以获得很好的论文筛选体验（RSS牛皮！🤤）<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719203301.png" alt="inoreader" loading="lazy"></p>
-<h1 id="会议">会议</h1>
-<ol>
-<li>
-<p><a href="http://www.miccai.org/events/conference-history/">MICCAI: International Conference on Medical Image Computing and Computer Assisted Intervention</a><br>
-每年9~10月，2020年会议<a href="https://miccai2020.org/en/">在这里</a><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719182442.png" alt="MICCAI" loading="lazy"></p>
-</li>
-<li>
-<p><a href="https://dblp.uni-trier.de/search?q=IPMI">IPMI: Information Processing in Medical Imaging</a><br>
-图像的顶会，2年一届，去年见<a href="https://ipmi2019.cse.ust.hk/">这里</a></p>
-</li>
-<li>
-<p><a href="http://2020.biomedicalimaging.org/">ISBI: IEEE International Symposium on Biomedical Imaging</a><br>
-每年4月，2021年<a href="https://biomedicalimaging.org/2021/">在这里</a></p>
-</li>
-<li>
-<p><a href="https://spie.org/conferences-and-exhibitions/medical-imaging/conferences?SSO=1">SPIE Medical Imaging</a><br>
-每年2月，似乎还行？</p>
-</li>
-<li>
-<p><a href="https://www.midl.io/">MIDL: Medical Imaging with Deep Learning</a><br>
-每年下半年举行，似乎是个年轻的会议，只有三届，2020年6~9月正在进行。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719202058.png" alt="MIDL" loading="lazy"></p>
-</li>
-</ol>
-<h1 id="医学比赛网站">医学比赛网站</h1>
-<p><a href="https://grand-challenge.org/challenges/">Grand Challenge</a><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719202542.png" alt="challenge" loading="lazy"><br>
-有点厉害，不过我这种小辣鸡应该是无缘了。🤣</p>
-<p>相关参考：</p>
-<ol>
-<li><a href="https://zhuanlan.zhihu.com/p/70225750?utm_source=com.yinxiang">JunMa的知乎回答</a></li>
-<li><a href="https://www.jianshu.com/p/823f96472b62">思思_Z的简书回答</a></li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[好久不见，朋友们]]></title>
-        <id>https://laffitto.github.io/post/hao-jiu-bu-jian-peng-you-men/</id>
-        <link href="https://laffitto.github.io/post/hao-jiu-bu-jian-peng-you-men/">
-        </link>
-        <updated>2020-07-11T16:16:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>与三位好朋友的重聚</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>与三位好朋友的重聚</p>
-<!-- more -->
-<p>周六久违的和朋友一起出去聚了一次。记得上一次和这几位朋友一起聚在一起还是19年年初的时候呢。那时生活很平静，我们都是处于大四的末阶段。每个人的人生也充满了不确定。当我翻回那天的日记时，正是考研成绩公布的后一天。那时的我看见了不理想的成绩，并不知道自己该走向哪里。大家在一起的时候，或多或少的也表达出了对未来的一些惆怅与感慨。我们吃完了火锅，之后又去酒吧里喝了点酒。回想着过去的往事，生活继续平静向前。</p>
-<p>昨天的聚餐，感觉往日的伙伴，似乎样貌上并没有多大的变化。章鱼在这一年间去了美国留学，她是极幸运的，2020年突如其来的新冠肺炎并没有让她经历太大的波折，至少现在顺利的回国，并且完成了学业。虽然她本人是对没能参加本科研究生的毕业典礼有些许遗憾，但不得不说，这已经是最且最好的结果了。小徐开始了工作实习，她也算是半个社会人了，平常在群里吐槽吐槽工作，饭局上分享分享她朋友的情感，感觉也是很快活。皇上通过艰难的调剂，也算是奠定了未来三年研究生的旅途，暂时不用太担心其他。自己通过去年幸运的调剂，现在已经要步入研二，还有很多东西与未来要去想。我们开始聊起了八卦，我们开始聊起了情感。感觉我们已经不像以前那样思考，然而依旧是笑脸对待。</p>
-<p>我想他们应该是我最好的朋友了。至少我们仍然有联系，有些东西之间无论是多么的刻骨铭心，时间的距离会让一切感情慢慢变淡。我很开心，一直能够同他们在群里分享生活，吹水聊天。他们三个应该是在网络上和联系最密切的人了。有时候一并走路，我会刻意走在最后，微笑着的看着他们三个背影，不知道为什么，感觉可以体会到平凡与快乐。</p>
-<p>虽然半数的我们已经步入了社会。但我还是希望我们的友谊不会断线，应该不会，因为我发现有一个有趣群比单独之间的聊天会好很多。即便我们会步入不同的人生，即便我们之间可能不会有更深的交集。但是我们是朋友，会将回忆珍藏并记录，我们是学生时代好朋友，我相信也会是一生中的好朋友。朋友们，请多指教😴。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[技术敬畏]]></title>
-        <id>https://laffitto.github.io/post/ji-zhu-jing-wei/</id>
-        <link href="https://laffitto.github.io/post/ji-zhu-jing-wei/">
-        </link>
-        <updated>2020-07-05T14:04:35.000Z</updated>
-        <summary type="html"><![CDATA[<p>技术强大，心生向恶</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>技术强大，心生向恶</p>
-<!-- more -->
-<p>自己近些日子就在研究深度学习的文章。深度学习神经网络在近些年被炒得火热。无论什么领域，都试图想在这个方法上获得重大的突破。然而事实也的确如此，这个技术的确让人们在图像识别和时间序列预测上都获得了巨大的成功。当人们发现通过喂养数据标签，冰冷的机器可以准确的断定图像是苹果还是梨子时，世界沸腾了。是一个巨大的进步，特别是众多公司通过手机这一机器获得了海量的数据后，这些技术对于他们用于挖掘人们背后的喜好和勾勒人物画像并有了巨大的意义。数据就是金钱，这句话变得愈加真实。</p>
-<p>然而我们真的被技术所恩惠了吗？或者说得到技术恩惠的真正是我们吗？可以说正常的百姓是无法从中获得较大的收益的，我们无非也就是看见高铁可以人脸识别，支付宝可以刷脸支付。我们感叹这微小的便利，实则在现代生活毫无戒备的在街上裸奔。我们没有隐私，不会去细看一个又一个密密麻麻的条款，也不会去深究这个应用又取得了某项权限。技术让我们暴露的一览无余，在满街摄像头的保护下，人人安居乐业，分内守己。实际上我们不得不惊叹，变化就在这几年之内，温水煮青娃后，我们变得更加像韭菜了。</p>
-<p>科技公司的恶，纵容于更上层的建筑，它们是否有那种责任去尊重保护那些数据？答案是否定的，至少在商业化于利益趋向的面前大多数的中国公司是无法做到的，大环境的推动依然让各种从业者狂热，在所有人都在泥沼中厮杀时已然做不到不去同流合污。技术固然伟大，然而她应该更多的是去造福人类，而不是去被利用去视奸人类，至少各个国家的政府都应该找到一个合适的中间点。但如何去寻找这个中间点，每个国家因为其欲望和体制，又会大不相同了。<br>
-<img src="https://laffitto.github.io//post-images/1594040118494.jpg" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[詹詹碎言 #3]]></title>
-        <id>https://laffitto.github.io/post/zhan-zhan-sui-yan-3/</id>
-        <link href="https://laffitto.github.io/post/zhan-zhan-sui-yan-3/">
-        </link>
-        <updated>2020-06-27T14:44:29.000Z</updated>
-        <summary type="html"><![CDATA[<p>——高考顶替别人上大学的新闻，闹得沸沸扬扬的，真的有那么重要吗？<br>
-——对，真的有那么重要。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>——高考顶替别人上大学的新闻，闹得沸沸扬扬的，真的有那么重要吗？<br>
-——对，真的有那么重要。</p>
-<!-- more -->
-<p>近日从山东省报出高考顶替的事件开始发生了越来越多高考顶替事件的查处与出现。以苟晶为代表，她生涯中的两次高考，居然都被顶替。甚至她第2年的高考是否成功都是一个让人无法回答的问题。然而此时社会各界的焦点都聚焦到这件事情上会发生什么转机吗？</p>
-<p>替代事件可能是最恶劣的事件之一了，虽然这个时期从来就不是公平。但是我们还是希望从表面上看到相对公平的现象。小到一场考试，你找同学去代考。大到高考结束后，你直接冒名顶替代替别人去入学。这些都是恶的代表。我们可能会痛批当事人的监管不力。然而凡事都应该问一些为什么。为什么会发生这种事呢？这件事情的背后肯定不是一个简单的即时交易，而是一条繁杂的利益链。有需求就有市场。只要你有足够的门道，就能够买到任何你想都想不到的东西。</p>
-<p>这些被顶替的人大多是农村里的女性。这些人大多都被扣以懦弱无为的帽子。即便遭遇到不公，他们仍然不敢继续向前去追求他们应有的权益。即便现在社会是如此的发展。物化歧视这种东西还是在生活中随处可见。我看过这样一句话，具体的出处记不得了：</p>
-<blockquote>
-<p>未来你想生活在哪里？要么住在外国记者比较多的地方。要么住着离皇上近的地方。</p>
-</blockquote>
-<p>不得不说，这正是现在我们的苟活之道。你甚至不敢相信,大多数人遇见了恶的代表时，甚至学会了所谓的同理之心。“当时涉案的老师都已经在公众面前写了忏悔信了，他们已经知道错了。为什么你就不能体谅一下对方，思考一下对方的难处，不做的这么绝呢？”病态思想的人不在少数。他们自以为博学，自以为想的比别人多，进而发表出一些让人啼笑皆非的观点，让傻逼之间产生共鸣。</p>
-<p>我不想就这件事情，单纯的去想这件事。如果你有一天不幸变成了被害者，受到了不好的事情是害人来向你道歉，你究竟应该怎么做？于我而言，操你妈的，我是相信以牙还牙这件事的。你捅了我一刀，你说对不起。我也可以礼貌地捅你一刀说句没关系。有时相互的恶并不会带来更好的结果，但这足以让纵容对面的人也尝到苦头。我们总是抱怨这个世界的噪音太多，进而渐渐蒙蔽的双眼，不去看那些黑暗的事实，渴望着一切无忧无虑的生活。然而这终究不是沦落到自己头上。最后大声指责的是你，歇斯底里的也是你。</p>
-<p>最后分享给大家一则有趣的截图，自己体会吧。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed//20200627225448.jpg" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Samsung watch 安装 tpk 文件教程]]></title>
-        <id>https://laffitto.github.io/post/samsung-watch-an-zhuang-tpk-wen-jian-jiao-cheng/</id>
-        <link href="https://laffitto.github.io/post/samsung-watch-an-zhuang-tpk-wen-jian-jiao-cheng/">
-        </link>
-        <updated>2020-06-19T14:24:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>一个给samsung watch 安装检测血压软件的小教程</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一个给samsung watch 安装检测血压软件的小教程</p>
-<!-- more -->
-<p>偶然看见三星还未推出的<a href="https://news.samsung.com/global/samsung-announces-blood-pressure-monitoring-application-for-galaxy-watch-devices">手表血压测量软件</a>，且近日已经在韩国本土<a href="https://news.samsung.com/global/samsung-launches-the-samsung-health-monitor-application-with-blood-pressure-measurement">正式推出</a>，觉得十分有趣。但是自己的手表是国行的，推送过来估计都猴年马月了，抱着折腾致死的心态，一番搜索后终于安装成功，包含手表端的tpk软件包与手机端的apk软件包。有网上能力的建议直接看<a href="https://forum.xda-developers.com/showpost.php?p=82502465&amp;postcount=208">原xda网站</a>和其配套的<a href="https://www.youtube.com/watch?v=bTni4d832XE">视频教程</a>。这里大致写一下中文教程。</p>
-<p><strong>注意</strong>，搞机有风险，下手请谨慎！<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620002403.jpg" alt="三星心率软件" loading="lazy"></p>
-<h2 id="准备所需文件">准备所需文件</h2>
-<p>首先需要准备四个文件，分别为tizen studio，sdb工具，手机端apk，手表端tpk。</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200619230718.png" alt="image-20200619230703819" loading="lazy"></figure>
-<p>下载地址如下：</p>
-<p><a href="https://developer.tizen.org/development/tizen-studio/download">tizen studio</a> 选择<strong>Tizen Studio 3.7 with IDE installer</strong>，608M</p>
-<p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013509&amp;d=1588841964">sdb工具</a></p>
-<p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013507&amp;d=1588841964">手表端tpk文件</a></p>
-<p><a href="https://drive.google.com/u/0/uc?id=1w1flxQu7sZp7vtOdAGbxZ3SPg9sHPgBW">手机端apk文件</a></p>
-<p>分享一下sdb+tpk+apk的<a href="https://laffitto.lanzous.com/iVAzZduf5gj">蓝奏云链接</a></p>
-<h2 id="tpk文件安装教程以三星血压检测软件为例">tpk文件安装教程（以三星血压检测软件为例）</h2>
-<p>这里手表系统调成的是英文界面，注意对照。</p>
-<ol>
-<li>
-<p>打开debugging：进入setting--about watch，翻到最下面，将debugging打开。</p>
-</li>
-<li>
-<p>打开developer mode：进入setting--about watch--software，连续点击software version（大约7次），可以看见 developer mode turned on 的提示。</p>
-</li>
-<li>
-<p>手表连接WiFi网络（注意此时要与电脑连接到同一个WiFi），<strong>关闭蓝牙连接</strong>。</p>
-</li>
-<li>
-<p>解压sdb文件与tpk文件，安装tizen studio软件。</p>
-</li>
-<li>
-<p>连接手表与电脑：打开Tizen Studio，在顶部会看到一个写有“No target”的框，点击下拉菜单，选择“Launch Remote Device Manager”，点击“Scan”，你会找到你的手表。点击connect进行连接。</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001941.png" alt="image-20200619233406983" loading="lazy"></figure>
-</li>
-</ol>
-<p>如果无法扫描到你的手表，可以手动添加IP地址，ip地址获取方法：手表端setting--connections--WLAN--WLAN networks--自己连接的wifi名称--IP address，这里我自己的是192.168.0.102，填上点击add即可。</p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001934.png" alt="image-20200619234410284" loading="lazy"></figure>
-<p>如果连接不成功，尝试<strong>重新启动手表连接</strong>，<strong>多手动添加几次</strong>等操作基本可以解决问题。</p>
-<ol start="6">
-<li>
-<p>安装tpk软件：将tpk软件复制到sdb2260\sdb\data\tools文件目录下，点击ansicon.exe文件，输入命令：</p>
-<pre><code class="language-shell">sdb install bp.tpk
-</code></pre>
-<p>即可安装成功，手表上也可以看见对应的软件。</p>
-</li>
-</ol>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001925.png" alt="image-20200620000418691" loading="lazy"></figure>
-<ol start="7">
-<li>配套安装手机端的apk即可使用。</li>
-</ol>
-<hr>
-<h2 id="附不用tizen-studio安装的方法">附：不用tizen studio安装的方法</h2>
-<p>网上找了找，似乎不用tizen studio也可以直接安装，并且我这边成功运行，分享一下。</p>
-<p>上面1到4步相同，接着直接将tpk软件复制到sdb2260\sdb\data\tools文件目录下，点击ansicon.exe文件，输入命令：</p>
-<pre><code class="language-shell">sdb connect 192.168.xxx.xxx
-</code></pre>
-<p>其中192.168.xxx.xxx替换成自己手表的ip地址<br>
-如下图，显示连接成功：</p>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001908.png" alt="image-20200620001720019" loading="lazy"></figure>
-<p>再次输入</p>
-<pre><code class="language-shell">sdb install bp.tpk
-</code></pre>
-<p>即可直接安装。</p>
-]]></content>
-    </entry>
-</feed>
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://laffitto.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
