@@ -6,7 +6,7 @@
 
 <title>深度学习优化算法总结 | 假正经者       ——詹詹碎言</title>
 
-<link rel="shortcut icon" href="https://laffitto.top/favicon.ico?v=1598146854330">
+<link rel="shortcut icon" href="https://laffitto.top/favicon.ico?v=1598146919246">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://laffitto.top/styles/main.css">
@@ -105,7 +105,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1598146854330" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1598146919246" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -139,7 +139,7 @@
 <p>在刚开始研究深度学习的时候，学习过许多的优化算法，但是当时仅仅停留在理论了解的部分。同样，在后面进行深度学习程序的测试时，由于较为高度集成的编程环境（例如tensorflow，pytorch等），很多优化算法的部分仅仅停留在用一句简短的命令直接调用相关的优化算法，更多的时候只是无脑的设置为Adam，但对其选择原因和更深层的原理理解都不知不觉进行了忽略。总体来说，就是理论学习和实践环节由于工具的原因出现了较大的脱节，此次正好借助这门课的机会，重新回顾一遍深度学习中常用的优化算法，结合自己之前的笔记和网络上的相关资料对这块重新进行温习总结。</p>
 <p>这里引用一则网络上的类比，深度学习的日常就像是炼丹的过程，药材即是数据，各式的炉子即是模型，而火候等就像是类似优化算法一类的变量。因此，优化算法对于整体模型训练的效果是至关重要的。而这其中的优化算法最先想到的应该是SGD（stochastic gradient descent），接着可以大致看成在此基础上渐渐加入一些其他成分，最终构成多种多样的优化算法。大致的发展流程大概是SGD -&gt; SGDM -&gt; NAG -&gt;AdaGrad -&gt; AdaDelta -&gt; Adam -&gt; Nadam 。</p>
 <h2 id="优化算法总体框架">优化算法总体框架</h2>
-<p>这里先介绍一个看到总结的很好的优化算法的框架，有了这个架构再看算法不免觉得豁然开朗。</p>
+<p>这里先介绍一个看到总结的很好的优化算法的框架，有了这个架构再看算法不免觉得豁然开朗🤠。</p>
 <p>首先定义首先定义：待优化参数：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span></span></span></span> ，目标函数：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>w</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span>  ，初始学习率 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span></span></span></span>。</p>
 <p>而后，开始进行迭代优化。在每个epoch <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span> ：</p>
 <ol>
