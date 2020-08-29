@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-08-23T01:42:01.751Z</updated>
+    <updated>2020-08-29T12:32:43.726Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,69 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[github pages域名更换和vercel博客加速]]></title>
+        <id>https://laffitto.top/post/yu-ming-geng-huan-he-vercel-bo-ke-jia-su/</id>
+        <link href="https://laffitto.top/post/yu-ming-geng-huan-he-vercel-bo-ke-jia-su/">
+        </link>
+        <updated>2020-08-28T11:42:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>将自己的辣鸡博客包个皮，加个速。😚</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>将自己的辣鸡博客包个皮，加个速。😚</p>
+<!-- more -->
+<p>由于自己的博客是托管在github pages上的，所以域名一直是以github.io结尾的，访问速度也令人担忧。正好在gridea的TG群里看见有人推广域名，又研究了一点简单的CDN加速，本辣鸡就趁此机会优化一波。</p>
+<h2 id="域名购买">域名购买</h2>
+<p>域名网站选用的是群友推荐的<a href="https://www.namesilo.com/">namesilo</a>，注册后购买域名非常方便（居然支持微信和支付宝付款），不过不要贪图一些特别便宜的域名后缀，注意一下续费价格🤑（当然年年折腾天天换的除外）。</p>
+<p>这里我买了.top域名，即购买的域名名称为laffitto.top（瞬间变得有点高大上了）。</p>
+<h2 id="域名加速">域名加速</h2>
+<p>我们等一下再绑定域名，先用<a href="https://vercel.com/docs">vercel</a>对自己的静态博客加速一波。</p>
+<p>一开始需要注册账号，直接用github账号登录即可。</p>
+<p>之后可以导入项目，进入以下界面点击<strong>Continue</strong>。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214315.png" alt="" loading="lazy"></figure>
+<p>输入项目的URL，即自己的github pages页面，如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214722.png" alt="" loading="lazy"></figure>
+<p>导入过程一路默认即可：</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215304.png" alt="" loading="lazy"></figure>
+<p>自动就部署好了呢，发现vercel分配有很多地址都可以访问自己的博客。🤗</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214739.png" alt="" loading="lazy"></figure>
+<h2 id="绑定域名">绑定域名</h2>
+<p>加速完成了，但是如果用vercel提供的域名实在是太长太蛋疼，当你为了介绍自己网站结果给朋友一大段<s>字符串</s>（并不），那场景实在是太美。于是需要将刚刚买的域名绑定上去。</p>
+<p>先向你的 Github Pages 仓库添加一个CNAME文件，里面包含自己刚买的域名，如下：</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214804.png" alt="" loading="lazy"></figure>
+<p>设置完可以去Settings的github pages界面查看一下，不出意外Custom domian上名称为自己设定的域名。</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214826.png" alt="" loading="lazy"></figure>
+<p>同时回到vercel的项目界面，添加自己的域名<strong>www.laffitto.top</strong>和<strong>laffitto.top</strong>，可以得到如下类似界面：（自己的域名由于没有设定DNS，会显示如第一条的Invalid Configuration），不过慌，就差亿点点了（误）🤡。</p>
+<figure data-type="image" tabindex="7"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214842.png" alt="" loading="lazy"></figure>
+<h2 id="修改dns">修改DNS</h2>
+<p>回到之前的域名购买网站namesilo，接下来点击网站上方的<strong>Manage My Domains</strong>进入域名管理的界面。</p>
+<p>点击<strong>Options</strong>的蓝色图标，即<strong>Manage DNS of this domain</strong>：</p>
+<figure data-type="image" tabindex="8"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214901.png" alt="" loading="lazy"></figure>
+<p>这里如果有很多疑问可以参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/86961133">Namesilo DNS 域名解析教程和常见问题解决方法汇总</a></p>
+<p>添加一条A记录和一条CHAME记录。（最上面一条可以忽略）</p>
+<figure data-type="image" tabindex="9"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214916.png" alt="" loading="lazy"></figure>
+<p>A记录是根据vercel上的提示设置即可：</p>
+<figure data-type="image" tabindex="10"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215137.png" alt="" loading="lazy"></figure>
+<p>CNAME记录是将自己的域名指向另一个域名：</p>
+<p>laffitto-github-io.vercel.io----&gt; laffitto.top，主要是看vercel的域名提示。</p>
+<figure data-type="image" tabindex="11"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215112.png" alt="" loading="lazy"></figure>
+<p>等待一会让DNS生效，即可用购买的域名快速访问自己的网站啦！woh，焕然一新哦😉</p>
+<p>参考：</p>
+<ol>
+<li>
+<p><a href="https://vincentqin.tech/posts/speedup-gitpage/">🔨工具：使用vercel加速Hexo静态博客访问</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/164585697">如何拥有一个访问速度超快的个人博客？GitHub+Vercel+Gridea</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/86961133">Namesilo DNS 域名解析教程和常见问题解决方法汇总</a></p>
+</li>
+<li>
+<p><a href="https://www.zhihu.com/question/31377141">github怎么绑定自己的域名？</a></p>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[深度学习优化算法总结]]></title>
         <id>https://laffitto.top/post/shen-du-xue-xi-you-hua-suan-fa-zong-jie/</id>
@@ -598,78 +661,6 @@ Instead, researchers wish to have control over every nuance of the network and t
 <p>我不想就这件事情，单纯的去想这件事。如果你有一天不幸变成了被害者，受到了不好的事情是害人来向你道歉，你究竟应该怎么做？于我而言，操你妈的，我是相信以牙还牙这件事的。你捅了我一刀，你说对不起。我也可以礼貌地捅你一刀说句没关系。有时相互的恶并不会带来更好的结果，但这足以让纵容对面的人也尝到苦头。我们总是抱怨这个世界的噪音太多，进而渐渐蒙蔽的双眼，不去看那些黑暗的事实，渴望着一切无忧无虑的生活。然而这终究不是沦落到自己头上。最后大声指责的是你，歇斯底里的也是你。</p>
 <p>最后分享给大家一则有趣的截图，自己体会吧。<br>
 <img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed//20200627225448.jpg" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Samsung watch 安装 tpk 文件教程]]></title>
-        <id>https://laffitto.top/post/samsung-watch-an-zhuang-tpk-wen-jian-jiao-cheng/</id>
-        <link href="https://laffitto.top/post/samsung-watch-an-zhuang-tpk-wen-jian-jiao-cheng/">
-        </link>
-        <updated>2020-06-19T14:24:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>一个给samsung watch 安装检测血压软件的小教程</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一个给samsung watch 安装检测血压软件的小教程</p>
-<!-- more -->
-<p>偶然看见三星还未推出的<a href="https://news.samsung.com/global/samsung-announces-blood-pressure-monitoring-application-for-galaxy-watch-devices">手表血压测量软件</a>，且近日已经在韩国本土<a href="https://news.samsung.com/global/samsung-launches-the-samsung-health-monitor-application-with-blood-pressure-measurement">正式推出</a>，觉得十分有趣。但是自己的手表是国行的，推送过来估计都猴年马月了，抱着折腾致死的心态，一番搜索后终于安装成功，包含手表端的tpk软件包与手机端的apk软件包。有网上能力的建议直接看<a href="https://forum.xda-developers.com/showpost.php?p=82502465&amp;postcount=208">原xda网站</a>和其配套的<a href="https://www.youtube.com/watch?v=bTni4d832XE">视频教程</a>。这里大致写一下中文教程。</p>
-<p><strong>注意</strong>，搞机有风险，下手请谨慎！<br>
-<img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620002403.jpg" alt="三星心率软件" loading="lazy"></p>
-<h2 id="准备所需文件">准备所需文件</h2>
-<p>首先需要准备四个文件，分别为tizen studio，sdb工具，手机端apk，手表端tpk。</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200619230718.png" alt="image-20200619230703819" loading="lazy"></figure>
-<p>下载地址如下：</p>
-<p><a href="https://developer.tizen.org/development/tizen-studio/download">tizen studio</a> 选择<strong>Tizen Studio 3.7 with IDE installer</strong>，608M</p>
-<p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013509&amp;d=1588841964">sdb工具</a></p>
-<p><a href="https://forum.xda-developers.com/attachment.php?attachmentid=5013507&amp;d=1588841964">手表端tpk文件</a></p>
-<p><a href="https://drive.google.com/u/0/uc?id=1w1flxQu7sZp7vtOdAGbxZ3SPg9sHPgBW">手机端apk文件</a></p>
-<p>分享一下sdb+tpk+apk的<a href="https://laffitto.lanzous.com/iVAzZduf5gj">蓝奏云链接</a></p>
-<h2 id="tpk文件安装教程以三星血压检测软件为例">tpk文件安装教程（以三星血压检测软件为例）</h2>
-<p>这里手表系统调成的是英文界面，注意对照。</p>
-<ol>
-<li>
-<p>打开debugging：进入setting--about watch，翻到最下面，将debugging打开。</p>
-</li>
-<li>
-<p>打开developer mode：进入setting--about watch--software，连续点击software version（大约7次），可以看见 developer mode turned on 的提示。</p>
-</li>
-<li>
-<p>手表连接WiFi网络（注意此时要与电脑连接到同一个WiFi），<strong>关闭蓝牙连接</strong>。</p>
-</li>
-<li>
-<p>解压sdb文件与tpk文件，安装tizen studio软件。</p>
-</li>
-<li>
-<p>连接手表与电脑：打开Tizen Studio，在顶部会看到一个写有“No target”的框，点击下拉菜单，选择“Launch Remote Device Manager”，点击“Scan”，你会找到你的手表。点击connect进行连接。</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001941.png" alt="image-20200619233406983" loading="lazy"></figure>
-</li>
-</ol>
-<p>如果无法扫描到你的手表，可以手动添加IP地址，ip地址获取方法：手表端setting--connections--WLAN--WLAN networks--自己连接的wifi名称--IP address，这里我自己的是192.168.0.102，填上点击add即可。</p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001934.png" alt="image-20200619234410284" loading="lazy"></figure>
-<p>如果连接不成功，尝试<strong>重新启动手表连接</strong>，<strong>多手动添加几次</strong>等操作基本可以解决问题。</p>
-<ol start="6">
-<li>
-<p>安装tpk软件：将tpk软件复制到sdb2260\sdb\data\tools文件目录下，点击ansicon.exe文件，输入命令：</p>
-<pre><code class="language-shell">sdb install bp.tpk
-</code></pre>
-<p>即可安装成功，手表上也可以看见对应的软件。</p>
-</li>
-</ol>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001925.png" alt="image-20200620000418691" loading="lazy"></figure>
-<ol start="7">
-<li>配套安装手机端的apk即可使用。</li>
-</ol>
-<hr>
-<h2 id="附不用tizen-studio安装的方法">附：不用tizen studio安装的方法</h2>
-<p>网上找了找，似乎不用tizen studio也可以直接安装，并且我这边成功运行，分享一下。</p>
-<p>上面1到4步相同，接着直接将tpk软件复制到sdb2260\sdb\data\tools文件目录下，点击ansicon.exe文件，输入命令：</p>
-<pre><code class="language-shell">sdb connect 192.168.xxx.xxx
-</code></pre>
-<p>其中192.168.xxx.xxx替换成自己手表的ip地址<br>
-如下图，显示连接成功：</p>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/laffitto/Pic_bed/master/20200620001908.png" alt="image-20200620001720019" loading="lazy"></figure>
-<p>再次输入</p>
-<pre><code class="language-shell">sdb install bp.tpk
-</code></pre>
-<p>即可直接安装。</p>
 ]]></content>
     </entry>
 </feed>

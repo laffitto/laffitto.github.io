@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>好久不见，朋友们 | 假正经者       ——詹詹碎言</title>
+<title>github pages域名更换和vercel博客加速 | 假正经者       ——詹詹碎言</title>
 
 <link rel="shortcut icon" href="https://laffitto.top/favicon.ico?v=1598704356926">
 
@@ -117,25 +117,68 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    好久不见，朋友们
+                    github pages域名更换和vercel博客加速
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-07-12 ·
+                        · 2020-08-28 ·
                     </time>
-                    
-                        <a href="https://laffitto.top/tag/uoTMg6m9B/" class="post-tags">
-                            # 生活
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>与三位好朋友的重聚</p>
+                    <p>将自己的辣鸡博客包个皮，加个速。😚</p>
 <!-- more -->
-<p>周六久违的和朋友一起出去聚了一次。记得上一次和这几位朋友一起聚在一起还是19年年初的时候呢。那时生活很平静，我们都是处于大四的末阶段。每个人的人生也充满了不确定。当我翻回那天的日记时，正是考研成绩公布的后一天。那时的我看见了不理想的成绩，并不知道自己该走向哪里。大家在一起的时候，或多或少的也表达出了对未来的一些惆怅与感慨。我们吃完了火锅，之后又去酒吧里喝了点酒。回想着过去的往事，生活继续平静向前。</p>
-<p>昨天的聚餐，感觉往日的伙伴，似乎样貌上并没有多大的变化。章鱼在这一年间去了美国留学，她是极幸运的，2020年突如其来的新冠肺炎并没有让她经历太大的波折，至少现在顺利的回国，并且完成了学业。虽然她本人是对没能参加本科研究生的毕业典礼有些许遗憾，但不得不说，这已经是最且最好的结果了。小徐开始了工作实习，她也算是半个社会人了，平常在群里吐槽吐槽工作，饭局上分享分享她朋友的情感，感觉也是很快活。皇上通过艰难的调剂，也算是奠定了未来三年研究生的旅途，暂时不用太担心其他。自己通过去年幸运的调剂，现在已经要步入研二，还有很多东西与未来要去想。我们开始聊起了八卦，我们开始聊起了情感。感觉我们已经不像以前那样思考，然而依旧是笑脸对待。</p>
-<p>我想他们应该是我最好的朋友了。至少我们仍然有联系，有些东西之间无论是多么的刻骨铭心，时间的距离会让一切感情慢慢变淡。我很开心，一直能够同他们在群里分享生活，吹水聊天。他们三个应该是在网络上和联系最密切的人了。有时候一并走路，我会刻意走在最后，微笑着的看着他们三个背影，不知道为什么，感觉可以体会到平凡与快乐。</p>
-<p>虽然半数的我们已经步入了社会。但我还是希望我们的友谊不会断线，应该不会，因为我发现有一个有趣群比单独之间的聊天会好很多。即便我们会步入不同的人生，即便我们之间可能不会有更深的交集。但是我们是朋友，会将回忆珍藏并记录，我们是学生时代好朋友，我相信也会是一生中的好朋友。朋友们，请多指教😴。</p>
+<p>由于自己的博客是托管在github pages上的，所以域名一直是以github.io结尾的，访问速度也令人担忧。正好在gridea的TG群里看见有人推广域名，又研究了一点简单的CDN加速，本辣鸡就趁此机会优化一波。</p>
+<h2 id="域名购买">域名购买</h2>
+<p>域名网站选用的是群友推荐的<a href="https://www.namesilo.com/">namesilo</a>，注册后购买域名非常方便（居然支持微信和支付宝付款），不过不要贪图一些特别便宜的域名后缀，注意一下续费价格🤑（当然年年折腾天天换的除外）。</p>
+<p>这里我买了.top域名，即购买的域名名称为laffitto.top（瞬间变得有点高大上了）。</p>
+<h2 id="域名加速">域名加速</h2>
+<p>我们等一下再绑定域名，先用<a href="https://vercel.com/docs">vercel</a>对自己的静态博客加速一波。</p>
+<p>一开始需要注册账号，直接用github账号登录即可。</p>
+<p>之后可以导入项目，进入以下界面点击<strong>Continue</strong>。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214315.png" alt="" loading="lazy"></figure>
+<p>输入项目的URL，即自己的github pages页面，如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214722.png" alt="" loading="lazy"></figure>
+<p>导入过程一路默认即可：</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215304.png" alt="" loading="lazy"></figure>
+<p>自动就部署好了呢，发现vercel分配有很多地址都可以访问自己的博客。🤗</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214739.png" alt="" loading="lazy"></figure>
+<h2 id="绑定域名">绑定域名</h2>
+<p>加速完成了，但是如果用vercel提供的域名实在是太长太蛋疼，当你为了介绍自己网站结果给朋友一大段<s>字符串</s>（并不），那场景实在是太美。于是需要将刚刚买的域名绑定上去。</p>
+<p>先向你的 Github Pages 仓库添加一个CNAME文件，里面包含自己刚买的域名，如下：</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214804.png" alt="" loading="lazy"></figure>
+<p>设置完可以去Settings的github pages界面查看一下，不出意外Custom domian上名称为自己设定的域名。</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214826.png" alt="" loading="lazy"></figure>
+<p>同时回到vercel的项目界面，添加自己的域名<strong>www.laffitto.top</strong>和<strong>laffitto.top</strong>，可以得到如下类似界面：（自己的域名由于没有设定DNS，会显示如第一条的Invalid Configuration），不过慌，就差亿点点了（误）🤡。</p>
+<figure data-type="image" tabindex="7"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214842.png" alt="" loading="lazy"></figure>
+<h2 id="修改dns">修改DNS</h2>
+<p>回到之前的域名购买网站namesilo，接下来点击网站上方的<strong>Manage My Domains</strong>进入域名管理的界面。</p>
+<p>点击<strong>Options</strong>的蓝色图标，即<strong>Manage DNS of this domain</strong>：</p>
+<figure data-type="image" tabindex="8"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214901.png" alt="" loading="lazy"></figure>
+<p>这里如果有很多疑问可以参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/86961133">Namesilo DNS 域名解析教程和常见问题解决方法汇总</a></p>
+<p>添加一条A记录和一条CHAME记录。（最上面一条可以忽略）</p>
+<figure data-type="image" tabindex="9"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214916.png" alt="" loading="lazy"></figure>
+<p>A记录是根据vercel上的提示设置即可：</p>
+<figure data-type="image" tabindex="10"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215137.png" alt="" loading="lazy"></figure>
+<p>CNAME记录是将自己的域名指向另一个域名：</p>
+<p>laffitto-github-io.vercel.io----&gt; laffitto.top，主要是看vercel的域名提示。</p>
+<figure data-type="image" tabindex="11"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215112.png" alt="" loading="lazy"></figure>
+<p>等待一会让DNS生效，即可用购买的域名快速访问自己的网站啦！woh，焕然一新哦😉</p>
+<p>参考：</p>
+<ol>
+<li>
+<p><a href="https://vincentqin.tech/posts/speedup-gitpage/">🔨工具：使用vercel加速Hexo静态博客访问</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/164585697">如何拥有一个访问速度超快的个人博客？GitHub+Vercel+Gridea</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/86961133">Namesilo DNS 域名解析教程和常见问题解决方法汇总</a></p>
+</li>
+<li>
+<p><a href="https://www.zhihu.com/question/31377141">github怎么绑定自己的域名？</a></p>
+</li>
+</ol>
 
                 </div>
             </article>
@@ -144,8 +187,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://laffitto.top/post/ji-zhu-jing-wei/" class="post-title gt-a-link">
-                    技术敬畏
+                <a href="https://laffitto.top/post/shen-du-xue-xi-you-hua-suan-fa-zong-jie/" class="post-title gt-a-link">
+                    深度学习优化算法总结
                 </a>
             </div>
         
