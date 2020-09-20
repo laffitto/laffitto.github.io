@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-09-13T13:09:41.538Z</updated>
+    <updated>2020-09-20T09:29:40.068Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,124 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[交叉验证cross validation]]></title>
+        <id>https://laffitto.top/post/jiao-cha-yan-zheng-cross-validation/</id>
+        <link href="https://laffitto.top/post/jiao-cha-yan-zheng-cross-validation/">
+        </link>
+        <updated>2020-09-19T12:55:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>基于tensorflow2.0的交叉验证实现方法。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>基于tensorflow2.0的交叉验证实现方法。</p>
+<!-- more -->
+<h2 id="交叉验证是啥">交叉验证是啥</h2>
+<p>机器学习模型常常不能很好地对未经过训练的数据进行归纳。有时候表现良好然而有些时候表现糟糕。为了确保模型能在未见数据上表现良好，引出使一种称为K折交叉验证（K-Fold cross-validation）的重新采样技术。</p>
+<p>我们训练的时候通常将数据分成三个部分，即<strong>训练集</strong>、<strong>验证集</strong>和<strong>测试集</strong>。但是如果当数据量有限时，将数据集划分为训练集和验证集，可能会导致一些具有有用信息的数据点被排除在训练过程之外，导致模型无法正确地学习数据的分布。这时候交叉验证可以做出一些改进：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200920172813.png" alt="cross-validation" loading="lazy"></p>
+<p>与其他方法相比，K-Fold 给出了一个偏差较小的模型。在k - fold 中，我们有一个参数k。这个参数决定数据集将被划分的折叠数。每一次折叠都有机会出现在训练集(k-1)中，这反过来又确保了数据集中的每一次观察都出现在数据集中，从而使模型能够更好地学习底层数据分布。如上图中k的值为5。</p>
+<p>使用的k值一般在5或10之间。k的值不应该太低或太高。如果k的值太低(比如k = 2)，我们将得到一个高度偏置的模型。这种情况类似于将数据集拆分为训练集和验证集，因此偏差（bias）较高，方差（variance）较低。如果k的值很大(比如k = n(总体的数量))，那么这种方法称为<strong>Leave One Out CV (LOOCV)</strong>。在这种情况下，偏差会很低，但方差会很高，模型会过度拟合，导致模型无法在测试集上推广。</p>
+<p>另一种方法是在将数据集拆分为k次折叠之前只将数据集洗牌一次，然后再拆分，这样每个类中的观察值的分布在每次折叠中保持不变。测试集也不会在连续的迭代之间重叠。这种方法称为<strong>Stratified K-Fold</strong>。该方法适用于不平衡数据集。</p>
+<h2 id="具体代码实现">具体代码实现</h2>
+<p>这里的编程环境是Tensorflow2.0，要实现交叉验证的核心功能，可以借助sklearn库的KFold和StratifiedKFold类。</p>
+<pre><code class="language-python">from sklearn.model_selection import KFold, StratifiedKFold
+</code></pre>
+<p>具体使用方法可以参考官方wiki：<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html">KFold</a>和<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html">StratifiedKFold</a></p>
+<p>可以先参考如下文章，前两个具有极大的参考价值：</p>
+<ol>
+<li>
+<p><a href="https://www.machinecurve.com/index.php/2020/02/18/how-to-use-k-fold-cross-validation-with-keras/"><strong>How to use K-fold Cross Validation with Keras?</strong></a></p>
+</li>
+<li>
+<p><a href="https://medium.com/the-owl/k-fold-cross-validation-in-keras-3ec4a3a00538"><strong>K-Fold Cross Validation for Deep Learning Models using Keras</strong></a></p>
+</li>
+<li>
+<p><a href="https://www.kaggle.com/stefanie04736/simple-keras-model-with-k-fold-cross-validation">Simple Keras Model with k-fold cross validation</a></p>
+</li>
+<li>
+<p><a href="https://machinelearningmastery.com/k-fold-cross-validation/">A Gentle Introduction to k-fold Cross-Validation</a></p>
+</li>
+</ol>
+<h2 id="实现">实现</h2>
+<p>这是自己自己再综合过程中完成的代码片段：</p>
+<pre><code class="language-python">#coding:utf-8
+# Based on tensorflow 2.2
+from model_verTF2 import class_net
+from data import *
+from tensorflow.keras import callbacks
+import tensorflow as tf
+from sklearn.model_selection import KFold, StratifiedKFold
+import os
+
+# enable GPU
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
+config.gpu_options.per_process_gpu_memory_fraction = 0.8
+tf.compat.v1.keras.backend.set_session(tf.compat.v1.Session(config=config))
+
+# Model confiuration
+BATCH_SIZE = 2
+EPOCH = 200
+FOLD = 9
+path = './train_image'
+save_dir = './saved_models/'
+
+fold_var = 1
+total_data = len(os.listdir(path))
+labels = get_all_label(path)
+
+# Define K-fold cross validation
+kf = KFold(n_splits=FOLD, shuffle=True, random_state=6)
+skf = StratifiedKFold(n_splits=FOLD, random_state=6, shuffle=True)
+
+VALIDATION_ACCURACY = []
+VALIDATION_LOSS = []
+
+# Train by cross validation
+for train_index, val_index in skf.split(np.zeros(total_data),labels):
+
+    train_iter = batch_generator_cross_validation(path=path, index=train_index, 		  batch_size=BATCH_SIZE,train=True)
+    val_iter = batch_generator_cross_validation(path=path, index=val_index, batch_size=BATCH_SIZE,train=False)
+
+    model = class_net()
+    ckpt = callbacks.ModelCheckpoint(save_dir+get_model_name(fold_var),
+                                     monitor='val_accuracy', verbose=1,
+                                     save_best_only=True, mode='max')
+    log = callbacks.CSVLogger(save_dir+'model_log'+str(fold_var)+'.csv')
+    callbacks_list = [ckpt, log]
+
+    print('--------------------------------------------------------')
+    print(f'Training for fold {fold_var} ...')
+    history = model.fit(x=train_iter,
+                        steps_per_epoch=len(train_index)/BATCH_SIZE,
+                        epochs=EPOCH,
+                        validation_data=val_iter,
+                        validation_steps=len(val_index)/BATCH_SIZE,
+                        callbacks=callbacks_list)
+
+    plot_log(save_dir+'model_log'+str(fold_var)+'.csv')
+
+    # load best model to evaluate
+    model.load_weights(&quot;./saved_models/model_&quot;+str(fold_var)+&quot;.h5&quot;)
+
+    results = model.evaluate(x=val_iter, steps=len(val_index)/BATCH_SIZE)
+    results = dict(zip(model.metrics_names, results))
+
+    VALIDATION_ACCURACY.append(results['accuracy'])
+    VALIDATION_LOSS.append(results['loss'])
+
+    tf.keras.backend.clear_session()
+
+    fold_var += 1
+
+print('----------------------------------------')
+print('Score per fold')
+for i in range(0, len(VALIDATION_LOSS)):
+    print('------------------------------------------')
+    print(f'&gt; Flod {i+1} - Val_loss:{VALIDATION_LOSS[i]} - Val_accuracy:{VALIDATION_ACCURACY[i]}')
+</code></pre>
+<p>代码段不太完整，留作自己以后检查时调用，待项目完成会放到github上开源，毕竟太辣鸡，只能各种拼凑一下勉强维持一下生活的样子。😱</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[詹詹碎言 #4]]></title>
         <id>https://laffitto.top/post/zhan-zhan-sui-yan-4/</id>
@@ -638,22 +756,6 @@ Instead, researchers wish to have control over every nuance of the network and t
 <li><a href="https://zhuanlan.zhihu.com/p/70225750?utm_source=com.yinxiang">JunMa的知乎回答</a></li>
 <li><a href="https://www.jianshu.com/p/823f96472b62">思思_Z的简书回答</a></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[好久不见，朋友们]]></title>
-        <id>https://laffitto.top/post/hao-jiu-bu-jian-peng-you-men/</id>
-        <link href="https://laffitto.top/post/hao-jiu-bu-jian-peng-you-men/">
-        </link>
-        <updated>2020-07-11T16:16:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>与三位好朋友的重聚</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>与三位好朋友的重聚</p>
-<!-- more -->
-<p>周六久违的和朋友一起出去聚了一次。记得上一次和这几位朋友一起聚在一起还是19年年初的时候呢。那时生活很平静，我们都是处于大四的末阶段。每个人的人生也充满了不确定。当我翻回那天的日记时，正是考研成绩公布的后一天。那时的我看见了不理想的成绩，并不知道自己该走向哪里。大家在一起的时候，或多或少的也表达出了对未来的一些惆怅与感慨。我们吃完了火锅，之后又去酒吧里喝了点酒。回想着过去的往事，生活继续平静向前。</p>
-<p>昨天的聚餐，感觉往日的伙伴，似乎样貌上并没有多大的变化。章鱼在这一年间去了美国留学，她是极幸运的，2020年突如其来的新冠肺炎并没有让她经历太大的波折，至少现在顺利的回国，并且完成了学业。虽然她本人是对没能参加本科研究生的毕业典礼有些许遗憾，但不得不说，这已经是最且最好的结果了。小徐开始了工作实习，她也算是半个社会人了，平常在群里吐槽吐槽工作，饭局上分享分享她朋友的情感，感觉也是很快活。皇上通过艰难的调剂，也算是奠定了未来三年研究生的旅途，暂时不用太担心其他。自己通过去年幸运的调剂，现在已经要步入研二，还有很多东西与未来要去想。我们开始聊起了八卦，我们开始聊起了情感。感觉我们已经不像以前那样思考，然而依旧是笑脸对待。</p>
-<p>我想他们应该是我最好的朋友了。至少我们仍然有联系，有些东西之间无论是多么的刻骨铭心，时间的距离会让一切感情慢慢变淡。我很开心，一直能够同他们在群里分享生活，吹水聊天。他们三个应该是在网络上和联系最密切的人了。有时候一并走路，我会刻意走在最后，微笑着的看着他们三个背影，不知道为什么，感觉可以体会到平凡与快乐。</p>
-<p>虽然半数的我们已经步入了社会。但我还是希望我们的友谊不会断线，应该不会，因为我发现有一个有趣群比单独之间的聊天会好很多。即便我们会步入不同的人生，即便我们之间可能不会有更深的交集。但是我们是朋友，会将回忆珍藏并记录，我们是学生时代好朋友，我相信也会是一生中的好朋友。朋友们，请多指教😴。</p>
 ]]></content>
     </entry>
 </feed>

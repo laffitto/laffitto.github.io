@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>医学图像处理领域重要的期刊与会议 | 假正经者       ——詹詹碎言</title>
+<title>交叉验证cross validation | 假正经者       ——詹詹碎言</title>
 
 <link rel="shortcut icon" href="https://laffitto.top/favicon.ico?v=1600594175462">
 
@@ -117,79 +117,135 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    医学图像处理领域重要的期刊与会议
+                    交叉验证cross validation
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-07-19 ·
+                        · 2020-09-19 ·
                     </time>
+                    
+                        <a href="https://laffitto.top/tag/znfJoDdWX/" class="post-tags">
+                            # 部分转载
+                        </a>
                     
                         <a href="https://laffitto.top/tag/i1-Jje_9N/" class="post-tags">
                             # study
                         </a>
                     
-                        <a href="https://laffitto.top/tag/MbeaYBjQP/" class="post-tags">
-                            # book
+                        <a href="https://laffitto.top/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>根据网上其他人的经验总结的一些医学图像处理领域的期刊和会议😘</p>
+                    <p>基于tensorflow2.0的交叉验证实现方法。</p>
 <!-- more -->
-<h1 id="期刊">期刊</h1>
+<h2 id="交叉验证是啥">交叉验证是啥</h2>
+<p>机器学习模型常常不能很好地对未经过训练的数据进行归纳。有时候表现良好然而有些时候表现糟糕。为了确保模型能在未见数据上表现良好，引出使一种称为K折交叉验证（K-Fold cross-validation）的重新采样技术。</p>
+<p>我们训练的时候通常将数据分成三个部分，即<strong>训练集</strong>、<strong>验证集</strong>和<strong>测试集</strong>。但是如果当数据量有限时，将数据集划分为训练集和验证集，可能会导致一些具有有用信息的数据点被排除在训练过程之外，导致模型无法正确地学习数据的分布。这时候交叉验证可以做出一些改进：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200920172813.png" alt="cross-validation" loading="lazy"></p>
+<p>与其他方法相比，K-Fold 给出了一个偏差较小的模型。在k - fold 中，我们有一个参数k。这个参数决定数据集将被划分的折叠数。每一次折叠都有机会出现在训练集(k-1)中，这反过来又确保了数据集中的每一次观察都出现在数据集中，从而使模型能够更好地学习底层数据分布。如上图中k的值为5。</p>
+<p>使用的k值一般在5或10之间。k的值不应该太低或太高。如果k的值太低(比如k = 2)，我们将得到一个高度偏置的模型。这种情况类似于将数据集拆分为训练集和验证集，因此偏差（bias）较高，方差（variance）较低。如果k的值很大(比如k = n(总体的数量))，那么这种方法称为<strong>Leave One Out CV (LOOCV)</strong>。在这种情况下，偏差会很低，但方差会很高，模型会过度拟合，导致模型无法在测试集上推广。</p>
+<p>另一种方法是在将数据集拆分为k次折叠之前只将数据集洗牌一次，然后再拆分，这样每个类中的观察值的分布在每次折叠中保持不变。测试集也不会在连续的迭代之间重叠。这种方法称为<strong>Stratified K-Fold</strong>。该方法适用于不平衡数据集。</p>
+<h2 id="具体代码实现">具体代码实现</h2>
+<p>这里的编程环境是Tensorflow2.0，要实现交叉验证的核心功能，可以借助sklearn库的KFold和StratifiedKFold类。</p>
+<pre><code class="language-python">from sklearn.model_selection import KFold, StratifiedKFold
+</code></pre>
+<p>具体使用方法可以参考官方wiki：<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html">KFold</a>和<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html">StratifiedKFold</a></p>
+<p>可以先参考如下文章，前两个具有极大的参考价值：</p>
 <ol>
 <li>
-<p><a href="https://www.journals.elsevier.com/medical-image-analysis/">Medical Image Analysis</a><br>
-简称MIA，影响因子11.1，有RSS订阅，推荐用inoreader进行订阅<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719181424.jpg" alt="MIA" loading="lazy"></p>
+<p><a href="https://www.machinecurve.com/index.php/2020/02/18/how-to-use-k-fold-cross-validation-with-keras/"><strong>How to use K-fold Cross Validation with Keras?</strong></a></p>
 </li>
 <li>
-<p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42">IEEE Transactions on Medical Imaging</a><br>
-简称TMI，影响因子6.685，同样有RSS订阅<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719181659.png" alt="TMI" loading="lazy"></p>
+<p><a href="https://medium.com/the-owl/k-fold-cross-validation-in-keras-3ec4a3a00538"><strong>K-Fold Cross Validation for Deep Learning Models using Keras</strong></a></p>
 </li>
 <li>
-<p><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10">IEEE Transactions on Biomedical Engineering</a><br>
-简称TBME，影响因子4.42，有RSS订阅，相较于上面两个期刊稍微差一点<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719182033.png" alt="TBME" loading="lazy"></p>
+<p><a href="https://www.kaggle.com/stefanie04736/simple-keras-model-with-k-fold-cross-validation">Simple Keras Model with k-fold cross validation</a></p>
+</li>
+<li>
+<p><a href="https://machinelearningmastery.com/k-fold-cross-validation/">A Gentle Introduction to k-fold Cross-Validation</a></p>
 </li>
 </ol>
-<p>配合inoreader可以获得很好的论文筛选体验（RSS牛皮！🤤）<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719203301.png" alt="inoreader" loading="lazy"></p>
-<h1 id="会议">会议</h1>
-<ol>
-<li>
-<p><a href="http://www.miccai.org/events/conference-history/">MICCAI: International Conference on Medical Image Computing and Computer Assisted Intervention</a><br>
-每年9~10月，2020年会议<a href="https://miccai2020.org/en/">在这里</a><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719182442.png" alt="MICCAI" loading="lazy"></p>
-</li>
-<li>
-<p><a href="https://dblp.uni-trier.de/search?q=IPMI">IPMI: Information Processing in Medical Imaging</a><br>
-图像的顶会，2年一届，去年见<a href="https://ipmi2019.cse.ust.hk/">这里</a></p>
-</li>
-<li>
-<p><a href="http://2020.biomedicalimaging.org/">ISBI: IEEE International Symposium on Biomedical Imaging</a><br>
-每年4月，2021年<a href="https://biomedicalimaging.org/2021/">在这里</a></p>
-</li>
-<li>
-<p><a href="https://spie.org/conferences-and-exhibitions/medical-imaging/conferences?SSO=1">SPIE Medical Imaging</a><br>
-每年2月，似乎还行？</p>
-</li>
-<li>
-<p><a href="https://www.midl.io/">MIDL: Medical Imaging with Deep Learning</a><br>
-每年下半年举行，似乎是个年轻的会议，只有三届，2020年6~9月正在进行。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719202058.png" alt="MIDL" loading="lazy"></p>
-</li>
-</ol>
-<h1 id="医学比赛网站">医学比赛网站</h1>
-<p><a href="https://grand-challenge.org/challenges/">Grand Challenge</a><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200719202542.png" alt="challenge" loading="lazy"><br>
-有点厉害，不过我这种小辣鸡应该是无缘了。🤣</p>
-<p>相关参考：</p>
-<ol>
-<li><a href="https://zhuanlan.zhihu.com/p/70225750?utm_source=com.yinxiang">JunMa的知乎回答</a></li>
-<li><a href="https://www.jianshu.com/p/823f96472b62">思思_Z的简书回答</a></li>
-</ol>
+<h2 id="实现">实现</h2>
+<p>这是自己自己再综合过程中完成的代码片段：</p>
+<pre><code class="language-python">#coding:utf-8
+# Based on tensorflow 2.2
+from model_verTF2 import class_net
+from data import *
+from tensorflow.keras import callbacks
+import tensorflow as tf
+from sklearn.model_selection import KFold, StratifiedKFold
+import os
+
+# enable GPU
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
+config.gpu_options.per_process_gpu_memory_fraction = 0.8
+tf.compat.v1.keras.backend.set_session(tf.compat.v1.Session(config=config))
+
+# Model confiuration
+BATCH_SIZE = 2
+EPOCH = 200
+FOLD = 9
+path = './train_image'
+save_dir = './saved_models/'
+
+fold_var = 1
+total_data = len(os.listdir(path))
+labels = get_all_label(path)
+
+# Define K-fold cross validation
+kf = KFold(n_splits=FOLD, shuffle=True, random_state=6)
+skf = StratifiedKFold(n_splits=FOLD, random_state=6, shuffle=True)
+
+VALIDATION_ACCURACY = []
+VALIDATION_LOSS = []
+
+# Train by cross validation
+for train_index, val_index in skf.split(np.zeros(total_data),labels):
+
+    train_iter = batch_generator_cross_validation(path=path, index=train_index, 		  batch_size=BATCH_SIZE,train=True)
+    val_iter = batch_generator_cross_validation(path=path, index=val_index, batch_size=BATCH_SIZE,train=False)
+
+    model = class_net()
+    ckpt = callbacks.ModelCheckpoint(save_dir+get_model_name(fold_var),
+                                     monitor='val_accuracy', verbose=1,
+                                     save_best_only=True, mode='max')
+    log = callbacks.CSVLogger(save_dir+'model_log'+str(fold_var)+'.csv')
+    callbacks_list = [ckpt, log]
+
+    print('--------------------------------------------------------')
+    print(f'Training for fold {fold_var} ...')
+    history = model.fit(x=train_iter,
+                        steps_per_epoch=len(train_index)/BATCH_SIZE,
+                        epochs=EPOCH,
+                        validation_data=val_iter,
+                        validation_steps=len(val_index)/BATCH_SIZE,
+                        callbacks=callbacks_list)
+
+    plot_log(save_dir+'model_log'+str(fold_var)+'.csv')
+
+    # load best model to evaluate
+    model.load_weights(&quot;./saved_models/model_&quot;+str(fold_var)+&quot;.h5&quot;)
+
+    results = model.evaluate(x=val_iter, steps=len(val_index)/BATCH_SIZE)
+    results = dict(zip(model.metrics_names, results))
+
+    VALIDATION_ACCURACY.append(results['accuracy'])
+    VALIDATION_LOSS.append(results['loss'])
+
+    tf.keras.backend.clear_session()
+
+    fold_var += 1
+
+print('----------------------------------------')
+print('Score per fold')
+for i in range(0, len(VALIDATION_LOSS)):
+    print('------------------------------------------')
+    print(f'&gt; Flod {i+1} - Val_loss:{VALIDATION_LOSS[i]} - Val_accuracy:{VALIDATION_ACCURACY[i]}')
+</code></pre>
+<p>代码段不太完整，留作自己以后检查时调用，待项目完成会放到github上开源，毕竟太辣鸡，只能各种拼凑一下勉强维持一下生活的样子。😱</p>
 
                 </div>
             </article>
@@ -198,8 +254,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://laffitto.top/post/hao-jiu-bu-jian-peng-you-men/" class="post-title gt-a-link">
-                    好久不见，朋友们
+                <a href="https://laffitto.top/post/zhan-zhan-sui-yan-4/" class="post-title gt-a-link">
+                    詹詹碎言 #4
                 </a>
             </div>
         
