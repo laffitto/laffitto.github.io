@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-09-28T13:27:40.961Z</updated>
+    <updated>2020-10-04T13:51:55.164Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,25 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[程序正义]]></title>
+        <id>https://laffitto.top/post/cheng-xu-zheng-yi/</id>
+        <link href="https://laffitto.top/post/cheng-xu-zheng-yi/">
+        </link>
+        <updated>2020-10-03T11:39:44.000Z</updated>
+        <summary type="html"><![CDATA[<p>江阳和他的伙伴最终用程序正义击倒了黑暗。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>江阳和他的伙伴最终用程序正义击倒了黑暗。</p>
+<!-- more -->
+<p>最近看了一步很火的国产剧，<a href="https://movie.douban.com/subject/33447642/">沉默的真相</a>。说实话这部剧的主题还是挺有深意的，同时我也感叹中国的广电总局居然可以让这种剧过审。相较于整天吹捧的各种国产玛丽苏，潜移默化的神奇逻辑碾碎人民的三观，沉默的真相立意实在是高了几个档次（实际个人觉得国产剧只要涉及爱情青春都是傻逼剧）。电视剧主要改编于紫金陈的小说长夜难明，据说小说的结局实际上是更黑暗一点的，相较于电视剧的恶人绳之以法，小说中的恶人们都在社会中以各种体面的方式去世。</p>
+<p>剧中角色张超提到了一个词语：程序正义，Procedural Justice，主要是指解决争端和资源分配过程中的公平理念。<a href="https://en.wikipedia.org/wiki/Procedural_justice">维基百科</a>是这样解释的：</p>
+<blockquote>
+<p>程序正义涉及公平性和对透明度由作出决定的过程，并且可以与对比分配正义（在权利和资源分配的公平性），以及因果报应（在过错的处罚公平性）。在做出决定之前听取所有各方的意见是一个可以被认为是适当的步骤，以便可以将过程视为程序上公正。一些程序正义理论认为，即使不满足分配正义或恢复正义的要求，公平程序也会导致公平的结果。有人提出，这是在程序正义过程中经常发现的更高质量的人际互动的结果，事实表明，在解决冲突的过程中，人与人之间的相互作用对公正感的影响更大。</p>
+</blockquote>
+<p>每个人对正义的定义方式都不相同，同时受到各种文化环境的影响，对定义执行的方式也抱有不同的意见。可能如果我们是古代的人，我们会选择自己报仇，去手刃自己的怨家，那时候会感觉自己是正义的伙伴。而如果放到现代，你去炸掉仇人的企业，这会被理解为是一种变相的不正义行为。所以我们需要一种程序正义，在这种条件束缚下，每当我们想解决针对冲突时，程序正义会给我们一种束缚。最后所达成的最优解是，每个人都对这种正义感觉良好。这大程度依赖于法律体系的完善，在法律的框架下，达成所有人所追求的「程序正义」。</p>
+<p>程序正义让我们不能为所欲为，这个的某种程度上也是一种不麻烦于他人的道德约束。当我们以恐怖之手段冠以正义之名时，那应该是将是战争复仇与法律崩坏的前兆吧。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[未来的未来]]></title>
         <id>https://laffitto.top/post/wei-lai-de-wei-lai/</id>
@@ -677,38 +696,6 @@ Instead, researchers wish to have control over every nuance of the network and t
 <li><a href="https://zhuanlan.zhihu.com/p/58825020">TensorFlow2.0教程-Keras 快速入门</a></li>
 <li><a href="https://deeplizard.com/learn/video/k4jY9L8H89U">Build PyTorch CNN - Object Oriented Neural Networks</a></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[智商在线的反派们——漫画「夏日重现」]]></title>
-        <id>https://laffitto.top/post/zhi-shang-zai-xian-de-fan-pai-men-man-hua-xia-ri-chong-xian/</id>
-        <link href="https://laffitto.top/post/zhi-shang-zai-xian-de-fan-pai-men-man-hua-xia-ri-chong-xian/">
-        </link>
-        <updated>2020-07-26T14:56:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>反派也应该有脑子啦！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>反派也应该有脑子啦！</p>
-<!-- more -->
-<p>近期又看到一部非常有意思的漫画——<a href="https://zh.moegirl.org.cn/index.php?title=%E5%A4%8F%E6%97%A5%E9%87%8D%E7%8E%B0&amp;mobileaction=toggle_view_desktop">夏日重现</a>。作者田中靖规。<br>
-(PS:萌娘百科真是一个好百科😚)</p>
-<p>不得不说这是很难得的反派智力在线的作品。主要讲述了主角遇到可以复制他人的影子人。为了能够拯救小岛上的居民而展现的斗智斗勇的过程，这其中蕴含着许多轮回的过程，即存在着主角团大量被团灭，再去绝望中找寻生机的过程。在一次一次的轮转中，条件变得越来越苛刻，同时boss影子人在应对的主角团时也采取了对应不同的行动。</p>
-<p>于我而言，这部作品的吸引之处在于以下2点。</p>
-<ol>
-<li>
-<p>独特的世界架构导致可以任意的画死主角。<br>
-这是这部作品精妙的地方。由于主角的特殊性，所以能够穿越回溯一定的时间。加上boss团的强大实力，初期主角一行人经常动不动全体身亡。这从某种程度上来说，真的是看着很爽。很多漫画的主角都有个强大的主角光环，尤其是各种民工漫，无论与敌人差距悬殊多么大。到最后各种嘴炮，各种开挂，最后总能莫名其妙的战胜对手。不知不觉主角的战力后期就会溢出。这在龙珠海贼王的漫画上都有很明显的体现。因此主角的死亡与失败实在是一件难得的事情。<br>
-下面分享几张主角疯狂嗝屁图：<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200727231144.png" alt="嗝屁1" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200727231212.png" alt="嗝屁2" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200727231235.png" alt="嗝屁3" loading="lazy"><br>
-真是太惨了🤣，虽然会复活但还是好惨🤣！</p>
-</li>
-<li>
-<p>反派的智商在线。<br>
-这是非常非常重要的事情。特别是智斗与邪道漫画中。反派的强大才能从侧面衬托出主角的冷静与果断。但是很多漫画都是虎头蛇尾。一开始反派都很有魅力，但后来随着主角的变强，主角反派的智力是直线下降。你甚至有些怀疑对方一开始就使出了王炸，后面直接变瘪三。毕竟剧本写的好，画画得好的漫画家还是很少的。</p>
-</li>
-</ol>
-<p>现在作品的剧情进入到一个白热化的阶段。主角也渐渐被加上了各种buff。然而战力还是没有很严重的倾向。这既是精彩之处，也是可贵之处。从某种程度上来说小说，电视剧，漫画，他们都是有着可能烂尾的特点。而作为食用者的我们，或是重视营养或是喜欢不同的口感，这些也都不太一样吧。</p>
 ]]></content>
     </entry>
 </feed>
