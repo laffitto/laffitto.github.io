@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-10-18T12:43:13.731Z</updated>
+    <updated>2020-10-27T08:40:17.358Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,27 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[控制思想]]></title>
+        <id>https://laffitto.top/post/kong-zhi-si-xiang/</id>
+        <link href="https://laffitto.top/post/kong-zhi-si-xiang/">
+        </link>
+        <updated>2020-10-26T12:35:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>“你无法控制别人的思想！”</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>“你无法控制别人的思想！”</p>
+<!-- more -->
+<p>和我的朋友威少扯淡时，每每我们意见不合，他总是会义正言辞的说出：“大家都是成年人了，你无法控制别人的思想！”每次听完这话，我都无言以对，有趣的是可以以其人之道还治其人之身，后面的场合，每当受到反驳时，“我已经是个成年人了，你无法控制我的思想！”此话一出，杀伤力巨大。</p>
+<p>实际这句话是很诡辩的，不如说：我怎么想关你什么事。不过这样说太直白了，有点伤感情。就这句话来说，语境是很重要的，当然也不排除被滥用的可能。</p>
+<p>“你今天咋不用你那个饭盒了，你今天怎么又吃这个饭？”</p>
+<p>“我是个成年人，我想做什么是我的事，你无法控制别人的思想！”</p>
+<p>“好吧……”</p>
+<p>没有什么限制，无论事大事小，无论是日常讨论还是事实观点，都能用这句话让别人无话可说。</p>
+<p>除去日常的玩笑，实际这句话情景应该体现的是现代人没有自主思想的内核，不得不说现在信息真是太爆炸了，舆论阴谋谎言不断增加，可怜的是很多人根本不知道，阅几篇文章便手眼通天，看几个视频便思想爆炸。若是将其指出，反而会受到其冷嘲热讽，你甚至不敢相信这居然是个研究生。别人说啥，媒体说啥，嗯嗯嗯，对对对，民族主义爆棚，心理信心大增，学历与思想完全得不到匹配。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201027163727.jpeg" alt="" loading="lazy"><br>
+然而，你无法去改变他们的思想，因为人家是成年人呀，你如果振振有词的指出，反而会被他们认为你是傻B，自己灰头土脸被人在内心深处咒骂或是瞧不清。所以，还是记住这句话：“我已经是个成年人了，我不应该去控制他人的思想，因为他人也是成年人，人家有自己的思想，保持沉默，随声附和就对了。”</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[抬头望天]]></title>
         <id>https://laffitto.top/post/tai-tou/</id>
@@ -489,23 +510,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p><a href="https://arxiv.org/abs/1712.07628">Improving Generalization Performance by Switching from Adam to SGD</a></p>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[开源]]></title>
-        <id>https://laffitto.top/post/kai-yuan/</id>
-        <link href="https://laffitto.top/post/kai-yuan/">
-        </link>
-        <updated>2020-08-16T10:53:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>对待开源的态度也能反映一些对待生活的态度🤔</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>对待开源的态度也能反映一些对待生活的态度🤔</p>
-<!-- more -->
-<p>看到阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2020/08/weekly-issue-120.html">周报</a>，他表达了一些自己对于开源的看法。<a href="https://www.redhat.com/zh/topics/open-source/what-is-open-source">开源</a>实际是一个很新的词汇，至少它是诞生于计算机发展之后的，从最开始大家熟悉的 nuix 系统开始，到后面百花齐放的各种 linux 变体，开源使得它们百花齐放而又各有各的特色。同样，我们也要感谢 Google 对 Android 源码的开源，即便 Google 自己被拦在巨大的城墙之外，城墙内的手机厂商也能通过这一开源项目构建出各种自己且符合国人习惯的「OS」。与睾贵的苹果公司不同，Android 代表的更多的是一种自由，一种开放，纵然吹捧 ios 的万般丝滑，多么多么的智能，但现在的我觉得这是一种态度的选择，一种开源的创新和闭源的豢养之间的选择。纵然之后可能会拥抱 ios，那是的我可能会变得比现在更保守了。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200816194014.webp" alt="linux" loading="lazy"></p>
-<p>同样还有一点，似乎只有在计算机领域才是崇尚「开源」的，总是觉得这是一件很神奇的事情。当然在这里指的「开源」意义会更广一些，可以把它理解为<strong>行业知识的共享</strong>。在所有行业都恨不得把自己那点东西藏着掖着，不让外人知道的时候，程序员社区居然可以将重要的东西共享开源出来。即便当时他们花费了大量的时间精力去研究这这些工作，但是当他们共享出来后却没有感到后悔，世界上的各种编程语言，各种代码库，在开源的助力下，基本都在不断变得更好更易用。这确实是开源的魅力，它让从事相关行业的人自觉的注意，自觉的奉献自己的一份力，这股合力进而让事情变得更美好。尽管大家都水平良莠不齐，但实际都朝着更好的目标望去，且不要求回报，做到真正的「用爱发电」。这可能也是各位企业家最想看到的结果，但是这种行为却自发形成了，实在是有趣。这个行业从诞生之初就是一个崇尚「自由」的职业，虽然现在由于各种商业政治原因变得愈加封闭，但是其魅力仍然让人着迷。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200816194038.png" alt="开源软件社区froid" loading="lazy"></p>
-<p>说了这么多，对待开源的态度，也像是自己对待世界的态度，你是会沉醉在别人给你的温暖中，但是却失去选择的权利温顺而舒服的活下去，还是会将选择权掌握在自己手中，但是路途却可能艰辛苦涩。这是我们需要思考的问题，或许你想找到一个合适的平衡点，但那种难度需要大量的阅历和知识才可以克服。这样想想，也许有些「强迫症」的牛人之所以成功，他们对待所有都追求极端，免去了一些切换决策的烦恼，这样何尝又不是一种捷径？😄</p>
 ]]></content>
     </entry>
 </feed>
