@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>假正经者       ——詹詹碎言</title>
-    <updated>2020-11-30T12:52:49.004Z</updated>
+    <updated>2020-12-05T07:34:35.646Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,97 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 假正经者       ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[正则表达式快速参考]]></title>
+        <id>https://laffitto.top/post/zheng-ze-biao-da-shi-kuai-su-can-kao/</id>
+        <link href="https://laffitto.top/post/zheng-ze-biao-da-shi-kuai-su-can-kao/">
+        </link>
+        <updated>2020-12-03T01:57:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>一些常用的正则表达式</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一些常用的正则表达式</p>
+<!-- more -->
+<p>首先放上两个很有用的参考网站：</p>
+<ol>
+<li>
+<p><a href="https://regexone.com/">RegexOne</a>：涵盖了基本的正则表达式的用法，我就是通过这个网站学习的</p>
+</li>
+<li>
+<p><a href="https://regex101.com/">Regex101</a>：在线匹配正则表达式的网站，炒鸡方便</p>
+</li>
+</ol>
+<p>实际比较重要的几个：中括号[0-9a-z]、小括号（）分组、大括号{1,4}个数、^前匹配、$后匹配、|或逻辑。</p>
+<p>以下有一个偷来的图：</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205151923.png" alt="" loading="lazy"></figure>
+<h2 id="表达式整理">表达式整理</h2>
+<p>基于RegexOne网站：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205152128.png" alt="" loading="lazy"></p>
+<h3 id="数字匹配">数字匹配</h3>
+<p>方法：<strong>\d</strong></p>
+<p>字符\d可以用于替换从0到9的任何数字。前面的斜杠将它与简单的d字符区分开来，并表明它是一个元字符（metacharacter）。</p>
+<h3 id="万能匹配">万能匹配</h3>
+<p>方法：<strong>.</strong></p>
+<p>. 可以理解为通配符，可以匹配<strong>任何单个字符</strong>(字母、数字、空格等)。</p>
+<p>如果想匹配真正的.字符，需要在前面加上斜杠以表示区别，即**.**</p>
+<h3 id="匹配特定字符">匹配特定字符</h3>
+<p>方法：<strong>[abc]</strong><br>
+[] 可以匹配特定的字符。例如：[abc]将只匹配一个字母a, b,或c,和无。</p>
+<h3 id="排除特定字符">排除特定字符</h3>
+<p>方法：<strong>[^]</strong></p>
+<p>在方括号中使用^(hat)可以排除特定字符。例如 [ ^abc]可以匹配除了a,b,c外的任意<strong>单个</strong>字符。</p>
+<h3 id="特定范围内的字符">特定范围内的字符</h3>
+<p>方法：<strong>[0-6], [a-e], [M-W], \w</strong></p>
+<p>使用破折号“-”表示范围。例如[0-6]只匹配从0到6的任何单个数字字符，其他字符不匹配。同样地，结合^，[ ^n-p]将只匹配除字母n到p之外的任何单个字符。</p>
+<p>其中**\w<strong>为元字符，等同于</strong>[A-Za-z0-9_]<strong>，</strong>\W<strong>等同于</strong>[^A-Za-z0-9_]**</p>
+<h3 id="匹配多个字符">匹配多个字符</h3>
+<p>方法：<strong>{m}，{m,n}</strong></p>
+<p>使用花括号{}匹配多次结果。例如：a{3}精确匹配a三次。a{1,3}将匹配a1到3次。.{2,6}将匹配任意字符2到6次。</p>
+<h3 id="泛多次匹配">泛多次匹配</h3>
+<p>方法：*<strong>，+</strong></p>
+<p>使用Kleene Star “*”匹配0或更多次。</p>
+<p>例如\d*表示匹配任意个数的数字。</p>
+<p>使用Kleene Plus“+”匹配1或更多次。</p>
+<p>例如\d+表示至少有一个数字类型的输入。[abc]+表示1个或多个任意a,b,c字符。</p>
+<h3 id="字符可选项">字符可选项</h3>
+<p>方法：<strong>？</strong></p>
+<p>使用？表示此项可以作为可选项。例如，ab?c可以匹配“abc”或“ac”，b是作为一个可选项存在的。</p>
+<p>同样，要想匹配字符?需要加上斜杠，即?</p>
+<h3 id="匹配空格">匹配空格</h3>
+<p>方法：<strong>\s</strong></p>
+<p>通常有以下几种空格情况：</p>
+<ol>
+<li>空格( )</li>
+<li>制表符(\t)</li>
+<li>新行(\n)</li>
+<li>回车符(\r)</li>
+</ol>
+<p>它们都可以通过**\s**进行匹配，其可以匹配任意特定的空白。实际等价于 [ \f\n\r\t\v]。</p>
+<p><strong>\S</strong>则匹配任何非空白字符，等价于 [ ^ \f\n\r\t\v]。</p>
+<h3 id="匹配开始结束特定字符">匹配开始/结束特定字符</h3>
+<p>方法：<strong>^, $</strong></p>
+<p>使用^匹配开始时的特定字符。<br>
+例如^success来匹配仅仅以success开始的行。</p>
+<p>使用$匹配结束时的特定附。</p>
+<p>例如love$来匹配以love为结尾的字段。</p>
+<p>注意这里的^与上面中括号的[hat符号]表示的含义不同，注意区分。</p>
+<p>$还可以作为替换的指代，详细看此文：<a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></p>
+<h3 id="匹配一个组">匹配一个组</h3>
+<p>方法：<strong>（）</strong></p>
+<p>使用()匹配<strong>一组</strong>特定的字符。例如：^(IMG\d+)\ .png$，其可以将前面部分作为一个整体进行匹配捕获。</p>
+<p>同样（）是可以进行嵌套的，例如：^(IMG(\d+))\ .png$，前面部分又分成两个整体进行匹配。</p>
+<p>（）与上面方法结合使用可以带来更好的效果。例如(\d{3})</p>
+<h3 id="或逻辑">或逻辑</h3>
+<p>方法:<strong>|</strong></p>
+<p>在使用组时，可以用|匹配不同组的字符。例如([cb]ats*|[dh]ogs?)，可以匹配cats，bats，dogs，hogs。</p>
+<h2 id="不错的例子参考">不错的例子参考</h2>
+<ol>
+<li><a href="https://www.cnblogs.com/yyds/p/6913550.html">正则表达式总结</a></li>
+<li><a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></li>
+<li><a href="https://www.runoob.com/python/python-reg-expressions.html">菜鸟教程Python 正则表达式</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/127807805?utm_source=qq">Python正则表达式，这一篇就够了！</a></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[记一次潮州之旅]]></title>
         <id>https://laffitto.top/post/ji-yi-ci-chao-zhou-zhi-lu/</id>
@@ -73,9 +164,9 @@
         <link href="https://laffitto.top/post/guan-yu-tou-fa-yue-lai-yue-shao-zhe-jian-shi/">
         </link>
         <updated>2020-11-22T11:41:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>得快点找个女朋友😐</p>
+        <summary type="html"><![CDATA[<p>得快点求人认领😐</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>得快点找个女朋友😐</p>
+        <content type="html"><![CDATA[<p>得快点求人认领😐</p>
 <!-- more -->
 <p>一天晚上，在我日常给头发涂完<strong>米诺地尔</strong>时，师兄来找我聊天，不禁瞄了一眼我刚涂完药水的头顶，感叹了一句：“你头发有点少呀，得好好保养呀。”我微微一笑，虽然我早已接受了这个事实，但是听见了类似的话语难免还是有点难受。</p>
 <h2 id="小叔的羡慕">小叔的羡慕</h2>
@@ -471,25 +562,6 @@ $ python train.py --checkpoints output/checkpoints \\
 </blockquote>
 <p>每个人对正义的定义方式都不相同，同时受到各种文化环境的影响，对定义执行的方式也抱有不同的意见。可能如果我们是古代的人，我们会选择自己报仇，去手刃自己的怨家，那时候会感觉自己是正义的伙伴。而如果放到现代，你去炸掉仇人的企业，这会被理解为是一种变相的不正义行为。所以我们需要一种程序正义，在这种条件束缚下，每当我们想解决针对冲突时，程序正义会给我们一种束缚。最后所达成的最优解是，每个人都对这种正义感觉良好。这大程度依赖于法律体系的完善，在法律的框架下，达成所有人所追求的「程序正义」。</p>
 <p>程序正义让我们不能为所欲为，这个的某种程度上也是一种不麻烦于他人的道德约束。当我们以恐怖之手段冠以正义之名时，那应该是将是战争复仇与法律崩坏的前兆吧。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[未来的未来]]></title>
-        <id>https://laffitto.top/post/wei-lai-de-wei-lai/</id>
-        <link href="https://laffitto.top/post/wei-lai-de-wei-lai/">
-        </link>
-        <updated>2020-09-28T12:58:55.000Z</updated>
-        <summary type="html"><![CDATA[<p>加入硕博志愿团的一点感想。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>加入硕博志愿团的一点感想。</p>
-<!-- more -->
-<p>这周五晚上参加了硕博志愿团的换届。虽然一开始有点事情没能及时去，但还是在换届完成后成功赶到，和以前的团长与队员们相互见了一面。很多人还是都到了，团长定了一个有所有成员名字的蛋糕，切下吃掉自己的一瞬间，也是一次回忆交织的过程。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200928212515.png" alt="" loading="lazy"><br>
-当初加入硕博志愿团的动机有两点，一是锻炼一下自己的组织能力，自己真的很怕在很多人面前讲话，虽然随着年龄的增长逐渐变得自信，然而更多的时候还是结结巴巴心跳加速。二是多认识一点人，因为研究生的圈子实在是太小了，小小的实验室里，我甚至连人都认不全。为了做出一点改变，我选择加入了这个集体。当然还有一个隐性原因。我个人非常厌恶诸如学生会之类的团体组织。主要观点是觉得他们的形式大于内容，且官僚主义太过严重。</p>
-<p>回想加入硕博志愿团的这一年（实际上是一个学期，疫情啥的实在是太厉害了，下学期根本没有回到学校），收获也有，但遗憾也不少。整个学期共组织了四次大的活动，然而我因为各种原因只参加了其中的两个，而缺席了在我看来「更有意义」的两个。有时候我会回想自己是否成长了，从锻炼自己的组织能力这方面，我惭愧的低下了头，上届部长一手操办了我们部门的活动策划，虽然很感谢，但还是让我变得有点失落。😌</p>
-<p>但同时，我也看到了很多热心的人，这是真的热心与善良，因为这时的他们是不追求任何物质回报的，精神方面的补充会促进更好的良性发展。在飞速发展的中国，很多东西都被赋予很强的目的性，我们在付出的同时也渴望获得回报，或是物质，或是人情，但更多的时候我们会疲惫于此。阿德勒说过，一切的烦恼都来自人际关系。仔细想想也的确如此，有时候缩小于一个人，也会更快乐，更舒服。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200928211517.jpg" alt="" loading="lazy"><br>
-我很开心能够加入这样一个集体，一起为别人做出一点贡献的集体，这里更多的是一种相互帮助的氛围，尽管大家都有各自的生活，但是还是会随着活动而聚集在一起，这是纯粹而自然的。虽然真正活动只持续了半年，当时回想起来还是会嘴角微微上扬，或许很多东西都目的也就是如此，当我们身入其中时不曾发觉，但是回忆起来又会温柔留存。😊</p>
 ]]></content>
     </entry>
 </feed>

@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>詹詹碎言 #1 | 假正经者       ——詹詹碎言</title>
+<title>正则表达式快速参考 | 假正经者       ——詹詹碎言</title>
 
 <link rel="shortcut icon" href="https://laffitto.top/favicon.ico?v=1607153654557">
 
@@ -117,41 +117,104 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    詹詹碎言 #1
+                    正则表达式快速参考
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-02-23 ·
+                        · 2020-12-03 ·
                     </time>
                     
-                        <a href="https://laffitto.top/tag/E42cXcjcL/" class="post-tags">
-                            # 杂谈
+                        <a href="https://laffitto.top/tag/Y31CukBfz/" class="post-tags">
+                            # API
                         </a>
                     
-                        <a href="https://laffitto.top/tag/r2jJOK6USR/" class="post-tags">
-                            # 扯淡
+                        <a href="https://laffitto.top/tag/i1-Jje_9N/" class="post-tags">
+                            # study
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>大可当作无病呻吟</p>
+                    <p>一些常用的正则表达式</p>
 <!-- more -->
-<p>看到这样一篇<a href="https://twitter.com/435Hz/status/1231219080360644608">推文</a>：</p>
-<blockquote>
-<p>我们这群人，苦没有真正苦过，爱没有用力爱过。每天受着信息大潮的冲击，三观未定又备受曲折。贫穷不再是正义，又妄图不让金钱成为唯一的追求。过早看到了更大的世界，勤奋却又不过三天。热血透不过键盘和屏幕，回忆止于游戏和高考。像一群没有根的孩子，在别人的经历和精神里吵闹。</p>
-</blockquote>
-<p>推文的作者大概是30~40岁的人，但是这样的话语似乎对我和我后面的一代都适用。我知道，他也是从别的地方摘来的，但是无妨。平平淡淡的文字，透露出的淡淡的悲伤，确实，当我姥姥有时候回忆起1960年代的天灾人祸，讲着讲着就眼角泛红时，即便我已从历史与话语中了解了那些艰苦岁月，但还是难以达到共情；那些轰轰烈烈的，经历过巨大经验而终得成果的爱情，现在看来甚至会沦为笑柄，人们渐渐回归简简单单，甚至有时人们并不爱自己重要的另一半，只是为了生存为了繁衍罢了。</p>
-<p>在信息爆炸的时代，我们变得健忘与麻木，精力也变得愈加分散，我们沉醉于在网络中视奸万象万物，却又无能狂怒变得只能伤害自己身边的人。当文字变化的越来越敏感，行为不得不越来越谨慎，最终思想变得越来越狭隘，眼界被局限于眼前事物，最终变为一个个利己主义者。我们变得疲于生计，忙于奔波，阶级转变变得越来越困难，甚至上一代的思想会深深影响下一代，最后一代代的人都会堕落于命运的轮回而无法挣脱。大的“黑天鹅”事件一旦发生，一切都变得脆弱与偏激，陷入别人的圈套里，思想愈发黑暗而心愈发死。</p>
-<p>上面的都是我瞎扯淡的，真实的我并不会以这种思想去生活，那不过是我内心黑暗的意淫而已，因为无论什么话语都无法全面概括所有人，与其沉迷于上面的悲情，我更赞同下面的<a href="https://twitter.com/435Hz/status/1231103105850212352">观点</a>：</p>
-<blockquote>
-<p>一个人能力的强弱，决定他关心事情的大小。能力越强的人，越注重自己的每一步决策和判断和自己的收益。弱一些的，关心自己所在团队的上升，期望靠别人努力，自己混水摸鱼也多捞些。再弱一些，期待自己院系的上升，再往下是关心城市好坏、关心自己学校排名、关心这个省的收益。</p>
-</blockquote>
-<p>所以，还是自己变强才是王道。记得少数派的Hum在播客里说的一句话（我无法找到准确引用，但大概意思如下）：</p>
-<blockquote>
-<p>确定一些事情优先度的关键在于这件事情对于提高你的<strong>阶级</strong>的影响多大。</p>
-</blockquote>
-<p>听着急功近利，实际真实的一逼。<br>
-愿与君共勉。</p>
+<p>首先放上两个很有用的参考网站：</p>
+<ol>
+<li>
+<p><a href="https://regexone.com/">RegexOne</a>：涵盖了基本的正则表达式的用法，我就是通过这个网站学习的</p>
+</li>
+<li>
+<p><a href="https://regex101.com/">Regex101</a>：在线匹配正则表达式的网站，炒鸡方便</p>
+</li>
+</ol>
+<p>实际比较重要的几个：中括号[0-9a-z]、小括号（）分组、大括号{1,4}个数、^前匹配、$后匹配、|或逻辑。</p>
+<p>以下有一个偷来的图：</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205151923.png" alt="" loading="lazy"></figure>
+<h2 id="表达式整理">表达式整理</h2>
+<p>基于RegexOne网站：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205152128.png" alt="" loading="lazy"></p>
+<h3 id="数字匹配">数字匹配</h3>
+<p>方法：<strong>\d</strong></p>
+<p>字符\d可以用于替换从0到9的任何数字。前面的斜杠将它与简单的d字符区分开来，并表明它是一个元字符（metacharacter）。</p>
+<h3 id="万能匹配">万能匹配</h3>
+<p>方法：<strong>.</strong></p>
+<p>. 可以理解为通配符，可以匹配<strong>任何单个字符</strong>(字母、数字、空格等)。</p>
+<p>如果想匹配真正的.字符，需要在前面加上斜杠以表示区别，即**.**</p>
+<h3 id="匹配特定字符">匹配特定字符</h3>
+<p>方法：<strong>[abc]</strong><br>
+[] 可以匹配特定的字符。例如：[abc]将只匹配一个字母a, b,或c,和无。</p>
+<h3 id="排除特定字符">排除特定字符</h3>
+<p>方法：<strong>[^]</strong></p>
+<p>在方括号中使用^(hat)可以排除特定字符。例如 [ ^abc]可以匹配除了a,b,c外的任意<strong>单个</strong>字符。</p>
+<h3 id="特定范围内的字符">特定范围内的字符</h3>
+<p>方法：<strong>[0-6], [a-e], [M-W], \w</strong></p>
+<p>使用破折号“-”表示范围。例如[0-6]只匹配从0到6的任何单个数字字符，其他字符不匹配。同样地，结合^，[ ^n-p]将只匹配除字母n到p之外的任何单个字符。</p>
+<p>其中**\w<strong>为元字符，等同于</strong>[A-Za-z0-9_]<strong>，</strong>\W<strong>等同于</strong>[^A-Za-z0-9_]**</p>
+<h3 id="匹配多个字符">匹配多个字符</h3>
+<p>方法：<strong>{m}，{m,n}</strong></p>
+<p>使用花括号{}匹配多次结果。例如：a{3}精确匹配a三次。a{1,3}将匹配a1到3次。.{2,6}将匹配任意字符2到6次。</p>
+<h3 id="泛多次匹配">泛多次匹配</h3>
+<p>方法：*<strong>，+</strong></p>
+<p>使用Kleene Star “*”匹配0或更多次。</p>
+<p>例如\d*表示匹配任意个数的数字。</p>
+<p>使用Kleene Plus“+”匹配1或更多次。</p>
+<p>例如\d+表示至少有一个数字类型的输入。[abc]+表示1个或多个任意a,b,c字符。</p>
+<h3 id="字符可选项">字符可选项</h3>
+<p>方法：<strong>？</strong></p>
+<p>使用？表示此项可以作为可选项。例如，ab?c可以匹配“abc”或“ac”，b是作为一个可选项存在的。</p>
+<p>同样，要想匹配字符?需要加上斜杠，即?</p>
+<h3 id="匹配空格">匹配空格</h3>
+<p>方法：<strong>\s</strong></p>
+<p>通常有以下几种空格情况：</p>
+<ol>
+<li>空格( )</li>
+<li>制表符(\t)</li>
+<li>新行(\n)</li>
+<li>回车符(\r)</li>
+</ol>
+<p>它们都可以通过**\s**进行匹配，其可以匹配任意特定的空白。实际等价于 [ \f\n\r\t\v]。</p>
+<p><strong>\S</strong>则匹配任何非空白字符，等价于 [ ^ \f\n\r\t\v]。</p>
+<h3 id="匹配开始结束特定字符">匹配开始/结束特定字符</h3>
+<p>方法：<strong>^, $</strong></p>
+<p>使用^匹配开始时的特定字符。<br>
+例如^success来匹配仅仅以success开始的行。</p>
+<p>使用$匹配结束时的特定附。</p>
+<p>例如love$来匹配以love为结尾的字段。</p>
+<p>注意这里的^与上面中括号的[hat符号]表示的含义不同，注意区分。</p>
+<p>$还可以作为替换的指代，详细看此文：<a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></p>
+<h3 id="匹配一个组">匹配一个组</h3>
+<p>方法：<strong>（）</strong></p>
+<p>使用()匹配<strong>一组</strong>特定的字符。例如：^(IMG\d+)\ .png$，其可以将前面部分作为一个整体进行匹配捕获。</p>
+<p>同样（）是可以进行嵌套的，例如：^(IMG(\d+))\ .png$，前面部分又分成两个整体进行匹配。</p>
+<p>（）与上面方法结合使用可以带来更好的效果。例如(\d{3})</p>
+<h3 id="或逻辑">或逻辑</h3>
+<p>方法:<strong>|</strong></p>
+<p>在使用组时，可以用|匹配不同组的字符。例如([cb]ats*|[dh]ogs?)，可以匹配cats，bats，dogs，hogs。</p>
+<h2 id="不错的例子参考">不错的例子参考</h2>
+<ol>
+<li><a href="https://www.cnblogs.com/yyds/p/6913550.html">正则表达式总结</a></li>
+<li><a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></li>
+<li><a href="https://www.runoob.com/python/python-reg-expressions.html">菜鸟教程Python 正则表达式</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/127807805?utm_source=qq">Python正则表达式，这一篇就够了！</a></li>
+</ol>
 
                 </div>
             </article>
@@ -160,8 +223,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://laffitto.top/post/cheng-wei-bao-ke-meng-da-shi/" class="post-title gt-a-link">
-                    成为宝可梦大师！
+                <a href="https://laffitto.top/post/ji-yi-ci-chao-zhou-zhi-lu/" class="post-title gt-a-link">
+                    记一次潮州之旅
                 </a>
             </div>
         
