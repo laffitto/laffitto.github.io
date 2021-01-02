@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>乱谈府      ——詹詹碎言</title>
-    <updated>2020-12-29T12:16:45.080Z</updated>
+    <updated>2021-01-02T13:45:32.035Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -10,7 +10,53 @@
 也扯淡，也思考，也生活</subtitle>
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
-    <rights>All rights reserved 2020, 乱谈府      ——詹詹碎言</rights>
+    <rights>All rights reserved 2021, 乱谈府      ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[2021年Flag]]></title>
+        <id>https://laffitto.top/post/2021-nian-flag/</id>
+        <link href="https://laffitto.top/post/2021-nian-flag/">
+        </link>
+        <updated>2021-01-02T11:16:34.000Z</updated>
+        <summary type="html"><![CDATA[<p>新的一年Flag还是要立的，万一都实现了呢？</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>新的一年Flag还是要立的，万一都实现了呢？</p>
+<!-- more -->
+<h2 id="去年flag回顾">去年Flag回顾</h2>
+<p>去年的Flag文章在这里：<a href="https://laffitto.top/post/2020-nian-zhan-wang/">2020年flag</a>，当时立下了很多Flag🤦‍♂，看看有没有完成：</p>
+<ol>
+<li>读书计划：失败。就读了两本书，还没啥营养，大失败。</li>
+<li>写作计划：完美完成。这个博客就是记录，真的是一周一篇，没有中断。</li>
+<li>发表论文：暂未完成。疫情原因耽误了一些时间，不过在路上了。</li>
+<li>Girlfriend：没有找到。</li>
+<li>健身计划：部分完成。本意就是保持健康，上半年基本没动，但下半年来学校后运动量还是充足的。</li>
+<li>投资计划：持续ing。或许需要单独回顾一下才有意义。</li>
+</ol>
+<p>以上就是去年立的6点，实际上完成度都不高，有点揪心🤐。但Flag这种东西还得继续立的，不然年底怎么后悔呢？</p>
+<hr>
+<h1 id="2021-flag">2021 Flag</h1>
+<h2 id="习惯养成">习惯养成</h2>
+<h3 id="阅读计划">阅读计划📖</h3>
+<p>相比去年，这里的措辞发生了一些改变。书固然好，但是不读也没办法。这里改为每天的阅读计划。这里的阅读是一个泛指，指在除去自己现在研究需要浏览的内容外额外涉猎的知识。内容包含书本，深度文章，有趣社群，<strong>播客</strong>等形式，但不包含短视频方面，因为看短视频本身就是一个浪费生命的东西。</p>
+<p>每天至少需要花费2个小时浏览有趣的内容，<strong>并进行积累记录</strong>，但是还是有最低读书限额，6本，不定太高了，一点点来吧。</p>
+<h3 id="写作计划plus">写作计划PLUS✍</h3>
+<p>输出继续，但是量上不再要求一周一篇，但<strong>至少二周一篇</strong>。但是在质量上需要提高bi，包括但不限于深度，广度，技巧。输出是一件很重要的事情，自己还有很长的路要走。同时也希望好的文章可以去其他的平台去投投稿，反馈激励自己。去年养成的习惯不错，现在时不时就想这个东西可不可以当成素材，继续加油吧。</p>
+<h2 id="愿望方面">愿望方面</h2>
+<h3 id="girlfriend">Girlfriend👧</h3>
+<p>一个人虽然单惯了，但还是希望能找个人经常联络联络感情。与其去费劲心思的去找，不如尝试一下周围熟悉的人。之前是觉得女朋友啥的有点麻烦，一个人多好。现在是一个人挺不错，但有个女朋友更不错，心境发生了微妙的变化，随缘吧哈哈😕。</p>
+<h3 id="论文发表">论文发表📄</h3>
+<p>今年论文发表继续加油，实验做得差不多了，论文的中文也写得差不多了，但后续还有很多未知的因素，加油！</p>
+<h3 id="算法与编程">算法与编程💻</h3>
+<p>以后估计是要靠这个吃饭，可能学习过程会很辛苦，费脑子。先搞定算法的相关知识，再精进一些Java和Python等语言，为下半年的出路打好基础。</p>
+<h2 id="低优先级长期坚持">低优先级（长期坚持）</h2>
+<h3 id="保持健康">保持健康💪</h3>
+<p>健康比啥都重要。能一口气做40个以上的俯卧撑比做不到10个俯卧撑的人在未来发生心血管疾病的概率明显降低。保持健康的身体才是奋斗的基石。</p>
+<p>计划保持<strong>每周至少三次的运动量</strong>，用继续用Seven app做一些简短无压力的运动，结合我的samsung active 2和三星健康好好监控自己的运动睡眠等状态。</p>
+<h3 id="投资长跑">投资长跑💸</h3>
+<p>**跟着大牛走就躺着就行！**这真是真谛，自动定投，网格都是省时省力的方案！自己贪心买了一点其他品种就被套进去了，日了狗了，跟着走的都盈利了。新的一年继续耐着性子慢慢积累，这是真是一个长期的过程，也是收益终身的技能。</p>
+<p>还有一些想法，比如冥想提升内心呀，继续玩琴唱歌呀，不过暂时不太重要，看情况吧👻。</p>
+<p>希望Flag都能完成！！！😄</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020年终总结]]></title>
         <id>https://laffitto.top/post/2020-nian-zhong-zong-jie/</id>
@@ -743,27 +789,6 @@ $ python train.py --checkpoints output/checkpoints \\
 	--model output/checkpoints/epoch_40.hdf5 --start-epoch 40
 </code></pre>
 <p>结合以上的代码，可以轻松的暂停程序，调整学习率，在特定的epoch回调，在那个特定点重新进行训练，方便很多。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[控制思想]]></title>
-        <id>https://laffitto.top/post/kong-zhi-si-xiang/</id>
-        <link href="https://laffitto.top/post/kong-zhi-si-xiang/">
-        </link>
-        <updated>2020-10-26T12:35:43.000Z</updated>
-        <summary type="html"><![CDATA[<p>“你无法控制别人的思想！”</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>“你无法控制别人的思想！”</p>
-<!-- more -->
-<p>和我的朋友威少扯淡时，每每我们意见不合，他总是会义正言辞的说出：“大家都是成年人了，你无法控制别人的思想！”每次听完这话，我都无言以对，有趣的是可以以其人之道还治其人之身，后面的场合，每当受到反驳时，“我已经是个成年人了，你无法控制我的思想！”此话一出，杀伤力巨大。</p>
-<p>实际这句话是很诡辩的，不如说：我怎么想关你什么事。不过这样说太直白了，有点伤感情。就这句话来说，语境是很重要的，当然也不排除被滥用的可能。</p>
-<p>“你今天咋不用你那个饭盒了，你今天怎么又吃这个饭？”</p>
-<p>“我是个成年人，我想做什么是我的事，你无法控制别人的思想！”</p>
-<p>“好吧……”</p>
-<p>没有什么限制，无论事大事小，无论是日常讨论还是事实观点，都能用这句话让别人无话可说。</p>
-<p>除去日常的玩笑，实际这句话情景应该体现的是现代人没有自主思想的内核，不得不说现在信息真是太爆炸了，舆论阴谋谎言不断增加，可怜的是很多人根本不知道，阅几篇文章便手眼通天，看几个视频便思想爆炸。若是将其指出，反而会受到其冷嘲热讽，你甚至不敢相信这居然是个研究生。别人说啥，媒体说啥，嗯嗯嗯，对对对，民族主义爆棚，心理信心大增，学历与思想完全得不到匹配。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201027163727.jpeg" alt="" loading="lazy"><br>
-然而，你无法去改变他们的思想，因为人家是成年人呀，你如果振振有词的指出，反而会被他们认为你是傻B，自己灰头土脸被人在内心深处咒骂或是瞧不清。所以，还是记住这句话：“我已经是个成年人了，我不应该去控制他人的思想，因为他人也是成年人，人家有自己的思想，保持沉默，随声附和就对了。”</p>
 ]]></content>
     </entry>
 </feed>
