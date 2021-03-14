@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>乱谈府      ——詹詹碎言</title>
-    <updated>2021-03-02T12:39:00.116Z</updated>
+    <updated>2021-03-14T13:20:09.935Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,54 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2021, 乱谈府      ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[买了点啥数字服务？]]></title>
+        <id>https://laffitto.top/post/mai-liao-dian-sha-shu-zi-fu-wu/</id>
+        <link href="https://laffitto.top/post/mai-liao-dian-sha-shu-zi-fu-wu/">
+        </link>
+        <updated>2021-03-14T01:35:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>对自己购入的数字服务的一次盘点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>对自己购入的数字服务的一次盘点。</p>
+<!-- more -->
+<p>直到2015年上了大学，即便接触到更多的软件，那时的我依旧不会为了软件或是数字应用去付费。现在的我和回想那段时光，是大环境与个人价值观共同造成的一点偏见。大环境是很少有人会为了正版软件去付费，用破解盗版也是用，网上资源一大堆，正版付费用户是真的傻。个人价值观是当时觉得这种看不见摸不着的东西没有必要为之付费，花钱买了个冰淇淋，我获得了饱腹感，而买了个虚拟服务得到了什么？不值得。</p>
+<p>然而随着时间向前流淌，整体大环境在越变越好。从盗版数字音乐漫天飞，到国内现在基本被腾讯网易垄断，从软件不断寻求破解版，到越来越多独立开发者可以靠软件吃上饭。当然这不排除我的眼光短浅而导致的认知偏差，但是在<a href="https://sspai.com/">少数派</a>，<a href="https://www.coolapk.com/">酷安</a>等社区的影响下，我渐渐也接受了为软件付费这种理念。现在我将盘点这些年自己购买的软件服务，包括买断制软件和订阅制服务，并推荐几个真正好用的应用。</p>
+<p><strong><a href="https://www.notion.so/d39ea3af60094448958bdc3b3641090b">服务notion链接</a>，下面截图仅为一小部分，以后会持续更新。</strong><br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314210814.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314210828.png" alt="" loading="lazy"></p>
+<ol>
+<li><a href="https://www.dida365.com/home">滴答清单</a></li>
+</ol>
+<p>清单整理兼小笔记便签应用，教育优惠99元/年，全平台制霸，利用周视图，月视图可以规划自己的日程。付费后才深深懂得其核心功能的区分，每个人的用法都不一样，确实是一个好软件。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314210844.png" alt="" loading="lazy"></p>
+<ol start="2">
+<li><a href="https://www.notion.so">Notion</a></li>
+</ol>
+<p>All in one软件，笔记，日程，项目等等都可做，依赖于云端，目前通过教育邮箱白嫖中。非常方便，很多统计类表格都往上面搬，依赖较自由的网络环境，这既是优点也是缺点。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314210858.png" alt="" loading="lazy"></p>
+<ol start="3">
+<li><a href="https://www.wiz.money/zh">MoneyWiz</a></li>
+</ol>
+<p>记账软件，买断和订阅皆可，自己持有IOS和Android版本。目前最强的记账软件（当然也可能由于当时学习体系就是基于它的）。除去基本的记账，通过预算来控制花销也是一个非常强大的点。据说由于疫情公司只有5个人了，加油，希望挺住。</p>
+<ol start="4">
+<li><a href="https://www.yinxiang.com/">印象笔记</a></li>
+</ol>
+<p>吃相越来越难看，但是其优秀的同步，剪藏，搜索功能可以让它成为一个很好的整理软件。现在笔记倾向于使用Notion，实在是因为印象笔记无法导出泛用格式（例如Markdown）。有所担忧但是还是看好，很好用。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314210916.png" alt="" loading="lazy"></p>
+<ol start="5">
+<li><a href="https://www.spotify.com/us/">Spotify</a></li>
+</ol>
+<p>国外流媒体听歌软件，算法强大，超级和我的胃口。由于一些我也不知道的原因白嫖中。每次都能从中发现一些新歌，实在是快乐，外加自己也开了QQ音乐会员，各有特色，双份快乐。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314210935.png" alt="" loading="lazy"></p>
+<ol start="6">
+<li><a href="https://tasker.joaoapps.com/">Tasker</a></li>
+</ol>
+<p>最强Android端自动化软件，只要你能想到，基本都能用它做到。虽然我现在只用了它个别几个功能，但是足够让我感叹它的强大。实际对应在IOS上就是快捷指令，不过比快捷指令权限更高，毕竟IOS实在是太封闭了。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210314211637.jpg" alt="" loading="lazy"><br>
+订阅服务和买断软件的区别主要在于其「服务」属性。如果作者需要额外的云端服务成本，且软件使用频繁，我支持其转向订阅制。因为订阅制让开发者有充足的现金流，得以让其迭代开发新的功能和优化算法等等，大版本更新一般不用收费。相反买断制软件更多存在于本地运行，大版本更新需要再次付费。但还是有很多例外，比如苹果生态的Bear，同步完全依赖于iCloud，自家无任何服务器，但其依旧为订阅制，还有不少的付费用户。当然这只是衡量的一个维度，使用频率也是一个标准。例如<a href="https://www.xmind.net/">Xmind</a>这个脑图软件，一般人根本不可能做到天天用，但它还是订阅制，这就导致它单次使用成本十分的昂贵。像滴答清单，虽然订阅，但天天用，经常看，成本反而就冲淡了。免费的软件往往是最贵的，一个软件即便没有明面上收费，但它从你这里获得的个人数据往往有着更加深刻的价值。没有公司是做慈善的，一切都是因为背后有利可图才会驱使它们做出一些看似不合理的举动。若有选择，个人还是倾向于开源软件&gt;付费软件&gt;免费软件。</p>
+<p>还有很多优秀的软件，就不一一例举了，不得不说软件深刻的改变了我的生活，我也害怕于有一天失去它们自己会极度的不适应。未来的未来，软件肯定会更加融入生活，从电动汽车的操作系统，到各种智能家居都可见一斑。好的软件和服务值得我们去付费，这样才能形成良性循环，达到更便利，更高效的生活状态。最后再次感谢酷安和少数派，让我发现应用的乐趣和用应用去更好的生活。😄</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[恶之华——成长的让步与妥协]]></title>
         <id>https://laffitto.top/post/e-zhi-hua-cheng-chang-de-rang-bu-yu-tuo-xie/</id>
@@ -555,62 +603,6 @@
 <li><a href="https://www.runoob.com/python/python-reg-expressions.html">菜鸟教程Python 正则表达式</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/127807805?utm_source=qq">Python正则表达式，这一篇就够了！</a></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[记一次潮州之旅]]></title>
-        <id>https://laffitto.top/post/ji-yi-ci-chao-zhou-zhi-lu/</id>
-        <link href="https://laffitto.top/post/ji-yi-ci-chao-zhou-zhi-lu/">
-        </link>
-        <updated>2020-11-30T08:54:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>潮州一日游</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>潮州一日游</p>
-<!-- more -->
-<h2 id="旅游路线">旅游路线</h2>
-<p>借着自己是党员的福，得以参加学校工学院组织的去潮州『学习交流』的活动。很可悲的是，身为研二的老大哥，我大意了啊，居然就只有我一个人参加，原本说去的也都『咕咕咕』叫着然后飞走了。不过随便了，我也不在乎这点小破事，毕竟还是有几个认识的师弟的。</p>
-<p>早上8:20集合了，还行，我背个包随便吃个饭就到了。</p>
-<p>坐上大巴车后，就开始慢慢晃去目的地，大概一个多小时后，成功抵达潮州地区。</p>
-<h3 id="涵碧楼">涵碧楼</h3>
-<p>我们的第一个目的地是潮州西湖上的<a href="https://baike.baidu.com/item/%E6%B6%B5%E7%A2%A7%E6%A5%BC/2659714?fr=aladdin"><strong>涵碧楼</strong></a>，听完真是高大上呀，结果去到后才发现所谓西湖，正如其名，靠近西边的一个小湖。可能是为了保护，我们不能通过乘坐大巴直接在目的地停下，中间停下来换了小车，也得以看见了许多市井风光，那一刻确实很淳朴，杂乱的街道，过往的居民，拥挤的马路，刻画着生活气息。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201130204230.JPG" alt="西湖景色" loading="lazy"><br>
-穿过生活感浓厚的街区，我们终于来道了涵碧楼，实际性质是一个爱国主义教育基地，不大，二层有余，里面陈列着抗战时期的诸多文物，夹杂着介绍，却仍然无法将我代回过去岁月。很遗憾，我对此并不共情，看了5min便出来等他们了。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201130204149.JPG" alt="涵碧楼" loading="lazy"></p>
-<h3 id="牌坊街">牌坊街</h3>
-<p>紧接着我们来到了潮州地区最富盛名的街道：<a href="https://baike.baidu.com/item/%E6%BD%AE%E5%B7%9E%E7%89%8C%E5%9D%8A%E8%A1%97/729296?fr=aladdin">『牌坊街』</a>，这个类似步行街的巷道，进入其中看见了大大小小的商户，或是小吃，或是奶茶，或是特产，可以说这条街诞生的目的应该就是为了吸引游客，你不去买点东西，还真对不起来过这里。然而这里东西的重复度也高到令人发指。一条路走到头，同一个牌子的商品，可以看见10次以上，不亚于长沙黄兴路步行街上茶颜悦色店面的数量。我想买个特产，无异于买彩票。不过整条街还是挺热闹的。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201130204304.JPG" alt="牌坊街热热闹闹" loading="lazy"></p>
-<h3 id="广济桥">广济桥</h3>
-<p>跟随大部队七拐八拐，出了牌坊街，迎面来到的就是<a href="https://baike.baidu.com/item/%E5%B9%BF%E6%B5%8E%E6%A1%A5/3929?fr=aladdin">『广济桥』</a>，一条桥挺长的，中间有着极具特色的景点：由船在特定时间闭合开启才能连通的路。最初的我抱有不屑，觉得中间的船是固定的，不过是为了吸引游客的噱头，因为走在上面真的很稳，等我走完了，看到整体架构和旁边关于闭合时间段的通知，一种淡淡的敬意才逐渐产生。<br>
-（图歪了，懒得调了，锻炼一下颈椎吧😕）<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201130204343.jpg" alt="" loading="lazy"></p>
-<p>桥上也很多的题字，或许是处于不同人的手笔，有些很好认，有些我看来不过是鬼画符。然而真实这一块块的题字，才让桥的历史底蕴呈现出来。不禁让人想，究竟是人造就了景点，还是真正的历史？<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201130204427.JPG" alt="" loading="lazy"><br>
-实际上面所有东西都在一个上午完成了。中午去了那种很简单的旅行社包餐的餐厅，用餐体验中等偏下，外加一点心情的不愉快😶。</p>
-<h3 id="下午的闲逛">下午的闲逛</h3>
-<p>下午很人性化的给了我们自由活动的时间，这也好让我们去真正<strong>探索</strong>一下匆忙走过的牌坊街。跟着师弟一行人，成功的捕获了以下填肚子的东西🤗：</p>
-<ol>
-<li>潮州三宝之一：老桂皮。吃起来有点像陈皮，偶尔吃吃挺不错的。</li>
-<li>宫廷桃酥：实际很多地方都有，不过他这里6个混合口味，一份价格6份快乐，我最爱。不过还没吃，应该不赖。</li>
-<li>猫屎香柠檬茶：实际喝起来和其他的破柠檬茶没啥区别，血亏，不过也有可能是走错了商家。<br>
-（忘了给吃的拍照片了，我真是裂开了😤）</li>
-</ol>
-<p>逛了一圈快到集合时间点了，就慢慢回去了，也没去<a href="https://baike.baidu.com/item/%E5%B9%BF%E6%B5%8E%E6%A5%BC/7474114?fr=aladdin"><strong>广济楼</strong></a>上看看，没啥兴趣。<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201130204613.JPG" alt="" loading="lazy"><br>
-之后等待不守时的某些人快半小时，心情变差差。</p>
-<p>人终于到齐，大巴的回校之旅。没车祸啥的，挺幸运😴，旅途结束。</p>
-<h2 id="青春荷尔蒙的氛围">青春荷尔蒙的氛围</h2>
-<p>有一个非常有意思的点，去的人周围似乎充满了青春荷尔蒙的气息。同行的电子系有三个女生，很明显有几个小伙被吸引住了，就很舔狗的样子。在中午悲伤的饭桌上，他们显得很拘谨，因为有女生，导致大家吃饭吃的都很不舒服，食物虽然并没有那么好吃，但它们罪不至于一点都不曾被动筷子。中华传统美德礼仪谦让得到了很好的诠释，我很是欣慰。</p>
-<p>下午自由活动散开时，他们一起消失了，消失在牌坊街的大大小小的巷落中，以至于到了规定的集合时间只有他们还没来。浪费所有人的时间来完成一点私欲，这实际是十分自私的事情。大多的时候我们只是陌路人，陌路到即便觉得眼熟也不一定会去打招呼。实际也不想做过多的批判，因为青春（<s>性欲</s>）的荷尔蒙让人变得愚蠢，甚至不求回报。</p>
-<h2 id="真正的气氛">真正的气氛</h2>
-<p>人们会考虑真正的孤独嘛？</p>
-<p>如果只有一个人，一个人出去玩，会显得很寂寞嘛。</p>
-<p>这种寂寞，是来自自己内心真正的寂寞，又或者是来自他人的目光？</p>
-<p>“你看那个人，只有他一个，好可怜哦。”</p>
-<p>“咋就一个人出来玩，也太伤心了吧。”</p>
-<p>实际当事人甚至不为所动，可能就是因为累了，出来换个心情，或是通过一次自己的旅行，提升自己的思想境界。然而别人指指点点 ，『同理心』泛滥，又显得十分奇怪了。</p>
-<blockquote>
-<p>我的事关你啥事，管好自己就行了。我已经是个成年人了，你无法控制我的思想😒。</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
