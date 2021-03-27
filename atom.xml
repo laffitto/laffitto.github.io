@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://laffitto.top</id>
     <title>乱谈府      ——詹詹碎言</title>
-    <updated>2021-03-14T13:31:54.343Z</updated>
+    <updated>2021-03-27T12:00:57.976Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://laffitto.top"/>
     <link rel="self" href="https://laffitto.top/atom.xml"/>
@@ -11,6 +11,488 @@
     <logo>https://laffitto.top/images/avatar.png</logo>
     <icon>https://laffitto.top/favicon.ico</icon>
     <rights>All rights reserved 2021, 乱谈府      ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[排序算法整理]]></title>
+        <id>https://laffitto.top/post/pai-xu-suan-fa-zheng-li/</id>
+        <link href="https://laffitto.top/post/pai-xu-suan-fa-zheng-li/">
+        </link>
+        <updated>2021-03-27T08:59:48.000Z</updated>
+        <summary type="html"><![CDATA[<p>Algorithms 4th的排序算法整理</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Algorithms 4th的排序算法整理</p>
+<!-- more -->
+<p>这周把algorithm 4th这本书上的排序算法简单整理了一下，留做以后备用，也顺便水一篇博文。<br>
+[TOC]<br>
+<a href="https://www.notion.so/103d587069584b899c6f048c93b2b9f1">缝合奇美拉文章notion版点这里</a></p>
+<h2 id="排序算法总体比较">排序算法总体比较</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327193530.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327194035.png" alt="" loading="lazy"></p>
+<h3 id="稳定性">稳定性</h3>
+<p>如果一个排序算法能够保留数组中<strong>重复元素的相对位置</strong>则可以被称为是<strong>稳定</strong>的。</p>
+<ul>
+<li>稳定的排序算法：插入排序、归并排序</li>
+<li>不稳定的排序算法：选择排序、希尔排序、快速排序和堆排序</li>
+</ul>
+<p>一般只有在稳定性是必要的情况下，稳定的排序算法才有优势。</p>
+<h3 id="各种排序算法的性能特点">各种排序算法的性能特点</h3>
+<p>快速排序是最快的通用排序算法。</p>
+<h2 id="插入排序insertion-sort">插入排序(Insertion sort)</h2>
+<blockquote>
+<p>（1）设待排序数组a[n]，默认a[0]是一个有序序列<br>
+（2）循环n-1次，每次将为排序序列插入到前面的已排序序列当中，将已排序序列区间长度加1，未排序区间长度减一<br>
+（3）重复（2）直到未排序区间长度为0</p>
+</blockquote>
+<p>插入排序每次将正在遍历的元素插入到其他已经有序的元素中的适当位置。与选择排序一样，当前索引左边的所有元素都是有序的，但它们的最终位置还不确定。为了给更小的元素腾出空间，它们可能会向右移动。当索引到达数组的右端时，数组排序就完成了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327191930.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192010.png" alt="" loading="lazy"></p>
+<p>java代码：</p>
+<pre><code class="language-java">    // 插入排序
+    public void insertSort(int[] nums) {
+        if (nums == null || nums.length == 0)
+            return;
+
+        // 假设第一个数位置是正确的
+        for (int i = 1; i &lt; nums.length; i++) {
+            int j = i;
+
+            int target = nums[j];
+
+            // 后移
+            while (j &gt; 0 &amp;&amp; nums[j - 1] &gt; target) {
+                nums[j] = nums[j - 1];
+                j--;
+            }
+
+            // 插入
+            nums[j] = target;
+        }
+    }
+</code></pre>
+<p>python代码：</p>
+<pre><code class="language-python">def InsertSort(ls):
+    n=len(ls)
+    if n&lt;=1:
+        return ls
+    for i in range(1,n):
+        j=i
+        target=ls[i]            #每次循环的一个待插入的数
+        while j&gt;0 and target&lt;ls[j-1]:       #比较、后移，给target腾位置
+            ls[j]=ls[j-1]
+            j=j-1
+        ls[j]=target            #把target插到空位
+    return ls
+</code></pre>
+<p>每轮操作O(n)次，共O(n)轮，时间复杂度O(n^2)。</p>
+<p>额外空间开销出在数据移位时那一个过渡空间，空间复杂度O(1)。</p>
+<p>对于随机排列的长度为 N 且主键不重复的数组，平均情况下插入排序需要 ~N^2/4 次比较以及 ~N^2/4 次交换。最坏情况下需要 ~N^2/2 次比较和 ~N^2/2 次交换，最好情况下需要 N-1 次比较和 0 次交换。</p>
+<h2 id="选择排序selection-sort">选择排序(Selection sort)</h2>
+<p>通过n-1次关键字比较，从n-i+1个记录中选择关键字最小的记录，并和第i个记录交换。</p>
+<blockquote>
+<p>选择排序是经过一次一次在无序区间中找到最值，放到无序区间的前一个位置，基本步骤：<br>
+（1）设待排序的记录存放在数组r[n]中，第一趟从r[1]开始，通过n-1次比较，从n个记录中选取最小的记录，记为r[k]，交换r[1]和r[k]<br>
+（2）第二趟从r[2]开始，通过n-2次比较，从n-1个记录中选出关键字最小的记录，记为r[k]，交换r[2]和r[k]<br>
+（3）以此类推，第i趟从r[i]开始，通过n-i次比较，从n-i+1个记录中选取最小关键字记录，记为r[k]，交换 r[i]和r[k]<br>
+（4）经过n-1趟，排序完成</p>
+</blockquote>
+<p>其实选择排序可以看成冒泡排序的优化，因为其目的相同，只是选择排序只有在确定了最小数的前提下才进行交换，大大减少了交换的次数。</p>
+<p>动态图如下：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327191519.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327191617.png" alt="" loading="lazy"><br>
+java代码：</p>
+<pre><code class="language-java">// 选择排序
+    public void selectSort(int[] nums) {
+        if (nums == null || nums.length == 0)
+            return;
+
+        int minIndex;
+
+        // 只需要循环 n-1 次
+        for (int i = 0; i &lt; nums.length - 1; i++) {
+            minIndex = i;
+
+            for (int j = i + 1; j &lt; nums.length; j++) {
+                if (nums[j] &lt; nums[minIndex]) {
+                    minIndex = j;
+                }
+            }
+						//交换两个值
+            if (minIndex != i) {
+                swap(nums, i, minIndex);
+            }
+        }
+    }
+</code></pre>
+<p>python代码：</p>
+<pre><code class="language-python">def SelectSort(ls):
+    n=len(ls)
+    if n&lt;=1:
+        return ls
+    for i in range(0,n-1):
+        minIndex=i
+
+        for j in range(i+1,n):          #比较一遍，记录索引不交换
+            if ls[j]&lt;ls[minIndex]:
+                minIndex=j
+
+        if minIndex!=i:                     #按索引交换
+            (ls[minIndex],ls[i])=(ls[i],ls[minIndex])
+    return ls
+</code></pre>
+<p>每轮操作O(n)次，共O(n)轮，时间复杂度O(n^2)。</p>
+<p>额外空间开销出在交换数据时那一个过渡空间，空间复杂度O(1)。</p>
+<p>选择排序的特点：</p>
+<ul>
+<li>运行时间和输入无关：一个已经有序的数组或是主键全部相等的数组和一个元素随机排列的数组所用的排序时间一样长；</li>
+<li>数据移动是最少的：每次交换都会改变两个数组元素的值，因此选择排序用了 N 次交换——交换次数和数组的大小是<strong>线性</strong>关系。其他算法大多都是线性对数或是平方级别。</li>
+</ul>
+<h2 id="冒泡排序bubble-sort">冒泡排序(Bubble sort)</h2>
+<p>很少用，通过与相邻元素的比较和交换来把小的数交换到最前面，或者把大的数交换到最后面。</p>
+<blockquote>
+<p>有一个数组a[10]，用变量i表示它的下标(i从0开始）<br>
+（1） 比较两个相邻元素a[i]和a[i+1]，如果a[i]&gt;a[i+1]，就交换这两个数的位置；<br>
+（2）重复执行第一步，直到比较到最后一对的时候（例：首次是a[8]和a[9]，此时，a[9]的值为该数组的最大值，这个值属于有序数列）；<br>
+（3）对所有元素（除了有序数列里的元素），重复执行第一步和第二步，每执行完一次，都会找到当前比较的数里最大的那个（有序数列就会增加一个）；<br>
+（4）随着参与比较的元素越来越少，最终没有任何一对元素需要比较的时候，排序完成。</p>
+</blockquote>
+<p>java代码：</p>
+<pre><code class="language-java">    // 冒泡排序
+    public void bubbleSort(int[] nums) {
+        if (nums == null || nums.length == 0)
+            return;
+
+        // 只需要循环 n-1 次
+        for (int i = 0; i &lt; nums.length - 1; i++) {
+            for (int j = 0; j &lt; nums.length - i - 1; j++) {
+                if (nums[j] &gt; nums[j + 1]) {
+                    swap(nums, j, j + 1);
+                }
+            }
+        }
+    }
+</code></pre>
+<p>python代码</p>
+<pre><code class="language-python">def BubbleSort(ls):
+    n=len(ls)
+    if n&lt;=1:
+        return ls
+    for i in range (0,n):
+        for j in range(0,n-i-1):
+            if ls[j]&gt;ls[j+1]:
+                (ls[j],ls[j+1])=(ls[j+1],ls[j])
+    return ls
+</code></pre>
+<p>每轮操作O(n)次，共O(n)轮，时间复杂度O(n^2)。</p>
+<p>额外空间开销出在交换数据时那一个过渡空间，空间复杂度O(1)。</p>
+<h2 id="希尔排序shell-sort">希尔排序(Shell sort)</h2>
+<p><strong>希尔排序</strong>是一种基于插入排序的快速的排序算法，为了加快速度简单地改进了插入排序，交换不相邻的元素以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序。</p>
+<p><strong>思想</strong>：使数组中任意间隔为 h 的元素都是有序的。这样的数组被称为 <strong>h 有序数组</strong>。换句话说，一个 h 有序数组就是 h 个互相独立的有序数组编织在一起的一个数组。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192319.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192330.png" alt="" loading="lazy"></p>
+<p>官方java代码：</p>
+<pre><code class="language-java">public static void sort(Comparable[] a) {
+    // 将 a[] 按升序排列
+    int N = a.length;
+    int h = 1;
+    while(h &lt; N / 3)
+        h = 3 * h + 1;    // 1, 4, 13, 40, 121, 364, 1093, ...
+    while(h &gt;= 1) {
+        // 将数组变为 h 有序
+        for(int i = h; i &lt; N; i++) {
+            // 将 a[i] 插入到 a[i-h]，a[i-2*h]，a[i-3*h]... 之中
+            for(int j = i; j &gt;= h &amp;&amp; less(a[j], a[j -h]); j -= h)
+                exch(a, j, j-h);
+        }
+        h /= 3;
+    }
+}
+</code></pre>
+<h2 id="归并排序merge-sort">归并排序(Merge sort)</h2>
+<p><strong>归并</strong>：将两个有序的数组归并成一个更大的有序数组。</p>
+<p>归并排序能保证将任意长度为 N 的数组排序所需时间和 NlogN 成正比；但主要缺点是所需的额外空间和 N 成正比。</p>
+<p>归并算法是算法设计中分治思想的典型应用。</p>
+<blockquote>
+<p>（1）将当前序列一分为二，求出分裂点mid=(l+r)/2<br>
+（2）对子序列r[l]-r[mid]递归，进行归并排序，结果放在t[l,mid]中<br>
+（3）对子序列r[mid+1,r]递归，进行归并排序，结果放在t[mid+1,r]<br>
+（4）将两个有序的子序列t[l,mid]，t[mid+1,r]归并为一个有序的序列放入r[l,r]中</p>
+</blockquote>
+<h2 id="merge思想图解">merge思想图解：</h2>
+<p>实际就是将两个有序序列合并<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192550.png" alt="" loading="lazy"></p>
+<h2 id="自顶而下归并排序递归">自顶而下归并排序（递归）</h2>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192637.png" alt="" loading="lazy"></figure>
+<p>java代码：</p>
+<pre><code class="language-java">    // 归并排序
+    public void mergeSort(int[] arr, int start, int end) {
+        if (start &gt;= end)
+            return;
+
+        int mid = (start + end) / 2;
+
+        // 递归排序左边
+        mergeSort(arr, start, mid);
+        // 递归排序右边
+        mergeSort(arr, mid + 1, end);
+
+        // 合并
+        merge(arr, start, mid, end);
+    }
+
+    // 合并两个有序数组
+    public void merge(int[] arr, int start, int mid, int end) {
+        int[] temp = new int[end - start + 1]; // 中间数组
+
+        int i = start;
+        int j = mid + 1;
+        int k = 0;
+        while (i &lt;= mid &amp;&amp; j &lt;= end) {
+            if (arr[i] &lt;= arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
+            }
+        }
+
+        while (i &lt;= mid) {
+            temp[k++] = arr[i++];
+        }
+
+        while (j &lt;= end) {
+            temp[k++] = arr[j++];
+        }
+
+				for (p = start; p &lt;= end; p++) {
+						arr[p] = temp[p];
+				}
+
+   /*     for (int p = 0; p &lt; temp.length; p++) {
+            arr[start + p] = temp[p];
+        }
+	*/
+    }
+</code></pre>
+<p>另一个版本<a href="https://www.notion.so/cbbb88ccab634a7b8c8b1288602b27da">java代码</a>：（类似于算法4书上的表述）</p>
+<pre><code class="language-java">//归并排序
+    public void sort(int[] arr,int start,int end){
+        if(start &gt;= end)return;
+
+        int mid = start + (end-start)/2;
+        sort(arr,start,mid);
+        sort(arr,mid+1,end);
+				merge(arr,start,mid,end);
+		}
+
+        //合并
+		public void merge(int[] arr, int start, int mid, int end) {
+        int i=start,j=mid+1,k=0;
+				int[] temp = new int[end-start+1];
+
+        for(int k=start;k&lt;=end;k++){
+            if(i&gt;mid)temp[k]=arr[j++];
+            else if(j&gt;end)temp[k]=arr[i++];
+            else if(arr[i]&gt;arr[j])temp[k] = arr[j++];
+            else temp[k] = arr[i++];
+        }
+    }
+</code></pre>
+<p>python代码：</p>
+<pre><code class="language-python">def MergeSort(ls):
+    #合并左右子序列函数
+    def merge(arr,left,mid,right):
+        temp=[]     #中间数组
+        i=left          #左段子序列起始
+        j=mid+1   #右段子序列起始
+        while i&lt;=mid and j&lt;=right:
+            if arr[i]&lt;=arr[j]:
+                temp.append(arr[i])
+                i+=1
+            else:
+                temp.append(arr[j])
+                j+=1
+        while i&lt;=mid:
+            temp.append(arr[i])
+            i+=1
+        while j&lt;=right:
+            temp.append(arr[j])
+            j+=1
+        for i in range(left,right+1):    #  !注意这里，不能直接arr=temp,他俩大小都不一定一样
+            arr[i]=temp[i-left]
+
+    #递归调用归并排序
+    def mSort(arr,left,right):
+        if left&gt;=right:
+            return
+        mid=(left+right)//2
+        mSort(arr,left,mid)
+        mSort(arr,mid+1,right)
+        merge(arr,left,mid,right)
+ 
+    n=len(ls)
+    if n&lt;=1:
+        return ls
+    mSort(ls,0,n-1)
+    return ls
+</code></pre>
+<p>归并排序划分子问题采用二分法，共需O(logn)次划分，当然需要相当次合并；每次合并遍历比较O(n)。时间复杂度O(nlogn)。</p>
+<p>额外空间开销出在合并过程中的一个暂存数组，空间复杂度O(n)。</p>
+<h2 id="自底向上的归并排序非递归">自底向上的归并排序（非递归）</h2>
+<p>利用for循环，无递归。但是理解上比较复杂。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192708.png" alt="" loading="lazy"></p>
+<h2 id="快速排序quick-sort">快速排序(Quick sort)</h2>
+<p><strong>特点：</strong></p>
+<ul>
+<li>原地排序（只需要一个很小的辅助栈）；</li>
+<li>将长度为 N 的数组排序所需的时间和 NlgN 成正比。</li>
+</ul>
+<blockquote>
+<p>（1）选择待排序记录中第一个记录作为基准，将基准暂存在r[0]的位置上，假设两个指针low和high，初始分别指向表的下界和上界<br>
+（2）从表的最右侧位置向左寻找第一个比基准数小的位置，从表的最左侧寻找第一个比基准数大的位置，交换两个元素<br>
+（3）重复（2）当low==high时，将基准数放到low位置处的元素判断大于还是小于后，与基准数交换<br>
+（4）此时以基准数的位置为分界点，将序列分为两个子序列，分别进行（1），（2），（3）操作，直到序列的长度为1为止</p>
+</blockquote>
+<p>快速排序是一种分治的排序算法。 它的工作原理是将一个数组分成两部分，通过切分实现某一部分总小于另一数组，然后分别独立排序。</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327192941.png" alt="" loading="lazy"></figure>
+<p><strong>切分</strong>：一般策略是先随意地选取 a[lo] 作为<strong>切分元素</strong>，即那个会被排定的元素，然后我们从数组的左端开始向右扫描直到找到一个<strong>大于等于</strong>它的元素，再从数组的右端开始向左扫描直到找到一个小于等于它的元素。这两个元素显然是没有排定的，因此我们交换它们的位置。</p>
+<p>如此继续，我们就可以保证左指针 i 的左侧元素都不大于切分元素，右指针 j 的右侧元素都不小于切分元素。当两个指针相遇时，我们只需要将切分元素 a[lo] 和左子数组最右侧的元素（a[j]）交换然后返回 j 即可。</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327193000.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327193015.png" alt="" loading="lazy"></figure>
+<p>java代码：</p>
+<pre><code class="language-java">    // 快速排序
+    public void quickSort(int[] nums, int start, int end) {
+        if (start &gt;= end)
+            return;
+
+        int partitionIdx = partition(nums, start, end);
+
+        quickSort(nums, start, partitionIdx - 1);
+        quickSort(nums, partitionIdx + 1, end);
+    }
+
+    // partition
+    public int partition(int[] nums, int start, int end) {
+        if (start == end) {
+            return start;
+        }
+
+        int pivot = nums[start];
+
+        while (start &lt; end) {
+            // 从右往左找到第一个小于 pivot 的元素
+            while (start &lt; end &amp;&amp; nums[end] &gt;= pivot) {
+                end--;
+            }
+            // 把小的移动到左边
+            nums[start] = nums[end];
+
+            // 从左往右找到第一个大于 pivot 的元素
+            while (start &lt; end &amp;&amp; nums[start] &lt;= pivot) {
+                start++;
+            }
+            // 把大的移动到右边
+            nums[end] = nums[start];
+        }
+
+        // 最后把pivot赋值到中间
+        nums[start] = pivot;
+
+        return start;
+    }
+</code></pre>
+<p>python代码：</p>
+<pre><code class="language-python">def QuickSort(ls):
+    def partition(arr,left,right):
+        key=left         #划分参考数索引,默认为第一个数，可优化
+        while left&lt;right:
+            while left&lt;right and arr[right]&gt;=arr[key]:
+                right-=1
+            while left&lt;right and arr[left]&lt;=arr[key]:
+                left+=1
+            (arr[left],arr[right])=(arr[right],arr[left])
+        (arr[left],arr[key])=(arr[key],arr[left])
+        return left
+ 
+    def quicksort(arr,left,right):   #递归调用
+        if left&gt;=right:
+            return
+        mid=partition(arr,left,right)
+        quicksort(arr,left,mid-1)
+        quicksort(arr,mid+1,right)
+    #主函数
+    n=len(ls)
+    if n&lt;=1:
+        return ls
+    quicksort(ls,0,n-1)
+    return ls
+</code></pre>
+<p>算法的整体性能取决于划分的平均程度，即基准值的选择，此处衍生出快速排序的许多优化方案，甚至可以划分为多块。</p>
+<p>基准值若能把数据分为平均的两块，划分次数O(logn)，每次划分遍历比较一遍O(n)，时间复杂度O(nlogn)。</p>
+<p>额外空间开销出在暂存基准值，O(logn)次划分需要O(logn)个，空间复杂度O(logn)。</p>
+<h2 id="堆排序heap优先队列-priority-queues">堆排序(Heap)（优先队列 Priority queues）</h2>
+<p>可以参考这些文章：</p>
+<ol>
+<li><a href="https://github.com/labuladong/fucking-algorithm/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%B3%BB%E5%88%97/%E4%BA%8C%E5%8F%89%E5%A0%86%E8%AF%A6%E8%A7%A3%E5%AE%9E%E7%8E%B0%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97.md">二叉堆详解实现优先级队列</a></li>
+<li><a href="https://www.jianshu.com/p/f7c1c62ee335">堆的使用及相关LeetCode题目</a></li>
+<li><a href="https://github.com/MeandNi/Algorithms4-Common/blob/master/Chapter02-Sorting%20/2-4-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86%E6%8E%92%E5%BA%8F).md">Algorithms-优先队列（堆排序）</a></li>
+</ol>
+<blockquote>
+<p>堆排序利用了大根堆（或小根堆）堆顶记录的关键字最大（或最小）这一特征，使得当前无序的序列中选择关键字最大（或最小）的记录变得简单，步骤为：<br>
+（1）按照堆的定义将待排序序列a[n] 调整为大根堆，这个过程称为初建堆，交换a[1]和a[n] ，则a[n]为关键字的最大记录<br>
+（2）将a[n-1]重新调整为堆，交换ra[1]和a[n-1]，此时a[n-1]为关键字最大记录<br>
+（3）循环n-1次，直到交换a[1]和a[2]为止</p>
+</blockquote>
+<p>堆排序基于比较交换，是冒泡排序的优化。具体涉及大（小）顶堆的建立与调整。</p>
+<p>大顶堆指任意一个父节点都不小于左右两个孩子节点的完全二叉树，根节点最大。</p>
+<p>堆排序首先建立大顶堆（找出一个最大值），然后用最后一个叶子结点代替根节点后做大顶堆的调整（再找一个最大值），重复</p>
+<p>以数组（列表）实现大顶堆时，从上到下，从左到右编号。父节点序号为n，则左右孩子节点序号分别为2<em>n+1、2</em>n+2</p>
+<p>堆的表示：</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20210327193126.png" alt="" loading="lazy"></figure>
+<p>还有一些基本操作：</p>
+<p>上浮（swim）</p>
+<p>下沉（sink）</p>
+<p>在进行插入和删除元素时都将使用上面两个方法。</p>
+<p>python构建堆代码：</p>
+<pre><code class="language-python">def  HeapSort(ls):
+    def heapadjust(arr,start,end):  #将以start为根节点的堆调整为大顶堆
+        temp=arr[start]
+        son=2*start+1
+        while son&lt;=end:
+            if son&lt;end and arr[son]&lt;arr[son+1]:  #找出左右孩子节点较大的
+                son+=1
+            if temp&gt;=arr[son]:       #判断是否为大顶堆
+                break
+            arr[start]=arr[son]     #子节点上移
+            start=son                     #继续向下比较
+            son=2*son+1
+        arr[start]=temp             #将原堆顶插入正确位置
+#######
+    n=len(ls)
+    if n&lt;=1:
+        return ls
+    #建立大顶堆
+    root=n//2-1    #最后一个非叶节点（完全二叉树中）
+    while(root&gt;=0):
+        heapadjust(ls,root,n-1)
+        root-=1
+    #掐掉堆顶后调整堆
+    i=n-1
+    while(i&gt;=0):
+        (ls[0],ls[i])=(ls[i],ls[0])  #将大顶堆堆顶数放到最后
+        heapadjust(ls,0,i-1)    #调整剩余数组成的堆
+        i-=1
+    return ls
+</code></pre>
+<p>堆排序的初始建堆过程比价复杂，对O(n)级别个非叶子节点进行堆调整操作O(logn)，时间复杂度O(nlogn)；之后每一次堆调整操作确定一个数的次序，时间复杂度O(nlogn)。合起来时间复杂度O(nlogn)</p>
+<p>额外空间开销出在调整堆过程，根节点下移交换时一个暂存空间，空间复杂度O(1)</p>
+<p>参考内容：</p>
+<ol>
+<li><a href="https://kyonhuang.top/Algorithms-notes/#/">《算法（第4版）》笔记</a></li>
+<li><a href="https://github.com/MeandNi/Algorithms4-Common">Algorithms4-Common</a></li>
+<li><a href="https://www.jianshu.com/p/7df9d6206e72">几种排序算法的总结与比较</a>(Java)</li>
+<li><a href="https://blog.csdn.net/qq_41431457/article/details/85262605">几种排序算法比较</a>(Java)</li>
+<li><a href="https://blog.csdn.net/aiya_aiya_/article/details/79846380">十大排序算法总结（Python3实现）</a></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[买了点啥数字服务？]]></title>
         <id>https://laffitto.top/post/mai-liao-dian-sha-shu-zi-fu-wu/</id>
@@ -511,97 +993,6 @@
 这个非常有意思，大满贯容易使系统崩溃。一件事延后，事事延后，最终想养成的习惯的热情也会渐渐磨灭。这种设置<strong>时间缓冲区</strong>的方法真的很有意思。</li>
 <li>沉没成本谬误中的“明确机会成本”<br>
 次优选择中得到的收益。这是一个新的思路，或许做出决策时考虑这种会对最终结果产生较大影响。</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[正则表达式快速参考]]></title>
-        <id>https://laffitto.top/post/zheng-ze-biao-da-shi-kuai-su-can-kao/</id>
-        <link href="https://laffitto.top/post/zheng-ze-biao-da-shi-kuai-su-can-kao/">
-        </link>
-        <updated>2020-12-05T01:57:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>一些常用的正则表达式</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一些常用的正则表达式</p>
-<!-- more -->
-<p>首先放上两个很有用的参考网站：</p>
-<ol>
-<li>
-<p><a href="https://regexone.com/">RegexOne</a>：涵盖了基本的正则表达式的用法，我就是通过这个网站学习的</p>
-</li>
-<li>
-<p><a href="https://regex101.com/">Regex101</a>：在线匹配正则表达式的网站，炒鸡方便</p>
-</li>
-</ol>
-<p>实际比较重要的几个：中括号[0-9a-z]、小括号（）分组、大括号{1,4}个数、^前匹配、$后匹配、|或逻辑。</p>
-<p>以下有一个偷来的图：</p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205151923.png" alt="" loading="lazy"></figure>
-<h2 id="表达式整理">表达式整理</h2>
-<p>基于RegexOne网站：<br>
-<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205152128.png" alt="" loading="lazy"></p>
-<h3 id="数字匹配">数字匹配</h3>
-<p>方法：<strong>\d</strong></p>
-<p>字符\d可以用于替换从0到9的任何数字。前面的斜杠将它与简单的d字符区分开来，并表明它是一个元字符（metacharacter）。</p>
-<h3 id="万能匹配">万能匹配</h3>
-<p>方法：<strong>.</strong></p>
-<p>. 可以理解为通配符，可以匹配<strong>任何单个字符</strong>(字母、数字、空格等)。</p>
-<p>如果想匹配真正的.字符，需要在前面加上斜杠以表示区别，即**.**</p>
-<h3 id="匹配特定字符">匹配特定字符</h3>
-<p>方法：<strong>[abc]</strong><br>
-[] 可以匹配特定的字符。例如：[abc]将只匹配一个字母a, b,或c,和无。</p>
-<h3 id="排除特定字符">排除特定字符</h3>
-<p>方法：<strong>[^]</strong></p>
-<p>在方括号中使用^(hat)可以排除特定字符。例如 [ ^abc]可以匹配除了a,b,c外的任意<strong>单个</strong>字符。</p>
-<h3 id="特定范围内的字符">特定范围内的字符</h3>
-<p>方法：<strong>[0-6], [a-e], [M-W], \w</strong></p>
-<p>使用破折号“-”表示范围。例如[0-6]只匹配从0到6的任何单个数字字符，其他字符不匹配。同样地，结合^，[ ^n-p]将只匹配除字母n到p之外的任何单个字符。</p>
-<p>其中**\w<strong>为元字符，等同于</strong>[A-Za-z0-9_]<strong>，</strong>\W<strong>等同于</strong>[^A-Za-z0-9_]**</p>
-<h3 id="匹配多个字符">匹配多个字符</h3>
-<p>方法：<strong>{m}，{m,n}</strong></p>
-<p>使用花括号{}匹配多次结果。例如：a{3}精确匹配a三次。a{1,3}将匹配a1到3次。.{2,6}将匹配任意字符2到6次。</p>
-<h3 id="泛多次匹配">泛多次匹配</h3>
-<p>方法：*<strong>，+</strong></p>
-<p>使用Kleene Star “*”匹配0或更多次。</p>
-<p>例如\d*表示匹配任意个数的数字。</p>
-<p>使用Kleene Plus“+”匹配1或更多次。</p>
-<p>例如\d+表示至少有一个数字类型的输入。[abc]+表示1个或多个任意a,b,c字符。</p>
-<h3 id="字符可选项">字符可选项</h3>
-<p>方法：<strong>？</strong></p>
-<p>使用？表示此项可以作为可选项。例如，ab?c可以匹配“abc”或“ac”，b是作为一个可选项存在的。</p>
-<p>同样，要想匹配字符?需要加上斜杠，即?</p>
-<h3 id="匹配空格">匹配空格</h3>
-<p>方法：<strong>\s</strong></p>
-<p>通常有以下几种空格情况：</p>
-<ol>
-<li>空格( )</li>
-<li>制表符(\t)</li>
-<li>新行(\n)</li>
-<li>回车符(\r)</li>
-</ol>
-<p>它们都可以通过**\s**进行匹配，其可以匹配任意特定的空白。实际等价于 [ \f\n\r\t\v]。</p>
-<p><strong>\S</strong>则匹配任何非空白字符，等价于 [ ^ \f\n\r\t\v]。</p>
-<h3 id="匹配开始结束特定字符">匹配开始/结束特定字符</h3>
-<p>方法：<strong>^, $</strong></p>
-<p>使用^匹配开始时的特定字符。<br>
-例如^success来匹配仅仅以success开始的行。</p>
-<p>使用$匹配结束时的特定附。</p>
-<p>例如love$来匹配以love为结尾的字段。</p>
-<p>注意这里的^与上面中括号的[hat符号]表示的含义不同，注意区分。</p>
-<p>$还可以作为替换的指代，详细看此文：<a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></p>
-<h3 id="匹配一个组">匹配一个组</h3>
-<p>方法：<strong>（）</strong></p>
-<p>使用()匹配<strong>一组</strong>特定的字符。例如：^(IMG\d+)\ .png$，其可以将前面部分作为一个整体进行匹配捕获。</p>
-<p>同样（）是可以进行嵌套的，例如：^(IMG(\d+))\ .png$，前面部分又分成两个整体进行匹配。</p>
-<p>（）与上面方法结合使用可以带来更好的效果。例如(\d{3})</p>
-<h3 id="或逻辑">或逻辑</h3>
-<p>方法:<strong>|</strong></p>
-<p>在使用组时，可以用|匹配不同组的字符。例如([cb]ats*|[dh]ogs?)，可以匹配cats，bats，dogs，hogs。</p>
-<h2 id="不错的例子参考">不错的例子参考</h2>
-<ol>
-<li><a href="https://www.cnblogs.com/yyds/p/6913550.html">正则表达式总结</a></li>
-<li><a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></li>
-<li><a href="https://www.runoob.com/python/python-reg-expressions.html">菜鸟教程Python 正则表达式</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/127807805?utm_source=qq">Python正则表达式，这一篇就够了！</a></li>
 </ol>
 ]]></content>
     </entry>
