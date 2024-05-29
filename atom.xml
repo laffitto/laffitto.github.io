@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.laffitto.xyz</id>
+    <title>乱谈府      ——詹詹碎言</title>
+    <updated>2024-05-29T15:45:50.343Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog.laffitto.xyz"/>
+    <link rel="self" href="https://blog.laffitto.xyz/atom.xml"/>
+    <subtitle>Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</subtitle>
+    <logo>https://blog.laffitto.xyz/images/avatar.png</logo>
+    <icon>https://blog.laffitto.xyz/favicon.ico</icon>
+    <rights>All rights reserved 2024, 乱谈府      ——詹詹碎言</rights>
+    <entry>
+        <title type="html"><![CDATA[游戏 Animal Well]]></title>
+        <id>https://blog.laffitto.xyz/post/you-xi-animal-well/</id>
+        <link href="https://blog.laffitto.xyz/post/you-xi-animal-well/">
+        </link>
+        <updated>2024-05-29T15:44:35.000Z</updated>
+        <summary type="html"><![CDATA[<p>一个独特的独立游戏</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一个独特的独立游戏</p>
+<!-- more -->
+<p>你应该或多或少看过或者上手玩过一些解谜游戏，或是纯粹解谜为主，类似锈湖系列，room 系列，纪念碑谷等等。或是<a href="https://zh.wikipedia.org/wiki/%E7%B1%BB%E9%93%B6%E6%B2%B3%E6%88%98%E5%A3%AB%E6%81%B6%E9%AD%94%E5%9F%8E%E6%B8%B8%E6%88%8F">类银河战士恶魔城游戏</a> ，在偌大的地图中探索，不断升级获得新能力，再进行新的探索。有些解谜基于游戏本身，你在自己解谜完成后会有一种小快感，有些麻烦的尝试后可能会在网上搜索答案，然后感叹谜题之精妙。更有构思复杂的谜题，在一环一环的嵌套破译后，你会惊呼是神作。然后还有一类谜题超出了游戏本身，他可能打破第四面墙，达到作者与玩家的直接沟通，或者疯狂的将游戏内容拓展到现实。</p>
+<p>最近玩了一款新像素风类银河战士恶魔城游戏，<a href="https://www.animalwell.net/">animal well</a>，直译过来就是动物井。作者 <a href="https://twitter.com/billy_basso"><strong>Billy Basso</strong></a> 经过七年的独立开发最终问世。游戏 steam，switch 和 ps 平台都有。游戏很小仅有不到 40M，据说还是作者自己开发的引擎，但内容真的惊为天人，游戏设计之精妙，谜题难度之离谱，我个人评价是满分 10 分的佳作。</p>
+<p>游戏的地图十分大，而且是左右上下连通的，这算是亮点，但不算新意。我之前玩过的<a href="https://memo.laffitto.xyz/m/e9d415d447740760">好狗狗星系</a>才是真正把这种连通地图做成游戏特色。游戏初始操纵着软糖人（个人称呼）在地图中探索。在途中你会收集各种各样的东西，获得不一样的能力，借助能力你就能去一些你之前无法探索的地形。听起来很俗套，但是真正游玩的时候，不同能力的搭配会达成一些操作，你会惊呼，同一个谜题原来可以这样解，又可以那样解，而这要求的操作难度是大大不同的，颇有一种塞尔达神庙解谜的感觉。但是你以为自己发现了游戏中的bug，可以用某种方式去无限作弊时，你又会发现，其实作者早就设置好了障碍，这一切都在他的计算之中。</p>
+<blockquote>
+<p>庞大的地图和渺小的我<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405272333044.jpg" alt="" loading="lazy"></p>
+</blockquote>
+<p>游戏中期可以获得一个道具笛子，通过不同的方向可以吹出不同的韵律，而特定的韵律就可以触发特殊的效果。这就导致游戏中蕴含着很多隐藏谜题。无论是收集64颗蛋后，破译出64音符的旋律解锁重要道具，又或者全图寻找16只兔子，之后再次根据兔子耳朵结合四进制信息破译方向信息，抵达最终之地。你都会惊呼，这难度和隐藏度已经到了非人的境界。</p>
+<p>更为疯狂的是，游戏中一些独特操作会产生一些特殊编码，然而他们都是有意义的，收集全部内容完成拼接，会得到一个地图，而地图的最终之地，居然是作者和玩家的对话录音，这切切实实打破了第四面墙。这终极的谜题，在全网玩家探索努力下居然三天就破译出来了，不得不感叹网络和群众的力量。尽管如此，游戏还有许多细小的彩蛋等待探索。你永远不知道作者藏了多少东西。<br>
+有兴趣的可以看看 b 站上的相关解谜视频，剩下的只剩感叹：<br>
+<a href="https://www.bilibili.com/video/BV1Dx4y1i7C1">动物井 寻找农场巨兔以及解谜原理 ANIMAL WELL 预定年度最佳探索类银河恶魔城</a><br>
+<a href="https://www.bilibili.com/video/BV1Lz421Y7y1">动物井真结局 最疯狂的谜题以及解谜原理 开发者录音 ANIMAL WELL 预定年度最佳探索类银河恶魔城</a></p>
+<p>我在switch平台购买游玩的游戏，现在大概12小时游戏时间，仅仅全收集了蛋，兔子谜题和第四面墙实在是过于复杂了，不是我能独立解决的，后面的内容看视频云完了。实际我是 2D 跳跃类型游戏的手残党，玩这个游戏有些地方还是受了点苦头的，特别是你在漫长跳跃尝试后因为一个失误失败重来，真的非常烦躁。不过好歹还不算太难，达成之后有一种非常强的满足感。玩游戏的时候打开地图，你会好奇地探索着任何一个黑色的区域，因为基本上所有的区域都有隐藏的东西，他们就如同一个个小手勾引着你将他们全部挖掘。作为一个独立游戏，在保证趣味性和探索性的同时，能够不断让你发出惊呼，这种惊喜让生活充满了乐趣。你也能够感受到开发者的硬核和设计良苦用心。这时一个好游戏，值得大家都去感受一下，不过 steam 上售价 85 米，不着急还是可以等等打折再入手吧。</p>
+<blockquote>
+<p>追逐战的猫猫截图，说实话有点吓人<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405272334242.jpg" alt="" loading="lazy"></p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[旅程——香港]]></title>
+        <id>https://blog.laffitto.xyz/post/lu-cheng-xiang-gang/</id>
+        <link href="https://blog.laffitto.xyz/post/lu-cheng-xiang-gang/">
+        </link>
+        <updated>2024-05-14T15:08:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>五一香港游记</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>五一香港游记</p>
+<!-- more -->
+<p>作为一个生活在中国的普通人，能有一个长假期不容易。趁着五一假期，和女朋友和另一位好朋友一起开启一段香港之旅。</p>
+<h2 id="day1-过关-然后落寞离场">DAY1 过关 然后落寞离场</h2>
+<p>去香港的第一步是过关。从合肥出发，乘坐 6 点 40 的飞机，于 8 点半左右到达深圳。我们的路线是前往福田口岸过关。可能是由于深圳香港天气不好的原因，口岸没有想象中五一那种流量，轻轻松松基本没有排队便到达了香港境内——落马洲站。</p>
+<p>入境后香港这边也是有雨，先乘坐地铁到酒店。香港的地铁也算方便，在 iphone 上开通了八达通后，体验基本和国内一致。在一路换乘颠簸之后，我们终于到达位于荃湾附近的酒店。淅淅沥沥的小雨打湿了行李箱，不过也打走了假期拥挤的氛围。</p>
+<p>我们这一行的目的是来看五月天五月一日的香港演唱会，可以说是为了这盘醋包了这顿饺子。在我去附近的取票机取了票后，已然下午1点左右。当下还是得吃点东西来填饱肚子，在休整一番后，我们乘坐酒店巴士到附近的新都会广场。这里我们吃了一家越南菜芽庄。整体来说是我了解的那种臭臭又香香的感觉，肉很香，酱很上头。</p>
+<p>吃饱喝足后，我们向着演唱会的地点中环附近前行。在快到达场馆附近时，突然收到了因为器材和天气原因演唱会推迟到9号到噩耗。当时瞬间感觉如此的不真实但又不得不接受这样的结果。看着中环附近的巨大的摩天轮和同样得到消息失落的歌迷们，有一种身处巨大洪流下的无力感。天气倒是讽刺，雨逐渐消失甚至开始放晴，至少不用打伞了。</p>
+<p>演唱会取消归取消，我们的行程还得继续。顺延着海滨长廊继续逛街拍照，海风与水面之间的游船航行在维多利亚港，有种轻松惬意的感觉。远远的可以看见museum+的巨大屏幕和天际100高挑身影。预报说8点有烟花大会，我们在时间差不多的时候选取到一个合适的位置，静静的等待烟花绽放。然而期望越大，失望也挺大，可能是离烟花地点较远的缘故。烟花在感官上非常的小，甚至没有旁边的楼高，反观烟倒是挺大，稀稀拉拉的放了10min就结束了。个人感觉实在是太拉了，无论是本地人还是游客，看到肯定都会失望，宣传的有点用力了。</p>
+<p>回程的时候想着吃点东西，到达葵涌附近的富华冰室。一开始我听冰室这个名字，还以为是吃甜品冰淇淋的地方，尝试才知道是类似于香港的那种大排档一样的形式。你可以点各种盖饭面条，外加小零食饮料，算是有香港特色。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405142248846.jpg" alt="20240514_122519.jpg" loading="lazy"></p>
+<h2 id="day2-city-walk-累但挺开心">DAY2 City Walk 累但挺开心</h2>
+<p>第二天的主要任务就是逛街。从旺角出发，沿着弥敦道一路向南进发，途径油麻地-佐敦-尖沙咀。路上形形色色的车，形形色色的楼。五彩斑斓的双层巴士，红色鲜艳的小的士。走在香港的街头，路边有繁华的高楼大厦，但同时也有低矮小巷。整体感觉路边乱乱的，但是乱中又透露着秩序，有种矛盾的美感。像是走在一种极度现代与古老的结合体中。<br>
+中餐我们找了一家旺角的金华冰厅，在平常的主食基础上，点了菠萝包和西多士。西多士就是炸面包上面加上黄油，不过这一家的西多士有点过于油了，很香但不能够多吃。而且同是港式奶茶，仅仅是冰与热也有很大的区别。<br>
+区别于内地的商场，香港地段寸土寸金，有些商场甚至有十几楼高，不过占地面积倒不是很大。从下午走到晚上，一路走到尖沙咀附近，伴随着淅淅沥沥的小雨，再次沿着海滨漫步，星光大道附近有手印长廊，里面有很多明星大导演的手印嵌在其中，还有麦兜可爱的小猪蹄。晚上去一家叫池记的馆子吃的云吞面和艇仔粥，感觉比较正宗，因为云吞面的那个汤够难吃。它艇仔粥的英文够有意思，Congee with pork squid and fish，直观的展示了所有的配料。喝粥是很舒服的，可以消除一定疲惫。这一天走的实在是太累了，从小腿痛到脚后跟。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405142248382.jpg" alt="20240514_122759.jpg" loading="lazy"></p>
+<h2 id="day3-香港海洋公园-进发">DAY3 香港海洋公园 进发</h2>
+<p>第三天的行程是香港海洋公园。早晨先到一家小店吃了港式早茶，味道和种类与内地比较相似。点一壶茶，接着就是许许多多的小点心。旁边有很多的老年人，他们看着报纸聊着天，瞬间感觉时间被拉慢了。香港的报纸挺又去，收了一份收藏。</p>
+<p>虽然香港也有迪士尼，但是忌惮人流量，还是选取了人数相对较少的海洋公园。票价在美团团购大概 310 元/人。海洋公园像是各地海洋世界与游乐场的结合体。整个公园横跨两座山，坐着小列车上山，然后缆车下山，四周环海，风景一览无余。尽管已经见识过一些海洋世界，但是漆黑一片中突现的海洋场景，巨大的章鱼，凌乱的鱼群，游走的海洋生物，加上场馆偏下坡的地形，我甚至感受到一阵阵迷幻眩晕，切实有种身处海洋世界的感觉。相较于国内的设施，海洋公园感觉有点地方有些岁月的痕迹，褪色和掉漆。我们看了海豚表演，是粤语和汉语双语进行的，表演的过程中穿插了一些保护自然环境和食用本地食品的宣传，要说节目精彩吧，和看过内地的海洋表演比是触不可及，更多感觉他们注重宣传而非表演。公园里面还有一些其他动物栖息，大熊猫，树懒等等。</p>
+<p>从海洋公园出来后，我们到达了位于铜锣湾附近的沙嗲王吃晚餐。点了招牌的白咖喱香茅猪扒饭，蟹粉豆腐锅饭和和沙嗲乌冬面，外加一些小食饮料。不得不说白咖喱香茅猪扒和沙嗲还是非常香的，沙嗲有点像潮汕地区的沙茶酱，嘎嘎下饭。饭后又在附近的大商场逛了逛，之后到了尖沙咀的dondondonki 买了日本零食。回程后依旧又是巨累的一天。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405142248494.jpg" alt="20240514_123118.jpg" loading="lazy"></p>
+<h2 id="day4-尖沙咀美食探索-然后回程">DAY4 尖沙咀美食探索 然后回程</h2>
+<p>时间过的飞快，转眼就到了回程的日子。预计下午两点左右从酒店出发去关口，于是进行最后一次美食探索，这里选择了尖沙咀附近的深仔记茶餐厅。虽然叫做茶餐厅，但是和内地形式完全不一样。我们点了叉烧虾仁滑蛋饭，芝士猪扒面，焗咖喱猪扒意面，加上特色的菠萝包和西多士，同样是香到不行。这一家明显比之前吃的冰室更加正宗。之后又去 hashtag 买了蛋挞，不得不说这蛋挞是真的大一口下去满满当当，偏甜。</p>
+<p>下午回程的时候下了大雨，我们决定坐出租车从酒店返回落马洲过关口岸。豆大的雨点击打在玻璃上，不得不说老天爷还算给我们面子，虽然国庆假期南方都是雨，但起码我们逛街的时候基本晴朗。不过香港打车是真的贵，大概 27 公里的路程，加上过隧道费，行李费，大概需要将近 300 港币。过关回深圳很顺利，基本没有排队，安检也很顺利。至于回程航班，由于深圳天气有点小插曲，不过好歹还是回来了，也就不再计较了。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405142249391.jpg" alt="20240514_123329.jpg" loading="lazy"></p>
+<h2 id="香港的一点感想">香港的一点感想</h2>
+<h3 id="电子化支付">电子化支付</h3>
+<p>香港的支付即便是内地过去也不会感觉丝毫不方便，得益于支付宝和微信的普及，你基本可以在任何稍微大一点的地方使用他它们进行支付。再退其次，可以使用 apple 或 google pay 直接开通八达通，作为本地电子化支付的最好选择，无论是地铁公交，还有一些商店，做到了一卡在手，衣食无忧。当然我们还是备了 1000 港币现金的，吃早茶的小馆子没有任何电子支付的手段，手上有点实钱还是安心。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405142249753.jpg" alt="20240514_123642.jpg" loading="lazy"></p>
+<h3 id="交通趣闻">交通趣闻</h3>
+<p>香港的交通给人感觉一种不太方便，但混乱中又彰显秩序。这是国内交通太方便而造成的心理落差。走在繁华的旺角尖沙咀街头，即便是在小巷没车的情况下，大多数人也不会横穿马路而是从街头巷尾经过。红绿灯不是简单的这边绿那边就红，导致虽然看起来拥挤，但交通也算比较顺畅。居住的附近有个加油站，旁边甚至有单独隔出来供行人走的羊肠小道。香港由于沿用英国式交通规则，过马路先向左看的经验会不适用，不过每条马路口都写了大大的「向左」「向右」的文字进行提示，倒也显得别有风趣。</p>
+<figure data-type="image" tabindex="1"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202405142306529.jpg" alt="20240514_230502.jpg" loading="lazy"></figure>
+<p>与之对比，我感觉内地确实很方便。这包含支付，交通，服务等等的舒适程度。但我感觉这种方便是可能建立在一定劳动廉价内卷上的来的，它们背后都是无数人的汗水和辛酸。香港遇见的大部分本地人都挺热情，各个职位上的人，他们的生活好像也不只是被工作所压迫。而且那些开车的，在便利店打工的人年纪有的也都挺高。他们是享受生活？或者为了生活而努力？不会有更年轻的人来替代他们吗？又或者香港新一代的年轻人根本看不上这些时薪与职业。时代在不断变化，我也无法用自己狭隘的目光去妄加推测。可能是由于国内发展过于迅猛，日新月异的变化在我角度看来习以为常。是先进，或者是趋势，还是说怀旧。香港汇丰银行有些网点甚至连个座位都没有，大爷大妈办理业务都是站着排队。人性化吗，肯定不人性。可能是历史遗留，可能是利益度量。无法深究其后的理由，但我充满好奇，以后也还是得多出去走走，多看看别人才能看清自己究竟是什么。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[折叠屏Fold5双屏不同桌面方案]]></title>
+        <id>https://blog.laffitto.xyz/post/fold-with-different-launchers/</id>
+        <link href="https://blog.laffitto.xyz/post/fold-with-different-launchers/">
+        </link>
+        <updated>2024-03-18T13:34:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>折叠屏内外屏使用不同桌面的探索</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>折叠屏内外屏使用不同桌面的探索</p>
+<!-- more -->
+<p>我使用三星设备偏多，从S9系列入坑，S9+，S10 5G，Tab S7+，到S22U，耳机手表还用过buds+，buds pro，watch active2和watch classic4，最近还给女票淘了个美丽小废物flip3做热点备用机。实际自折叠屏发售以来我就觊觎已久，特别是fold系列的大折叠，但奈何感觉技术不成熟，加上价格也偏贵，一直没有入手。Fold5作为三星最新屏幕终于能够完整合上的新一代折叠，戳中了我的心窝。由于自己有root的需求，fold系列唯有欧版可以轻易的解锁且能使用相机，在海鲜市场蹲候多时终于入手。天蓝色12+256，屏幕完美，边框有一点点掉漆，不过6300，还要什么自行车，带个凯夫拉壳美滋滋。</p>
+<p>三星折叠最与其他品牌折叠不同的点就在于它独特的屏幕比例，折叠情况下23:9的比例，导致它握起来更像是一个遥控器。自带默认的OneUI主屏幕固然可以，在展开内屏的情况下，合理显示布局，加上自带的下面一条任务栏，使用起来非常舒适。但是合起使用外屏时，拥挤的状态不够优雅。<a href="https://play.google.com/store/apps/details?id=bitpit.launcher&amp;hl=en_US&amp;pli=1">Niagara Launcher</a>作为一个第三方启动器，其简洁的滑动字母布局和通知直接呈现提醒非常适合三星狭长的外屏。于是需求产生了，是否可以在外屏使用Niagara主屏幕，而打开内屏后自动切换为有任务栏的OneUI主屏幕呢？</p>
+<figure data-type="image" tabindex="1"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202403190009529.jpg" alt="" loading="lazy"></figure>
+<h2 id="思路拆解">思路拆解</h2>
+<p>答案显然是可以的，Android是可以选取拿个应用作为默认启动器的。在查阅和综合了相关资料后，结合实际使用情况，这个问题的解决方案可以进一步细化为以下三个部分：</p>
+<ol>
+<li>当屏幕合上，为外屏时，切换Niagara为默认主屏幕</li>
+<li>当屏幕打开，为内屏时，切换OneUI为默认主屏幕</li>
+<li>在外屏正在使用一些app时，如果此时打开为大屏幕内屏，则需要保持这些app为打开状态。即外屏转到内屏时，有些app可以无缝切换（不会返回主屏）</li>
+</ol>
+<p>理论上，只要手机厂商允许修改默认启动器，那么在其他牌子折叠屏上也同样可以实现。</p>
+<h2 id="无root解决方案">无ROOT解决方案</h2>
+<p>大多情况下，手机是没有root的，这里需要借助<a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&amp;hl=en_US">Tasker</a>和它的一个插件 <a href="https://play.google.com/store/apps/details?id=com.joaomgcd.autotools&amp;hl=en_US">AutoTools</a>。Tasker是一个自动化工具，有点类似苹果的快捷指令和三星的日常程序，不过它能够做到的东西更加广泛一些。软件可以试用，tasker建议直接入手，autotools看广告免费用。</p>
+<p>tasker使用adb命令去激活read logs的功能，连接adb后，输入以下命令：</p>
+<pre><code class="language-shell">adb shell pm grant net.dinglisch.android.taskerm android.permission.READ_LOGS
+adb shell am force-stop net.dinglisch.android.taskerm
+</code></pre>
+<p>之后就需要使用tasker创建对应任务和触发条件，这里引用两个其他帖子的方法（本质一样），自行配置，不重复造轮子了。</p>
+<p><a href="https://xdaforums.com/t/tasker-auto-switch-launcher-for-folded-unfolded-screen.4603923/">[Tasker] Auto-switch Launcher for folded/unfolded screen</a></p>
+<p><a href="https://droidwin.com/how-to-set-different-launcher-for-folded-unfolded-screen/">How to Set Different Launcher for Folded/Unfolded Screen</a></p>
+<p>如果觉得配置起来有点迷糊，这里也有reddit网友给出的tasker一键导入，一共三配置，分别对应思路拆解的三个部分：</p>
+<p><a href="https://www.reddit.com/r/GalaxyFold/comments/174sz3d/comment/k4qoxuq/?utm_source=share&amp;utm_medium=web2x&amp;context=3">Reddit回答 Dual Launcher Fold 5</a></p>
+<p>这里分别解释一下三个配置文件</p>
+<h3 id="折叠情况">折叠情况</h3>
+<p>在自定义设置情况下，执行Folded这个任务。自定义设置为判断条件，edge_panel_width值为401即折叠情况下。Folded任务有以下步骤：</p>
+<ol>
+<li>使用AutoTools将主屏幕设置为Niagara。</li>
+<li>返回桌面主页。</li>
+<li>设置一个变量，名称为FoldStatus，设置此时状态为CLOSED（关闭）。实际上这步可以不需要。后续可以根据这个自定义更多复杂的操作。</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202403190010100.jpg" alt="" loading="lazy"></figure>
+<h3 id="判断需要保持打开的app">判断需要保持打开的APP</h3>
+<p>在特定app打开的情况下，执行Hold Refresh这个任务；在app关闭后，执行Pause Refresh这个任务。特定app可以根据自己需要选中即可。</p>
+<p>其中，Hold Refresh任务定义了一个变量，名称为PauseRefresh，并设定为1。Pause Refresh任务将PauseRefresh这个变量值进行清楚。</p>
+<p>因此这个配置文件的逻辑为：在特定选中的app打开时，变量PauseRefresh被设置为1，在app关闭退出时，变量PauseRefresh变为未设置状态。这个主要是为了配合下面一个配置文件做判断。</p>
+<figure data-type="image" tabindex="3"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202403190010414.jpg" alt="" loading="lazy"></figure>
+<h3 id="展开情况">展开情况</h3>
+<p>在自定义设置情况下，执行Unfolded这个任务。自定义设置为判断条件，edge_panel_width值为362即展开情况下。UnFolded任务有以下步骤：</p>
+<ol>
+<li>使用AutoTools将主屏幕设置为OneUI主屏幕。</li>
+<li>判断变量PauseRefresh是否设置，如果设置，表示选中app在前台，不做操作。如果未设置，则返回桌面，启动主屏幕。</li>
+<li>将变量FoldStatus，设置此时状态为OPENED（打开）。实际上这步可以不需要。</li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202403190010030.jpg" alt="" loading="lazy"></figure>
+<p>在导入完三个配置文件后，<strong>一定要将默认启动器设置为AutoTools</strong>，不然无效。</p>
+<h3 id="小瑕疵">小瑕疵</h3>
+<p>因为本质上还是借助AutoTools作为一个中间应用，去启动两个不同的桌面，AutoTools才是默认的桌面，因此有点小瑕疵：比如桌面长按应用无法使用shortcuts；手机重启后展开大屏无法显示状态栏，需要手动把默认桌面先切换回OneUI主屏幕，保证状态栏显示，再修改为AutoTools。不过这些瑕疵无伤大雅，因为99%的时间你不会去调整桌面，也不会经常去重启手机。所以体验还算舒服。</p>
+<h2 id="root解决方案">ROOT解决方案</h2>
+<p>不过既然我都已经root，当然要展现root的优势。主要改进就一点，使用tasker直接调用shell命令，在root的环境下切换默认桌面。这样就可以和AutoTools说拜拜了。</p>
+<p>至于切换的命令，探索后发现是这个：</p>
+<pre><code class="language-shell">adb shell cmd package set-home-activity com.example.launcher/com.example.launcher.MainActivity
+</code></pre>
+<p>com.example.launcher为启动器的包名，</p>
+<p>在tasker中选择将选择Autotools的命令改为运行shell命令，输入语句，例如展开时OneUI启动器：</p>
+<pre><code class="language-shell">cmd package set-home-activity com.sec.android.app.launcher/com.sec.android.app.launcher.MainActivity
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202403190011303.jpg" alt="" loading="lazy"></figure>
+<p>折叠时Niagara 启动器</p>
+<pre><code class="language-shell">cmd package set-home-activity bitpit.launcher/bitpit.launcher.MainActivity
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202403190011070.jpg" alt="" loading="lazy"></figure>
+<p>其他更改不变，这样就可以直接切换到默认的启动器，而且小瑕疵问题也解决了。</p>
+<p>我图中还借助<a href="https://play.google.com/store/apps/details?id=com.pranavpandey.rotation&amp;hl=en_US">rotation</a>这个应用，实现折叠小屏强制竖屏，展开大屏强制旋转。另外我发现，用大屏情况下，转到后置摄像头自拍，且用小屏控制时会回到桌面，所以我还设置了一个变量Camera Set，检测如何变为小屏时相机打开了，那么还是再开启相机，实现一个无缝后置摄像头自拍的情况。这种设置很灵活，配合自己的需求修改就好。</p>
+<h2 id="fold5简单使用体验">Fold5简单使用体验</h2>
+<p>Fold5到手已经用了快10天了，我用起来还算满意。可能是这种屏幕比例，我更倾向于展开使用屏幕，真的就像在用一个小平板一样，阅读文字和漫画的体验非常舒服。自己也不是追求那么极致的拍照体验，所以从S22U换下来感觉也还好。而且折叠屏最重要的一点，我拍照的时候可以打开后置预览，这样拍人物的时候对方可以在外屏看到呈现效果，调整姿势表情。这简直感动哭了好吧，拍女朋友时候难度直接降低一个等级，增进情侣和睦的好机器呀。</p>
+<p>而且8gen2真的出色，尽管Fold5只有4400毫安的电池，当感觉比我8gen1的S22U续航还要好，外出续航焦虑至少是没有了。虽然25w充电，但三星45和25w在充满时间上没太大区别，也感知不强了。</p>
+<p>目前时这些，后续如果再有啥体验再补充吧。</p>
+<p>自己由于是root玩家，淘一个可以轻易root且不锁相机的欧版也算是花了大功夫。最后我只建议三星你不要不识好歹，把你那针对除了欧版其他版本解锁后相机不能用的规矩给我取消了，让人能好好的玩玩机喽！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一场朋友的婚礼]]></title>
+        <id>https://blog.laffitto.xyz/post/hun-li/</id>
+        <link href="https://blog.laffitto.xyz/post/hun-li/">
+        </link>
+        <updated>2024-02-25T12:17:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>一场朋友的婚礼</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一场朋友的婚礼</p>
+<!-- more -->
+<p>2024年2月25日，我受邀去参加了高中同学的婚礼。作为这么多年还联络的朋友，外加正好是自己的生日，去参加婚礼时的心情十分开心。虽然说同学邀请了我和我的女朋友，但奈何她正好在项目上出差，只能我一个人带着她的心意去赴宴。</p>
+<p>回想起来，这还是我第一次以自己的名义去参加朋友的婚礼，虽然小的时候和老妈一起去参加过婚礼，但那都是以一种儿童的视角。以前印象中参加的婚宴都是晚上进行，而现在很多人都是中午进行婚礼，不知道这是风俗习惯的不同还是时代演化的差异。</p>
+<p>宴会厅在合肥滨湖的富茂大酒店，酒店比较红火，今天这个日子有九对新人喜结连理，据说要预定场所都得提前一年预约。酒店门前大大的粉色系花墙，喜庆中透露出温馨。同学的场子在二楼，穿过长长的电梯，婚照便呈现在眼前。比较遗憾的是，我没有与新郎新娘合照，可能是去的时候正好卡点了，和新郎说几句话后他正好要去下面拍，导致没能拍几张俊男靓女合照。</p>
+<p>一同参与婚礼的还有几位高中的同学，当然都是经常聚聚的朋友。有时候难免会感叹，这么多年还能保持联络，真的是很难得。人与人之间的关系就是在一点点失去联络之中逐渐疏远的。回想起之前还有几个经常一起上下学的同学，当时觉得关系挺不错的，但是长久没有保持联络，毕业后也就渐渐淡出生活了。</p>
+<p>桌台前有高高的花束，摆的比人都高很多。男方女方加起来大概有20多桌。同学们坐一桌，两个同学是新郎的伴郎，穿起礼服来还真是那么回事，俊得很。大家婚礼上又再起相聚，当然还是很开心的，没心没肺的拌拌嘴，唠唠嗑，调调侃，日子仿佛回到了以前。</p>
+<p>婚礼上有个小乐队，说是小乐队，主要是就只有主唱，吉他手和一个键盘手。等待的过程中，他们演唱了「你是如此的相信」，「温柔」等歌，还挺好听的。</p>
+<p>在12:18的时候，结婚仪式正式开始了，在司仪烘托完气氛后，终于等到新郎和新娘的入场。在庄重的婚礼进行曲中，在众人的欢笑注视中，在漫天气球爆开的包围中，新郎牵着新娘，缓缓地向舞台中间走去。虽然新郎之前给我们吐槽很紧张，但是我发现了，正式流程他也确实是肉眼可见的紧张。在相互宣读完誓词，父母代表发言后，大致的婚礼流程也就结束了。这里实际新郎新娘没有说太多的话，如果要在上面说很多很多的话，那真的是有点心理压力哩。</p>
+<p>在祝福完最美好的场景后，饭局开始。安徽人这边似乎对古井贡酒情有独钟，桌子上的白酒是古16，我和一个同学打开来喝了喝，应该是清香型的，喝起来不是那么上头，不容易发昏，虽然我下午回家还是去躺着睡得挺舒服就是。宴会的菜基本上有的都有，螃蟹，虾，甲鱼，石斑鱼，红烧肉等等一大桌子。大家吃吃喝喝相互敬酒和饮料，扯扯淡中时间就过去了。在新郎新娘敬完了所有桌子后，婚礼也基本上到了尾声，拿完喜糖，我们又聊了聊相互祝福后基本上就离场了。</p>
+<p>这次去参加婚礼，不仅仅是去给他们送去祝福，也有一部分是想看看未来的自己。自己终将也会经历人生的这么一个过程，结婚是一件重要的事，也是个麻烦事。这些东西的选购，场地预定，相互沟通等等都要花费大量的精力。不过参加朋友的婚礼，也能给我带来一些经验的积累。小时候的我看的更多是热闹，吃的更多是喜糖，现在的我看着红毯上的他们，也会带入自己和女朋友的情境，吃着生活这道酸甜苦辣并存的菜，憧憬着美好的未来。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023年度总结]]></title>
+        <id>https://blog.laffitto.xyz/post/2023-nian-zhong-zong-jie/</id>
+        <link href="https://blog.laffitto.xyz/post/2023-nian-zhong-zong-jie/">
+        </link>
+        <updated>2023-12-31T08:49:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>2023，转瞬即逝</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>2023，转瞬即逝</p>
+<!-- more -->
+<p>2023年已然过去，惯例还是需要总结一下一年的过程。</p>
+<p>总体来说今年的状态不算满意，因为生活的主轴并没有步入正轨，从而进入一种混沌的浑浑噩噩状态。我将通过去年的Flag一一对应今年的收获。</p>
+<h2 id="职业发展">职业发展</h2>
+<p>这是最大的硬伤，自从一月份离职回家后，由于各种原因一直也没有再全职工作。这就产生一种巨大的落差，没有一种稳定收入与投入的事情。虽然自己兼职也接了一些项目，也有一部分的收入，但是那终究不能作为全部。职业技能方面，虽然一直没有拉下，没有太大的退步，但是看待事物难免会眼界落于局限之中，最新最潮的事物肯定弄不明白，也没有那个自制力去弄。</p>
+<h2 id="财务状况">财务状况</h2>
+<p>目前并没有房子和车子之类负债资产。但是由于没有稳定的收入，投资方面也暂时停下了脚步。从目前自己的投资看来，经过这几年的实验，确实发现市场是一个起起落落的过程。今年的行情尤其不好，投资一片绿油油，不过这个本身就是个过程，顺其自然不断改变吧。投资的理念学习不足，还是需要多读书。</p>
+<p>财务的记录方面记账基本坚持了下来，通过小星记账完美的记录了自己的每一笔支出，能明确的看到自己每一步前都花在了哪里。过程是有所收获的，记账是一个长期的过程，未来有了更多的资产，开源节流，才能不断积攒财富。虽然住在家里，但是花费还是不少。设备上主要是增加了一台台式机，用于跑跑代码。其他零零散散软件支出也不少，不过由于有明确的账单，明年重新调整预算还是有所依据的。</p>
+<h2 id="信息输出">信息输出</h2>
+<p>这一年自己的记录方面基本确定了下来。个人笔记以Obsidian本地为主，Notion表格线上为辅。滴答清单作为轻量级的记录主力使用。之前总是在不同的应用间换来换去，现在越来越趋于简单化。基本形成了一套记录体系，软件如果不出意外的话不会太换了。</p>
+<p>输出方面，长篇文章用博客记录，短篇想法用memos表达，除了软件更新，基本上也不想再折腾了。但是落实到今年具体的细节，输出的内容还是太少了，尽管很多时候有很多想法，但是都没有及时的记录进行反思。博客只更新了8篇，一月一篇都没有做到，memos也分享了才大概40个。基本处于想到这东西才去做。这个流程和心理的负担还是需要减少，逼着自己进行输出。因为这些对于自己也是一种回首与反思。</p>
+<h2 id="自我实现">自我实现</h2>
+<p>这一部分基本没有完成，大部分的精力被奶头乐所消耗，没有充足的动力让我去执行。但是我渐渐也发现自己似乎可以并不用把全部的注意力集中在一件事上也可以大致的完成内容，或许需要从某些细节上验证这个问题。不过注意力分散和好奇心有点消退确实是个问题，需要好好调整。</p>
+<p>不过今年还是读了几本书的，也算有点收获。游戏方面，单机游戏玩了王国之类，艾尔登法环，杀戮尖塔等等，联机游戏中，游戏王大师决斗，皇室战争等，都带我领略了电子游戏的魅力。</p>
+<h2 id="个人健康">个人健康</h2>
+<p>睡觉作息方面，尽管在家里，但是整体的作息还是比较规律的。日常起床，吃饭，基本可以保证正常的日常生活与学习。</p>
+<p>身体健康方面，中途有四个月根据b站的课程进行健身，肌肉量有所增长，不过最近天冷了又有所懈怠。但是最近发现明显腰痛，这说明最近明显缺少锻炼，锻炼还是要融入生活中，成为习惯才能坚持下去呀。</p>
+<p>心理精神方面，由于直接的压力较小，还是比较愉悦的，而且现在遇到问题好像不会特别着急，仿佛知道急也没有用，如何解决才是硬道理，似乎心智有一些提升。</p>
+<h2 id="家庭朋友">家庭朋友</h2>
+<p>在这个方面，由于时间比较充足，和女朋友约会了35次，和朋友相聚了14次，和家人聚餐了19次，外地出行了5次。这点我还是比较满意的，能够有较多的时间陪陪家人，陪陪朋友，看看世界还是很不错的。</p>
+<p>自己也快27岁了，这几年也算是非常重要的黄金时间，今年的日子不算好，有很重要的事情没有推进。时间不等人，自己不能懈怠。我每周都会根据清单做一个简单的复盘，所以明白今年在一日一点点过后后的无奈与焦虑。明年真的需要更加努力了。希望明年回顾后能看到更优秀的自己。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[迪士尼之旅]]></title>
+        <id>https://blog.laffitto.xyz/post/di-shi-ni-zhi-lu/</id>
+        <link href="https://blog.laffitto.xyz/post/di-shi-ni-zhi-lu/">
+        </link>
+        <updated>2023-12-30T12:48:03.000Z</updated>
+        <summary type="html"><![CDATA[<p>「世界上最快乐的地方」</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>「世界上最快乐的地方」</p>
+<!-- more -->
+<p>女朋友说，迪士尼是世界上最快乐的地方。尽管她已经去过两次上海迪士尼了，但是我们两个一起去倒是未体验过。正好上迪的疯狂动物城园区也正式开幕了，安排好一切事项后，28号开启一趟轰轰烈烈的迪士尼之旅。</p>
+<p>用女朋友的话讲，这是她最晚的一次进园。选定的酒店离园区不远，尽管我们6点就已经起床，在洗漱，化妆，吃早饭完毕后不知不觉已经7点半了。打车到迪士尼的地铁口，拿到网上租借的达菲发箍，差不多已经8点多了。虽然八点半才正式开园，但是从此刻开始，一天的奔跑计划就已然拉开序幕！</p>
+<p>远远望去，人山人海，为了能够更快一点入园，我被拽着穿过一波又一波的人流。真正排队入园后，大概8点50，外加满头大汗。迪士尼的官方app可以看到地图和各个项目的大致排队入园时间，我们没有犹豫选择最新开的疯狂动物城作为初始目标。经过整整4个大棚的排队后，终于在10点多一点进入了动物城的园区内。整个动物城还原了很多动画中的元素，豹警官，牛局长，充满俏皮可爱。动物城警局，动物城监狱，场景惟妙惟肖。项目「热力追踪」不算刺激，但是绝对精彩，大屏幕的震撼仿佛身临其境，在动画世界中。城中还有很多奇妙的小景点，比如小动物红绿灯，巨大座椅，迷你乐器店等等，还是非常有趣的。</p>
+<figure data-type="image" tabindex="1"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311405534.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311405839.jpg" alt="" loading="lazy"></figure>
+<p>拍拍照出来疯狂动物城园区大概快12点了，正好到了花车巡游的时候，伴随着振奋人心的乐曲，浩浩荡荡的队伍缓缓走来。疯狂动物城，玩具总动员，小飞象，美女与野兽，海底总动员，冰雪奇缘等各路IP都出来亮相，还有他们招牌的各种动画角色，唐老鸭，小熊维尼，玲娜贝儿，达菲等等。这些人物和场景浩浩荡荡的从你眼前经过时，会让你瞬间进入他们营造的世界中，不经意的嘴角上扬。</p>
+<figure data-type="image" tabindex="3"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311406492.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311406560.jpg" alt="" loading="lazy"></figure>
+<p>出来后由于没赶上预约米奇妙游童话书内容，先去排队玩了加勒比海盗，不过内容与剧情不能说是一模一样，只能说是毫不相关。结束差不多快2点了，终于去迪士尼小镇炫完了中午饭。15点左右终于看上了预约的米奇妙游童话书，这个类似于舞台剧，整体场景还是十分迷幻的，虚实结合，配合表演者的演唱和舞蹈共同呈现。一开始我还以为是对嘴型，结果原来真的是在唱，Let it go响起时鸡皮疙瘩起立。整体大概30min，质量上乘。</p>
+<figure data-type="image" tabindex="5"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311407974.jpg" alt="" loading="lazy"></figure>
+<p>后续又七零八落的把各个项目都排队玩了一遍。排队的过程是痛苦与漫长的，平均大概排队一个小时，爽一小会儿，创极速光轮，抱抱龙冲天赛车，七个小矮人矿山车。当然还玩了一些休闲小场景，旋转木马，旋转疯蜜罐等等。过程中感觉自己的腿已经不是自己的了，走路不可怕，怕的是站着老半天不动。</p>
+<figure data-type="image" tabindex="6"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311407806.jpg" alt="" loading="lazy"></figure>
+<p>在排排等等玩玩后，时间来到了21点，这时最大也是最值得的内容开始了：灯光烟火秀。激昂的歌曲加上变换的场景，灯光投射出斑斓的效果，喷泉交相辉映，甚至在空中映射出虚幻的场景。在不同的IP变换后，巨大的烟火腾空而起，在城堡上方绽放开来，场景震撼且令人着迷。之前我一直以为烟火是重点，看过不少的视频，也看过几次户外烟火表演，然而真正体验过才发现，迪士尼将灯光与烟火结合，加上音乐与喷泉，配合着自己的主题内容一切显得浑然得体。百闻不如一见的明确诠释了。</p>
+<figure data-type="image" tabindex="7"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311407076.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311408847.jpg" alt="" loading="lazy"></figure>
+<p>烟火结束后，这场旅途也接近了尾声，我们去商店逛逛买了达菲后，22点左右离开了园区。一天下来，筋疲力尽，浑身大汗，腰酸脚痛，最后到酒店后有根筋都差点抽了。虽然很累，但是一整天下来也玩到了很多的项目很充实。女朋友说这是世界上最快乐的地方，确实，来到这里你可以抛弃一切的烦恼去享受。我最喜欢的还是花车巡游与灯光烟火，其他自家IP的项目也令人充满喜悦，相较于一些令人肾上腺素飙升的刺激项目，这些在其他地方都无法体会到的独一无二梦幻时刻。另外，与重要的人共同享受这份快乐，创造美好回忆，这也是这趟旅程更重要的事吧。</p>
+<figure data-type="image" tabindex="9"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202312311410260.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[电子漫画解决方案]]></title>
+        <id>https://blog.laffitto.xyz/post/comic-solution/</id>
+        <link href="https://blog.laffitto.xyz/post/comic-solution/">
+        </link>
+        <updated>2023-10-02T02:46:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>自己看漫画的一些途径</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>自己看漫画的一些途径</p>
+<!-- more -->
+<p>自己很喜欢看漫画，从小学到现在，国漫，日漫，韩漫都有所涉及。但是由于媒介问题，也渐渐从购买实体书籍转换到直接线上观看。有付费，也有白嫖，这里整理一下自己看电子漫画用到的一些软件与资源，以作存档和抛砖引玉。</p>
+<p>电子漫画阅读通常有两种媒介，线上观看和本地下载观看。由于漫画都是以章节为单位更新的，所以自己大部分时候都是线上直接追更新。如果遇到那种出了单行本并且自己非常喜欢的漫画，或者一些没有线上资源的小众漫画，才会去寻找资源下载到本地，观看和收藏用。</p>
+<h2 id="在线漫画">在线漫画</h2>
+<p>线上漫画服务我通常使用<a href="https://www.webtoons.com/zh-hant/">webtoon</a>和 <a href="https://tachiyomi.org/">tachiyomi</a>，并用<a href="https://www.manhuaren.com/search/">漫画人</a>作为辅助。</p>
+<p>webtoon主要用来看一些韩漫和台湾的漫画。作为官方正版软件，既可以白嫖慢慢追漫画，也可以花钱抢先看。webtoon这个平台的漫画基本是为了迎合手机，所有的漫画都可以一划到底，不会产生较大的割裂，同时彩色漫画也显得更加现代，很多漫画质量都巨高。</p>
+<p>tachiyomi作为一个android漫画终端阅读软件，可以通过插件的形式阅读各种网站源的漫画，像是一个聚合器，动漫之家，漫画人，爱米推甚至哔咔这种r18平台都有相关插件。软件本身涉及也符合android规范，没有任何广告。由于是开源软件，也有着其他修改版本，比如<a href="https://tachiyomi.org/forks/TachiyomiJ2K/">tachiyomij2k</a> ，其增加了一些功能比如横屏下的双页布局。我主要用来白嫖阅读日漫和一些国漫，体验较好。</p>
+<p>漫画人是自己从初中一直使用的应用，看日漫，主要是用出习惯了，主打一个方便。</p>
+<figure data-type="image" tabindex="1"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202310021751943.jpg" alt="" loading="lazy"></figure>
+<p>腾讯动漫用于看一些国产和日漫，氪点金图方便。</p>
+<p>有时候我也会用一下集英社旗下的在线漫画网站<a href="https://mangaplus.shueisha.co.jp/updates">MANGA Plus by SHUEISHA</a>看一些生肉，不过看起来还是有点费劲，更多是用它发现漫画。</p>
+<h2 id="本地漫画">本地漫画</h2>
+<p>漫画的格式通常是包含jpg的压缩包，或者是cbz这种带有一些信息的压缩格式，再有一些会制作成epub这种电子书格式的文件。我更多的时候是喜欢将那种线上图源不是很高清的精美漫画（例如烙印勇士）或者非常有意思的短篇（例如蓦然回首）下载下来，没事本地品味一下。喜欢的作品直接网上搜索就可以找到，这里推荐一下<a href="https://kox.moe/">Kox.moe</a>，可以用于下载epub格式的漫画。质量和数量都有保障。</p>
+<h3 id="本地阅读器">本地阅读器</h3>
+<p>个人经常在android平板和手机，外加windows电脑上进行本地漫画阅读。</p>
+<p>在android设备上，我通常使用<a href="https://librera.mobi/">librera</a> 阅读epub格式的漫画，主要是他可以实现平板上横屏双页外加从右向左的翻页模式阅读，这一点我暂时没有找到替代品。另外我也使用<a href="https://kurotoshiro.com.br/reader/">Kuro reader</a>来阅读cbz等专用漫画格式的漫画，主要是ui实在好看，颜值党狂喜。</p>
+<figure data-type="image" tabindex="2"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202310021741178.jpg" alt="" loading="lazy"></figure>
+<p>在windows上，我推荐使用<a href="https://www.yacreader.com/">YACReader</a>，既可以进行漫画管理，也可以支持多格式完美的漫画阅读。</p>
+<figure data-type="image" tabindex="3"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202310021743437.png" alt="" loading="lazy"></figure>
+<p>当然有时候资源是纯粹的图源，为了较好的进行管理我通常会进行格式转换，这里推荐<a href="https://github.com/ciromattia/kcc">kcc</a>这个项目，可以将包含漫画的文件夹转化为cbz，epub等格式。省时省力。</p>
+<h2 id="如何找到有趣的漫画">如何找到有趣的漫画</h2>
+<h3 id="大众的热度漫画">大众的热度漫画</h3>
+<p>每个人的漫画口味不一样，但是大众喜欢的作品通常也不会太差，虽然可能剧情老套，但是很多热门的漫画还是值得一看的。除了在各大漫画app中直接看人气推荐的作品，我还会在kox.moe上用评价<a href="https://kox.moe/l/all,all,all,count_push,all,all,BL,0,0/">从高到低</a>去筛选一些作品，也能发现很多人气虽然不高但精良的佳作。或者在<a href="https://www.cmoa.jp/">cmoa</a>这类卖书的网站上看看人气作品。</p>
+<h3 id="特定类型的漫画">特定类型的漫画</h3>
+<p>有时候会沉迷于特定类型的漫画，比如我很长一段时候忠实于「智斗」这个标签，为了找到相关类型的漫画，实际最有效的方法是找网上的讨论。贴吧讨论或者知乎回答都是不错的参考，把大家的推荐记录下来，一个个去翻就好了，很多时候都能找到自己想要的。</p>
+<h3 id="有趣的新连载">有趣的新连载</h3>
+<p>通常你在日常生活中能看到有人讨论漫画，那漫画大概率已经是现象级的作品了。但是如何知道比较小众且高热度的新连载作品呢？这个问题基本就是一个信息的差异。看的多了，就知道哪里会讨论多，会更有趣。</p>
+<p>第一种方法是通过平台的投喂。像webtoon经常会推新的漫画，直接看看前两章，感兴趣就直接订阅，很舒服的流程体验。除此之外还可以看看manga plus上的新作，不过他们通常是英语生肉，遇到有趣的作品想看汉化版的还是需要有段时间的，建议精进自己的英语水平。</p>
+<p>第二种是推荐。这里可以参考漫画评选网站，例如<a href="https://konomanga.jp/">这本漫画真厉害</a>, 每年评选一次，上榜的都看看还是很有趣的，不过这个评选是日漫。还有就是一些youtuber主，例如<a href="https://www.youtube.com/@yorke">孫沁岳</a>, <a href="https://www.youtube.com/@gabulaga_">嘎不拉嘎</a>, <a href="https://www.youtube.com/@InokawaHajime">井川一</a>等等，他们会帮我们收集一些漫画资讯，看看他们的视频也会有所收获。</p>
+<h2 id="漫画与我">漫画与我</h2>
+<p>想想看自己已经看漫画有快20年了。小学时的漫画大王，漫画party，初中的动漫水晶，各种日漫单行本，高中知音漫客，加上网络看日漫，大学后转向纯线上，webtoon，腾讯动漫等等。从实体到线上，从国产到国际，阅读漫画已经变成了我的兴趣。晚上睡前基本有空闲时间就打开漫画软件，看看有啥更新了，看个10min，收获的都是快乐。</p>
+<p>漫画中能看到各种题材，各种剧情，各种点子。还有漫画家的画风，分镜，叙述逻辑都各不相同。看过史诗级的佳作，也看过烂的不行的大便作。但是各有各的乐趣。作为一种文字与图像结合的艺术创作，漫画真的能够承载很多的东西。它可以展现出文字也描绘不出的场景，又能回避了影像的一些表现阉割。不得不说漫画也养大了我的胃口，以至于看很多热播影视剧时，都会产生这种老套也能吹的想法。漫画着实有趣，我也会一直保留这个兴趣，然后也会多多支持正版为我长久的白嫖买买单。最后也希望我们国家的漫画产业也能像日本韩国那样更加蓬勃的发展。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[笔记螺旋上升]]></title>
+        <id>https://blog.laffitto.xyz/post/bi-ji-luo-xuan-shang-sheng/</id>
+        <link href="https://blog.laffitto.xyz/post/bi-ji-luo-xuan-shang-sheng/">
+        </link>
+        <updated>2023-08-14T09:07:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>笔记如何记，折腾半天，是个螺旋上升的过程</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>笔记如何记，折腾半天，是个螺旋上升的过程</p>
+<!-- more -->
+<h2 id="好记性不如烂笔头">好记性不如烂笔头</h2>
+<p>记笔记这件事，从小到大一直都在做。小学时候，老师家长就教育，好记性不如烂笔头。实际核心是说瞬时记忆想要转化为长久记忆需要不断的反复。学习东西，当时好像明白记住，但是可能明天再看已然不记得细节。通过一些媒介记录下来，时常看看，才能够内化这些知识，更好是做到「温故而知新」。笔记更多的时候是作为一个外脑存在，并辅助将一些内容烙印在真实的大脑中。</p>
+<p>在不同的阶段，记笔记的目标和策略也有所不同。高考前的学生时期更多是为了应试考试，把密密麻麻的知识点，老师的精解在纸质的本子上抄下来，用作复习与反思。这个阶段记笔记很纯粹，记录完的一沓沓笔记会感到很满足。</p>
+<p>步入大学往后阶段，考试这种东西在生命中占比有所减少。而且这段时间我们也不仅仅是需要记下来一些知识性的问题，生活中的记录，必要性的文章等一些其他的东西同样需要记录。时间多了，看的东西多了，觉得自己之前的眼界太短浅，涉猎东西又都想记下来，于是基于网络化的电子笔记似乎逐渐替代纸质笔记。这个时候的行为会从单纯的「记笔记」转化为一个更为高级的术语：「知识管理」。</p>
+<p>我觉得电子化笔记优于纸质笔记的核心一点就是易于整理与搜寻。电子媒介借助特定的格式（如markdown），或是独有的结构（单位块），可以轻松的将大部分的内容进行调整和编辑。依托于搜索功能，也能够将之前记录的内容迅速查找调用，极大的提高使用效率。</p>
+<h2 id="器与术">器与术</h2>
+<p>在我个人探索的过程中，接触到了很多关于如何记好笔记的术和方便记笔记的器。术的方面多种多样，每种都有自己的特色与精进。从用于整理文件夹的<a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E4%B9%A6%E5%88%86%E7%B1%BB%E6%B3%95">图书馆分类法</a>，到打标签多维度检索，再到突出双链以块为单位的<a href="https://zh.wikipedia.org/zh-hans/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AD%86%E8%A8%98%E6%B3%95">卡片盒笔记法</a>。新的方法一直在涌现，这其中有的是互补，有的是方法的精炼。</p>
+<p>然而在器方面，才是更加的百花齐放。小到各厂家自带的备忘录，到专业的如印象笔记，为知笔记，Notion，Roam Research，Obsidian等等。我有很长一段时间在不同的软件之间来回折腾，似乎研究用什么做笔记比做笔记本身更有意思，工具越用越多，内容记了屁点。颇有大部分独立博客的文章都是只有「如何搭建一个独立博客」的意味。</p>
+<h2 id="我的笔记折腾经历">我的笔记折腾经历</h2>
+<p>要问如何记电子笔记，选择一个合适的应用很重要的。数据如何保存，格式是否友好，更新频率如何，开发团队情况，这些都需要考虑在内。</p>
+<p>我最开始使用印象笔记，一开始还是很优秀的。它能存放任何的东西，图片，视频，音频，文件等等，加上强大的剪藏功能，真的是个完美的笔记软件。甚至开始还有那种得到的课程直接通过印象笔记进行分享的黑产，用起来很舒服。但是后面慢慢加了很多冗余的东西，随之而来的是越来越多的vip，svip，ssvip。在看有优惠一口气续了三年的会员，它还推出10年会员后，我终于怕了。害怕它倒闭我所有东西都付之一炬，我决定快跑，同时也看到一个新的应用向我招手，那就是Notion。</p>
+<p>Notion作为一个可以All in one的应用，在最开始推出的时候就展现出了极大的潜力，所有文章都可以以块为最小单位随意任意链接，其强大的表格功能，过滤功能，再加上用户们分享的各种模板，用起来真的觉得是有无限的可能性。我个人尤其喜欢它的表格统计功能，做各种汇总的时候真的很方便。要说缺点，就是功能有点太多比较复杂，同时需要依赖科学的网络环境。</p>
+<p>除此之外我还有使用Obsidian，目前逐渐将一些重要的笔记使用这个软件进行记录。经历了印象笔记那种体验，笔记能掌控在自己手里并进行分享是我一个很看重的点。作为一个本地应用，能够把数据存放在本地，可以使用自己搭建的云服务进行同步。软件社区维护积极，借助插件，应用可以使用的很简单，也可以很折腾，适合各种需求的人。要说麻烦的地方，就是由于基本格式是markdown，图片之类的保存不会像其他软件那么集成，不过借助图床插件也还算方便。</p>
+<h2 id="什么才是值得记录的">什么才是值得记录的</h2>
+<p>上周想起我很久之前买的印象笔记会员要到期了，于是打算把里面有用的笔记迁移一下。这一整理，发现有用的东西寥寥无几，这也让我重新思考了一遍什么东西才是值得记录的。从前的自己沉迷稍后读，配合印象笔记的剪藏功能，有些有价值的文章就直接整篇剪贴进来，但是读倒是没读多少。再以现在的眼光看那些文章，它们中很多已经没有太大价值了。笔记这种东西，不仅需要有摘录，更要有自己的思考。剪藏这个过程有时候很必要，但不一定要在笔记中呈现。就我而言，真正需要记录的东西如下：</p>
+<h3 id="学习东西自己写的知识点的笔记">学习东西自己写的知识点的笔记</h3>
+<p>这种类型的最终目的是内化。这也是最原始的形式，类似于从小到大纸质的笔记。但是这并不是大段的复制，那样没有价值的。需要有自己的归纳总结，可以记的很简单，写好引用，以便查阅的时候可以溯源。</p>
+<h3 id="突然迸发思考而碎片化的想法">突然迸发思考而碎片化的想法</h3>
+<p>这种类型的最终目的是输出。人是有表达欲的，写博客的目的也是如此，碎片化的想法可能很短，但也很珍贵，全部作为笔记收集起来也是一笔财富。在一个合适的时间段总结整理一下，发个大文章也好，全部发到吐槽里也罢，都是一种不错的选择。</p>
+<h3 id="记录的一些流水账或统计">记录的一些流水账或统计</h3>
+<p>这种主要就是为了记录，信息统计，或者经验记录，还有总结思考之类的。比如每周周报，一些表格信息，这些也都可以放在其中用作查用。</p>
+<p>至于工具上，我觉得也不用都归一于同一应用，写自己笔记我用Obsidian，它比较好管理；碎片化想法可能用滴答清单顺便就记了，到时候再整理；统计使用Notion的表格更方便，每种软件取其长处用就好了。</p>
+<p>总体感觉自己对于记笔记这事是一个螺旋上升的过程，一个时间段感觉自己悟了，但后面又觉得之前做的不对，但貌似在否定之否定中还是处于进步的过程中。术有很多，但每个人适合的都不一样，这个过程与平衡只能慢慢探索了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[八三夭live house]]></title>
+        <id>https://blog.laffitto.xyz/post/ba-san-yao-live-house/</id>
+        <link href="https://blog.laffitto.xyz/post/ba-san-yao-live-house/">
+        </link>
+        <updated>2023-05-22T02:17:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>八三夭的神奇体验</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>八三夭的神奇体验</p>
+<!-- more -->
+<p>提起听演唱会，上次一次的记忆还是大学时代五月天的现场版，大体育馆内的千人合唱，想起来很是享受。然而会与近些年兴起的live house形式的演出自己一直没有参加过，正好八三夭来合肥，女朋友又从闲鱼上购入了两张票，正好去体验一下。</p>
+<p>live house（ライブハウス）诞生于上世纪的日本，作为一种于体育馆截然不同的形式，live house为那些名气不是特别大的音乐人提供了一个很好的舞台，三五百人的容纳提供了更好的氛围与形式。这次去的奕空间正好位于合肥奥体中心旁边，是一个篮球场改造的，场馆内部是一整个空间，大概容纳了五百人左右。舞台空间上，音响质量还可以，正前方，左前方和右前方各有一个大屏幕，基本上就是体育馆演唱会的微缩版。</p>
+<figure data-type="image" tabindex="1"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221051277.jpg" alt="" loading="lazy"></figure>
+<p>八三夭是台湾的乐队，和五月天一样都是来自相信音乐旗下的艺人。他们最广为人知的歌曲应该是2019年电视剧《想见你》的主题曲「想见你想见你想见你」</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/69zgyr5HVKdInjeKpq1qHa?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>但实际我大概在14年左右就关系喜欢了这个乐队，他们当时比现在还是差点，不过也是把他们的专辑都听了一遍，最后的831，东区东区，我怎么哭了等等直到现在都是他们主打的歌曲。然而不知道为啥，可能是听的音乐太多了，他们渐渐消失在了我的音乐列表，后续只有一些现象级的歌曲听过（如想见你想见你想见你，不摇滚，一事无成的伟大等等）。因此去听他们的live house，也有一些现充的成分，因为很多新歌都只听过一两次，远远达不到之前单专辑不断循环的地步。</p>
+<p>演出8点正式开始，不过7点半有暖场嘉宾，魏嘉莹，小姐姐之前没听过，不过唱的还是挺好的，感觉现场还是蛮稳的，多是那种放松抒情的歌。</p>
+<figure data-type="image" tabindex="2"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221144578.jpg" alt="" loading="lazy"></figure>
+<p>八点整，重点来了，八三夭来了，上来先是几首较燃的歌曲引爆全场的气氛。个人觉得八三夭的很多哥都适合与这种演唱会的形式，强劲的节奏和鼓点，就算没听过这首歌也能跟着奏乐跟着摇摆的那种感觉。</p>
+<figure data-type="image" tabindex="3"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221151989.jpg" alt="" loading="lazy"></figure>
+<p>感觉主场阿噗颜值忽高忽低哈哈🤣</p>
+<figure data-type="image" tabindex="4"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221159459.jpg" alt="" loading="lazy"></figure>
+<p>调动观众气氛是一件非常重要的事情，八三夭这点做的很好，身为一个乐队，不断的重复介绍自己的团员，每个人都进行富有特点的talking，给乐迷和路人都会留下很深的印象，不会觉得只有主唱在唱，其他人不过是打工的可有可无的情况。</p>
+<p>另外他们将一些歌曲进行简化，让观众跟着旋律唱一些简单的句子，进而提高互动率，让我这种对新歌不太熟悉的现充也有很好的参与感😘。</p>
+<figure data-type="image" tabindex="5"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221205751.jpg" alt="" loading="lazy"></figure>
+<p>还有和体育馆演唱会一样的翻唱Encore，老传统了。说是最后一首歌，然后唱完下去了，舞台灯也熄灭了，乐迷们大喊「八三夭，八三夭」，在声声呼唤中再回来继续奏乐继续舞~</p>
+<p>最终持续到10点多结束，整体的现场还是很嗨的，能明显的感受到，如果想跳，还是能够跳起来的，就是小腿有点酸痛罢了。</p>
+<figure data-type="image" tabindex="6"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221211584.jpg" alt="" loading="lazy"></figure>
+<p>个人觉得，这场live house还是很值的。演唱会这种东西现场和屏幕前完全是两种概念，那种快乐的氛围简直是天差地别。生活中能够蹦蹦跳跳的机会不多，能够和有着一起喜好的人嗨的机会不多，疫情的封闭让大家太压抑了，唱跳完感觉很爽，全身都是汗。生活本身平淡，热烈的事情还是需要去寻找。</p>
+<figure data-type="image" tabindex="7"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202305221221607.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenCV高阶操作]]></title>
+        <id>https://blog.laffitto.xyz/post/opencv-gao-jie-cao-zuo/</id>
+        <link href="https://blog.laffitto.xyz/post/opencv-gao-jie-cao-zuo/">
+        </link>
+        <updated>2023-04-10T04:20:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>一些OpenCV的高级操作和代码</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一些OpenCV的高级操作和代码</p>
+<!-- more -->
+<h2 id="阈值处理">阈值处理</h2>
+<p>阈值处理有很多种，有三种形式：</p>
+<ul>
+<li>手动提供参数来设定合适的阈值分割图像。需要控制照明条件下工作得非常好，可以确保图像的前景和背景之间的高对比度。</li>
+<li>如OTSU阈值之类的方法，这些方法试图更动态地自动计算最佳阈值。</li>
+<li>自适应阈值，它不是试图用一个单一的值全局地阈值一个图像，而是把图像分解成更小的部分，然后分别地和单独地对每个部分进行阈值。</li>
+</ul>
+<h3 id="手动阈值-basic-thresholding">手动阈值 Basic thresholding</h3>
+<p>需要手动确定阈值T</p>
+<pre><code class="language-python"># apply basic thresholding -- the first parameter is the image
+# we want to threshold, the second value is is our threshold
+# check; if a pixel value is greater than our threshold (in this
+# case, 200), we set it to be *black, otherwise it is *white*
+(T, threshInv) = cv2.threshold(blurred, 200, 255,
+	cv2.THRESH_BINARY_INV)
+cv2.imshow(&quot;Threshold Binary Inverse&quot;, threshInv)
+</code></pre>
+<p><code>cv2.threshold</code> 第一个参数为需要处理的图像，第二个为阈值T，第三个为高于阈值后需要变化为的数值（通常为255，表示变为黑色），第四个为阈值处理方法。<br>
+输出结果 第一个T表示阈值，第二个表示阈值后的图像。</p>
+<h3 id="自动化阈值-otsu">自动化阈值 OTSU</h3>
+<p>OTUS可以帮助我们自动设置阈值。Otsu的方法假设我们的图像像素强度的灰度直方图是双模态的，这仅仅意味着直方图是两个峰。[[opencv直方图对比|直方图详解]]</p>
+<p>例如如下图像，第一个尖峰对应于图像的统一背景颜色，而第二个峰值对应于药丸区域本身。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304021636564.png" alt="image.png" loading="lazy"></figure>
+<pre><code class="language-python">(T, threshInv) = cv2.threshold(blurred, 0, 255,
+	cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+</code></pre>
+<p>使用OTSU第二个参数设置为了0，因为它会自动帮助我们计算阈值。</p>
+<pre><code class="language-python">import argparse  
+import cv2  
+ap = argparse.ArgumentParser()  
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, type=str, required=True,  
+   help=&quot;path to input image&quot;)  
+args = vars(ap.parse_args())  
+  
+# load the image and display it  
+image = cv2.imread(args[&quot;image&quot;])  
+cv2.imshow(&quot;Image&quot;, image)  
+# convert the image to grayscale and blur it slightly  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+blurred = cv2.GaussianBlur(gray, (7, 7), 0)  
+  
+# apply Otsu's automatic thresholding which automatically determines  
+# the best threshold value  
+(T, threshInv) = cv2.threshold(blurred, 0, 255,  
+   cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)  
+cv2.imshow(&quot;Threshold&quot;, threshInv)  
+print(&quot;[INFO] otsu's thresholding value: {}&quot;.format(T))  
+# visualize only the masked regions in the image  
+masked = cv2.bitwise_and(image, image, mask=threshInv)  
+cv2.imshow(&quot;Output&quot;, masked)  
+cv2.waitKey(0)
+</code></pre>
+<p>注意一下<code>cv2.threshold</code> 中的阈值方法参数：</p>
+<ul>
+<li>cv2.THRESH_BINARY_INV 二值化后再反转</li>
+<li>cv2.THRESH_BINARY 正常二值化</li>
+</ul>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/">OpenCV Thresholding ( cv2.threshold ) - PyImageSearch</a></p>
+<h3 id="自适应阈值-adaptive-thresholding">自适应阈值 adaptive thresholding</h3>
+<p>对于一些复杂的图像，全局只有一个阈值分割效果可能会不好，因此使用自适应阈值。而且可以避免训练专用Mask R-CNN或U-Net分割网络的耗时和计算昂贵的过程。</p>
+<p>具体思想是在小块的领域确定阈值，选取区域大小是个需要调整的参数。区域阈值计算方法可以选择算术平均值或高斯平均值，算数平均更加常用。</p>
+<pre><code class="language-python">thresh = cv2.adaptiveThreshold(blurred, 255,
+	cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 21, 10)
+</code></pre>
+<p>输入参数 第一个为目标图像；第二个为输入阈值；第三个为自适应阈值方法，可选<code>cv2.ADAPTIVE_THRESH_MEAN_C</code> 或 <code>cv2.ADAPTIVE_THRESH_GAUSSIAN_C</code> ；第四个如同手动阈值方法；第五个是领域大小，这里表示21×21；最后一个为微调常数值C，通过加减C来进行调整阈值。</p>
+<pre><code class="language-python">image = cv2.imread('test.png')
+cv2.imshow(&quot;Image&quot;, image)
+# convert the image to grayscale and blur it slightly
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(gray, (7, 7), 0)
+
+# instead of manually specifying the threshold value, we can use
+# adaptive thresholding to examine neighborhoods of pixels and
+# adaptively threshold each neighborhood
+thresh = cv2.adaptiveThreshold(blurred, 255,
+	cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 21, 4)
+cv2.imshow(&quot;Mean Adaptive Thresholding&quot;, thresh)
+cv2.waitKey(0)
+</code></pre>
+<p>参考 <a href="https://pyimagesearch.com/2021/05/12/adaptive-thresholding-with-opencv-cv2-adaptivethreshold/">Adaptive Thresholding with OpenCV ( cv2.adaptiveThreshold )</a></p>
+<h2 id="图像平滑和模糊">图像平滑和模糊</h2>
+<p>平滑和模糊是计算机视觉和图像处理中最常见的预处理步骤之一。在应用边缘检测或阈值分割等技术之前，通过平滑图像，能够减少高频内容的数量，如噪声和边缘(即图像的细节)。</p>
+<h3 id="平均模糊-cv2blur">平均模糊 cv2.blur</h3>
+<p>取中心像素周围的像素区域，将所有这些像素平均在一起，并用平均值替换中心像素。通常使用 M×N (M N为奇数)的内核进行平均。随着内核大小的增加，图像模糊的数量也会增加。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (9, 9), (15, 15)]
+# loop over the kernel sizes
+for (kX, kY) in kernelSizes:
+	# apply an &quot;average&quot; blur to the image using the current kernel
+	# size
+	blurred = cv2.blur(image, (kX, kY))
+	cv2.imshow(&quot;Average ({}, {})&quot;.format(kX, kY), blurred)
+	cv2.waitKey(0)
+</code></pre>
+<h3 id="高斯模糊-cv2gaussianblur">高斯模糊 cv2.GaussianBlur</h3>
+<p>高斯模糊类似于平均模糊，但不是简单的平均值，而是加权平均值，其中更接近中心像素的邻域像素对平均值贡献更多的权重。借助M×N 的内核(M N为奇数)，基于这种加权，将能够保留图像中更多的边缘。</p>
+<p>x和y方向上的高斯函数如下：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi><mi>σ</mi></mrow></mfrac><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">G(x,y)= \frac{1}{2 \pi \sigma}e^{- \frac{x^{2}+y^{2}}{2 \sigma ^{2}}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.3013099999999997em;"><span style="top:-3.4534200000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2112714285714286em;"><span style="top:-2.5061857142857145em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.4623857142857144em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.04844em;"><span style="top:-3.04844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.04844em;"><span style="top:-3.04844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.49381428571428565em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>当内核的大小增加时，应用于输出图像的模糊量也会增加。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (9, 9), (15, 15)]
+# loop over the kernel sizes again
+for (kX, kY) in kernelSizes:
+	# apply a &quot;Gaussian&quot; blur to the image
+	blurred = cv2.GaussianBlur(image, (kX, kY), 0)
+	cv2.imshow(&quot;Gaussian ({}, {})&quot;.format(kX, kY), blurred)
+	cv2.waitKey(0)
+</code></pre>
+<p>最后一个参数为高斯分布的标准差。通过将这个值设置为0，我们指示OpenCV根据内核大小自动计算。更多细节可以参考 <a href="https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html#gaussianblur">OpenCV documentation</a></p>
+<h3 id="中值模糊-cv2medianblur">中值模糊 cv2.medianBlur</h3>
+<p>中值模糊方法是去除椒盐噪声最有效的方法。该方法的内核大小必须是正方形。并且用邻域的中值代替中心像素。</p>
+<p>中值模糊在从图像中去除椒盐风格噪声时更有效的原因是每个中心像素总是被图像中存在的像素强度所取代。由于中位数对异常值具有稳健性，与平均值等其他统计方法相比，椒盐噪声对中位数的影响较小。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (9, 9), (15, 15)]
+# loop over the kernel sizes a final time
+for k in (3, 9, 15):
+	# apply a &quot;median&quot; blur to the image
+	blurred = cv2.medianBlur(image, k)
+	cv2.imshow(&quot;Median {}&quot;.format(k), blurred)
+	cv2.waitKey(0)
+</code></pre>
+<h3 id="双边模糊-cv2bilateralfilter">双边模糊 cv2.bilateralFilter</h3>
+<p>上面几种模糊方法往往会失去图像的边缘，为了在保持边缘的同时减少噪声，可以使用双边模糊（利用两个高斯分布）。但是它的速度会慢很多。</p>
+<pre><code class="language-python">blurred = cv2.bilateralFilter(image, diameter, sigmaColor, sigmaSpace)
+</code></pre>
+<p>第一个参数为需要模糊的图像；第二个参数为像素邻域的直径。直径越大，模糊计算中包含的像素就越多；第三个参数是颜色标准偏差，更大的值意味着在计算模糊时将考虑附近更多的颜色。第四个参数为坐标空间中的sigma值。它的值越大，说明有越多的点能够参与到滤波计算中来。</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/">OpenCV Smoothing and Blurring - PyImageSearch</a></p>
+<h2 id="形态学操作">形态学操作</h2>
+<p>形态学运算是应用于二值或灰度图像的简单变换。形态学操作探测带有结构元素(<strong>structuring elements</strong>)的图像。这个结构元素定义了每个像素周围要检查的邻域。根据给定的操作和结构元素的大小，我们可以调整输出图像。</p>
+<p>有时候很多东西根本不配用上特别高级的算法，例如机器学习，深度学习。</p>
+<p>结构元素在opencv中用<code>cv2.getStructuringElement</code>定义，如下与定义4邻域和8邻域的一个例子<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032110987.png" alt="image.png" loading="lazy"></p>
+<h3 id="侵蚀-erosion">侵蚀 Erosion</h3>
+<p>图像中物体边界附近的像素将被丢弃侵蚀掉。</p>
+<p>侵蚀通过定义结构元素，然后在输入图像上从左到右、从上到下滑动这个结构元素。只有当结构元素中的所有像素都是&gt; 0时，输入图像中的前景像素才会被保留。否则，像素被设置为0(即背景)。</p>
+<p>使用 <code>cv2.erode</code></p>
+<pre><code class="language-python"># apply a series of erosions
+for i in range(0, 3):
+	eroded = cv2.erode(gray, None, iterations=i + 1)
+	cv2.imshow(&quot;Eroded {} times&quot;.format(i + 1), eroded)
+	cv2.waitKey(0)
+</code></pre>
+<p>第一个参数为需要侵蚀的图像；第二个为侵蚀的结构元素，设为<code>None</code>表示3×3的8领域结构；第三个为膨胀迭代次数。</p>
+<h3 id="膨胀-dilation">膨胀 dilation</h3>
+<p>膨胀可以增加前景对象的大小，尤其适用于将图像的破碎部分连接在一起。通过定义结构元素，若任意一个像素为&gt; 0，则结构元素的中心像素p将被设置为白色。</p>
+<p>使用 <code>cv2.dilate</code></p>
+<pre><code class="language-python"># apply a series of dilations
+for i in range(0, 3):
+	dilated = cv2.dilate(gray.copy(), None, iterations=i + 1)
+	cv2.imshow(&quot;Dilated {} times&quot;.format(i + 1), dilated)
+	cv2.waitKey(0)
+
+</code></pre>
+<p>参数类似侵蚀，基本同理</p>
+<h3 id="开操作-opening">开操作 Opening</h3>
+<p>开操作是侵蚀之后的膨胀。该操作可以从图像中删除小斑点:首先应用侵蚀来删除小斑点，然后应用膨胀来重新增长原始对象的大小。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (5, 5), (7, 7)]
+# loop over the kernels sizes
+for kernelSize in kernelSizes:
+	# construct a rectangular kernel from the current size and then
+	# apply an &quot;opening&quot; operation
+	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+	opening = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel)
+	cv2.imshow(&quot;Opening: ({}, {})&quot;.format(
+		kernelSize[0], kernelSize[1]), opening)
+	cv2.waitKey(0)
+</code></pre>
+<p>cv2.getStructuringElement用来定义一个结构元素。第一个参数结构元素类型：<code>cv2.MORPH_RECT</code> 表示正方形结构（8邻域），<code>cv2.MORPH_CROSS</code> 表示十字形结构（4邻域），<code>cv2.MORPH_ELLIPSE</code> 表示圆形结构。第二个参数表示大小。</p>
+<p>这里开操作使用 cv2.morphologyEx 函数，不过实际上它能够传递任何想要的形态操作。这里操作方式选择<code>cv2.MORPH_OPEN</code> 表示开操作。</p>
+<h3 id="闭操作-closing">闭操作 Closing</h3>
+<p>闭操作是膨胀之后的侵蚀。它可以将物体内部的孔或将组件连接在一起。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (5, 5), (7, 7)]
+for kernelSize in kernelSizes:
+	# construct a rectangular kernel form the current size, but this
+	# time apply a &quot;closing&quot; operation
+	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+	closing = cv2.morphologyEx(gray, cv2.MORPH_CLOSE, kernel)
+	cv2.imshow(&quot;Closing: ({}, {})&quot;.format(
+		kernelSize[0], kernelSize[1]), closing)
+	cv2.waitKey(0)
+</code></pre>
+<p>与开操作类似，不过cv2.morphologyEx 函数中方法选择 <code>cv2.MORPH_CLOSE</code></p>
+<h3 id="形态学梯度-morphological-gradient">形态学梯度 Morphological gradient</h3>
+<p>形态学梯度是膨胀和侵蚀之间的差异。它对于确定图像的特定对象的轮廓很有用</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (5, 5), (7, 7)]
+for kernelSize in kernelSizes:
+	# construct a rectangular kernel and apply a &quot;morphological
+	# gradient&quot; operation to the image
+	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+	gradient = cv2.morphologyEx(gray, cv2.MORPH_GRADIENT, kernel)
+	cv2.imshow(&quot;Gradient: ({}, {})&quot;.format(
+		kernelSize[0], kernelSize[1]), gradient)
+	cv2.waitKey(0)
+</code></pre>
+<p>cv2.morphologyEx 函数中方法选择 <code>cv2.MORPH_GRADIENT</code></p>
+<h3 id="顶帽操作top-hatwhite-hat和黑帽操作black-hat">顶帽操作（Top hat/white hat）和黑帽操作（black hat）</h3>
+<p>top hat用于在深色背景上显示图像的明亮区域。</p>
+<pre><code class="language-python">image = cv2.imread(args[&quot;image&quot;])
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# construct a rectangular kernel (13x5) and apply a blackhat
+# operation which enables us to find dark regions on a light
+# background
+rectKernel = cv2.getStructuringElement(cv2.MORPH_RECT, (13, 5))
+blackhat = cv2.morphologyEx(gray, cv2.MORPH_BLACKHAT, rectKernel)
+
+# similarly, a tophat (also called a &quot;whitehat&quot;) operation will
+# enable us to find light regions on a dark background
+tophat = cv2.morphologyEx(gray, cv2.MORPH_TOPHAT, rectKernel)
+
+# show the output images
+cv2.imshow(&quot;Original&quot;, image)
+cv2.imshow(&quot;Blackhat&quot;, blackhat)
+cv2.imshow(&quot;Tophat&quot;, tophat)
+cv2.waitKey(0)
+</code></pre>
+<p>分别使用 <code>cv2.MORPH_BLACKHAT</code> 和 <code>cv2.MORPH_TOPHAT</code> 去进行操作</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-morphological-operations/">OpenCV Morphological Operations</a></p>
+<h2 id="颜色空间">颜色空间</h2>
+<p>主要基于 cv2.cvtColor 函数</p>
+<h3 id="照明条件的重要性">照明条件的重要性</h3>
+<p>照明条件对于计算机视觉处理流程有着重要的影响。光的质量是图像进入算法前就应该积极考虑的，它可能是最重要的因素。</p>
+<ul>
+<li>
+<p>高对比度 High contrast<br>
+尽量确保环境的背景和前景之间有很高的对比度，这将使编写代码更容易准确地理解背景和前景。</p>
+</li>
+<li>
+<p>可推广的 Generalizable<br>
+照明条件应该足够一致，以至于它们从一个物体到另一个对象都可以很好地工作。</p>
+</li>
+<li>
+<p>稳健性 Stable<br>
+拥有稳定、一致和可重复的照明条件是计算机视觉应用开发重要因素。</p>
+</li>
+</ul>
+<h3 id="rgb-color-space">RGB color space</h3>
+<p>由RGB三个通道组成，每个通道范围为[0,255]。RGB颜色空间是加色空间的一个例子:每种颜色加的越多，像素就变得越亮，越接近白色。需要将三个通道都加起来才能表示一种颜色。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032156706.png" alt="image.png" loading="lazy"></p>
+<h3 id="hsv-color-space">HSV color space</h3>
+<p>HSV颜色空间会改变RGB的颜色空间，将其重塑为圆柱体而不是立方体。在RGB部分中看到的，颜色的白色或明度是每个红色、绿色和蓝色组件的相加组合。但现在在HSV颜色空间中，亮度被赋予了自己的独立维度。</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032155596.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p><strong>Hue</strong>：检查哪种“纯”颜色。例如，颜色“红色”的所有阴影和色调都具有相同的色调。</p>
+</li>
+<li>
+<p><strong>Saturation</strong>：颜色是多么“白色”。完全饱和的颜色将是“纯”，如“纯红色”。零饱和的颜色将是纯白色。</p>
+</li>
+<li>
+<p><strong>value</strong>：控制颜色的明度。0将表示纯黑色，而增加将产生较浅的颜色</p>
+</li>
+</ul>
+<p>不同的计算机视觉库将使用不同的范围来表示每个色相、饱和度和值组件。<br>
+在OpenCV中，图像表示为8位无符号整数数组。因此，Hue值被定义为范围[0,179] (总共有180个可能的值，因为[0,359]共360对于8位无符号数组是不可能的)，Hue实际上是HSV颜色圆柱上的度数。<strong>Saturation</strong>和<strong>value</strong>范围都在[0,255]。</p>
+<p>转换方式使用<code>cv2.COLOR_BGR2HSV</code></p>
+<pre><code class="language-python">hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+</code></pre>
+<p>Value组件本质上是一个灰度图像，这是因为Value控制了颜色的实际明度，而Hue和Saturation定义了实际的颜色和阴影。HSV颜色空间在计算机视觉应用中被大量使用，特别是当我们对跟踪图像中某些物体的颜色感兴趣时。使用HSV定义一个有效的颜色范围比使用RGB要容易得多。</p>
+<h3 id="l-a-b-color-space">L* a* b* color space</h3>
+<p>该方法目标是模仿人类观察和解释颜色的方法。L* a* b* 颜色空间中任意两种颜色之间的欧几里得距离具有实际的感知意义。L* a* b* 颜色空间是一个3轴系统</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032207325.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li><strong>L-channel:</strong> 像素的亮度。这个值在垂直轴上上下变化，从白色到黑色，轴的中心是中性灰色。</li>
+<li><strong>a-channel:</strong> 源于L通道的中心，在光谱的一端定义纯绿色，在另一端定义纯红色。</li>
+<li><strong>b-channel</strong>：源于l通道的中心，但垂直于a通道。b通道在一个光谱上定义纯蓝色，在另一个光谱上定义纯黄色。</li>
+</ul>
+<p>L* a* b* 颜色空间不像HSV和RGB颜色空间那么直观，但它在计算机视觉中被大量使用。这是因为颜色之间的距离具有实际的感知意义，使我们能够克服各种光照条件问题。它还可以作为一个强大的彩色图像描述符。</p>
+<p>转换方式使用<code>cv2.COLOR_BGR2LAB</code></p>
+<pre><code class="language-python">lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+</code></pre>
+<p>L* 通道，用于显示给定像素的亮度。然后，a* 和b* 决定像素的阴影和颜色。</p>
+<h3 id="灰度-grayscale">灰度 Grayscale</h3>
+<p>转换方式使用<code>cv2.COLOR_BGR2GRAY</code></p>
+<pre><code class="language-python">gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+</code></pre>
+<p>转化为单一通道像素范围在[0,255]的图像。转化公式如下</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mn>0.299</mn><mo>×</mo><mi>R</mi><mo>+</mo><mn>0.587</mn><mo>×</mo><mi>G</mi><mo>+</mo><mn>0.114</mn><mo>×</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">Y=0.299 \times R+0.587 \times G+0.114 \times B
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span><span class="mord">9</span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span><span class="mord">8</span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">G</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></p>
+<p>不平均主要是由于我们视觉感知RGB三种颜色敏感度不同。</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/">OpenCV Color Spaces ( cv2.cvtColor )</a></p>
+<h2 id="图像梯度">图像梯度</h2>
+<p>图像梯度的作用</p>
+<ul>
+<li>使用梯度检测图像中的边缘，在图像中找到对象的轮廓，阴影，边缘等等</li>
+<li>用作通过特征提取来量化图像的输入。例如定向梯度直方图（Histogram of Oriented Gradients）和 SIFT</li>
+<li>用于构建显着图（saliency maps），突出显示图像的主题</li>
+</ul>
+<p>通常检测到图像的边缘叫做<strong>edge map</strong></p>
+<p>关于图像梯度手动计算的方法<a href="https://pyimagesearch.com/2021/05/12/image-gradients-with-opencv-sobel-and-scharr/#__next:~:text=Computing%20image%20gradients%20manually">参考这里</a></p>
+<h3 id="sobel-and-scharr-kernels">Sobel and Scharr kernels</h3>
+<p>Sobel使用了两个核，一个用于检测水平方向的变化，另一个用于检测垂直方向的变化</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>G</mi><mi>x</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>2</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>2</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><msub><mi>G</mi><mi>y</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>2</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>2</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">G _ { x } = \left[ \begin{array}  { l l l  }  { - 1 } &amp; { 0 } &amp; { + 1 } \\ { - 2 } &amp; { 0 } &amp; { + 2 } \\ { - 1 } &amp; { 0 } &amp; { + 1 } \end{array} \right]\ and\ G _ { y } = \left[ \begin{array}  { l l l  }  { - 1 } &amp; { - 2 } &amp; { - 1 } \\ { 0 } &amp; { 0 } &amp; { 0 } \\ { + 1 } &amp; { + 2 } &amp; { + 1 } \end{array} \right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">2</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">2</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">2</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>Scharr类似，不过核不太一样，效果会更好一些。</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>G</mi><mi>x</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>10</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>10</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><msub><mi>G</mi><mi>y</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>10</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>10</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">G _ { x } = \left[ \begin{array}  { l l l  }  { - 3 } &amp; { 0 } &amp; { + 3 } \\ { - 10 } &amp; { 0 } &amp; { + 10 } \\ { - 3 } &amp; { 0 } &amp; { + 3 } \end{array} \right]\ and\ G _ { y } = \left[ \begin{array}  { l l l  }  { - 3 } &amp; { - 10 } &amp; { - 3 } \\ { 0 } &amp; { 0 } &amp; { 0 } \\ { + 3 } &amp; { + 10 } &amp; { + 3 } \end{array} \right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span><span class="mord">0</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span><span class="mord">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>代码使用</p>
+<pre><code class="language-python">import argparse
+import cv2
+# construct the argument parser and parse the arguments
+# scharr 参数为0表示使用sobel内核，&gt;0表示使用scharr内核
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, type=str, required=True,
+	help=&quot;path to input image&quot;)
+ap.add_argument(&quot;-s&quot;, &quot;--scharr&quot;, type=int, default=0,
+	help=&quot;path to input image&quot;)
+args = vars(ap.parse_args())
+
+image = cv2.imread(args[&quot;image&quot;])
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow(&quot;Gray&quot;, gray)
+
+# set the kernel size, depending on whether we are using the Sobel
+# operator of the Scharr operator, then compute the gradients along
+# the x and y axis, respectively
+ksize = -1 if args[&quot;scharr&quot;] &gt; 0 else 3
+gX = cv2.Sobel(gray, ddepth=cv2.CV_32F, dx=1, dy=0, ksize=ksize)
+gY = cv2.Sobel(gray, ddepth=cv2.CV_32F, dx=0, dy=1, ksize=ksize)
+
+# the gradient magnitude images are now of the floating point data
+# type, so we need to take care to convert them back a to unsigned
+# 8-bit integer representation so other OpenCV functions can operate
+# on them and visualize them
+gX = cv2.convertScaleAbs(gX)
+gY = cv2.convertScaleAbs(gY)
+
+# combine the gradient representations into a single image
+combined = cv2.addWeighted(gX, 0.5, gY, 0.5, 0)
+# show our output images
+cv2.imshow(&quot;Sobel/Scharr X&quot;, gX)
+cv2.imshow(&quot;Sobel/Scharr Y&quot;, gY)
+cv2.imshow(&quot;Sobel/Scharr Combined&quot;, combined)
+cv2.waitKey(0)
+</code></pre>
+<p>参考 <a href="https://pyimagesearch.com/2021/05/12/image-gradients-with-opencv-sobel-and-scharr/">Image Gradients with OpenCV (Sobel and Scharr)</a></p>
+<h2 id="边缘检测">边缘检测</h2>
+<p>通常会使用Canny边缘检测器，opencv中使用cv2.Canny函数</p>
+<p>在边缘检测过程中，梯度幅值对噪声极其敏感。<a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.420.3300&amp;rep=rep1&amp;type=pdf">Canny</a>检测中，边被定义为像素强度的不连续，或者更简单地说，像素值的急剧差异和变化。</p>
+<h3 id="几种边缘示例">几种边缘示例</h3>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304061017413.png" alt="image.png" loading="lazy"></figure>
+<h3 id="canny边缘检测步骤">Canny边缘检测步骤</h3>
+<ol>
+<li>
+<p>噪声去除：使用[[Opencv高级处理#高斯模糊 cv2.GaussianBlur|高斯模糊]]等去除图片噪声，做平滑处理</p>
+</li>
+<li>
+<p>计算图像梯度：对平滑后的图像使用[[Opencv高级处理#Sobel and Scharr kernels|Sobel算子]]计算水平方向和竖直方向的一阶导数(Gx 和Gy)。根据得到的这两幅梯度，找到边界梯度和方向</p>
+</li>
+<li>
+<p>非极大值抑制（ <strong>Non-maxima suppression</strong>）：在获得梯度的方向和大小之后，对整幅图像进行扫描（通常是3×3），去除那些非边界上的点。对每一个像素进行检查，看这个点的梯度是不是周围具有相同梯度方向的点中最大的（如果中心像素的大小大于与之比较的两个像素，则保留，否则丢弃）</p>
+</li>
+<li>
+<p>滞后阈值（ <strong>Hysteresis thresholding</strong>）：确定真正的边界，设置两个阈值: TminVal 和TmaxVal。当图像的灰度梯度高于TmaxVal时被认为是真的边界，低于TminVal的边界会被抛弃</p>
+</li>
+</ol>
+<p>调用方法，需要设定上下界的阈值</p>
+<pre><code class="language-python">image = cv2.Canny(blurred, TminVal, TmaxVal)
+</code></pre>
+<h3 id="自动canny代码">自动canny代码</h3>
+<p>实际上这个auto_canny代码已经集成在了imutils中，可以直接调用</p>
+<pre><code class="language-python">import argparse  
+import cv2  
+import numpy as np  
+  
+def auto_canny(image, sigma=0.33):  
+    v = np.median(image)  
+    # apply automatic Canny edge detection using the computed median  
+    lower = int(max(0, (1.0 - sigma) * v))  
+    upper = int(min(255, (1.0 + sigma) * v))  
+    edged = cv2.Canny(image, lower, upper)  
+    return edged  
+  
+ap = argparse.ArgumentParser()  
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, required=True, help=&quot;Path to the image&quot;)  
+args = vars(ap.parse_args())  
+  
+image = cv2.imread(args[&quot;image&quot;])  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+blurred = cv2.GaussianBlur(gray, (3, 3), 0)  
+  
+wide = cv2.Canny(blurred, 10, 200)  
+tight = cv2.Canny(blurred, 225, 250)  
+auto = auto_canny(blurred)  
+  
+cv2.imshow(&quot;Original&quot;, image)  
+cv2.imshow(&quot;Wide&quot;, wide)  
+cv2.imshow(&quot;Tight&quot;, tight)  
+cv2.imshow(&quot;Auto&quot;, auto)  
+cv2.waitKey(0)
+</code></pre>
+<p>参考 <a href="https://pyimagesearch.com/2021/05/12/opencv-edge-detection-cv2-canny/">OpenCV Edge Detection ( cv2.Canny )</a></p>
+<h2 id="轮廓近似">轮廓近似</h2>
+<p>OpenCV Contour Approximation，称为<a href="https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm">Ramer–Douglas–Peucker</a> 算法<br>
+目的是通过减少给定阈值的折线顶点来简化折线。通俗地说，我们取一条曲线，减少它的顶点数量，同时保留它的大部分形状</p>
+<p>主要使用cv2.findContours函数寻找所有的轮廓，再使用cv2.approxPolyDP对轮廓进行近似。</p>
+<pre><code class="language-python">import numpy as np  
+import argparse  
+import imutils  
+import cv2  
+# construct the argument parser and parse the arguments  
+ap = argparse.ArgumentParser()  
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, type=str, default=&quot;shape.png&quot;,  
+   help=&quot;path to input image&quot;)  
+args = vars(ap.parse_args())  
+  
+# load the image and display it  
+image = cv2.imread(args[&quot;image&quot;])  
+cv2.imshow(&quot;Image&quot;, image)  
+  
+# convert the image to grayscale and threshold it  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+thresh = cv2.threshold(gray, 200, 255,  
+   cv2.THRESH_BINARY_INV)[1]  
+cv2.imshow(&quot;Thresh&quot;, thresh)  
+  
+# find the largest contour in the threshold image  
+cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,  
+   cv2.CHAIN_APPROX_SIMPLE)  
+cnts = imutils.grab_contours(cnts)  
+c = max(cnts, key=cv2.contourArea)  
+  
+# draw the shape of the contour on the output image, compute the  
+# bounding box, and display the number of points in the contour  
+output = image.copy()  
+cv2.drawContours(output, [c], -1, (0, 255, 0), 3)  
+(x, y, w, h) = cv2.boundingRect(c)  
+text = &quot;original, num_pts={}&quot;.format(len(c))  
+cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX,  
+   0.9, (0, 255, 0), 2)  
+  
+# show the original contour image  
+print(&quot;[INFO] {}&quot;.format(text))  
+cv2.imshow(&quot;Original Contour&quot;, output)  
+cv2.waitKey(0)  
+  
+# to demonstrate the impact of contour approximation, let's loop  
+# over a number of epsilon sizes  
+for eps in np.linspace(0.001, 0.05, 10):  
+   # approximate the contour  
+   peri = cv2.arcLength(c, True) # 计算周长  
+   approx = cv2.approxPolyDP(c, eps * peri, True)  
+   # draw the approximated contour on the image  
+   output = image.copy()  
+   cv2.drawContours(output, [approx], -1, (0, 255, 0), 3)  
+   text = &quot;eps={:.4f}, num_pts={}&quot;.format(eps, len(approx))  
+   cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX,  
+      0.9, (0, 255, 0), 2)  
+   # show the approximated contour image  
+   print(&quot;[INFO] {}&quot;.format(text))  
+   cv2.imshow(&quot;Approximated Contour&quot;, output)  
+   cv2.waitKey(0)
+</code></pre>
+<p>通过改变eps的值，一步步的近似轮廓边缘。</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/10/06/opencv-contour-approximation/"># OpenCV Contour Approximation</a></p>
+]]></content>
+    </entry>
+</feed>
