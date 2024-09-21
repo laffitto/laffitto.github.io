@@ -1,0 +1,493 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Stack vs Concat in PyTorch, TensorFlow &amp; NumPy | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1726931395097">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1726931395097" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Stack vs Concat in PyTorch, TensorFlow &amp; NumPy
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-04-27 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>最近在重新捡起以前学习过的东西，这里写一下stack与concatenate在pytorch，tensorflow和numpy中的表达方式。最开始的参考为<a href="https://deeplizard.com/learn/video/kF2AlpykJGY">这个博客</a>，建议有技术的直接看原文。</p>
+<h2 id="stack与concatenate的区别">Stack与Concatenate的区别</h2>
+<ul>
+<li>Concatenate joins a sequence of tensors along <strong>an existing axis.</strong></li>
+<li>Stack joins a sequence of tensors along <strong>a new axis.</strong></li>
+</ul>
+<h2 id="how-to-add-or-insert-an-axis-into-a-tensor">How to Add or Insert an Axis into a Tensor</h2>
+<p>这里先用pytorch进行演示：</p>
+<pre><code class="language-python">import torch
+t1 = torch.tensor([1,1,1])
+</code></pre>
+<ul>
+<li>增加一个维度</li>
+</ul>
+<pre><code class="language-python">&gt; t1.unsqueeze(dim=0)
+tensor([[1, 1, 1]])
+</code></pre>
+<pre><code class="language-python">&gt; t1.unsqueeze(dim=1)
+tensor([[1],
+        [1],       
+        [1]])
+</code></pre>
+<ul>
+<li>观察形状</li>
+</ul>
+<pre><code class="language-python">&gt; print(t1.shape)
+&gt; print(t1.unsqueeze(dim=0).shape)
+&gt; print(t1.unsqueeze(dim=1).shape)
+
+torch.Size([3])  # 注意这里tensor的初始维度！
+torch.Size([1, 3])
+torch.Size([3, 1])
+</code></pre>
+<h3 id="stack-vs-cat-in-pytorch">Stack vs Cat in PyTorch</h3>
+<pre><code class="language-python">import torch
+t1 = torch.tensor([1,1,1])
+t2 = torch.tensor([2,2,2])
+t3 = torch.tensor([3,3,3])
+</code></pre>
+<ul>
+<li>使用<strong>cat</strong></li>
+</ul>
+<pre><code class="language-python">&gt; torch.cat((t1,t2,t3),dim=0)
+
+tensor([1, 1, 1, 2, 2, 2, 3, 3, 3])   # 在原有维度上操作
+</code></pre>
+<ul>
+<li>使用stack</li>
+</ul>
+<pre><code class="language-python">&gt; torch.stack((t1,t2,t3) ,dim=0)
+
+tensor([[1, 1, 1],
+        [2, 2, 2],      
+        [3, 3, 3]])     #  在新增加的维度操作
+</code></pre>
+<ul>
+<li>使用cat来达到与stack相同的效果</li>
+</ul>
+<pre><code class="language-python">&gt; torch.cat((t1.unsqueeze(0),
+            t2.unsqueeze(0),
+            t3.unsqueeze(0)),
+            dim=0)
+
+tensor([[1, 1, 1],       
+        [2, 2, 2],
+        [3, 3, 3]])
+</code></pre>
+<ul>
+<li>试试第二个维度</li>
+</ul>
+<pre><code class="language-python">&gt; torch.stack((t1,t2,t3),dim=1)
+
+tensor([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<pre><code class="language-python">&gt; torch.cat((t1.unsqueeze(1),
+            t2.unsqueeze(1),
+            t3.unsqueeze(1)),
+            dim=1)
+
+tensor([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<h3 id="stack-vs-concat-in-tensorflow">Stack vs Concat in TensorFlow</h3>
+<pre><code class="language-python">import tensorflow as tf
+t1 = tf.constant([1,1,1])
+t2 = tf.constant([2,2,2])
+t3 = tf.constant([3,3,3])
+</code></pre>
+<ul>
+<li>使用<strong>concat</strong></li>
+</ul>
+<pre><code class="language-python">&gt; tf.concat((t1,t2,t3),axis=0)
+
+tf.Tensor: id=4, shape=(9,), dtype=int32, numpy=array([1, 1, 1, 2, 2, 2, 3, 3, 3])
+</code></pre>
+<ul>
+<li>使用stack</li>
+</ul>
+<pre><code class="language-python">&gt; tf.stack((t1,t2,t3),axis=0)
+
+tf.Tensor: id=6, shape=(3, 3), dtype=int32, numpy=
+array([[1, 1, 1],       
+        [2, 2, 2],
+        [3, 3, 3]])
+</code></pre>
+<ul>
+<li>使用concat达到与stack相同效果（注意：tensorflow中的expand_dims与Pytorch中的unsqueeze效果相同）</li>
+</ul>
+<pre><code class="language-python">&gt; tf.concat((tf.expand_dims(t1, 1),
+            tf.expand_dims(t2, 1),
+            tf.expand_dims(t3, 1)),
+            axis=1)
+            
+tf.Tensor: id=15, shape=(3, 3), dtype=int32, numpy=
+array([[1, 1, 1],
+       [2, 2, 2],
+       [3, 3, 3]])
+</code></pre>
+<ul>
+<li>试试第二维度</li>
+</ul>
+<pre><code class="language-python">&gt; tf.stack((t1,t2,t3) ,axis=1)
+
+tf.Tensor: id=17, shape=(3, 3), dtype=int32, numpy=
+array([[1, 2, 3],
+       [1, 2, 3],
+       [1, 2, 3]])
+</code></pre>
+<pre><code class="language-python">&gt; tf.concat((tf.expand_dims(t1, 0),
+            tf.expand_dims(t2, 0),
+            tf.expand_dims(t3, 0)),
+            axis=0)
+            
+tf.Tensor: id=26, shape=(3, 3), dtype=int32, numpy=
+array([[1, 2, 3],
+       [1, 2, 3],
+       [1, 2, 3]])
+</code></pre>
+<h3 id="stack-vs-concatenate-in-numpy">Stack vs Concatenate in NumPy</h3>
+<pre><code class="language-python">import numpy as np
+t1 = np.array([1,1,1])
+t2 = np.array([2,2,2])
+t3 = np.array([3,3,3])
+</code></pre>
+<ul>
+<li>使用<strong>concatenate</strong></li>
+</ul>
+<pre><code class="language-python">&gt; np.concatenate((t1,t2,t3),axis=0)
+
+array([1, 1, 1, 2, 2, 2, 3, 3, 3])
+</code></pre>
+<ul>
+<li>使用stack</li>
+</ul>
+<pre><code class="language-python">&gt; np.stack((t1,t2,t3),axis=0)
+
+array([[1, 1, 1],
+       [2, 2, 2],
+       [3, 3, 3]])
+</code></pre>
+<ul>
+<li>使用concatenate达到与stack相同效果</li>
+</ul>
+<pre><code class="language-python">&gt; np.concatenate((np.expand_dims(t1, 0),
+                np.expand_dims(t2, 0),
+                np.expand_dims(t3, 0)),
+                axis=0)
+
+array([[1, 1, 1],
+       [2, 2, 2],
+       [3, 3, 3]])
+</code></pre>
+<ul>
+<li>第二维度</li>
+</ul>
+<pre><code class="language-python">&gt; np.stack((t1,t2,t3),axis=1)
+
+array([[1, 2, 3],       
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<pre><code class="language-python">&gt; np.concatenate((np.expand_dims(t1, 1),
+                    np.expand_dims(t2, 1),
+                    np.expand_dims(t3, 1)),
+                    axis=1)
+
+array([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+</code></pre>
+<h3 id="完全相通注意concatenate名字的区别">完全相通，注意concatenate<strong>名字的区别</strong>：</h3>
+<table>
+<thead>
+<tr>
+<th>LibraryFunction</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PyTorch</td>
+<td>cat()</td>
+</tr>
+<tr>
+<td>TensorFlow</td>
+<td>concat()</td>
+</tr>
+<tr>
+<td>NumPy</td>
+<td>concatenate()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实际例子操作">实际例子操作</h2>
+<ul>
+<li>将图片加入一个batch中</li>
+</ul>
+<pre><code class="language-python">import torch
+t1 = torch.zeros(3,28,28)
+t2 = torch.zeros(3,28,28)
+t3 = torch.zeros(3,28,28)
+torch.stack((t1,t2,t3),dim=0).shape
+
+## output ##
+torch.Size([3, 3, 28, 28])
+</code></pre>
+<p>这里使用stack操作，因为原图片没有batch_size的维度</p>
+<ul>
+<li>将batches加入一个单独的batch中</li>
+</ul>
+<pre><code class="language-python">import torch
+t1 = torch.zeros(1,3,28,28)
+t2 = torch.zeros(1,3,28,28)
+t3 = torch.zeros(1,3,28,28)
+torch.cat((t1,t2,t3),dim=0).shape
+
+## output ##
+torch.Size([3, 3, 28, 28])
+</code></pre>
+<p>这里使用cat操作，因为原图片已经有batch_size的维度</p>
+<ul>
+<li>将图片加入一个已经存在的batch中</li>
+</ul>
+<pre><code class="language-python">import torch
+batch = torch.zeros(3,3,28,28)
+t1 = torch.zeros(3,28,28)
+t2 = torch.zeros(3,28,28)
+t3 = torch.zeros(3,28,28)
+torch.cat((batch,torch.stack((t1,t2,t3),dim=0)),dim=0).shape
+
+## output ##
+torch.Size([6, 3, 28, 28])
+</code></pre>
+<p>先stack，合并三图片与一个batch中，再cat2个batch或如下操作也可达到相同目的：</p>
+<pre><code class="language-python">import torch
+batch = torch.zeros(3,3,28,28)
+t1 = torch.zeros(3,28,28)
+t2 = torch.zeros(3,28,28)
+t3 = torch.zeros(3,28,28)
+torch.cat((batch,torch.stack((t1,t2,t3),dim=0)),dim=0).shape
+
+## output ##
+torch.Size([6, 3, 28, 28])
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/liang-nian-qian-de-zao-yao-zhe/" class="post-title gt-a-link">
+                    两年前的“造谣者”
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
