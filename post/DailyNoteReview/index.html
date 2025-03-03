@@ -1,0 +1,533 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>基于Obsidian记录回顾系统 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    基于Obsidian记录回顾系统
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2025-02-03 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/0riEa61BG/" class="post-tags">
+                            # star
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/glJntuOz9/" class="post-tags">
+                            # 思考
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>基于obsidian的每日记录，每周，每月回顾系统</p>
+<!-- more -->
+<p>自己看过很多方法论的文章，其中记录每一天的生活，发生的事情与所思所感这件事非常有意义。最直接的一方面你可以依据模糊的检索到当时实际的情景，他们可能是一件事情阐述，一段当时心情的记录。<strong>借助定期回顾也会让你有目标性并系统性的进行反思改进，催进后续的目标制定和习惯的养成</strong>。在过去大概一年时间里，我逐渐使用 Obsidian 构建了这套记录回顾系统，收获颇丰，故分享之，希望共同进步。</p>
+<h2 id="记录的契机">记录的契机</h2>
+<p>为什么是 Obsidian？自己把它作为主力笔记软件也两年有余了。在接连尝试过为知笔记，印象笔记，但因为后续维护和定价带来的失望后，不会再去考虑使用依赖云端环境的笔记软件作为主力，以前里面的内容记录也因为导出后格式等问题基本烂尾了。我承认 Notion 这类 All in one 的软件非常方便，但是五年，十年后谁也无法承诺这些产品还会存在在这个世界上。Obsidian 作为一个纯本地软件，虽然 md 格式无法优雅的实现某些特定功能（如表格，图片嵌入），但胜在可以自主把控文件，配合 Remotely Save 等同步插件，同样可以做到在多端同步的同时完全把控自己的数据。并且单单每日记录加上周回顾这些内容，一年就大概有 420 个左右的文件，纯 md 格式也易于整合管理。</p>
+<p>在大概去年 4 月的时候，我偶然刷到一个使用每日笔记 obsidian 记录生活的视频。本身 obsidian 这个软件最开始推出的时候，每日笔记就是作为一个官方模块集成在应用中的。但看了他们的操作思路后，才让我明白了这个模块真正的意义。说实话我对每日记录并不陌生，从很久之前我是使用 journey（一个日记 app）专门做<a href="https://laffitto.xyz/archives/journey">晨间日记</a>。每天早上起来按照一个模板，回顾昨天的事情。但是后续因为 app 模板功能还要订阅，外加记录内容和其他内容有所割裂，频率也逐渐变少了。</p>
+<p>由此为契机，在吸取多方的经验和自己生活的魔改之后，我重新基于 obsidian 构建了一套记录系统，并不断改进达到目前的状态。系统依赖于 Calendar，Periodic Notes，Linter，Dataview 和 Templater 插件。在开始熟悉的时候可能需要折腾适应一下，但后面基本上是一劳永逸。记录分为三个大块 DailyNote，WeeklyReview 和 MonthlyReview，以下我逐一介绍，用作抛砖引玉。</p>
+<h3 id="dailynote">DailyNote</h3>
+<p>顾名思义，该模块记录每天的日常。通过模板创建后，会自动显示今天的日期和昨天明天每日笔记的短链接。笔记的正式内容分为三个部分。<br>
+第一部分为 Daily Questions，即每日的自我问答。这里主要是起到每日日记的作用。<strong>我会根据模板记录当日发生的事情，并记录回答自己这些问题。</strong><br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203174633368.png" alt="image.png" loading="lazy"></p>
+<p>第二部分为 Notes。这里主要需要是记录下来每天看到的一些有趣内容或项目，它们通常可能会十分短小，单独记录成一篇笔记又会过于零散。但是你可能会在某个时候回想起它们，这里时候借助搜索功能就是快速的调用。例如如下：<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203174838384.png" alt="image.png" loading="lazy"></p>
+<p>第三部分为 Files Overview，是基于 obsidian 所有文件的一个筛选。它通过 dataview 自动构建，主要向我展示每天新建的笔记，每天修改的笔记和往年今日的笔记。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203175004546.png" alt="image.png" loading="lazy"></p>
+<p>在新一天开始时，点击日历图表的对应日子会自动创建当日日记。首先回顾一下昨晚发生了什么，通常是前一天记录后发生的事情和夜间睡眠的情况，然后正常开始崭新的一天。中途看见了一些有趣的文章或事情，可以摘录在 Notes 部分下面。晚上结束后再把深入思考的东西填充一下。这里可以事无巨细，想写什么写什么。</p>
+<h3 id="weeklyreview">WeeklyReview</h3>
+<p>该部分为每周的回顾，一般我会当周的周日晚上进行。通过模板创建后会显示上周、本月、下周的短链接。笔记的正式内容同样分为三个部分。<br>
+第一部分为周计划。这里为双周为单位制定，<strong>这两周内的关键目标是什么，同时依据这个目标制定合适的任务推进。</strong><br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203175045195.png" alt="image.png" loading="lazy"></p>
+<p>第二部分为本周回顾。借助 dataview 会自动将该周的 DailyNote 进行汇总，方便我们回顾一周的内容和反思。并回答下面的问题。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203175114114.png" alt="image.png" loading="lazy"></p>
+<p>第三部分为本周笔记。同样使用 dataview自动构建汇总，以周为单位展示该周新建和修改的笔记。</p>
+<p>在新一周的开始时, 点击日历图标的对应周数会根据模板自动创建。在回顾当周发生的事情同时，总结一下该周的情况，并制定下周的目标。</p>
+<h3 id="monthlyreview">MonthlyReview</h3>
+<p>该部分为每月的回顾总览，在当月特定的时间点创建都可以。通过模板创建后会显示上月和下月的短链接。目前每月回顾较简单，包含两个部分。<br>
+第一部分为月计划。这里以双月为单位制定，<strong>这两个月的关键目标是什么</strong>。这里制定的计划要为后续的周计划和每日任务搭建好基础。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203175207659.png" alt="image.png" loading="lazy"></p>
+<p>第二部分为本月回顾。仅汇总了每周周回顾，当月的新建和修改的笔记。由于每周会进行回顾，故没有进行每月的问题提问。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203175241508.png" alt="image.png" loading="lazy"></p>
+<p>在新月份开始时，点击日历图标对应月份会总动创建笔记。更多时时候时给一个目标导向和查询的作用。不太经常在此记录。</p>
+<p>有些人可能会疑问，记录和回顾目标设定都会涉及任务处理，但在这里没有体现。我只能说确实是的，虽然 obsidian 可以完成这件事情，但是依赖其他插件会显得过于复杂了，我是另外一个软件滴答清单去实现任务的制定。正所谓术业有专攻，后面会再出文章展示滴答清单的系统，两个部分合二为一才是我目前完整的记录回顾系统。</p>
+<h2 id="模板配置展示">模板配置展示</h2>
+<p>如果你喜欢我的系统，有所启发且想自己尝试，这里我会把上述内容用到的插件配置和三个模板文件在这里分享给大家。</p>
+<h3 id="templater">Templater</h3>
+<p><a href="obsidian://show-plugin?id=templater-obsidian">Templater</a> 插件用于直接调用模板创建笔记。安装后需要注意设置 <code>Template folder location</code> 为模板文件夹的位置，另外把 <code>Trigger Templater on new file creation</code> 选项打开。</p>
+<h3 id="dataview">Dataview</h3>
+<p><a href="obsidian://show-plugin?id=dataview">Dataview</a> 插件主要是可以方便以类型表格的形式展示数据，安装后即可，无需特别调整。</p>
+<h3 id="linter">Linter</h3>
+<p><a href="obsidian://show-plugin?id=obsidian-linter">Linter</a> 插件主要可以对文章进行一些格式化的操作。其功能很强大，我们主要是用来规范特定的字段设定文章的创建和修改时间，防止在各种设备同步后因为时间不统一导致的显示不一致问题。<br>
+主要设置如下：将日期相关设置确定下来，创建日期键名和修改日期键名要注意，不然后期使用 dataview 判断时间段会出错。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203172910247.png" alt="image.png" loading="lazy"></p>
+<h3 id="calendar">Calendar</h3>
+<p>Calendar 插件已经很久没更新了，但是我也没找到其他趁手合适的替代品，这里建议去 github 上下载它的 <a href="https://github.com/liamcain/obsidian-calendar-plugin/releases/tag/2.0.0-beta.2">2.0.0beta</a> 版本，需要手动进行安装。其他设置无需改动。<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203220732844.png" alt="image.png" loading="lazy"></p>
+<h3 id="periodic-notes">Periodic Notes</h3>
+<p><a href="obsidian://show-plugin?id=periodic-notes">Periodic Notes</a> 插件用于基于设定模板的格式直接创建每日，每周，每月笔记。<br>
+我的 Dailynote 设置如下。Format 为 YYYY/MM-MMMM/YYYY-MM-DD-dddd<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203173209689.png" alt="image.png" loading="lazy"><br>
+这样每次新建笔记位于 0-Daily_Note 文件夹下, 后续以年/月份/具体日期命名。</p>
+<p>WeeklyNote 设置如下：<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203173430427.png" alt="image.png" loading="lazy"></p>
+<p>MonthlyNote 设置如下：<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203173532796.png" alt="image.png" loading="lazy"></p>
+<p>每周笔记以年份/Periodic/W 周数命名，每月笔记以年份/Periodic/M 月份命名。</p>
+<p>如下为文件格式展示<br>
+<img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/20250203174500017.png" alt="image.png" loading="lazy"></p>
+<h2 id="模板文件">模板文件</h2>
+<p>在选定的模板文件下下新增模板，设定模板文件时候需要打开 md 文件为源码模式，注意各种缩进。中途一些时间模板和 dataview 的语句修改可以直接询问 AI，做出合适自己模板。</p>
+<h3 id="dailynote-2">DailyNote</h3>
+<pre><code class="language-text">---
+createDate: 2025-02-03 23:15
+modifyDate: 2025-02-03 23:15
+tags:
+  - DailyNote
+---
+
+# Invalid date
+
+&lt;&lt; [[0-Daily_Note/2025/02-二月/2025-02-02-星期日|Yesterday]] | [[0-Daily_Note/2025/02-二月/2025-02-04-星期二|Tomorrow]] &gt;&gt;
+
+---
+## 📅 Daily Questions
+### 🌜 昨晚发生了什么
+- 
+
+### 🙌 深入思考
+#### 今日回顾
+&gt; 今天发生了什么？完成了什么？值得感激的事情是什么？
+- 
+
+####  面对挑战 
+&gt; 今天我遇到的挑战是什么？我是如何应对的？
+- 
+
+#### 情绪反思 
+&gt; 今天我经历的主要情绪是什么？这些情绪背后的原因是什么？
+- 
+
+#### 人际互动
+&gt; 今天的人际互动中，有哪些是积极的？有哪些是我希望改进的？
+- 
+
+---
+## 📝 Notes
+- &lt;% tp.file.cursor() %&gt;
+
+
+
+
+
+---
+
+## Files Overview
+
+&gt; [!example]+ 今日创建
+&gt; ```dataview
+&gt; table without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;&quot;
+&gt; where 
+&gt; 	date(split(createDate,&quot; &quot;)[0]) = date(&quot;2025-02-03&quot;) 
+&gt; 	AND file.path != this.file.path
+&gt; sort createDate desc
+&gt; ```
+
+&gt; [!example]+ 今日修改
+&gt; ```dataview
+&gt; table without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; modifyDate as &quot;Last Modified&quot;
+&gt; FROM &quot;&quot;
+&gt; where 
+&gt; 	date(split(modifyDate,&quot; &quot;)[0]) = date(&quot;2025-02-03&quot;) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) != date(&quot;2025-02-03&quot;) 
+&gt; 	AND file.path != this.file.path
+&gt; sort modifyDate desc
+&gt; ```
+
+&gt; [!tldr]+ 往年今日
+&gt; ```dataview
+&gt; table without id
+&gt; file.link as Note,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;0-Daily_Note&quot;
+&gt; where 
+&gt; 	dateformat(date(split(createDate,&quot; &quot;)[0]),&quot;MM-dd&quot;) = dateformat(date(&quot;2025-02-03&quot;),&quot;MM-dd&quot;)
+&gt; 	AND file.path != this.file.path
+&gt; sort createDate desc
+&gt; ```
+</code></pre>
+<h3 id="weeklyreview-2">WeeklyReview</h3>
+<pre><code class="language-text">---
+createDate: 2025-02-03 23:15
+tags:
+  - WeeklyReview
+---
+&lt;&lt; [[0-Daily_Note/2025/Periodic/W05|LastWeek:W05]] | [[0-Daily_Note/2025/Periodic/M02|MonthlyReview:M02]] | [[0-Daily_Note/2025/Periodic/W07|NextWeek:W07]] &gt;&gt;
+
+---
+
+# 周计划（双周为单位）
+- [ ] 
+
+
+
+---
+
+# 本周回顾
+
+&gt; [!info]+ DailyNote 回顾
+&gt; ```dataview  
+&gt; TABLE without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;0-Daily_Note&quot;
+&gt; WHERE 
+&gt; 	contains(tags, &quot;DailyNote&quot;) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &lt;= date({{date:YYYY-MM-DD}}) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &gt;= date({{date:YYYY-MM-DD}}) - dur(6days)
+&gt; SORT createDate ASC
+&gt; ```
+
+## 本周完成了什么事情？学习到了什么？
+- 
+
+## 本周出现了哪些问题？原因是什么？
+- 
+
+## 我应该开始做哪些事情
+- 
+
+## 我应该停止做哪些事情
+- 
+
+---
+
+# 本周笔记
+
+&gt; [!example]+ 本周制作笔记
+&gt; ```dataview  
+&gt; TABLE without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;&quot;
+&gt; WHERE 
+&gt; 	!contains(tags, &quot;DailyNote&quot;) 
+&gt; 	AND !contains(tags, &quot;WeeklyReview&quot;) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &lt;= date({{date:YYYY-MM-DD}}) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &gt;= date({{date:YYYY-MM-DD}}) - dur(6days)
+&gt; SORT createDate ASC
+&gt; ```
+
+&gt; [!example]+ 本周修改笔记
+&gt; ```dataview  
+&gt; TABLE without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; modifyDate as &quot;Modified&quot;,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;&quot;
+&gt; WHERE 
+&gt; 	date(split(modifyDate,&quot; &quot;)[0]) &lt;= date({{date:YYYY-MM-DD}}) AND 
+&gt; 	date(split(modifyDate,&quot; &quot;)[0]) &gt;= date({{date:YYYY-MM-DD}}) - dur(6days) AND 
+&gt; 	date(split(createDate,&quot; &quot;)[0]) &lt; date({{date:YYYY-MM-DD}}) - dur(6days)
+&gt; SORT modifyDate ASC
+&gt; ```
+</code></pre>
+<h3 id="monthlyreview-2">MonthlyReview</h3>
+<pre><code class="language-text">---
+createDate: 2025-02-03 23:15
+tags:
+  - MonthlyReview
+---
+&lt;&lt; [[0-Daily_Note/2025/Periodic/M01|LastMonth:M01]] | [[0-Daily_Note/2025/Periodic/M03|NextMonth:M03]] &gt;&gt;
+
+---
+
+# 月度计划KR（双月为单位）
+
+
+
+
+
+
+# 本月回顾
+
+&gt; [!info]+ WeeklyNote 回顾
+&gt; ```dataview  
+&gt; TABLE without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;0-Daily_Note&quot;
+&gt; WHERE 
+&gt; 	contains(tags, &quot;WeeklyReview&quot;) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &gt;= date({{date:YYYY-MM-DD}}) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &lt;= date({{date:YYYY-MM-DD}}) + dur(1months)
+&gt; SORT createDate ASC
+&gt; ```
+
+&gt; [!example]+ 本月制作笔记
+&gt; ```dataview  
+&gt; TABLE without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;&quot;
+&gt; WHERE 
+&gt; 	!contains(tags, &quot;DailyNote&quot;) 
+&gt; 	AND !contains(tags, &quot;WeeklyReview&quot;) 
+&gt; 	AND !contains(tags, &quot;MonthlyReview&quot;) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &gt;= date({{date:YYYY-MM-DD}}) 
+&gt; 	AND date(split(createDate,&quot; &quot;)[0]) &lt;= date({{date:YYYY-MM-DD}}) + dur(1months)
+&gt; SORT createDate ASC
+&gt; ```
+
+&gt; [!example]+ 本月修改笔记
+&gt; ```dataview  
+&gt; TABLE without id
+&gt; file.link as Note,
+&gt; file.folder as Folder,
+&gt; modifyDate as &quot;Modified&quot;,
+&gt; createDate as &quot;Created&quot;
+&gt; FROM &quot;&quot;
+&gt; WHERE 
+&gt; 	date(split(modifyDate,&quot; &quot;)[0]) &gt;= date({{date:YYYY-MM-DD}}) AND 
+&gt; 	date(split(modifyDate,&quot; &quot;)[0]) &lt;= date({{date:YYYY-MM-DD}}) + dur(1months) AND 
+&gt; 	date(split(createDate,&quot; &quot;)[0]) &lt; date({{date:YYYY-MM-DD}})
+&gt; SORT modifyDate ASC
+&gt; ```
+</code></pre>
+<h2 id="结语">结语</h2>
+<p>以上是我目前的基于 Obsidian 的记录回顾系统。我感觉最妙的一点在于他可以把我每天的日常和情绪等各种事项都记录下来，并进行定期回顾。你可以说记录的是流水账，<strong>但要相信习惯养成后时间的力量</strong>。同时这套系统完全是构建在我的笔记系统之上的，极大的减少了记录的割裂感，后续可以通过 AI 插件实现全文本库的向量构建，达成更高层次的知识库。</p>
+<p>缺点可能就是插入图片比较麻烦，因为我喜欢用图床而非本地存储。不过这种情况更多是分享，我会把他记录在我的日常唠嗑<a href="https://memo.laffitto.xyz/">詹詹碎言</a> 中，同步到 <a href="t.me/laffitto">TG 频道</a>里面，欢迎大家订阅关注。</p>
+<p>每个人的生活都不一样，系统的构建也会随着生活不断变化改进。虽然这里我自认为呈现了一个较为完备的方案，但是更多的细节和构筑都需要依据每个人的情况去自适应改变。在日常不断的使用中，你会发现系统问题，可能你有更多的记录需求，可能某项完全是冗余，这时候大胆的删掉并改变吧。不断的调整改变找到合适自己的就是最好的。</p>
+<hr>
+<p>喜欢我的文章吗？请不要吝啬自己的思考想法，欢迎在留言区讨论或提出建议。</p>
+<ul>
+<li>如果您了解使用 RSS，可以使用 <a href="https://laffitto.xyz/feed.xml">https://laffitto.xyz/feed.xml</a> rss订阅我的网站。</li>
+<li>另外我还通过 <a href="https://memo.laffitto.xyz/">memos詹詹碎言</a> 分享一些简短的生活和思考，可以使用 <a href="https://memo.laffitto.xyz/u/laffitto/rss.xml">https://memo.laffitto.xyz/u/laffitto/rss.xml</a> rss 订阅它。</li>
+<li>如果您使用 Telegram，可以订阅我的个人频道 <a href="t.me/laffitto">TG 频道詹詹碎言</a>，里面直接同步了我上面两个部分内容。</li>
+<li>您使用 <a href="https://follow.is/">follow</a>，可以搜索<strong>乱谈府</strong>订阅我的网站，欢迎大家的关注。</li>
+</ul>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/2024-zong-jie/" class="post-title gt-a-link">
+                    2024总结
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

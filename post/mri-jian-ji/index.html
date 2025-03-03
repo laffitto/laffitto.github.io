@@ -1,0 +1,403 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>MRI简记 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    MRI简记
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2022-07-16 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/znfJoDdWX/" class="post-tags">
+                            # 部分转载
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>一些MRI常用序列</p>
+<!-- more -->
+<p>工作中要用到MRI的一些知识，这里先做一些简单的整理，后续会持续整理更新。</p>
+<h2 id="术语描述">术语描述</h2>
+<h3 id="强度intensity">强度/intensity</h3>
+<p>在描述大多数 MRI 序列时，通常用<strong>intensity</strong>这个词来指代组织或流体的灰色阴影（强度）。因此有如下的术语描述：</p>
+<p><strong>绝对</strong>术语描述：</p>
+<ul>
+<li>high signal intensity = white</li>
+<li>intermediate signal intensity = grey</li>
+<li>low signal intensity = black</li>
+</ul>
+<p><strong>相对</strong>术语描述：</p>
+<ul>
+<li>hyperintense = brighter than the thing we are comparing it to</li>
+<li>isointense = same brightness as the thing we are comparing it to</li>
+<li>hypointense = darker than the thing we are comparing it to</li>
+</ul>
+<p>优选使用绝对术语，或者如果使用相对术语，则需要写明确认比较的组织结构</p>
+<p>tips： CT中描述强度使用<strong>density</strong>，避免混淆使用！</p>
+<h3 id="扩散diffusion">扩散/diffusion</h3>
+<p>在描述<strong>扩散加权序列(diffusion weighted sequences)<strong>时，也使用术语强度/intensity。使用术语“限制扩散restricted diffusion”和“促进扩散facilitated diffusion”来表示</strong>水</strong>是否可以比预期的组织更容易（限制）或更容易（促进）移动。</p>
+<p>序列分类可以参考这篇文章的分类：<a href="https://radlines.org/MRI_sequences">MRI sequence</a></p>
+<h2 id="mri序列">MRI序列</h2>
+<p>MRI仅能探测横向宏观磁化矢量。而氢质子进入高能状态后，可以产生此类矢量。</p>
+<p>根据核磁弛豫可以产生不同方向的能量，可以做出不同分类。</p>
+<h3 id="t1加权t1-weighted">T1加权/T1 weighted</h3>
+<p>也叫纵向弛豫，主要是氢质子高能量的释放过程（时间）。</p>
+<p>组织的T1越小，对应在MRI影像上信号强度越高（白）；T1越大，影像上信号强度越低（黑）。</p>
+<p>不同组织的信号强度为:</p>
+<ul>
+<li>
+<p>脂肪：白色 high signal intensity</p>
+</li>
+<li>
+<p>肌肉：灰色 intermediate signal intensity</p>
+</li>
+<li>
+<p>流体（尿液，脑脊液）：深色 low signal intensity</p>
+</li>
+<li>
+<p>流动的血液：深色 low signal intensity</p>
+</li>
+<li>
+<p>骨：深色</p>
+</li>
+<li>
+<p>空气：深色</p>
+</li>
+<li>
+<p>脑：</p>
+<ul>
+<li>
+<p>灰质：灰色</p>
+</li>
+<li>
+<p>白质：明亮（与灰质相比高信号）hyperintense compared to grey matter (white-ish)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>T1 最适合用于评估解剖结构，因为图像在宏观上类似于组织。</p>
+<h4 id="t1对比增强t1contrast-gadolinium">T1对比增强/T1+Contrast (gadolinium)</h4>
+<p>注射造影剂（钆）会增加流动血液的 T1 信号，从而可以检测到高血管病变。</p>
+<p>可用于评估高血管病变（例如血管瘤、淋巴管瘤）。</p>
+<h4 id="t1脂肪抑制t1-fat-suppressed">T1脂肪抑制/T1 fat suppressed</h4>
+<p>目的是检测通常含有大量脂肪成分的软组织中的水肿。抑制来自脂肪的信号可以使具有高信号的液体成分更加明显。</p>
+<h3 id="t2加权t2-weighted">T2加权/T2 weighted</h3>
+<p>也叫横向弛豫，主要是氢质子失相位过程（时间）。</p>
+<p>组织的T2越小，对应在MRI影像上信号强度越低（黑）；T1越大，影像上信号强度越高（白）。</p>
+<p>通常来说T1远远大于T2。</p>
+<p>不同组织的信号强度为:</p>
+<ul>
+<li>脂肪：白色 high signal intensity</li>
+<li>肌肉：灰色 intermediate signal intensity</li>
+<li>流体（尿液，脑脊液）：白色 high signal intensity</li>
+<li>流动的血液：深色</li>
+<li>骨：深色</li>
+<li>空气：深色</li>
+<li>脑：
+<ul>
+<li>灰质：灰色</li>
+<li>白质：灰暗（与灰质相比低信号）hypointense compared to grey matter (dark-ish)</li>
+</ul>
+</li>
+</ul>
+<h4 id="t2脂肪抑制t2-fat-suppressed">T2脂肪抑制/T2 fat suppressed</h4>
+<p>类似T1脂肪抑制</p>
+<h4 id="液体衰减反转恢复fluid-attenuation-inversion-recovery-flair">液体衰减反转恢复/Fluid Attenuation Inversion Recovery (FLAIR)</h4>
+<p>该序列衰减来自流体（例如CSF“脑脊液”）的信号，因此有助于检测通常被CSF覆盖的病变（在大脑和脊髓）。</p>
+<h4 id="磁敏感加权susceptibility-weighted-imaging-swi">磁敏感加权/susceptibility weighted imaging (SWI)</h4>
+<p>能够区分出钙和血液，SWI在显示脑内小静脉及出血方面敏感性优于常规梯度回波序列。</p>
+<h4 id="short-tau-inversion-recovery-stir">Short Tau Inversion Recovery (STIR)</h4>
+<p>与 FLAIR 序列类似，STIR 抑制来自脂肪组织的信号。</p>
+<p>STIR 不能在注射钆后使用，因为钆的 T1 在相同的脂肪范围内，最终来自它的信号会减弱。</p>
+<ul>
+<li>脂肪：深色</li>
+<li>肌肉：比脂肪更黑</li>
+<li>流体：非常明亮</li>
+<li>骨：深色</li>
+<li>空气：深色</li>
+<li>脑：
+<ul>
+<li>灰质：灰色</li>
+<li>白质：比灰质更暗</li>
+</ul>
+</li>
+</ul>
+<p>在评估充满液体的空间时最有用。</p>
+<h3 id="质子密度加权proton-density-weighted-imagingpdwi">质子密度加权/Proton density weighted imaging（PDWI）</h3>
+<p>一个中间序列，共享 T1 和 T2 的一些特征。它主要取决于质子的密度。因此，密度较高的组织会发出更亮的信号。</p>
+<p>在评估关节方面非常出色，因为它们可以区分流体、透明软骨和纤维软骨。</p>
+<ul>
+<li>脂肪：白色</li>
+<li>肌肉：灰色</li>
+<li>流体：白色</li>
+<li>骨：深色</li>
+<li>空气：深色</li>
+<li>透明软骨：灰色</li>
+<li>纤维软骨：深色</li>
+</ul>
+<h3 id="扩散加权序列">扩散加权序列</h3>
+<p>扩散加权成像评估<strong>水分子</strong>在组织内移动的难易程度（主要代表细胞外空间内的液体），并深入了解细胞结构（例如肿瘤）、细胞肿胀（例如缺血）和水肿。</p>
+<p>不同组织的主要信号强度为：</p>
+<ul>
+<li>液体（如尿液、脑脊液）：不限制扩散</li>
+<li>软组织（肌肉、实体器官、脑）：中间扩散</li>
+<li>脂肪：由于缺水，信号微弱</li>
+</ul>
+<p>通常在进行弥散加权成像时会发现三组图像：DWI、ADC 和 B=0 图像。</p>
+<h4 id="传统dwidiffusion-weighted-imagedwi">传统DWI/diffusion weighted image（DWI）</h4>
+<p>DWI 专门检测水分子中质子的运动。它代表了实际扩散值和 T2 信号的组合。</p>
+<ul>
+<li>脂肪：由于缺水，信号微弱</li>
+<li>肌肉：灰色</li>
+<li>流体（CFS）：深色</li>
+<li>脑：
+<ul>
+<li>灰质：灰色</li>
+<li>白质：灰暗（与灰质相比略低）</li>
+</ul>
+</li>
+</ul>
+<p>急性病理（缺血性中风、细胞肿瘤、脓液）通常表现为信号增强，表明扩散受限。而且重要的是，由于图像中有一部分来自 T2 信号，一些在 T2 上明亮的组织在 DWI 图像上会显得明亮，而不会出现异常受限扩散。</p>
+<h4 id="表观扩散系数图apparent-diffusion-coefficient-mapsadc">表观扩散系数图/Apparent diffusion coefficient maps（ADC）</h4>
+<p>ADC表示没有 T2 效应的组织的实际扩散值的图像。并且可以获得扩散值的客观度量，基本上显示为灰度倒置 DWI 图像。</p>
+<ul>
+<li>CSF：高信号（白色）</li>
+<li>脂肪：由于缺水，信号微弱</li>
+<li>其他软组织：中等信号强度（灰色）</li>
+<li>脑
+<ul>
+<li>灰质：中间信号强度（灰色）</li>
+<li>白质：与灰质相比略高</li>
+</ul>
+</li>
+</ul>
+<p>急性病理（缺血性中风、细胞肿瘤、脓液）通常表现为信号减弱，表明扩散受限。</p>
+<h4 id="b0">B=0</h4>
+<p>本质上是 T2 加权图像，具有一些易感性影响。</p>
+<h4 id="diffusion-tensordti">Diffusion tensor（DTI）</h4>
+<p>用于评估肿瘤引起的白质变形，减少的分数各向异性可能表明痴呆。</p>
+<h3 id="功能性mrifunctional-mrifmri">功能性MRI/Functional MRI（fMRI）</h3>
+<p>大脑非常紧密地局部控制其血流。活动组织表现出升高的血流量</p>
+<h3 id="灌注加权perfusion-weighted-pwi">灌注加权/Perfusion weighted (<strong>PWI</strong>)</h3>
+<p>流入组织的血量也可以被检测和相对量化，产生诸如脑血容量、脑血流量和平均通过时间等值。这些值在许多临床情况下都很有用，包括定义缺血性中风中的缺血半暗带、评估某些肿瘤的组织学分级或区分放射性坏死和肿瘤进展。</p>
+<h2 id="参考文章">参考文章</h2>
+<ol>
+<li><a href="https://radiopaedia.org/articles/mri-sequences-overview#:~:text=An%20MRI%20sequence%20is%20a,the%20particulars%20of%20each%20sequence">https://radiopaedia.org/articles/mri-sequences-overview#:~:text=An MRI sequence is a,the particulars of each sequence</a></li>
+<li><a href="https://radlines.org/MRI_sequences">https://radlines.org/MRI_sequences</a></li>
+<li><a href="https://www.wikidoc.org/index.php/MRI_sequences">https://www.wikidoc.org/index.php/MRI_sequences</a></li>
+<li><a href="https://case.edu/med/neurology/NR/MRI%20Basics.htm">https://case.edu/med/neurology/NR/MRI Basics.htm</a></li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/qing-dao-zhi-lu/" class="post-title gt-a-link">
+                    青岛之旅
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

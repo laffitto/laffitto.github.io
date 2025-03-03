@@ -1,0 +1,427 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>3种用TensorFlow 2.0构建Keras模型的方法 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    3种用TensorFlow 2.0构建Keras模型的方法
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-08-01 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/GOjnDzJhq/" class="post-tags">
+                            # tensorflow
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>这三种方法分别是序列模型，函数模型，子类化模型。</p>
+<!-- more -->
+<p>在回忆tensorflow构建深度模型的代码时，发现Keras有许多种构建模型的方法，这里查阅资料稍作整理。主要参考的是<a href="https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/">这篇</a>，里面有这篇文章中的很多完整代码。<br>
+模型整体分类如下：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231528.png" alt="" loading="lazy"></p>
+<h2 id="序列模型sequential-api">序列模型（Sequential API）</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231634.png" alt="Sequential model" loading="lazy"><br>
+这种模型主要是一层一层的构建，它是最简单的方法，就如同CONV--&gt;Batch Normalization--&gt;ReLU--&gt;POOLING。模型中没有分支，单输入，单输出。</p>
+<p>通常比较容易就可以用Sequential API构建的模型有：</p>
+<ul>
+<li>LeNet</li>
+<li>AlexNet</li>
+<li>VGGNet</li>
+</ul>
+<p>下面是Sequential model的一个简单例子：</p>
+<pre><code class="language-python">def shallownet_sequential(width, height, depth, classes):
+	# initialize the model along with the input shape to be
+	# &quot;channels last&quot; ordering
+	model = Sequential()
+	inputShape = (height, width, depth)
+	# define the first (and only) CONV =&gt; RELU layer
+	model.add(Conv2D(32, (3, 3), padding=&quot;same&quot;,
+		input_shape=inputShape))
+	model.add(Activation(&quot;relu&quot;))
+	# softmax classifier
+	model.add(Flatten())
+	model.add(Dense(classes))
+	model.add(Activation(&quot;softmax&quot;))
+	# return the constructed network architecture
+	return model
+</code></pre>
+<p>在Keras中只要模型是Sequential类，那就是使用了序列模型。后面用model.add的形式加入其他层。</p>
+<h2 id="函数模型functional-api">函数模型（Functional API）</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231737.png" alt="function model" loading="lazy"><br>
+使用函数模型有以下优点：</p>
+<ul>
+<li>可以构建多输入多输出模型</li>
+<li>可以轻易的构建分支结构（如Inception block, ResNet block）</li>
+<li>可以轻易共享架构内部的层</li>
+</ul>
+<p>通常比较容易就可以用Function API构建的模型（包含层间的分支）有：</p>
+<ul>
+<li>ResNet</li>
+<li>GoogLeNet/Inception</li>
+<li>Xception</li>
+<li>SqueezeNet</li>
+<li>DenseNet</li>
+</ul>
+<p>此处看一下原文中的例子MiniGoogLeNet：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801231856.png" alt="MiniGoogLeNet" loading="lazy"><br>
+看起来很复杂，但是模块化后显得十分清晰，代码如下：</p>
+<pre><code class="language-python">def minigooglenet_functional(width, height, depth, classes):
+	def conv_module(x, K, kX, kY, stride, chanDim, padding=&quot;same&quot;):
+		# define a CONV =&gt; BN =&gt; RELU pattern
+		x = Conv2D(K, (kX, kY), strides=stride, padding=padding)(x)
+		x = BatchNormalization(axis=chanDim)(x)
+		x = Activation(&quot;relu&quot;)(x)
+		# return the block
+		return x
+
+    def inception_module(x, numK1x1, numK3x3, chanDim):
+        # define two CONV modules, then concatenate across the
+        # channel dimension
+        conv_1x1 = conv_module(x, numK1x1, 1, 1, (1, 1), chanDim)
+        conv_3x3 = conv_module(x, numK3x3, 3, 3, (1, 1), chanDim)
+        x = concatenate([conv_1x1, conv_3x3], axis=chanDim)
+        # return the block
+        return x
+
+    def downsample_module(x, K, chanDim):
+		# define the CONV module and POOL, then concatenate
+		# across the channel dimensions
+	    conv_3x3 = conv_module(x, K, 3, 3, (2, 2), chanDim,
+			padding=&quot;valid&quot;)
+		pool = MaxPooling2D((3, 3), strides=(2, 2))(x)
+		x = concatenate([conv_3x3, pool], axis=chanDim)
+		# return the block
+		return x
+
+    
+	# initialize the input shape to be &quot;channels last&quot; and the
+	# channels dimension itself
+	inputShape = (height, width, depth)
+	chanDim = -1
+	# define the model input and first CONV module
+	inputs = Input(shape=inputShape)
+	x = conv_module(inputs, 96, 3, 3, (1, 1), chanDim)
+	# two Inception modules followed by a downsample module
+	x = inception_module(x, 32, 32, chanDim)
+	x = inception_module(x, 32, 48, chanDim)
+	x = downsample_module(x, 80, chanDim)
+	# four Inception modules followed by a downsample module
+	x = inception_module(x, 112, 48, chanDim)
+	x = inception_module(x, 96, 64, chanDim)
+	x = inception_module(x, 80, 80, chanDim)
+	x = inception_module(x, 48, 96, chanDim)
+	x = downsample_module(x, 96, chanDim)
+	# two Inception modules followed by global POOL and dropout
+	x = inception_module(x, 176, 160, chanDim)
+	x = inception_module(x, 176, 160, chanDim)
+	x = AveragePooling2D((7, 7))(x)
+	x = Dropout(0.5)(x)
+	# softmax classifier
+	x = Flatten()(x)
+	x = Dense(classes)(x)
+	x = Activation(&quot;softmax&quot;)(x)
+	# create the model
+	model = Model(inputs, x, name=&quot;minigooglenet&quot;)
+	# return the constructed network architecture
+	return model
+</code></pre>
+<p>结合图片一看，一目了然。</p>
+<h2 id="子类化模型model-subclassing">子类化模型（Model subclassing）</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200801232226.png" alt="Model subclassing" loading="lazy"><br>
+这种方式的定义在tensorflow1.x版本中不太常见，不过熟悉pytorch的肯定对这种定义方法烂熟于胸，因为pytorch基本都是根据这个方法构建模型的。即<strong>面向对象编程的思想（object-oriented programming）</strong>。</p>
+<p>实际这种方法要比上面两种麻烦许多，但是还是有优点，这里引用原文解释：</p>
+<blockquote>
+<p>Exotic architectures or custom layer/model implementations, <strong>especially those utilized by researchers</strong>, can be extremely challenging, if not impossible, to implement using the standard Sequential or Functional APIs.<br>
+Instead, researchers wish to have control over every nuance of the network and training process — and that’s exactly what model subclassing provides them.</p>
+</blockquote>
+<p>精髓即是：研究人员可以控制网络和培训过程的每个细微差别。</p>
+<p>这里看一下VGGNet模型的表达方法：</p>
+<pre><code class="language-python">class MiniVGGNetModel(Model):
+	def __init__(self, classes, chanDim=-1):
+		# call the parent constructor
+		super(MiniVGGNetModel, self).__init__()
+		# initialize the layers in the first (CONV =&gt; RELU) * 2 =&gt; POOL
+		# layer set
+		self.conv1A = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act1A = Activation(&quot;relu&quot;)
+		self.bn1A = BatchNormalization(axis=chanDim)
+		self.conv1B = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act1B = Activation(&quot;relu&quot;)
+		self.bn1B = BatchNormalization(axis=chanDim)
+		self.pool1 = MaxPooling2D(pool_size=(2, 2))
+		# initialize the layers in the second (CONV =&gt; RELU) * 2 =&gt; POOL
+		# layer set
+		self.conv2A = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act2A = Activation(&quot;relu&quot;)
+		self.bn2A = BatchNormalization(axis=chanDim)
+		self.conv2B = Conv2D(32, (3, 3), padding=&quot;same&quot;)
+		self.act2B = Activation(&quot;relu&quot;)
+		self.bn2B = BatchNormalization(axis=chanDim)
+		self.pool2 = MaxPooling2D(pool_size=(2, 2))
+		# initialize the layers in our fully-connected layer set
+		self.flatten = Flatten()
+		self.dense3 = Dense(512)
+		self.act3 = Activation(&quot;relu&quot;)
+		self.bn3 = BatchNormalization()
+		self.do3 = Dropout(0.5)
+		# initialize the layers in the softmax classifier layer set
+		self.dense4 = Dense(classes)
+		self.softmax = Activation(&quot;softmax&quot;)
+
+
+    def call(self, inputs):
+		# build the first (CONV =&gt; RELU) * 2 =&gt; POOL layer set
+		x = self.conv1A(inputs)
+		x = self.act1A(x)
+		x = self.bn1A(x)
+		x = self.conv1B(x)
+		x = self.act1B(x)
+		x = self.bn1B(x)
+		x = self.pool1(x)
+		# build the second (CONV =&gt; RELU) * 2 =&gt; POOL layer set
+		x = self.conv2A(x)
+		x = self.act2A(x)
+		x = self.bn2A(x)
+		x = self.conv2B(x)
+		x = self.act2B(x)
+		x = self.bn2B(x)
+		x = self.pool2(x)
+		# build our FC layer set
+		x = self.flatten(x)
+		x = self.dense3(x)
+		x = self.act3(x)
+		x = self.bn3(x)
+		x = self.do3(x)
+		# build the softmax classifier
+		x = self.dense4(x)
+		x = self.softmax(x)
+		# return the constructed model
+		return x
+</code></pre>
+<p>可能很难理解为什么要这样，我也说不明白，这就是面向对象编程的一种思想，可以说是换了一种看待问题的方式。虽然它本质上是可以序列模型，但是仍然可以实现复杂的旁路结构，和多输入多输出的情况。</p>
+<p>以后我对这块有了更深入的思考会加上的（挖坑）🤣。</p>
+<p>以上就是3种用TensorFlow 2.0构建Keras模型的方法，可以说是各有千秋，但是刚接触的人可能就会疑惑为什么构建模型的形式千奇百怪，一会官方文档用的是序列模型，某某教程用的又是函数模型甚至子类化模型。希望看了这个后，能对大家有所帮助。也更能进一步思考。</p>
+<p>参考：</p>
+<ol>
+<li><a href="https://www.pyimagesearch.com/2019/10/28/3-ways-to-create-a-keras-model-with-tensorflow-2-0-sequential-functional-and-model-subclassing/">3 ways to create a Keras model with TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/58825020">TensorFlow2.0教程-Keras 快速入门</a></li>
+<li><a href="https://deeplizard.com/learn/video/k4jY9L8H89U">Build PyTorch CNN - Object Oriented Neural Networks</a></li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/zhi-shang-zai-xian-de-fan-pai-men-man-hua-xia-ri-chong-xian/" class="post-title gt-a-link">
+                    智商在线的反派们——漫画「夏日重现」
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

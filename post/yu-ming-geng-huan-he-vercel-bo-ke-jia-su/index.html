@@ -1,0 +1,283 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>github pages域名更换和vercel博客加速 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    github pages域名更换和vercel博客加速
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-08-28 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/NnAU2qWAh/" class="post-tags">
+                            # 折腾
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/gridea/" class="post-tags">
+                            # Gridea
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>将自己的辣鸡博客包个皮，加个速。😚</p>
+<!-- more -->
+<p>由于自己的博客是托管在github pages上的，所以域名一直是以github.io结尾的，访问速度也令人担忧。正好在gridea的TG群里看见有人推广域名，又研究了一点简单的CDN加速，本辣鸡就趁此机会优化一波。</p>
+<h2 id="域名购买">域名购买</h2>
+<p>域名网站选用的是群友推荐的<a href="https://www.namesilo.com/">namesilo</a>，注册后购买域名非常方便（居然支持微信和支付宝付款），不过不要贪图一些特别便宜的域名后缀，注意一下续费价格🤑（当然年年折腾天天换的除外）。</p>
+<p>这里我买了.top域名，即购买的域名名称为laffitto.top（瞬间变得有点高大上了）。</p>
+<h2 id="域名加速">域名加速</h2>
+<p>我们等一下再绑定域名，先用<a href="https://vercel.com/docs">vercel</a>对自己的静态博客加速一波。</p>
+<p>一开始需要注册账号，直接用github账号登录即可。</p>
+<p>之后可以导入项目，进入以下界面点击<strong>Continue</strong>。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214315.png" alt="" loading="lazy"></figure>
+<p>输入项目的URL，即自己的github pages页面，如下：</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214722.png" alt="" loading="lazy"></figure>
+<p>导入过程一路默认即可：</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215304.png" alt="" loading="lazy"></figure>
+<p>自动就部署好了呢，发现vercel分配有很多地址都可以访问自己的博客。🤗</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214739.png" alt="" loading="lazy"></figure>
+<h2 id="绑定域名">绑定域名</h2>
+<p>加速完成了，但是如果用vercel提供的域名实在是太长太蛋疼，当你为了介绍自己网站结果给朋友一大段<s>字符串</s>（并不），那场景实在是太美。于是需要将刚刚买的域名绑定上去。</p>
+<p>先向你的 Github Pages 仓库添加一个CNAME文件，里面包含自己刚买的域名，如下：</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214804.png" alt="" loading="lazy"></figure>
+<p>设置完可以去Settings的github pages界面查看一下，不出意外Custom domian上名称为自己设定的域名。</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214826.png" alt="" loading="lazy"></figure>
+<p>同时回到vercel的项目界面，添加自己的域名<strong>www.laffitto.top</strong>和<strong>laffitto.top</strong>，可以得到如下类似界面：（自己的域名由于没有设定DNS，会显示如第一条的Invalid Configuration），不过别慌，就差亿点点了（误）🤡。</p>
+<figure data-type="image" tabindex="7"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214842.png" alt="" loading="lazy"></figure>
+<h2 id="修改dns">修改DNS</h2>
+<p>回到之前的域名购买网站namesilo，接下来点击网站上方的<strong>Manage My Domains</strong>进入域名管理的界面。</p>
+<p>点击<strong>Options</strong>的蓝色图标，即<strong>Manage DNS of this domain</strong>：</p>
+<figure data-type="image" tabindex="8"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214901.png" alt="" loading="lazy"></figure>
+<p>这里如果有很多疑问可以参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/86961133">Namesilo DNS 域名解析教程和常见问题解决方法汇总</a></p>
+<p>添加一条A记录和一条CHAME记录。（最上面一条可以忽略）</p>
+<figure data-type="image" tabindex="9"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828214916.png" alt="" loading="lazy"></figure>
+<p>A记录是根据vercel上的提示设置即可：</p>
+<figure data-type="image" tabindex="10"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215137.png" alt="" loading="lazy"></figure>
+<p>CNAME记录是将自己的域名指向另一个域名：</p>
+<p>laffitto-github-io.vercel.io----&gt; laffitto.top，主要是看vercel的域名提示。</p>
+<figure data-type="image" tabindex="11"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200828215112.png" alt="" loading="lazy"></figure>
+<p>等待一会让DNS生效，即可用购买的域名快速访问自己的网站啦！woh，焕然一新哦😉</p>
+<p>参考：</p>
+<ol>
+<li>
+<p><a href="https://vincentqin.tech/posts/speedup-gitpage/">🔨工具：使用vercel加速Hexo静态博客访问</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/164585697">如何拥有一个访问速度超快的个人博客？GitHub+Vercel+Gridea</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/86961133">Namesilo DNS 域名解析教程和常见问题解决方法汇总</a></p>
+</li>
+<li>
+<p><a href="https://www.zhihu.com/question/31377141">github怎么绑定自己的域名？</a></p>
+</li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/shen-du-xue-xi-you-hua-suan-fa-zong-jie/" class="post-title gt-a-link">
+                    深度学习优化算法总结
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

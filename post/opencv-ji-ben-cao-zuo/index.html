@@ -1,0 +1,622 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>OpenCV基本操作 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    OpenCV基本操作
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-04-10 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/ujzZjb39m/" class="post-tags">
+                            # OpenCV
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>一些基础的OpenCV操作及代码实例</p>
+<!-- more -->
+<p>最近在复习和学习OpenCV这个库，罗列一下知识点供以后整理查阅</p>
+<h2 id="坐标关系">坐标关系</h2>
+<p>OpenCV坐标为x向右为正，y向下为负。在代码中表示一个坐标 先y后x<br>
+例如下面要选择x,y=(90,40)这个点<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303281655106.png" alt="image.png" loading="lazy"></p>
+<p>代码表示如下：</p>
+<pre><code class="language-python"># pixel coordinates
+x = 90
+y = 40
+ 
+pixel_flame_gray16 = gray16_image [y, x]
+</code></pre>
+<p>另外opencv读取的RGB图像的顺序是B,G,R</p>
+<pre><code class="language-python"># images are simply NumPy arrays -- with the origin (0, 0) located at
+# the top-left of the image
+(b, g, r) = image[0, 0]
+print(&quot;Pixel at (0, 0) - Red: {}, Green: {}, Blue: {}&quot;.format(r, g, b))
+</code></pre>
+<h2 id="读取文件">读取文件</h2>
+<p>使用cv2.imread  前3个维度分别为Height，width和channels</p>
+<pre><code class="language-python">import argparse
+import cv2
+# construct the argument parser and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, required=True,
+	help=&quot;path to input image&quot;)
+args = vars(ap.parse_args())
+
+# load the image from disk via &quot;cv2.imread&quot; and then grab the spatial
+# dimensions, including width, height, and number of channels
+image = cv2.imread(args[&quot;image&quot;])
+(h, w, c) = image.shape[:3]
+# display the image width, height, and number of channels to our
+# terminal
+print(&quot;width: {} pixels&quot;.format(w))
+print(&quot;height: {}  pixels&quot;.format(h))
+print(&quot;channels: {}&quot;.format(c))
+
+# show the image and wait for a keypress
+cv2.imshow(&quot;Image&quot;, image)
+cv2.waitKey(0)
+# save the image back to disk (OpenCV handles converting image
+# filetypes automatically)
+cv2.imwrite(&quot;newimage.jpg&quot;, image)
+
+</code></pre>
+<h2 id="裁剪操作">裁剪操作</h2>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303291241584.png" alt="image.png" loading="lazy"></figure>
+<p>直接使用切片操作即可。例如需要提取一个图像的矩形区域，从(85,85)开始，到(220,250)结束。<br>
+OpenCV将图像表示为NumPy数组，高度在前(行编号#)，宽度在后(列编号#)。</p>
+<pre><code class="language-python">cropped = image[startY:endY, startX:endX]
+</code></pre>
+<pre><code class="language-python">import cv2
+
+# load the input image and display it to our screen
+image = cv2.imread('test.png')
+cv2.imshow(&quot;Original&quot;, image)
+# cropping an image with OpenCV is accomplished via simple NumPy
+# array slices in startY:endY, startX:endX order -- here we are
+# cropping the face from the image (these coordinates were
+# determined using photo editing software such as Photoshop,
+# GIMP, Paint, etc.)
+face = image[85:250, 85:220]
+cv2.imshow(&quot;Face&quot;, face)
+cv2.waitKey(0)
+</code></pre>
+<h2 id="算数操作">算数操作</h2>
+<p>在进行图像运算时，需要注意颜色空间和数据类型的数值限制。通常来说，RGB图像的像素在[0, 255]范围内。如果在这个运算中超出这个范围，opencv和numpy的处理方法是不一样的。</p>
+<ul>
+<li>OpenCV 执行剪切，并确保像素值永远不会超出范围[0,255]。</li>
+<li>NumPy 执行模数运算和循环。例如265表示为9</li>
+</ul>
+<pre><code class="language-python">import numpy as np
+import cv2
+
+# images are NumPy arrays stored as unsigned 8-bit integers (unit8)
+# with values in the range [0, 255]; when using the add/subtract
+# functions in OpenCV, these values will be *clipped* to this range,
+# even if they fall outside the range [0, 255] after applying the
+# operation
+
+added = cv2.add(np.uint8([200]), np.uint8([100]))
+subtracted = cv2.subtract(np.uint8([50]), np.uint8([100]))
+print(&quot;max of 255: {}&quot;.format(added))
+print(&quot;min of 0: {}&quot;.format(subtracted))
+&gt;&gt;&gt; max of 255: [[255]]
+&gt;&gt;&gt; min of 0: [[0]]
+
+# using NumPy arithmetic operations (rather than OpenCV operations)
+# will result in a modulo (&quot;wrap around&quot;) instead of being clipped
+# to the range [0, 255]
+
+added = np.uint8([200]) + np.uint8([100])
+subtracted = np.uint8([50]) - np.uint8([100])
+print(&quot;wrap around: {}&quot;.format(added))
+print(&quot;wrap around: {}&quot;.format(subtracted))
+&gt;&gt;&gt; wrap around: [44]
+&gt;&gt;&gt; wrap around: [206]
+</code></pre>
+<h2 id="位运算and-or-xor-and-not">位运算AND, OR, XOR, and NOT</h2>
+<p>通常像素值0为黑，255为纯白，如果只有0和255，实际可以抽象为二值化图像。<br>
+opencv中处理逻辑运算使用命令<code>bitwise_and</code>, <code>bitwise_or</code>, <code>bitwise_xor</code>, <code>bitwise_not</code>.<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303291253074.png" alt="image.png" loading="lazy"></p>
+<pre><code class="language-python">import numpy as np
+import cv2
+# draw a rectangle
+rectangle = np.zeros((300, 300), dtype=&quot;uint8&quot;)
+cv2.rectangle(rectangle, (25, 25), (275, 275), 255, -1)
+cv2.imshow(&quot;Rectangle&quot;, rectangle)
+# draw a circle
+circle = np.zeros((300, 300), dtype = &quot;uint8&quot;)
+cv2.circle(circle, (150, 150), 150, 255, -1)
+cv2.imshow(&quot;Circle&quot;, circle)
+
+# a bitwise 'AND' is only 'True' when both inputs have a value that
+# is 'ON' -- in this case, the cv2.bitwise_and function examines
+# every pixel in the rectangle and circle; if *BOTH* pixels have a
+# value greater than zero then the pixel is turned 'ON' (i.e., 255)
+# in the output image; otherwise, the output value is set to
+# 'OFF' (i.e., 0)
+bitwiseAnd = cv2.bitwise_and(rectangle, circle)
+cv2.imshow(&quot;AND&quot;, bitwiseAnd)
+cv2.waitKey(0)
+
+# a bitwise 'OR' examines every pixel in the two inputs, and if
+# *EITHER* pixel in the rectangle or circle is greater than 0,
+# then the output pixel has a value of 255, otherwise it is 0
+bitwiseOr = cv2.bitwise_or(rectangle, circle)
+cv2.imshow(&quot;OR&quot;, bitwiseOr)
+cv2.waitKey(0)
+
+# the bitwise 'XOR' is identical to the 'OR' function, with one
+# exception: the rectangle and circle are not allowed to *BOTH*
+# have values greater than 0 (only one can be 0)
+bitwiseXor = cv2.bitwise_xor(rectangle, circle)
+cv2.imshow(&quot;XOR&quot;, bitwiseXor)
+cv2.waitKey(0)
+
+# finally, the bitwise 'NOT' inverts the values of the pixels;
+# pixels with a value of 255 become 0, and pixels with a value of 0
+# become 255
+bitwiseNot = cv2.bitwise_not(circle)
+cv2.imshow(&quot;NOT&quot;, bitwiseNot)
+cv2.waitKey(0)
+</code></pre>
+<h2 id="遮盖图像">遮盖图像</h2>
+<p>本质上使用<code>bitwise_and</code> 操作即可</p>
+<pre><code class="language-python">import numpy as np
+import cv2
+image = cv2.imread('test.png')
+cv2.imshow(&quot;Original&quot;, image)
+# a mask is the same size as our image, but has only two pixel
+# values, 0 and 255 -- pixels with a value of 0 (background) are
+# ignored in the original image while mask pixels with a value of
+# 255 (foreground) are allowed to be kept
+mask = np.zeros(image.shape[:2], dtype=&quot;uint8&quot;)
+cv2.rectangle(mask, (0, 90), (290, 450), 255, -1)
+cv2.imshow(&quot;Rectangular Mask&quot;, mask)
+# apply our mask -- notice how only the person in the image is
+# cropped out
+masked = cv2.bitwise_and(image, image, mask=mask)
+cv2.imshow(&quot;Mask Applied to Image&quot;, masked)
+cv2.waitKey(0)
+</code></pre>
+<h2 id="缩放scalingresize">缩放scaling(resize)</h2>
+<p>当调整图像大小时，重要的是要记住宽度与高度比值，即图像的宽高比(aspect_ratio)。忽略纵横比可能会导致调整图像大小，看起来压缩和扭曲。另外图像放大过程需要注意插值(interpolation)方法。</p>
+<h3 id="cv2resize">cv2.resize</h3>
+<p>直接使用<code>cv2.resize</code>方法需要手动计算宽高比，以保证缩放比例正确</p>
+<pre><code class="language-python">aspect_ratio = image_width / image_height
+</code></pre>
+<pre><code class="language-python">import numpy as np
+import cv2
+image = cv2.imread('test.png') 
+
+# 调整为150像素宽度
+r = 150.0 / image.shape[1]
+dim = (150, int(image.shape[0] * r))
+# perform the actual resizing of the image
+resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+cv2.imshow(&quot;Resized (Width)&quot;, resized)
+
+# 调整为50像素高度
+r = 50.0 / image.shape[0]
+dim = (int(image.shape[1] * r), 50)
+# perform the resizing
+resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+cv2.imshow(&quot;Resized (Height)&quot;, resized)
+cv2.waitKey(0)
+</code></pre>
+<h3 id="imutilsresize">imutils.resize</h3>
+<p>可以使用imutils自动调整大小功能</p>
+<pre><code class="language-python">import imutils
+import cv2
+image = cv2.imread('test.png') 
+# calculating the ratio each and every time we want to resize an
+# image is a real pain, so let's use the imutils convenience
+# function which will *automatically* maintain our aspect ratio
+# for us
+resized = imutils.resize(image, width=100)
+cv2.imshow(&quot;Resized via imutils&quot;, resized)
+cv2.waitKey(0)
+</code></pre>
+<h3 id="插值方法">插值方法</h3>
+<p>cv2.INTER_NEAREST 最近邻域插值<br>
+cv2.INTER_LINEAR 双线性插值<br>
+cv2.INTER_AREA 区域间插值</p>
+<p>以下为样条插值，使用情况较少，速度较慢<br>
+cv2.INTER_CUBIC based on a <em>4 x 4</em> pixel neighbor<br>
+cv2.INTER_LANCZOS4 based on an <em>8 x 8</em> pixel neighborhood</p>
+<p>通常，<code>cv2.INTER_NEAREST</code>非常快，但没有提供最高质量的结果。在非常受到资源约束的环境中，可以考虑该方法。</p>
+<p>增加图像大小（上采样）时，考虑使用<code>cv2.INTER_LINEAR</code> 和 <code>cv2.INTER_CUBIC</code>。<code>cv2.INTER_LINEAR</code> 方法往往比 <code>cv2.INTER_CUBIC</code> 方法稍快，哪种更好自己尝试。</p>
+<p>减小图像大小（下采样）时，OPENCV文档建议使用<code>cv2.INTER_AREA</code>。也可以使用<code>cv2.INTER_NEAREST</code>方法，但是<code>cv2.INTER_AREA</code> 通常效果更好。</p>
+<p>最后，作为一般规则，建议使用<code>cv2.INTER_LINEAR</code>插值方法作为默认方法，上下采样都有较好的效果。</p>
+<h2 id="图像翻转cv2flip">图像翻转cv2.flip</h2>
+<p>0表示垂直翻转（x轴），1表示水平翻转（y轴），-1表示两种操作都进行（180度）</p>
+<pre><code class="language-python">import cv2
+image = cv2.imread('test.png') 
+# flip the image horizontally
+print(&quot;[INFO] flipping image horizontally...&quot;)
+flipped = cv2.flip(image, 1)
+cv2.imshow(&quot;Flipped Horizontally&quot;, flipped)
+
+# flip the image vertically
+flipped = cv2.flip(image, 0)
+print(&quot;[INFO] flipping image vertically...&quot;)
+cv2.imshow(&quot;Flipped Vertically&quot;, flipped)
+
+# flip the image along both axes
+flipped = cv2.flip(image, -1)
+print(&quot;[INFO] flipping image horizontally and vertically...&quot;)
+cv2.imshow(&quot;Flipped Horizontally &amp; Vertically&quot;, flipped)
+cv2.waitKey(0)
+</code></pre>
+<h2 id="图像旋转">图像旋转</h2>
+<h3 id="cv2rotate">cv2.rotate</h3>
+<p>旋转原理<br>
+通常来说，旋转需要选择一个旋转中心和旋转角度，opencv还可以将图片进行缩放操作。<br>
+使用<code>cv2.getRotationMatrix2D</code>定义一个旋转矩阵，第一个参数为旋转中心点，第二个为旋转角度（顺时针），第三个为缩放尺度。注意：在OpenCV中，正度表示逆时针旋转，负度表示顺时针旋转。</p>
+<p>使用<code>cv2.warpAffine</code>应用旋转，第一个参数是想要旋转的图像。之后指定旋转矩阵M和图像的输出维度(宽度和高度)。</p>
+<pre><code class="language-python">```python
+import cv2
+image = cv2.imread('test.png') 
+# grab the dimensions of the image and calculate the center of the
+# image
+(h, w) = image.shape[:2]
+(cX, cY) = (w // 2, h // 2)
+# rotate our image by 45 degrees around the center of the image
+M = cv2.getRotationMatrix2D((cX, cY), 45, 1.0)
+rotated = cv2.warpAffine(image, M, (w, h))
+cv2.imshow(&quot;Rotated by 45 Degrees&quot;, rotated)
+# rotate our image by -90 degrees around the image
+M = cv2.getRotationMatrix2D((cX, cY), -90, 1.0)
+rotated = cv2.warpAffine(image, M, (w, h))
+cv2.imshow(&quot;Rotated by -90 Degrees&quot;, rotated)
+</code></pre>
+<p>但是OpenCV并不会自动为我们整个旋转的图像分配空间以适应大小，可能会翻转到图像外面去。这个就需要调整<code>cv2.warpAffine</code>中的(w,h)来改变，比较麻烦。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303291746074.png" alt="image.png" loading="lazy"></p>
+<h3 id="imutilsrotate和imutilsrotate_bound">imutils.rotate和imutils.rotate_bound</h3>
+<p><code>imutils.convenience.rotate</code> 为一个封装的方法，代码显得简化许多。</p>
+<pre><code class="language-python">import cv2
+import imutils
+image = cv2.imread('test.png') 
+
+# use our imutils function to rotate an image 180 degrees
+rotated = imutils.rotate(image, 180)
+cv2.imshow(&quot;Rotated by 180 Degrees&quot;, rotated)
+</code></pre>
+<p>如果旋转过程中图像的一部分被切断，OpenCV不会分配足够的空间来存储整个图像，这时候可以使用<code>imutils.convenience.rotate_bound</code>解决</p>
+<pre><code class="language-python"># rotate our image by 33 degrees counterclockwise, ensuring the
+# entire rotated image still renders within the viewing area
+rotated = imutils.rotate_bound(image, -33)
+cv2.imshow(&quot;Rotated Without Cropping&quot;, rotated)
+cv2.waitKey(0)
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303291747804.png" alt="image.png" loading="lazy"></figure>
+<h2 id="分离合并通道">分离合并通道</h2>
+<p>使用<code>cv2.split</code> 和 <code>cv2.merge</code>即可</p>
+<pre><code class="language-python">import cv2
+import imutils
+image = cv2.imread('test.png') 
+# load the input image and grab each channel -- note how OpenCV
+# represents images as NumPy arrays with channels in Blue, Green,
+# Red ordering rather than Red, Green, Blue
+image = cv2.imread(args[&quot;image&quot;])
+(B, G, R) = cv2.split(image)
+# show each channel individually
+cv2.imshow(&quot;Red&quot;, R)
+cv2.imshow(&quot;Green&quot;, G)
+cv2.imshow(&quot;Blue&quot;, B)
+cv2.waitKey(0)
+
+# merge the image back together again
+merged = cv2.merge([B, G, R])
+cv2.imshow(&quot;Merged&quot;, merged)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+</code></pre>
+<h2 id="画图功能">画图功能</h2>
+<p>常用命令</p>
+<ul>
+<li><code>cv2.line</code> : 在图像上绘制一条直线，从指定的(x, y)坐标开始，结束于另一个(x, y)坐标</li>
+<li><code>cv2.circle</code> : 在由中心(x, y)坐标和提供的半径指定的图像上绘制一个圆</li>
+<li><code>cv2.rectangle</code> : 在左上角和右下角(x, y)坐标指定的图像上绘制矩形<br>
+还有其他命令</li>
+<li><code>cv2.ellipse</code> : 绘制椭圆形</li>
+<li><code>cv2.polylines</code> : 绘制由一组(x, y)坐标指定的多边形的轮廓</li>
+<li><code>cv2.fillPoly</code> : 绘制一个多边形，但不是绘制轮廓，而是填充多边形</li>
+<li><code>cv2.arrowedLine</code> : 绘制一个箭头，从起始(x, y)坐标指向结束(x, y)坐标</li>
+</ul>
+<pre><code class="language-python"># import the necessary packages
+import numpy as np
+import cv2
+# initialize our canvas as a 300x300 pixel image with 3 channels
+# (Red, Green, and Blue) with a black background
+canvas = np.zeros((300, 300, 3), dtype=&quot;uint8&quot;)
+
+# draw a green line from the top-left corner of our canvas to the
+# bottom-right
+green = (0, 255, 0)
+cv2.line(canvas, (0, 0), (300, 300), green)
+cv2.imshow(&quot;Canvas&quot;, canvas)
+cv2.waitKey(0)
+# draw a 3 pixel thick red line from the top-right corner to the
+# bottom-left
+red = (0, 0, 255)
+cv2.line(canvas, (300, 0), (0, 300), red, 3)
+cv2.imshow(&quot;Canvas&quot;, canvas)
+cv2.waitKey(0)
+
+# draw a green 50x50 pixel square, starting at 10x10 and ending at 60x60
+cv2.rectangle(canvas, (10, 10), (60, 60), green)
+cv2.imshow(&quot;Canvas&quot;, canvas)
+cv2.waitKey(0)
+# draw another rectangle, this one red with 5 pixel thickness
+cv2.rectangle(canvas, (50, 200), (200, 225), red, 5)
+cv2.imshow(&quot;Canvas&quot;, canvas)
+cv2.waitKey(0)
+# draw a final rectangle (blue and filled in )
+blue = (255, 0, 0)
+cv2.rectangle(canvas, (200, 50), (225, 125), blue, -1) #-1表示全部填充
+cv2.imshow(&quot;Canvas&quot;, canvas)
+cv2.waitKey(0)
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303292227034.png" alt="image.png" loading="lazy"></figure>
+<p>画圈</p>
+<pre><code class="language-python"># re-initialize our canvas once again
+canvas = np.zeros((300, 300, 3), dtype=&quot;uint8&quot;)
+# let's draw 25 random circles
+for i in range(0, 25):
+	# randomly generate a radius size between 5 and 200, generate a
+	# random color, and then pick a random point on our canvas where
+	# the circle will be drawn
+	radius = np.random.randint(5, high=200)
+	color = np.random.randint(0, high=256, size=(3,)).tolist()
+	pt = np.random.randint(0, high=300, size=(2,))
+	# draw our random circle on the canvas
+	cv2.circle(canvas, tuple(pt), radius, color, -1)
+# display our masterpiece to our screen
+cv2.imshow(&quot;Canvas&quot;, canvas)
+cv2.waitKey(0)
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202303292231537.png" alt="image.png" loading="lazy"></figure>
+<h2 id="图像平移">图像平移</h2>
+<p>与图像旋转类似，需要先定义一个平移矩阵，之后使用<code>cv2.warpAffine</code> 方法进行调用</p>
+<p>平移矩阵如下：<br>
+其中第一行表示左右移动，shiftX为负，向左移动，shiftX为正，向右移动。<br>
+第二行表示上下移动，shiftY为负，向下移动，shiftY为正，向上移动。</p>
+<pre><code class="language-python">M = np.float32([
+	[1, 0, shiftX],
+	[0, 1, shiftY]
+])
+</code></pre>
+<pre><code class="language-python">import cv2
+image = cv2.imread('test.png') 
+# shift the image 25 pixels to the right and 50 pixels down
+M = np.float32([[1, 0, 25], [0, 1, 50]])
+shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
+cv2.imshow(&quot;Shifted Down and Right&quot;, shifted)
+</code></pre>
+<p>同时也可以用<code>imutils.translate</code>方法，更加简洁一点。</p>
+<pre><code class="language-python"># use the imutils helper function to translate the image 100 pixels
+# down in a single function call
+shifted = imutils.translate(image, 0, 100)
+cv2.imshow(&quot;Shifted Down&quot;, shifted)
+cv2.waitKey(0)
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/2023-nian-flag/" class="post-title gt-a-link">
+                    2023年Flag
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

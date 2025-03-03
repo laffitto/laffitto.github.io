@@ -1,0 +1,467 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>断点训练的程序 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    断点训练的程序
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-11-01 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/Y31CukBfz/" class="post-tags">
+                            # API
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/GOjnDzJhq/" class="post-tags">
+                            # tensorflow
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/9LpvSH8vgX/" class="post-tags">
+                            # 深度学习
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>在最近深度学习网络训练的过程中，深刻的体会到了什么叫做「纸上得来终觉浅，绝知此事要躬行」。虽然看了很多的深度学习的训练过程，但实际自己去做还是发现屁都对不上。tensorflow教程为了达到一种「我们的框架很简单，新手很容易上手」的错觉，将很多东西都进行了高级的封装。的确程序是显得很简单，它训练的过程也显得十分顺利，随随便便就可以跑到很高的精度。但是一旦自己上手，用的是自己数据集，瞬间一切变得像难产的婴儿，蛋疼的训练集验证集测试集，每个都让人揪心。</p>
+<p>通常训练一个程序的步骤如下：</p>
+<ol>
+<li>开始初始训练脚本</li>
+<li>监控损失/准确性</li>
+<li>注意何时损失/准确性停滞</li>
+<li>停止训练</li>
+<li>降低你的学习速度</li>
+<li>从新的、较低的学习率开始，重新开始训练</li>
+</ol>
+<p>在训练过程中，学习率作为一个重要的超参数，不停的调整是非常重要的，然而作为初学者，根本不知道如何去停止，降低学习率然后改变，tensorflow并没有提供那种可以及时暂停调整重新训练的现成程序，仅有的callback只能定义函数去实现学习率的降低（当然也可能是我太菜没发现），需要自己实现。不过经过不懈的搜索，我终于找到了一篇宝藏博客： <a href="https://www.pyimagesearch.com/2019/09/23/keras-starting-stopping-and-resuming-training/">Keras: Starting, stopping, and resuming training</a></p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201102193329.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>在ResNet18的训练过程中，很明显在30，50epoch那里曲线变化的趋势突然变陡，原因即是在这些特定的epoch训练停止了，学习率降低了一个数量级，然后恢复训练。</p>
+<p>在经过几次学习率的减少之后，学习率变得非常小，这反过来又使权重更新变得非常小，因此该模型无法取得任何有意义的进展。</p>
+<p>由于学习率低，开始出现过度拟合。 该模型下降到损失情况下损失较小的区域，过度适合于训练数据，而不能推广到验证数据。注意上面有点过拟合，train_loss降低但val_loss有点升高。</p>
+<p>降低学习率是在训练过程中提高模型准确性的一种好方法，但需要意识到（1）收益递减点，以及（2）如果训练得不到适当监督就可能过度拟合。</p>
+</blockquote>
+<p>正如博客所说，在训练过程中我们可以通过<strong>ctrl+C</strong>暂停程序，进而调整优化算法的学习率，后在命令行中继续输入命令得以实现断点训练。<br>
+这里贴出文中需要付费得到的重要的callbacks代码：</p>
+<ol>
+<li>epochcheckpoint.py</li>
+</ol>
+<p>这个callbacks主要是可以自己定义每隔特定epoch后保存训练的模型</p>
+<pre><code class="language-python">from tensorflow.keras.callbacks import Callback
+import os
+
+class EpochCheckpoint(Callback):
+	def __init__(self, outputPath, every=5, startAt=0):
+		# call the parent constructor
+		super(Callback, self).__init__()
+
+		# store the base output path for the model, the number of
+		# epochs that must pass before the model is serialized to
+		# disk and the current epoch value
+		self.outputPath = outputPath
+		self.every = every
+		self.intEpoch = startAt
+
+	def on_epoch_end(self, epoch, logs={}):
+		# check to see if the model should be serialized to disk
+		if (self.intEpoch + 1) % self.every == 0:
+			path = os.path.sep.join([self.outputPath, &quot;epoch_{}.hdf5&quot;.format(self.intEpoch + 1)])
+			self.model.save(path, overwrite=True)
+
+		# increment the internal epoch counter
+		self.intEpoch += 1
+</code></pre>
+<ol start="2">
+<li>trainingmonitor.py</li>
+</ol>
+<p>这个callback主要是记录loss，acc和实时画图检测训练状态的作用</p>
+<pre><code class="language-python">from tensorflow.keras.callbacks import BaseLogger
+import matplotlib.pyplot as plt
+import numpy as np
+import json
+import os
+
+class TrainingMonitor(BaseLogger):
+    def __init__(self, figPath, jsonPath=None, startAt=0):
+        # store the output path for the figure, the path to the JSON
+        # serialized file, and the starting epoch
+        super(TrainingMonitor, self).__init__()
+        self.figPath = figPath
+        self.jsonPath = jsonPath
+        self.startAt = startAt
+
+    def on_train_begin(self, logs={}):
+        # initialize the history dictionary
+        self.H = {}
+
+        # if the JSON history path exists, load the training history
+        if self.jsonPath is not None:
+            if os.path.exists(self.jsonPath):
+                self.H = json.loads(open(self.jsonPath).read())
+
+                # check to see if a starting epoch was supplied
+                if self.startAt &gt; 0:
+                    # loop over the entries in the history log and
+                    # trim any entries that are past the starting epoch
+                    for k in self.H.keys():
+                        self.H[k] = self.H[k][:self.startAt]
+
+
+    def on_epoch_end(self, epoch, logs={}):
+        # loop over the logs and update the loss, accuracy, etc.
+        # for the entire training process
+        for (k, v) in logs.items():
+            l = self.H.get(k, [])
+            l.append(v)
+            self.H[k] = l
+
+        # check to see if the traning history should be serialized to file
+        if self.jsonPath is not None:
+            f = open(self.jsonPath, &quot;w&quot;)
+            f.write(json.dumps(self.H))
+            f.close()
+
+            # ensure at least 2 epochs have passed before plotting (epochs start at
+            # zero)
+            if len(self.H[&quot;loss&quot;]) &gt; 1:
+                # plot the training loss and accuracy
+                N = np.arange(0, len(self.H[&quot;loss&quot;]))
+                plt.style.use(&quot;ggplot&quot;)
+                plt.figure()
+                plt.plot(N, self.H[&quot;loss&quot;], label=&quot;train_loss&quot;)
+                plt.plot(N, self.H[&quot;val_loss&quot;], label=&quot;val_loss&quot;)
+                plt.plot(N, self.H[&quot;acc&quot;], label=&quot;train_acc&quot;)
+                plt.plot(N, self.H[&quot;val_acc&quot;], label=&quot;val_acc&quot;)
+                plt.title(&quot;Training Loss and Accuracy [Epoch {}]&quot;.format(
+                        len(self.H[&quot;loss&quot;])))
+                plt.xlabel(&quot;Epoch #&quot;)
+                plt.ylabel(&quot;Loss/Accuracy&quot;)
+                plt.legend()
+
+                # save the figure
+                plt.savefig(self.figPath)
+                plt.close()
+
+</code></pre>
+<p>不得不说这两个程序真的是宝藏，完美解决了程序的痛点。</p>
+<p>搭配上主程序（博客中已给）</p>
+<ol start="3">
+<li>main.py</li>
+</ol>
+<pre><code class="language-python"># set the matplotlib backend so figures can be saved in the background
+import matplotlib
+matplotlib.use(&quot;Agg&quot;)
+# import the necessary packages
+from pyimagesearch.callbacks.epochcheckpoint import EpochCheckpoint
+from pyimagesearch.callbacks.trainingmonitor import TrainingMonitor
+from pyimagesearch.nn.resnet import ResNet
+from sklearn.preprocessing import LabelBinarizer
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.datasets import fashion_mnist
+from tensorflow.keras.models import load_model
+import tensorflow.keras.backend as K
+import numpy as np
+import argparse
+import cv2
+import sys
+import os
+
+# construct the argument parse and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-c&quot;, &quot;--checkpoints&quot;, required=True,
+	help=&quot;path to output checkpoint directory&quot;)
+ap.add_argument(&quot;-m&quot;, &quot;--model&quot;, type=str,
+	help=&quot;path to *specific* model checkpoint to load&quot;)
+ap.add_argument(&quot;-s&quot;, &quot;--start-epoch&quot;, type=int, default=0,
+	help=&quot;epoch to restart training at&quot;)
+args = vars(ap.parse_args())
+
+# grab the Fashion MNIST dataset (if this is your first time running
+# this the dataset will be automatically downloaded)
+print(&quot;[INFO] loading Fashion MNIST...&quot;)
+((trainX, trainY), (testX, testY)) = fashion_mnist.load_data()
+# Fashion MNIST images are 28x28 but the network we will be training
+# is expecting 32x32 images
+trainX = np.array([cv2.resize(x, (32, 32)) for x in trainX])
+testX = np.array([cv2.resize(x, (32, 32)) for x in testX])
+# scale data to the range of [0, 1]
+trainX = trainX.astype(&quot;float32&quot;) / 255.0
+testX = testX.astype(&quot;float32&quot;) / 255.0
+# reshape the data matrices to include a channel dimension (required
+# for training)
+trainX = trainX.reshape((trainX.shape[0], 32, 32, 1))
+testX = testX.reshape((testX.shape[0], 32, 32, 1))
+
+# convert the labels from integers to vectors
+lb = LabelBinarizer()
+trainY = lb.fit_transform(trainY)
+testY = lb.transform(testY)
+# construct the image generator for data augmentation
+aug = ImageDataGenerator(width_shift_range=0.1,
+	height_shift_range=0.1, horizontal_flip=True,
+	fill_mode=&quot;nearest&quot;)
+
+# if there is no specific model checkpoint supplied, then initialize
+# the network (ResNet-56) and compile the model
+if args[&quot;model&quot;] is None:
+	print(&quot;[INFO] compiling model...&quot;)
+	opt = SGD(lr=1e-1)
+	model = ResNet.build(32, 32, 1, 10, (9, 9, 9),
+		(64, 64, 128, 256), reg=0.0001)
+	model.compile(loss=&quot;categorical_crossentropy&quot;, optimizer=opt,
+		metrics=[&quot;accuracy&quot;])
+# otherwise, we're using a checkpoint model
+else:
+	# load the checkpoint from disk
+	print(&quot;[INFO] loading {}...&quot;.format(args[&quot;model&quot;]))
+	model = load_model(args[&quot;model&quot;])
+	# update the learning rate
+	print(&quot;[INFO] old learning rate: {}&quot;.format(
+		K.get_value(model.optimizer.lr)))
+	K.set_value(model.optimizer.lr, 1e-2)
+	print(&quot;[INFO] new learning rate: {}&quot;.format(
+		K.get_value(model.optimizer.lr)))
+
+# build the path to the training plot and training history
+plotPath = os.path.sep.join([&quot;output&quot;, &quot;resnet_fashion_mnist.png&quot;])
+jsonPath = os.path.sep.join([&quot;output&quot;, &quot;resnet_fashion_mnist.json&quot;])
+# construct the set of callbacks
+callbacks = [
+	EpochCheckpoint(args[&quot;checkpoints&quot;], every=5,
+		startAt=args[&quot;start_epoch&quot;]),
+	TrainingMonitor(plotPath,
+		jsonPath=jsonPath,
+		startAt=args[&quot;start_epoch&quot;])]
+
+# train the network
+print(&quot;[INFO] training network...&quot;)
+model.fit(
+	x=aug.flow(trainX, trainY, batch_size=128),
+	validation_data=(testX, testY),
+	steps_per_epoch=len(trainX) // 128,
+	epochs=80,
+	callbacks=callbacks,
+	verbose=1)
+</code></pre>
+<p>训练实例代码：</p>
+<pre><code class="language-python"># 最开始训练
+$ python train.py --checkpoints output/checkpoints
+# 从40epoch继续训练
+$ python train.py --checkpoints output/checkpoints \\
+	--model output/checkpoints/epoch_40.hdf5 --start-epoch 40
+</code></pre>
+<p>结合以上的代码，可以轻松的暂停程序，调整学习率，在特定的epoch回调，在那个特定点重新进行训练，方便很多。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/kong-zhi-si-xiang/" class="post-title gt-a-link">
+                    控制思想
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

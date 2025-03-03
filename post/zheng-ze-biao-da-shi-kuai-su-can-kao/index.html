@@ -1,0 +1,311 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>正则表达式快速参考 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    正则表达式快速参考
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-12-05 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/Y31CukBfz/" class="post-tags">
+                            # API
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>一些常用的正则表达式</p>
+<!-- more -->
+<p>首先放上两个很有用的参考网站：</p>
+<ol>
+<li>
+<p><a href="https://regexone.com/">RegexOne</a>：涵盖了基本的正则表达式的用法，我就是通过这个网站学习的</p>
+</li>
+<li>
+<p><a href="https://regex101.com/">Regex101</a>：在线匹配正则表达式的网站，炒鸡方便</p>
+</li>
+</ol>
+<p>实际比较重要的几个：中括号[0-9a-z]、小括号（）分组、大括号{1,4}个数、^前匹配、$后匹配、|或逻辑。</p>
+<p>以下有一个偷来的图：</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205151923.png" alt="" loading="lazy"></figure>
+<h2 id="表达式整理">表达式整理</h2>
+<p>基于RegexOne网站：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20201205152128.png" alt="" loading="lazy"></p>
+<h3 id="数字匹配">数字匹配</h3>
+<p>方法：<strong>\d</strong></p>
+<p>字符\d可以用于替换从0到9的任何数字。前面的斜杠将它与简单的d字符区分开来，并表明它是一个元字符（metacharacter）。</p>
+<h3 id="万能匹配">万能匹配</h3>
+<p>方法：<strong>.</strong></p>
+<p>. 可以理解为通配符，可以匹配<strong>任何单个字符</strong>(字母、数字、空格等)。</p>
+<p>如果想匹配真正的.字符，需要在前面加上斜杠以表示区别，即**.**</p>
+<h3 id="匹配特定字符">匹配特定字符</h3>
+<p>方法：<strong>[abc]</strong><br>
+[] 可以匹配特定的字符。例如：[abc]将只匹配一个字母a, b,或c,和无。</p>
+<h3 id="排除特定字符">排除特定字符</h3>
+<p>方法：<strong>[^]</strong></p>
+<p>在方括号中使用^(hat)可以排除特定字符。例如 [ ^abc]可以匹配除了a,b,c外的任意<strong>单个</strong>字符。</p>
+<h3 id="特定范围内的字符">特定范围内的字符</h3>
+<p>方法：<strong>[0-6], [a-e], [M-W], \w</strong></p>
+<p>使用破折号“-”表示范围。例如[0-6]只匹配从0到6的任何单个数字字符，其他字符不匹配。同样地，结合^，[ ^n-p]将只匹配除字母n到p之外的任何单个字符。</p>
+<p>其中**\w<strong>为元字符，等同于</strong>[A-Za-z0-9_]<strong>，</strong>\W<strong>等同于</strong>[^A-Za-z0-9_]**</p>
+<h3 id="匹配多个字符">匹配多个字符</h3>
+<p>方法：<strong>{m}，{m,n}</strong></p>
+<p>使用花括号{}匹配多次结果。例如：a{3}精确匹配a三次。a{1,3}将匹配a1到3次。.{2,6}将匹配任意字符2到6次。</p>
+<h3 id="泛多次匹配">泛多次匹配</h3>
+<p>方法：*<strong>，+</strong></p>
+<p>使用Kleene Star “*”匹配0或更多次。</p>
+<p>例如\d*表示匹配任意个数的数字。</p>
+<p>使用Kleene Plus“+”匹配1或更多次。</p>
+<p>例如\d+表示至少有一个数字类型的输入。[abc]+表示1个或多个任意a,b,c字符。</p>
+<h3 id="字符可选项">字符可选项</h3>
+<p>方法：<strong>？</strong></p>
+<p>使用？表示此项可以作为可选项。例如，ab?c可以匹配“abc”或“ac”，b是作为一个可选项存在的。</p>
+<p>同样，要想匹配字符?需要加上斜杠，即?</p>
+<h3 id="匹配空格">匹配空格</h3>
+<p>方法：<strong>\s</strong></p>
+<p>通常有以下几种空格情况：</p>
+<ol>
+<li>空格( )</li>
+<li>制表符(\t)</li>
+<li>新行(\n)</li>
+<li>回车符(\r)</li>
+</ol>
+<p>它们都可以通过**\s**进行匹配，其可以匹配任意特定的空白。实际等价于 [ \f\n\r\t\v]。</p>
+<p><strong>\S</strong>则匹配任何非空白字符，等价于 [ ^ \f\n\r\t\v]。</p>
+<h3 id="匹配开始结束特定字符">匹配开始/结束特定字符</h3>
+<p>方法：<strong>^, $</strong></p>
+<p>使用^匹配开始时的特定字符。<br>
+例如^success来匹配仅仅以success开始的行。</p>
+<p>使用$匹配结束时的特定附。</p>
+<p>例如love$来匹配以love为结尾的字段。</p>
+<p>注意这里的^与上面中括号的[hat符号]表示的含义不同，注意区分。</p>
+<p>$还可以作为替换的指代，详细看此文：<a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></p>
+<h3 id="匹配一个组">匹配一个组</h3>
+<p>方法：<strong>（）</strong></p>
+<p>使用()匹配<strong>一组</strong>特定的字符。例如：^(IMG\d+)\ .png$，其可以将前面部分作为一个整体进行匹配捕获。</p>
+<p>同样（）是可以进行嵌套的，例如：^(IMG(\d+))\ .png$，前面部分又分成两个整体进行匹配。</p>
+<p>（）与上面方法结合使用可以带来更好的效果。例如(\d{3})</p>
+<h3 id="或逻辑">或逻辑</h3>
+<p>方法:<strong>|</strong></p>
+<p>在使用组时，可以用|匹配不同组的字符。例如([cb]ats*|[dh]ogs?)，可以匹配cats，bats，dogs，hogs。</p>
+<h2 id="不错的例子参考">不错的例子参考</h2>
+<ol>
+<li><a href="https://www.cnblogs.com/yyds/p/6913550.html">正则表达式总结</a></li>
+<li><a href="https://sspai.com/post/60650">多种实际使用场景，正则表达式带来丰富可能性</a></li>
+<li><a href="https://www.runoob.com/python/python-reg-expressions.html">菜鸟教程Python 正则表达式</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/127807805?utm_source=qq">Python正则表达式，这一篇就够了！</a></li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/ji-yi-ci-chao-zhou-zhi-lu/" class="post-title gt-a-link">
+                    记一次潮州之旅
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

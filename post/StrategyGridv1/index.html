@@ -1,0 +1,552 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>网格交易 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    网格交易
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-11-29 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/2HKnlhG5I/" class="post-tags">
+                            # 投资
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>量化交易初尝试</p>
+<!-- more -->
+<p>本文所有内容均为个人见解。仅表示自己在当前认知情况下自认为正确的观点所作出的行为，如有异议还请谅解与提出交流。头图来自 https://invest101.com.hk/grid-trading</p>
+<h2 id="心路历程">心路历程</h2>
+<p>自己也算是投资市场多少年的韭菜了，虽然玩的都是小钱，最后统计下来还是亏多赢少。以前读了点小书，看了点小文章，立马自信心爆棚，觉得其他交易者都是定力不行，自己不会被市场的情绪左右。交易过程天天说定投，相信时间的力量，投到后面资金不够，也不知道何时止盈止损，看着赚了以为自己牛逼，看着跌了就闭嘴装死。当然我这里不是指一些会发出信号的主动型基金，而是纯粹自己自我感知良好的操作，现在回首看过去，没有明确的系统与目的，进入投资市场无异于赌博。</p>
+<p>近几个月决定自己做一点量化的尝试，毕竟一个东西门槛越高，越少的人会去尝试。赛道越少，竞争越少。虽然大的机构也会有专门的量化投资部门，但毕竟会顾虑到资金和面向市场等多方面因素，和个人投资者要考虑的东西完全不一样。况且人家也不会分享给你他们的策略。投资要趁早，既然自己有一定的能力与基础，早点研究就当是玩玩也是有趣的。</p>
+<p>量化过程，简化来说大体可以分为如下几部分：数据收集，策略构建和策略回测。数据收集就是选择合适的平台，能够持续稳定准确的给你提供想要研究市场的数据。策略构建是选择合适的策略或是通过机器学习/深度学习训练得到策略。不同的策略同样有着众多的超参数，构建一个合适的模型同样需要考虑其准确性和泛化性。回测过程考虑最终的指标，可能是夏普比率，又可能仅是利润率，具体情况具体分析。本质上和众多科研流程类似，有科学研究内味了。</p>
+<p>对于一个策略来说，核心关键点就是信号（何时交易）和数量。在什么时间买入或卖出，交易的过程具体数量是多少。一步步拆解下来就是：构建好自己的框架，模拟这个过程，选择好合适的品种，同时保证准确性和泛化性。</p>
+<p>有些人相信价值投资，进行基本面的研究，但是我感觉自己的认知和眼光还是不够，况且我也拿不到单一公司真正内部的资料，又何来了解一说。现阶段不如交给机器去选择，少一点自己的主观能动性吧。</p>
+<h2 id="网格交易策略">网格交易策略</h2>
+<p>经过一段时间的探索，掌握了一些皮毛，目前仍然有许多知识盲点与专业性的东西需要慢慢领会。这里先从简单的入手复现一个以前使用过的网格交易策略。</p>
+<p>网格交易主要是在震荡环境中非常有效的策略。随着设定合适的买入卖出网格区间，在区间中做到低价买入，高价卖出，赚一点点中间的波动价格差。</p>
+<p>在进行网格交易中有以下关键的点：</p>
+<ol>
+<li>选定合适的品种。例如指数类 ETF（沪深 300，中证 500，兴全趋势混合，创业板指），财务稳定的（银行，保险），可以长期持有的股票等等。</li>
+<li>选定好合适的价格区间。等差区间，等比区间，或是其他更多的策略。</li>
+<li>做好压力测试，提前明确定好上下区间进行止盈止损。以及超出区间后如何进行后续操作。</li>
+</ol>
+<h2 id="策略编写">策略编写</h2>
+<p>这里选择之前实战中使用过的万马股份 (SZSE:002276) 作为研究对象。后续会对更多的品种进行测试。</p>
+<p>回测框架经过多方面对比，我选择了现在在持续维护且运行效率较高的 vectorbt 的付费版本 <a href="https://vectorbt.pro/">VectorBT PRO</a>。当然也可以选择一些免费的框架如 <a href="https://github.com/vnpy/vnpy">vnpy</a>。</p>
+<p>如下代码在jupyter notebook中运行，暂不考虑优化效率和面向对象编程，仅初步展示和参考。<br>
+导入相关库</p>
+<pre><code class="language-python">import vectorbtpro as vbt  
+import numpy as np  
+import pandas as pd
+</code></pre>
+<p>从 tradingview 抓取相关数据，以天为单位的K线</p>
+<pre><code class="language-python">list_name = vbt.TVData.list_symbols(symbol_pattern=&quot;002276&quot;)  
+data = vbt.TVData.pull(&quot;SZSE:002276&quot;)
+data.stats()
+
+输出
+Start Index            2009-07-10 01:30:00+00:00
+End Index              2024-11-13 01:30:00+00:00
+Total Duration                3623 days 00:00:00
+Total Symbols                                  1
+Null Counts: 002276                            0
+Name: agg_stats, dtype: object
+</code></pre>
+<p>选取特定时间段并可视化K线</p>
+<pre><code class="language-python">close = data.get('Close')
+data=data.loc['2018-01-01':]
+data.plot().show()
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202411281614777.png" alt="image.png" loading="lazy"></figure>
+<p>定义一个等差网格区间</p>
+<pre><code class="language-python"># 等差计算 输入上下区间，目标投入金额，计划网格数 得到每格买入价格间隔，每格买入数量  
+def arithmetic_grid(price_low, price_high, initial_fund, grid_num):  
+    # 计算每格价格的差价  
+    grid_price_interval = round((price_high - price_low) / (grid_num-1),4)  
+    # 等差数列计算公式  
+    total_multiplier = grid_num * (price_low + price_high) / 2  
+    # 计算每格的交易数量，使得总和符合初始资金  
+    share_number = int(initial_fund / total_multiplier)  
+    print(f&quot;每格交易价格间隔: {grid_price_interval}，每格交易数量: {share_number}&quot;)  
+    # 交易间隔  
+    grid_interval = [round(price_low + i * grid_price_interval, 4) for i in range(grid_num)]  
+    return grid_price_interval,share_number,grid_interval
+</code></pre>
+<p>设定网格最低价价为 6，最高价格 12，总计划投入金额 10000，网格数量 10</p>
+<pre><code class="language-python">grid_price, grid_amount, grid_interval = arithmetic_grid(price_low=6, price_high=12, initial_fund=10000, grid_num=10)  
+grid_interval
+
+输出：
+每格交易价格间隔: 0.6667，每格交易数量: 111
+[6.0,
+ 6.6667,
+ 7.3334,
+ 8.0001,
+ 8.6668,
+ 9.3335,
+ 10.0002,
+ 10.6669,
+ 11.3336,
+ 12.0003]
+
+</code></pre>
+<h4 id="gridv1">Gridv1</h4>
+<p>定义最基本简单的网格交易策略：采用每次交易相同数额，输出 direction 表示买卖信号，输出 grid_interval 表示网格间隔，仅用于可视化。</p>
+<pre><code class="language-python">## 针对股票买入特定份数  
+## 每一次买入卖出都会重置基准单位  
+  
+# 策略在执行之前先买入一定比例，后续使用网格进行交易测算。如果基金呈现上涨趋势，建仓比例较大可以吃到更多利润  
+# init_position 初始建仓份数  
+# init_price 建仓时价格  
+# position_size 已建仓的金额  
+# remain_cash 用于执行网格的金额  
+# units 持有的仓位  
+# base_unit_price 基准买入价格  
+# today_unit_price 当日价格  
+  
+def stock_grid_line_v1(close, remain_cash, init_position,price_low=6, price_high=12):  
+      
+    init_price = close.iloc[0]  
+    units = init_position    
+      
+    base_unit_price = close.iloc[0]  
+    direction = pd.Series(np.full(data.shape[0], 0), index=data.index)  
+    # size = pd.Series(np.full(data.shape[0], 0), index=data.index)  
+    # 计算网格大小和每格交易数量，采用等差方式  
+    grid_price, grid_amount,grid_interval = arithmetic_grid(price_low=price_low, price_high=price_high, initial_fund=remain_cash, grid_num=10)  
+    print(f&quot;初始买入价格{init_price}&quot;)  
+      
+    for i in range(1, close.shape[0]):  
+        today_unit_price = close.iloc[i]  
+          
+        # 超出交易区间不做交易  
+        if today_unit_price&lt;price_low or today_unit_price &gt; price_high:  
+            continue  
+        ## sold operation  
+        # 当日价格高于网格价，且手里有持仓有剩余  
+        if today_unit_price &gt;= base_unit_price+grid_price and units &gt;= grid_amount:  
+            units -= grid_amount  
+            remain_cash += grid_amount*today_unit_price  
+            direction.iloc[i] = -1  
+            #重置基准单位  
+            base_unit_price = today_unit_price  
+              
+        ## buy operation  
+        # 当日价格低于网格价，且手里有现金  
+        if today_unit_price &lt;= base_unit_price-grid_price and remain_cash &gt;= grid_amount*today_unit_price:  
+            units += grid_amount  
+            remain_cash -= grid_amount*today_unit_price  
+            direction.iloc[i] = 1  
+            #重置基准单位  
+            base_unit_price = today_unit_price  
+  
+                         
+    return direction,grid_interval
+</code></pre>
+<p>设定总计划最多投入金额 10000，初始建仓 400 股</p>
+<pre><code class="language-python">direction,grid_interval = stock_grid_line_v1(close,10000,400)
+
+输出：
+每格交易价格间隔: 0.6667，每格交易数量: 111
+初始买入价格8.7
+</code></pre>
+<p>可视化</p>
+<pre><code class="language-python">def plot_entry_exit(close, entries, exits, basic_line, grid_interval):  
+    fig = close.vbt.plot()  
+    entries.vbt.signals.plot_as_entries(close, fig=fig)  
+    exits.vbt.signals.plot_as_exits(close, fig=fig)  
+    fig.add_shape(  
+        type=&quot;line&quot;,  
+        x0=0, x1=1,  # 横坐标范围，0到1表示整个x轴的宽度  
+        y0=basic_line, y1=basic_line,  # y0=y1=7 表示水平线位置  
+        xref='paper',  # 使用 'paper' 参考系确保线条延伸到整个图宽  
+        line=dict(color=&quot;Red&quot;, width=2, dash=&quot;dash&quot;)  # 设置线条颜色、宽度和样式  
+    )  
+    for interval in grid_interval:  
+        fig.add_shape(  
+        type=&quot;line&quot;,  
+        x0=0, x1=1,  # 横坐标范围，0到1表示整个x轴的宽度  
+        y0=interval, y1=interval,  # y0=y1=7 表示水平线位置  
+        xref='paper',  # 使用 'paper' 参考系确保线条延伸到整个图宽  
+        line=dict(color=&quot;Blue&quot;, width=2, dash=&quot;dash&quot;)  # 设置线条颜色、宽度和样式  
+    )  
+    print(f'买入点数量{entries.vbt.signals.total()},卖出点数量{exits.vbt.signals.total()}')  
+    return fig.show()
+</code></pre>
+<p>由于时间有一定滞后性，默认为得到交易信号后一天才开始交易。</p>
+<pre><code class="language-python"># 实际操作买入卖出时间向后推迟一个单位
+entries = (direction == 1).vbt.signals.fshift() 
+exits = (direction == -1).vbt.signals.fshift()
+plot_entry_exit(close,entries,exits,basic_line=close.iloc[0],grid_interval=grid_interval)
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202411281645243.png" alt="image.png" loading="lazy"></figure>
+<p>进行实际回测，这里主要依赖vectorbt自带的回测方法，直接调用即可。忽略手续费。</p>
+<pre><code class="language-python">pf = vbt.Portfolio.from_signals(  
+    close=close,   
+    entries=entries,   
+    exits=exits,   
+    init_cash=10000, # 初始资金  
+    init_position= 400, #初始仓位  
+    init_price = close.iloc[0], #初始建仓金额  
+    size=111, # 使用amount类型，每次进行固定股数的交易  
+    size_type=&quot;amount&quot;,  
+    # fees=0.001,  
+    accumulate=True,  
+)
+pf.stats()
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202411281649054.png" alt="image.png" loading="lazy"></figure>
+<p>输出解析</p>
+<ul>
+<li>Total Return 最终投资利润增长</li>
+<li>Benchmark Return 基线收益（一直持有收益）</li>
+<li>Total Time Exposure 总暴露在市场中的时间</li>
+<li>Max Gross Exposure 最大交易中使用的现金量</li>
+<li>Max Drawdown 最大回撤，即组合价值在创下新高后下跌的最大距离</li>
+<li>Total Orders 总订单次数</li>
+<li>Total Trades 总交易次数。Vectorbt 中仅卖出操作计作交易。一旦卖出订单被执行（通过减少或关闭 position），就会根据加权平均进入和退出价格计算损益 (the profit and loss, PnL)</li>
+<li>Win Rate 交易（卖单）产生利润的概率</li>
+<li>Best Trade 最好交易的利润率</li>
+<li>Worst Trade 最差交易的利润率</li>
+<li>Profit Factor 利润因子</li>
+<li>Expectancy 预期 average profitability 平均盈利能力</li>
+</ul>
+<p>回报率 25%，还是可以的。</p>
+<h3 id="gridv2">Gridv2</h3>
+<p>简单改进一下网格策略：每次交易网格后，下一个网格按照一定比例增加份额。输出多增加一个 size ，表示交易的数量</p>
+<pre><code class="language-python">## 针对股票买入特定份数  
+## 每一次买入卖出都会重置基准单位  
+## 大网格增加份额。  
+  
+# 策略在执行之前先买入一定比例，后续使用网格进行交易测算。
+# init_position 初始建仓份数  
+# init_price 建仓时价格  
+# position_size 已建仓的金额  
+# remain_cash 用于执行网格的金额  
+# units 持有的仓位  
+# base_unit_price 基准买入价格  
+# today_unit_price 当日价格  
+  
+def stock_grid_line_v2(close, remain_cash, init_position,price_low=6, price_high=12):  
+    init_price = close.iloc[0]  
+    units = init_position  
+  
+    base_unit_price = close.iloc[0]  
+    direction = pd.Series(np.full(data.shape[0], 0), index=data.index)  
+    size = pd.Series(np.full(data.shape[0], 0), index=data.index)  
+  
+    # 计算网格大小和每格交易数量，采用等差方式  
+    grid_price, grid_amount, grid_interval = arithmetic_grid(price_low=price_low, price_high=price_high, initial_fund=remain_cash,  
+                                                             grid_num=10)  
+    print(f&quot;初始买入价格{init_price}&quot;)  
+  
+    # 记录操作位置  
+    position_grid = 0  
+    # 增加网格份额   
+    grid_amount_increase = int(grid_amount * 0.02)  
+    print(f&quot;网格增加数量{grid_amount_increase}&quot;)  
+  
+    for i in range(1, close.shape[0]):  
+        today_unit_price = close.iloc[i]  
+        buy_grid_amount = grid_amount + grid_amount_increase * position_grid  
+        sell_grid_amount = grid_amount + grid_amount_increase * position_grid  
+          
+        # 超出交易区间不做交易  
+        if today_unit_price&lt;price_low or today_unit_price &gt; price_high:  
+            continue  
+  
+        ## sold operation  
+        # 当日价格高于网格价，且手里有持仓有剩余  
+        if today_unit_price &gt;= base_unit_price + grid_price and units &gt;= sell_grid_amount:  
+            units -= sell_grid_amount  
+            remain_cash += sell_grid_amount * today_unit_price  
+            direction.iloc[i] = -1  
+            size.iloc[i] = sell_grid_amount  
+  
+            # 重置调整基准  
+            base_unit_price = today_unit_price  
+            position_grid -= 1  
+  
+        ## buy operation  
+        # 当日价格低于网格价，且手里有现金  
+        if today_unit_price &lt;= base_unit_price - grid_price and remain_cash &gt;= buy_grid_amount * today_unit_price:  
+            units += buy_grid_amount  
+            remain_cash -= buy_grid_amount * today_unit_price  
+            direction.iloc[i] = 1  
+            size.iloc[i] = buy_grid_amount  
+  
+            # 重置调整基准  
+            base_unit_price = today_unit_price  
+            position_grid += 1  
+  
+    return direction, size, grid_interval
+</code></pre>
+<p>选取和之前相同的参数模拟</p>
+<pre><code class="language-python">direction, input_size, grid_interval = stock_grid_line_v2(close,10000,400)
+
+输出：
+每格交易价格间隔: 0.6667，每格交易数量: 111
+初始买入价格8.7
+网格增加数量5
+</code></pre>
+<p>可视化</p>
+<pre><code class="language-python">entries = (direction == 1).vbt.signals.fshift() 
+exits = (direction == -1).vbt.signals.fshift()
+# 传入的每次交易数量也需要移位  
+input_size = input_size.shift(1, fill_value=0)
+plot_entry_exit(close,entries,exits,basic_line=close.iloc[0],grid_interval=grid_interval)
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202411282227673.png" alt="image.png" loading="lazy"></figure>
+<p>回测</p>
+<pre><code class="language-python">def signal_func_nb_v2(c, long_signals, short_signals, size,input_sizes):  
+    long_signal = vbt.pf_nb.select_nb(c, long_signals)  
+    short_signal = vbt.pf_nb.select_nb(c, short_signals)  
+    input_size = vbt.pf_nb.select_nb(c, input_sizes)  
+    if long_signal:  
+        print(f'buy {input_size} amount')  
+        size[0, c.col] = input_size  
+    if short_signal:  
+        print(f'sell {input_size} amount')  
+        size[0, c.col] = input_size  
+    return long_signal, False, short_signal, False  
+pf = vbt.Portfolio.from_signals(  
+    close=close,   
+    init_cash=10000, # 初始资金  
+    init_position= 400, #初始仓位  
+    init_price = close.iloc[0], #初始建仓金额  
+    signal_func_nb=signal_func_nb_v2,  
+    signal_args=(  
+        vbt.Rep(&quot;long_signals&quot;),   
+        vbt.Rep(&quot;short_signals&quot;),   
+        vbt.Rep(&quot;size&quot;),  
+        vbt.Rep(&quot;input_sizes&quot;)      
+    ),  
+    size=vbt.RepEval(&quot;np.full((1, wrapper.shape_2d[1]), np.nan)&quot;),    
+    size_type=&quot;amount&quot;,  
+    accumulate=True,  
+    broadcast_named_args=dict(  
+        long_signals= entries,  
+        short_signals=exits,  
+        input_sizes=input_size,  
+    ),  
+    jitted = False  
+)
+pf.stats()
+</code></pre>
+<p><img src="https://picgo-1306089623.cos.ap-nanjing.myqcloud.com/202411282229197.png" alt="image.png" loading="lazy"><br>
+就回报率而言没有太大变化，但是其他指标有所提升。</p>
+<p>值得注意的是，这个策略的超参数很多，网格上下限，网格数量，准备投入金额，初始建仓数量，都可以选取改变。况且就股票市场来说，买入的数量基本都是以1手为单位，上述的111交易份额实际不符合预期。</p>
+<p>策略也有很多优化空间，比如入场时机或许可以选择一些参数联合判断（如 EMA ，RSI 等）。</p>
+<p>Vectorbt 的优势就在于能够快速的遍历测试大规模数据的情况，进而从中选取合适的超参数。这里限于篇幅和进度，先暂时分享上述内容。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/obsidian-hao-yong-ai-cha-jian/" class="post-title gt-a-link">
+                    Obsidian好用AI插件
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

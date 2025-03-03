@@ -1,0 +1,342 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>交叉验证cross validation | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    交叉验证cross validation
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-09-19 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/GOjnDzJhq/" class="post-tags">
+                            # tensorflow
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>基于tensorflow2.0的交叉验证实现方法。</p>
+<!-- more -->
+<h2 id="交叉验证是啥">交叉验证是啥</h2>
+<p>机器学习模型常常不能很好地对未经过训练的数据进行归纳。有时候表现良好然而有些时候表现糟糕。为了确保模型能在未见数据上表现良好，引出使一种称为K折交叉验证（K-Fold cross-validation）的重新采样技术。</p>
+<p>我们训练的时候通常将数据分成三个部分，即<strong>训练集</strong>、<strong>验证集</strong>和<strong>测试集</strong>。但是如果当数据量有限时，将数据集划分为训练集和验证集，可能会导致一些具有有用信息的数据点被排除在训练过程之外，导致模型无法正确地学习数据的分布。这时候交叉验证可以做出一些改进：<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/20200920172813.png" alt="cross-validation" loading="lazy"></p>
+<p>与其他方法相比，K-Fold 给出了一个偏差较小的模型。在k - fold 中，我们有一个参数k。这个参数决定数据集将被划分的折叠数。每一次折叠都有机会出现在训练集(k-1)中，这反过来又确保了数据集中的每一次观察都出现在数据集中，从而使模型能够更好地学习底层数据分布。如上图中k的值为5。</p>
+<p>使用的k值一般在5或10之间。k的值不应该太低或太高。如果k的值太低(比如k = 2)，我们将得到一个高度偏置的模型。这种情况类似于将数据集拆分为训练集和验证集，因此偏差（bias）较高，方差（variance）较低。如果k的值很大(比如k = n(总体的数量))，那么这种方法称为<strong>Leave One Out CV (LOOCV)</strong>。在这种情况下，偏差会很低，但方差会很高，模型会过度拟合，导致模型无法在测试集上推广。</p>
+<p>另一种方法是在将数据集拆分为k次折叠之前只将数据集洗牌一次，然后再拆分，这样每个类中的观察值的分布在每次折叠中保持不变。测试集也不会在连续的迭代之间重叠。这种方法称为<strong>Stratified K-Fold</strong>。该方法适用于不平衡数据集。</p>
+<h2 id="具体代码实现">具体代码实现</h2>
+<p>这里的编程环境是Tensorflow2.0，要实现交叉验证的核心功能，可以借助sklearn库的KFold和StratifiedKFold类。</p>
+<pre><code class="language-python">from sklearn.model_selection import KFold, StratifiedKFold
+</code></pre>
+<p>具体使用方法可以参考官方wiki：<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html">KFold</a>和<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html">StratifiedKFold</a></p>
+<p>可以先参考如下文章，前两个具有极大的参考价值：</p>
+<ol>
+<li>
+<p><a href="https://www.machinecurve.com/index.php/2020/02/18/how-to-use-k-fold-cross-validation-with-keras/"><strong>How to use K-fold Cross Validation with Keras?</strong></a></p>
+</li>
+<li>
+<p><a href="https://medium.com/the-owl/k-fold-cross-validation-in-keras-3ec4a3a00538"><strong>K-Fold Cross Validation for Deep Learning Models using Keras</strong></a></p>
+</li>
+<li>
+<p><a href="https://www.kaggle.com/stefanie04736/simple-keras-model-with-k-fold-cross-validation">Simple Keras Model with k-fold cross validation</a></p>
+</li>
+<li>
+<p><a href="https://machinelearningmastery.com/k-fold-cross-validation/">A Gentle Introduction to k-fold Cross-Validation</a></p>
+</li>
+</ol>
+<h2 id="实现">实现</h2>
+<p>这是自己自己再综合过程中完成的代码片段：</p>
+<pre><code class="language-python">#coding:utf-8
+# Based on tensorflow 2.2
+from model_verTF2 import class_net
+from data import *
+from tensorflow.keras import callbacks
+import tensorflow as tf
+from sklearn.model_selection import KFold, StratifiedKFold
+import os
+
+# enable GPU
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
+config.gpu_options.per_process_gpu_memory_fraction = 0.8
+tf.compat.v1.keras.backend.set_session(tf.compat.v1.Session(config=config))
+
+# Model confiuration
+BATCH_SIZE = 2
+EPOCH = 200
+FOLD = 9
+path = './train_image'
+save_dir = './saved_models/'
+
+fold_var = 1
+total_data = len(os.listdir(path))
+labels = get_all_label(path)
+
+# Define K-fold cross validation
+kf = KFold(n_splits=FOLD, shuffle=True, random_state=6)
+skf = StratifiedKFold(n_splits=FOLD, random_state=6, shuffle=True)
+
+VALIDATION_ACCURACY = []
+VALIDATION_LOSS = []
+
+# Train by cross validation
+for train_index, val_index in skf.split(np.zeros(total_data),labels):
+
+    train_iter = batch_generator_cross_validation(path=path, index=train_index, 		  batch_size=BATCH_SIZE,train=True)
+    val_iter = batch_generator_cross_validation(path=path, index=val_index, batch_size=BATCH_SIZE,train=False)
+
+    model = class_net()
+    ckpt = callbacks.ModelCheckpoint(save_dir+get_model_name(fold_var),
+                                     monitor='val_accuracy', verbose=1,
+                                     save_best_only=True, mode='max')
+    log = callbacks.CSVLogger(save_dir+'model_log'+str(fold_var)+'.csv')
+    callbacks_list = [ckpt, log]
+
+    print('--------------------------------------------------------')
+    print(f'Training for fold {fold_var} ...')
+    history = model.fit(x=train_iter,
+                        steps_per_epoch=len(train_index)/BATCH_SIZE,
+                        epochs=EPOCH,
+                        validation_data=val_iter,
+                        validation_steps=len(val_index)/BATCH_SIZE,
+                        callbacks=callbacks_list)
+
+    plot_log(save_dir+'model_log'+str(fold_var)+'.csv')
+
+    # load best model to evaluate
+    model.load_weights(&quot;./saved_models/model_&quot;+str(fold_var)+&quot;.h5&quot;)
+
+    results = model.evaluate(x=val_iter, steps=len(val_index)/BATCH_SIZE)
+    results = dict(zip(model.metrics_names, results))
+
+    VALIDATION_ACCURACY.append(results['accuracy'])
+    VALIDATION_LOSS.append(results['loss'])
+
+    tf.keras.backend.clear_session()
+
+    fold_var += 1
+
+print('----------------------------------------')
+print('Score per fold')
+for i in range(0, len(VALIDATION_LOSS)):
+    print('------------------------------------------')
+    print(f'&gt; Flod {i+1} - Val_loss:{VALIDATION_LOSS[i]} - Val_accuracy:{VALIDATION_ACCURACY[i]}')
+</code></pre>
+<p>代码段不太完整，留作自己以后检查时调用，待项目完成会放到github上开源，毕竟太辣鸡，只能各种拼凑一下勉强维持一下生活的样子。😱</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/zhan-zhan-sui-yan-4/" class="post-title gt-a-link">
+                    詹詹碎言 #4
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

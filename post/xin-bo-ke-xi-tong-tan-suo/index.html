@@ -1,0 +1,253 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>新博客系统探索——动态博客Halo | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    新博客系统探索——动态博客Halo
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-06-20 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/qjXnpkIgW/" class="post-tags">
+                            # 新东西
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/NnAU2qWAh/" class="post-tags">
+                            # 折腾
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>有点想迁移博客的想法</p>
+<!-- more -->
+<p>现在的博客搭建在github pages上，虽然没有什么成本，但是访问速度极慢。虽然之前使用vercel加速效果还不错，但是近些日子发现vercel居然也被墙了，博客完全无法在国内网络正常访问。虽然在<a href="https://lmbk.net/vercel-china-ip/">这篇博文</a>中找到了解决方法，但这终究是暂时的。还有一点非常闹心的是github被高级墙，导致gridea和Picgo每次同步都和登山一样困难（简直到了不能用的地步，真是绝了）。于是关于新博客系统的探索开始啦。</p>
+<p>由于之前研究云盘的时候，买了一年的腾讯云服务器，就想直接试试动态博客，翻了一圈，选择了ghost和Halo两个博客系统。</p>
+<p><a href="https://ghost.org/">Ghost</a>是看了少数派的<a href="https://sspai.com/post/65602">推荐文章</a>，说实话第一次看到还挺心动的，因为界面真的很好看。但是发现localhost有点问题，而且发布什么的不太方便，总体感觉有点太重了，我并不需要邮件管理订阅什么之类东西，于是暂时放下了，有时间再摆弄。</p>
+<p><a href="https://halo.run/">Halo</a>是无意中翻到的，虽然想试试wordpress，但是很多评论说太重了，我也就没去尝试了，但是在体验了Halo后，感觉神清气爽，就决定是它了，新的简陋的<a href="https://laffitto.xyz/">博客展示</a>。</p>
+<h2 id="安装过程">安装过程</h2>
+<p>安装过程主要是参考这个视频：<a href="https://www.bilibili.com/video/BV1JN411Q7Na?p=1">如何用服务器优雅地搭建一个博客—Hello,Halo!</a>。讲得非常详细，是个人就能看懂，这里提几点可能需要的坑。</p>
+<h3 id="docker安装失败">Docker安装失败</h3>
+<p>CentOS 8 中安装 Docker 会出现一些不兼容的问题，可以参考<a href="https://blog.csdn.net/YKenan/article/details/111237517">CentOS 8 中安装 Docker 出现和 Podman 冲突的问题</a>解决。</p>
+<h3 id="国内服务器的防火墙开启">国内服务器的防火墙开启</h3>
+<p>如果使用腾讯云，阿里云，华为云，需要开启端口，不然无法访问。国外服务器如Vultr不需要这一步。具体方法可以参考<a href="https://www.bt.cn/bbs/thread-19376-1-1.html">宝塔Linux面板安装教程</a>的开端口教程。</p>
+<h3 id="域名备案">域名备案</h3>
+<p>国内服务器需要域名备案，不然无法访问。个人暂时不想备案，于是又买了Vultr的服务器玩。或者买腾讯云等非国内的服务器也行。</p>
+<h2 id="halo特性">Halo特性</h2>
+<p>尽管官网上已经给出了很多特性，但我还是说说自己比较看重的点。<br>
+首先，由于是动态博客，就不需要依赖于某个特定的设备，只要浏览器能够连上网，就很实时的对博客内容进行编辑改动。同时其内置了附件系统，图片或其他东西都可以直接整合进来（虽然我还是习惯外置图床）。评论和统计功能也一应俱全，不同自己单独配置。同时也有一些主题可以选择，虽然不多，但还是找到了我最喜欢的一个（又不是不能用）。数据备份和迁移也比较方便。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/112.png" alt="" loading="lazy"><br>
+具体到数学公式渲染，代码块高亮，主题和博客系统都提供了加持。要说唯一的缺点，可能就是博客的成本提高了吧，毕竟要租服务器。希望能够白嫖到Oracle。</p>
+<p>占用内存方面还是挺高的，内存要爆了啦，1G内存加上swap1G后也仅仅是勉强够用。估计是难以加上其他服务了。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/2021-06-22.png" alt="" loading="lazy"><br>
+不得不说在折腾过程中还是学到了不少东西的。简单的Linux命令，Docker的使用，还试过安装可道云和Nextcloud，不得不说实在是很好玩（真香）。</p>
+<p>这是一个简单的尝试，但是我觉得这也许是自己博客的下一个起点，因为github的墙实在是太高了。累觉不爱。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/xiao-yuan-ba-ling/" class="post-title gt-a-link">
+                    校园霸凌
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>OpenCV高阶操作 | 乱谈府      ——詹詹碎言</title>
+
+<link rel="shortcut icon" href="https://blog.laffitto.xyz/favicon.ico?v=1741015572497">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.laffitto.xyz/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160641909-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-160641909-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            乱谈府      ——詹詹碎言
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            🏯首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            ✉归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            ☁标签云集
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://memo.laffitto.xyz/" class="menu gt-a-link">
+                            💌詹詹碎言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            📝关于与留言
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            👫友链
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741015572497" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    OpenCV高阶操作
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-04-10 ·
+                    </time>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/ujzZjb39m/" class="post-tags">
+                            # OpenCV
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/i1-Jje_9N/" class="post-tags">
+                            # study
+                        </a>
+                    
+                        <a href="https://blog.laffitto.xyz/tag/HQ-WIhH4M/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>一些OpenCV的高级操作和代码</p>
+<!-- more -->
+<h2 id="阈值处理">阈值处理</h2>
+<p>阈值处理有很多种，有三种形式：</p>
+<ul>
+<li>手动提供参数来设定合适的阈值分割图像。需要控制照明条件下工作得非常好，可以确保图像的前景和背景之间的高对比度。</li>
+<li>如OTSU阈值之类的方法，这些方法试图更动态地自动计算最佳阈值。</li>
+<li>自适应阈值，它不是试图用一个单一的值全局地阈值一个图像，而是把图像分解成更小的部分，然后分别地和单独地对每个部分进行阈值。</li>
+</ul>
+<h3 id="手动阈值-basic-thresholding">手动阈值 Basic thresholding</h3>
+<p>需要手动确定阈值T</p>
+<pre><code class="language-python"># apply basic thresholding -- the first parameter is the image
+# we want to threshold, the second value is is our threshold
+# check; if a pixel value is greater than our threshold (in this
+# case, 200), we set it to be *black, otherwise it is *white*
+(T, threshInv) = cv2.threshold(blurred, 200, 255,
+	cv2.THRESH_BINARY_INV)
+cv2.imshow(&quot;Threshold Binary Inverse&quot;, threshInv)
+</code></pre>
+<p><code>cv2.threshold</code> 第一个参数为需要处理的图像，第二个为阈值T，第三个为高于阈值后需要变化为的数值（通常为255，表示变为黑色），第四个为阈值处理方法。<br>
+输出结果 第一个T表示阈值，第二个表示阈值后的图像。</p>
+<h3 id="自动化阈值-otsu">自动化阈值 OTSU</h3>
+<p>OTUS可以帮助我们自动设置阈值。Otsu的方法假设我们的图像像素强度的灰度直方图是双模态的，这仅仅意味着直方图是两个峰。[[opencv直方图对比|直方图详解]]</p>
+<p>例如如下图像，第一个尖峰对应于图像的统一背景颜色，而第二个峰值对应于药丸区域本身。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304021636564.png" alt="image.png" loading="lazy"></figure>
+<pre><code class="language-python">(T, threshInv) = cv2.threshold(blurred, 0, 255,
+	cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+</code></pre>
+<p>使用OTSU第二个参数设置为了0，因为它会自动帮助我们计算阈值。</p>
+<pre><code class="language-python">import argparse  
+import cv2  
+ap = argparse.ArgumentParser()  
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, type=str, required=True,  
+   help=&quot;path to input image&quot;)  
+args = vars(ap.parse_args())  
+  
+# load the image and display it  
+image = cv2.imread(args[&quot;image&quot;])  
+cv2.imshow(&quot;Image&quot;, image)  
+# convert the image to grayscale and blur it slightly  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+blurred = cv2.GaussianBlur(gray, (7, 7), 0)  
+  
+# apply Otsu's automatic thresholding which automatically determines  
+# the best threshold value  
+(T, threshInv) = cv2.threshold(blurred, 0, 255,  
+   cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)  
+cv2.imshow(&quot;Threshold&quot;, threshInv)  
+print(&quot;[INFO] otsu's thresholding value: {}&quot;.format(T))  
+# visualize only the masked regions in the image  
+masked = cv2.bitwise_and(image, image, mask=threshInv)  
+cv2.imshow(&quot;Output&quot;, masked)  
+cv2.waitKey(0)
+</code></pre>
+<p>注意一下<code>cv2.threshold</code> 中的阈值方法参数：</p>
+<ul>
+<li>cv2.THRESH_BINARY_INV 二值化后再反转</li>
+<li>cv2.THRESH_BINARY 正常二值化</li>
+</ul>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/">OpenCV Thresholding ( cv2.threshold ) - PyImageSearch</a></p>
+<h3 id="自适应阈值-adaptive-thresholding">自适应阈值 adaptive thresholding</h3>
+<p>对于一些复杂的图像，全局只有一个阈值分割效果可能会不好，因此使用自适应阈值。而且可以避免训练专用Mask R-CNN或U-Net分割网络的耗时和计算昂贵的过程。</p>
+<p>具体思想是在小块的领域确定阈值，选取区域大小是个需要调整的参数。区域阈值计算方法可以选择算术平均值或高斯平均值，算数平均更加常用。</p>
+<pre><code class="language-python">thresh = cv2.adaptiveThreshold(blurred, 255,
+	cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 21, 10)
+</code></pre>
+<p>输入参数 第一个为目标图像；第二个为输入阈值；第三个为自适应阈值方法，可选<code>cv2.ADAPTIVE_THRESH_MEAN_C</code> 或 <code>cv2.ADAPTIVE_THRESH_GAUSSIAN_C</code> ；第四个如同手动阈值方法；第五个是领域大小，这里表示21×21；最后一个为微调常数值C，通过加减C来进行调整阈值。</p>
+<pre><code class="language-python">image = cv2.imread('test.png')
+cv2.imshow(&quot;Image&quot;, image)
+# convert the image to grayscale and blur it slightly
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(gray, (7, 7), 0)
+
+# instead of manually specifying the threshold value, we can use
+# adaptive thresholding to examine neighborhoods of pixels and
+# adaptively threshold each neighborhood
+thresh = cv2.adaptiveThreshold(blurred, 255,
+	cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 21, 4)
+cv2.imshow(&quot;Mean Adaptive Thresholding&quot;, thresh)
+cv2.waitKey(0)
+</code></pre>
+<p>参考 <a href="https://pyimagesearch.com/2021/05/12/adaptive-thresholding-with-opencv-cv2-adaptivethreshold/">Adaptive Thresholding with OpenCV ( cv2.adaptiveThreshold )</a></p>
+<h2 id="图像平滑和模糊">图像平滑和模糊</h2>
+<p>平滑和模糊是计算机视觉和图像处理中最常见的预处理步骤之一。在应用边缘检测或阈值分割等技术之前，通过平滑图像，能够减少高频内容的数量，如噪声和边缘(即图像的细节)。</p>
+<h3 id="平均模糊-cv2blur">平均模糊 cv2.blur</h3>
+<p>取中心像素周围的像素区域，将所有这些像素平均在一起，并用平均值替换中心像素。通常使用 M×N (M N为奇数)的内核进行平均。随着内核大小的增加，图像模糊的数量也会增加。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (9, 9), (15, 15)]
+# loop over the kernel sizes
+for (kX, kY) in kernelSizes:
+	# apply an &quot;average&quot; blur to the image using the current kernel
+	# size
+	blurred = cv2.blur(image, (kX, kY))
+	cv2.imshow(&quot;Average ({}, {})&quot;.format(kX, kY), blurred)
+	cv2.waitKey(0)
+</code></pre>
+<h3 id="高斯模糊-cv2gaussianblur">高斯模糊 cv2.GaussianBlur</h3>
+<p>高斯模糊类似于平均模糊，但不是简单的平均值，而是加权平均值，其中更接近中心像素的邻域像素对平均值贡献更多的权重。借助M×N 的内核(M N为奇数)，基于这种加权，将能够保留图像中更多的边缘。</p>
+<p>x和y方向上的高斯函数如下：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi><mi>σ</mi></mrow></mfrac><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">G(x,y)= \frac{1}{2 \pi \sigma}e^{- \frac{x^{2}+y^{2}}{2 \sigma ^{2}}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.3013099999999997em;"><span style="top:-3.4534200000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2112714285714286em;"><span style="top:-2.5061857142857145em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.4623857142857144em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.04844em;"><span style="top:-3.04844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.04844em;"><span style="top:-3.04844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.49381428571428565em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>当内核的大小增加时，应用于输出图像的模糊量也会增加。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (9, 9), (15, 15)]
+# loop over the kernel sizes again
+for (kX, kY) in kernelSizes:
+	# apply a &quot;Gaussian&quot; blur to the image
+	blurred = cv2.GaussianBlur(image, (kX, kY), 0)
+	cv2.imshow(&quot;Gaussian ({}, {})&quot;.format(kX, kY), blurred)
+	cv2.waitKey(0)
+</code></pre>
+<p>最后一个参数为高斯分布的标准差。通过将这个值设置为0，我们指示OpenCV根据内核大小自动计算。更多细节可以参考 <a href="https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html#gaussianblur">OpenCV documentation</a></p>
+<h3 id="中值模糊-cv2medianblur">中值模糊 cv2.medianBlur</h3>
+<p>中值模糊方法是去除椒盐噪声最有效的方法。该方法的内核大小必须是正方形。并且用邻域的中值代替中心像素。</p>
+<p>中值模糊在从图像中去除椒盐风格噪声时更有效的原因是每个中心像素总是被图像中存在的像素强度所取代。由于中位数对异常值具有稳健性，与平均值等其他统计方法相比，椒盐噪声对中位数的影响较小。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (9, 9), (15, 15)]
+# loop over the kernel sizes a final time
+for k in (3, 9, 15):
+	# apply a &quot;median&quot; blur to the image
+	blurred = cv2.medianBlur(image, k)
+	cv2.imshow(&quot;Median {}&quot;.format(k), blurred)
+	cv2.waitKey(0)
+</code></pre>
+<h3 id="双边模糊-cv2bilateralfilter">双边模糊 cv2.bilateralFilter</h3>
+<p>上面几种模糊方法往往会失去图像的边缘，为了在保持边缘的同时减少噪声，可以使用双边模糊（利用两个高斯分布）。但是它的速度会慢很多。</p>
+<pre><code class="language-python">blurred = cv2.bilateralFilter(image, diameter, sigmaColor, sigmaSpace)
+</code></pre>
+<p>第一个参数为需要模糊的图像；第二个参数为像素邻域的直径。直径越大，模糊计算中包含的像素就越多；第三个参数是颜色标准偏差，更大的值意味着在计算模糊时将考虑附近更多的颜色。第四个参数为坐标空间中的sigma值。它的值越大，说明有越多的点能够参与到滤波计算中来。</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/">OpenCV Smoothing and Blurring - PyImageSearch</a></p>
+<h2 id="形态学操作">形态学操作</h2>
+<p>形态学运算是应用于二值或灰度图像的简单变换。形态学操作探测带有结构元素(<strong>structuring elements</strong>)的图像。这个结构元素定义了每个像素周围要检查的邻域。根据给定的操作和结构元素的大小，我们可以调整输出图像。</p>
+<p>有时候很多东西根本不配用上特别高级的算法，例如机器学习，深度学习。</p>
+<p>结构元素在opencv中用<code>cv2.getStructuringElement</code>定义，如下与定义4邻域和8邻域的一个例子<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032110987.png" alt="image.png" loading="lazy"></p>
+<h3 id="侵蚀-erosion">侵蚀 Erosion</h3>
+<p>图像中物体边界附近的像素将被丢弃侵蚀掉。</p>
+<p>侵蚀通过定义结构元素，然后在输入图像上从左到右、从上到下滑动这个结构元素。只有当结构元素中的所有像素都是&gt; 0时，输入图像中的前景像素才会被保留。否则，像素被设置为0(即背景)。</p>
+<p>使用 <code>cv2.erode</code></p>
+<pre><code class="language-python"># apply a series of erosions
+for i in range(0, 3):
+	eroded = cv2.erode(gray, None, iterations=i + 1)
+	cv2.imshow(&quot;Eroded {} times&quot;.format(i + 1), eroded)
+	cv2.waitKey(0)
+</code></pre>
+<p>第一个参数为需要侵蚀的图像；第二个为侵蚀的结构元素，设为<code>None</code>表示3×3的8领域结构；第三个为膨胀迭代次数。</p>
+<h3 id="膨胀-dilation">膨胀 dilation</h3>
+<p>膨胀可以增加前景对象的大小，尤其适用于将图像的破碎部分连接在一起。通过定义结构元素，若任意一个像素为&gt; 0，则结构元素的中心像素p将被设置为白色。</p>
+<p>使用 <code>cv2.dilate</code></p>
+<pre><code class="language-python"># apply a series of dilations
+for i in range(0, 3):
+	dilated = cv2.dilate(gray.copy(), None, iterations=i + 1)
+	cv2.imshow(&quot;Dilated {} times&quot;.format(i + 1), dilated)
+	cv2.waitKey(0)
+
+</code></pre>
+<p>参数类似侵蚀，基本同理</p>
+<h3 id="开操作-opening">开操作 Opening</h3>
+<p>开操作是侵蚀之后的膨胀。该操作可以从图像中删除小斑点:首先应用侵蚀来删除小斑点，然后应用膨胀来重新增长原始对象的大小。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (5, 5), (7, 7)]
+# loop over the kernels sizes
+for kernelSize in kernelSizes:
+	# construct a rectangular kernel from the current size and then
+	# apply an &quot;opening&quot; operation
+	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+	opening = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel)
+	cv2.imshow(&quot;Opening: ({}, {})&quot;.format(
+		kernelSize[0], kernelSize[1]), opening)
+	cv2.waitKey(0)
+</code></pre>
+<p>cv2.getStructuringElement用来定义一个结构元素。第一个参数结构元素类型：<code>cv2.MORPH_RECT</code> 表示正方形结构（8邻域），<code>cv2.MORPH_CROSS</code> 表示十字形结构（4邻域），<code>cv2.MORPH_ELLIPSE</code> 表示圆形结构。第二个参数表示大小。</p>
+<p>这里开操作使用 cv2.morphologyEx 函数，不过实际上它能够传递任何想要的形态操作。这里操作方式选择<code>cv2.MORPH_OPEN</code> 表示开操作。</p>
+<h3 id="闭操作-closing">闭操作 Closing</h3>
+<p>闭操作是膨胀之后的侵蚀。它可以将物体内部的孔或将组件连接在一起。</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (5, 5), (7, 7)]
+for kernelSize in kernelSizes:
+	# construct a rectangular kernel form the current size, but this
+	# time apply a &quot;closing&quot; operation
+	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+	closing = cv2.morphologyEx(gray, cv2.MORPH_CLOSE, kernel)
+	cv2.imshow(&quot;Closing: ({}, {})&quot;.format(
+		kernelSize[0], kernelSize[1]), closing)
+	cv2.waitKey(0)
+</code></pre>
+<p>与开操作类似，不过cv2.morphologyEx 函数中方法选择 <code>cv2.MORPH_CLOSE</code></p>
+<h3 id="形态学梯度-morphological-gradient">形态学梯度 Morphological gradient</h3>
+<p>形态学梯度是膨胀和侵蚀之间的差异。它对于确定图像的特定对象的轮廓很有用</p>
+<pre><code class="language-python">kernelSizes = [(3, 3), (5, 5), (7, 7)]
+for kernelSize in kernelSizes:
+	# construct a rectangular kernel and apply a &quot;morphological
+	# gradient&quot; operation to the image
+	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+	gradient = cv2.morphologyEx(gray, cv2.MORPH_GRADIENT, kernel)
+	cv2.imshow(&quot;Gradient: ({}, {})&quot;.format(
+		kernelSize[0], kernelSize[1]), gradient)
+	cv2.waitKey(0)
+</code></pre>
+<p>cv2.morphologyEx 函数中方法选择 <code>cv2.MORPH_GRADIENT</code></p>
+<h3 id="顶帽操作top-hatwhite-hat和黑帽操作black-hat">顶帽操作（Top hat/white hat）和黑帽操作（black hat）</h3>
+<p>top hat用于在深色背景上显示图像的明亮区域。</p>
+<pre><code class="language-python">image = cv2.imread(args[&quot;image&quot;])
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# construct a rectangular kernel (13x5) and apply a blackhat
+# operation which enables us to find dark regions on a light
+# background
+rectKernel = cv2.getStructuringElement(cv2.MORPH_RECT, (13, 5))
+blackhat = cv2.morphologyEx(gray, cv2.MORPH_BLACKHAT, rectKernel)
+
+# similarly, a tophat (also called a &quot;whitehat&quot;) operation will
+# enable us to find light regions on a dark background
+tophat = cv2.morphologyEx(gray, cv2.MORPH_TOPHAT, rectKernel)
+
+# show the output images
+cv2.imshow(&quot;Original&quot;, image)
+cv2.imshow(&quot;Blackhat&quot;, blackhat)
+cv2.imshow(&quot;Tophat&quot;, tophat)
+cv2.waitKey(0)
+</code></pre>
+<p>分别使用 <code>cv2.MORPH_BLACKHAT</code> 和 <code>cv2.MORPH_TOPHAT</code> 去进行操作</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-morphological-operations/">OpenCV Morphological Operations</a></p>
+<h2 id="颜色空间">颜色空间</h2>
+<p>主要基于 cv2.cvtColor 函数</p>
+<h3 id="照明条件的重要性">照明条件的重要性</h3>
+<p>照明条件对于计算机视觉处理流程有着重要的影响。光的质量是图像进入算法前就应该积极考虑的，它可能是最重要的因素。</p>
+<ul>
+<li>
+<p>高对比度 High contrast<br>
+尽量确保环境的背景和前景之间有很高的对比度，这将使编写代码更容易准确地理解背景和前景。</p>
+</li>
+<li>
+<p>可推广的 Generalizable<br>
+照明条件应该足够一致，以至于它们从一个物体到另一个对象都可以很好地工作。</p>
+</li>
+<li>
+<p>稳健性 Stable<br>
+拥有稳定、一致和可重复的照明条件是计算机视觉应用开发重要因素。</p>
+</li>
+</ul>
+<h3 id="rgb-color-space">RGB color space</h3>
+<p>由RGB三个通道组成，每个通道范围为[0,255]。RGB颜色空间是加色空间的一个例子:每种颜色加的越多，像素就变得越亮，越接近白色。需要将三个通道都加起来才能表示一种颜色。<br>
+<img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032156706.png" alt="image.png" loading="lazy"></p>
+<h3 id="hsv-color-space">HSV color space</h3>
+<p>HSV颜色空间会改变RGB的颜色空间，将其重塑为圆柱体而不是立方体。在RGB部分中看到的，颜色的白色或明度是每个红色、绿色和蓝色组件的相加组合。但现在在HSV颜色空间中，亮度被赋予了自己的独立维度。</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032155596.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li>
+<p><strong>Hue</strong>：检查哪种“纯”颜色。例如，颜色“红色”的所有阴影和色调都具有相同的色调。</p>
+</li>
+<li>
+<p><strong>Saturation</strong>：颜色是多么“白色”。完全饱和的颜色将是“纯”，如“纯红色”。零饱和的颜色将是纯白色。</p>
+</li>
+<li>
+<p><strong>value</strong>：控制颜色的明度。0将表示纯黑色，而增加将产生较浅的颜色</p>
+</li>
+</ul>
+<p>不同的计算机视觉库将使用不同的范围来表示每个色相、饱和度和值组件。<br>
+在OpenCV中，图像表示为8位无符号整数数组。因此，Hue值被定义为范围[0,179] (总共有180个可能的值，因为[0,359]共360对于8位无符号数组是不可能的)，Hue实际上是HSV颜色圆柱上的度数。<strong>Saturation</strong>和<strong>value</strong>范围都在[0,255]。</p>
+<p>转换方式使用<code>cv2.COLOR_BGR2HSV</code></p>
+<pre><code class="language-python">hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+</code></pre>
+<p>Value组件本质上是一个灰度图像，这是因为Value控制了颜色的实际明度，而Hue和Saturation定义了实际的颜色和阴影。HSV颜色空间在计算机视觉应用中被大量使用，特别是当我们对跟踪图像中某些物体的颜色感兴趣时。使用HSV定义一个有效的颜色范围比使用RGB要容易得多。</p>
+<h3 id="l-a-b-color-space">L* a* b* color space</h3>
+<p>该方法目标是模仿人类观察和解释颜色的方法。L* a* b* 颜色空间中任意两种颜色之间的欧几里得距离具有实际的感知意义。L* a* b* 颜色空间是一个3轴系统</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304032207325.png" alt="image.png" loading="lazy"></figure>
+<ul>
+<li><strong>L-channel:</strong> 像素的亮度。这个值在垂直轴上上下变化，从白色到黑色，轴的中心是中性灰色。</li>
+<li><strong>a-channel:</strong> 源于L通道的中心，在光谱的一端定义纯绿色，在另一端定义纯红色。</li>
+<li><strong>b-channel</strong>：源于l通道的中心，但垂直于a通道。b通道在一个光谱上定义纯蓝色，在另一个光谱上定义纯黄色。</li>
+</ul>
+<p>L* a* b* 颜色空间不像HSV和RGB颜色空间那么直观，但它在计算机视觉中被大量使用。这是因为颜色之间的距离具有实际的感知意义，使我们能够克服各种光照条件问题。它还可以作为一个强大的彩色图像描述符。</p>
+<p>转换方式使用<code>cv2.COLOR_BGR2LAB</code></p>
+<pre><code class="language-python">lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+</code></pre>
+<p>L* 通道，用于显示给定像素的亮度。然后，a* 和b* 决定像素的阴影和颜色。</p>
+<h3 id="灰度-grayscale">灰度 Grayscale</h3>
+<p>转换方式使用<code>cv2.COLOR_BGR2GRAY</code></p>
+<pre><code class="language-python">gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+</code></pre>
+<p>转化为单一通道像素范围在[0,255]的图像。转化公式如下</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mn>0.299</mn><mo>×</mo><mi>R</mi><mo>+</mo><mn>0.587</mn><mo>×</mo><mi>G</mi><mo>+</mo><mn>0.114</mn><mo>×</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">Y=0.299 \times R+0.587 \times G+0.114 \times B
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span><span class="mord">9</span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span><span class="mord">8</span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">G</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></p>
+<p>不平均主要是由于我们视觉感知RGB三种颜色敏感度不同。</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/">OpenCV Color Spaces ( cv2.cvtColor )</a></p>
+<h2 id="图像梯度">图像梯度</h2>
+<p>图像梯度的作用</p>
+<ul>
+<li>使用梯度检测图像中的边缘，在图像中找到对象的轮廓，阴影，边缘等等</li>
+<li>用作通过特征提取来量化图像的输入。例如定向梯度直方图（Histogram of Oriented Gradients）和 SIFT</li>
+<li>用于构建显着图（saliency maps），突出显示图像的主题</li>
+</ul>
+<p>通常检测到图像的边缘叫做<strong>edge map</strong></p>
+<p>关于图像梯度手动计算的方法<a href="https://pyimagesearch.com/2021/05/12/image-gradients-with-opencv-sobel-and-scharr/#__next:~:text=Computing%20image%20gradients%20manually">参考这里</a></p>
+<h3 id="sobel-and-scharr-kernels">Sobel and Scharr kernels</h3>
+<p>Sobel使用了两个核，一个用于检测水平方向的变化，另一个用于检测垂直方向的变化</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>G</mi><mi>x</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>2</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>2</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><msub><mi>G</mi><mi>y</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>2</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>2</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">G _ { x } = \left[ \begin{array}  { l l l  }  { - 1 } &amp; { 0 } &amp; { + 1 } \\ { - 2 } &amp; { 0 } &amp; { + 2 } \\ { - 1 } &amp; { 0 } &amp; { + 1 } \end{array} \right]\ and\ G _ { y } = \left[ \begin{array}  { l l l  }  { - 1 } &amp; { - 2 } &amp; { - 1 } \\ { 0 } &amp; { 0 } &amp; { 0 } \\ { + 1 } &amp; { + 2 } &amp; { + 1 } \end{array} \right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">2</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">2</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">2</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>Scharr类似，不过核不太一样，效果会更好一些。</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>G</mi><mi>x</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>10</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>10</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><msub><mi>G</mi><mi>y</mi></msub><mo>=</mo><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>10</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>3</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>10</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>+</mo><mn>3</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">G _ { x } = \left[ \begin{array}  { l l l  }  { - 3 } &amp; { 0 } &amp; { + 3 } \\ { - 10 } &amp; { 0 } &amp; { + 10 } \\ { - 3 } &amp; { 0 } &amp; { + 3 } \end{array} \right]\ and\ G _ { y } = \left[ \begin{array}  { l l l  }  { - 3 } &amp; { - 10 } &amp; { - 3 } \\ { 0 } &amp; { 0 } &amp; { 0 } \\ { + 3 } &amp; { + 10 } &amp; { + 3 } \end{array} \right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">1</span><span class="mord">0</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">1</span><span class="mord">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">−</span><span class="mord">3</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">0</span></span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">+</span><span class="mord">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-4.05002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>代码使用</p>
+<pre><code class="language-python">import argparse
+import cv2
+# construct the argument parser and parse the arguments
+# scharr 参数为0表示使用sobel内核，&gt;0表示使用scharr内核
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, type=str, required=True,
+	help=&quot;path to input image&quot;)
+ap.add_argument(&quot;-s&quot;, &quot;--scharr&quot;, type=int, default=0,
+	help=&quot;path to input image&quot;)
+args = vars(ap.parse_args())
+
+image = cv2.imread(args[&quot;image&quot;])
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow(&quot;Gray&quot;, gray)
+
+# set the kernel size, depending on whether we are using the Sobel
+# operator of the Scharr operator, then compute the gradients along
+# the x and y axis, respectively
+ksize = -1 if args[&quot;scharr&quot;] &gt; 0 else 3
+gX = cv2.Sobel(gray, ddepth=cv2.CV_32F, dx=1, dy=0, ksize=ksize)
+gY = cv2.Sobel(gray, ddepth=cv2.CV_32F, dx=0, dy=1, ksize=ksize)
+
+# the gradient magnitude images are now of the floating point data
+# type, so we need to take care to convert them back a to unsigned
+# 8-bit integer representation so other OpenCV functions can operate
+# on them and visualize them
+gX = cv2.convertScaleAbs(gX)
+gY = cv2.convertScaleAbs(gY)
+
+# combine the gradient representations into a single image
+combined = cv2.addWeighted(gX, 0.5, gY, 0.5, 0)
+# show our output images
+cv2.imshow(&quot;Sobel/Scharr X&quot;, gX)
+cv2.imshow(&quot;Sobel/Scharr Y&quot;, gY)
+cv2.imshow(&quot;Sobel/Scharr Combined&quot;, combined)
+cv2.waitKey(0)
+</code></pre>
+<p>参考 <a href="https://pyimagesearch.com/2021/05/12/image-gradients-with-opencv-sobel-and-scharr/">Image Gradients with OpenCV (Sobel and Scharr)</a></p>
+<h2 id="边缘检测">边缘检测</h2>
+<p>通常会使用Canny边缘检测器，opencv中使用cv2.Canny函数</p>
+<p>在边缘检测过程中，梯度幅值对噪声极其敏感。<a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.420.3300&amp;rep=rep1&amp;type=pdf">Canny</a>检测中，边被定义为像素强度的不连续，或者更简单地说，像素值的急剧差异和变化。</p>
+<h3 id="几种边缘示例">几种边缘示例</h3>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/laffitto/Pic_bed/202304061017413.png" alt="image.png" loading="lazy"></figure>
+<h3 id="canny边缘检测步骤">Canny边缘检测步骤</h3>
+<ol>
+<li>
+<p>噪声去除：使用[[Opencv高级处理#高斯模糊 cv2.GaussianBlur|高斯模糊]]等去除图片噪声，做平滑处理</p>
+</li>
+<li>
+<p>计算图像梯度：对平滑后的图像使用[[Opencv高级处理#Sobel and Scharr kernels|Sobel算子]]计算水平方向和竖直方向的一阶导数(Gx 和Gy)。根据得到的这两幅梯度，找到边界梯度和方向</p>
+</li>
+<li>
+<p>非极大值抑制（ <strong>Non-maxima suppression</strong>）：在获得梯度的方向和大小之后，对整幅图像进行扫描（通常是3×3），去除那些非边界上的点。对每一个像素进行检查，看这个点的梯度是不是周围具有相同梯度方向的点中最大的（如果中心像素的大小大于与之比较的两个像素，则保留，否则丢弃）</p>
+</li>
+<li>
+<p>滞后阈值（ <strong>Hysteresis thresholding</strong>）：确定真正的边界，设置两个阈值: TminVal 和TmaxVal。当图像的灰度梯度高于TmaxVal时被认为是真的边界，低于TminVal的边界会被抛弃</p>
+</li>
+</ol>
+<p>调用方法，需要设定上下界的阈值</p>
+<pre><code class="language-python">image = cv2.Canny(blurred, TminVal, TmaxVal)
+</code></pre>
+<h3 id="自动canny代码">自动canny代码</h3>
+<p>实际上这个auto_canny代码已经集成在了imutils中，可以直接调用</p>
+<pre><code class="language-python">import argparse  
+import cv2  
+import numpy as np  
+  
+def auto_canny(image, sigma=0.33):  
+    v = np.median(image)  
+    # apply automatic Canny edge detection using the computed median  
+    lower = int(max(0, (1.0 - sigma) * v))  
+    upper = int(min(255, (1.0 + sigma) * v))  
+    edged = cv2.Canny(image, lower, upper)  
+    return edged  
+  
+ap = argparse.ArgumentParser()  
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, required=True, help=&quot;Path to the image&quot;)  
+args = vars(ap.parse_args())  
+  
+image = cv2.imread(args[&quot;image&quot;])  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+blurred = cv2.GaussianBlur(gray, (3, 3), 0)  
+  
+wide = cv2.Canny(blurred, 10, 200)  
+tight = cv2.Canny(blurred, 225, 250)  
+auto = auto_canny(blurred)  
+  
+cv2.imshow(&quot;Original&quot;, image)  
+cv2.imshow(&quot;Wide&quot;, wide)  
+cv2.imshow(&quot;Tight&quot;, tight)  
+cv2.imshow(&quot;Auto&quot;, auto)  
+cv2.waitKey(0)
+</code></pre>
+<p>参考 <a href="https://pyimagesearch.com/2021/05/12/opencv-edge-detection-cv2-canny/">OpenCV Edge Detection ( cv2.Canny )</a></p>
+<h2 id="轮廓近似">轮廓近似</h2>
+<p>OpenCV Contour Approximation，称为<a href="https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm">Ramer–Douglas–Peucker</a> 算法<br>
+目的是通过减少给定阈值的折线顶点来简化折线。通俗地说，我们取一条曲线，减少它的顶点数量，同时保留它的大部分形状</p>
+<p>主要使用cv2.findContours函数寻找所有的轮廓，再使用cv2.approxPolyDP对轮廓进行近似。</p>
+<pre><code class="language-python">import numpy as np  
+import argparse  
+import imutils  
+import cv2  
+# construct the argument parser and parse the arguments  
+ap = argparse.ArgumentParser()  
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, type=str, default=&quot;shape.png&quot;,  
+   help=&quot;path to input image&quot;)  
+args = vars(ap.parse_args())  
+  
+# load the image and display it  
+image = cv2.imread(args[&quot;image&quot;])  
+cv2.imshow(&quot;Image&quot;, image)  
+  
+# convert the image to grayscale and threshold it  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+thresh = cv2.threshold(gray, 200, 255,  
+   cv2.THRESH_BINARY_INV)[1]  
+cv2.imshow(&quot;Thresh&quot;, thresh)  
+  
+# find the largest contour in the threshold image  
+cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,  
+   cv2.CHAIN_APPROX_SIMPLE)  
+cnts = imutils.grab_contours(cnts)  
+c = max(cnts, key=cv2.contourArea)  
+  
+# draw the shape of the contour on the output image, compute the  
+# bounding box, and display the number of points in the contour  
+output = image.copy()  
+cv2.drawContours(output, [c], -1, (0, 255, 0), 3)  
+(x, y, w, h) = cv2.boundingRect(c)  
+text = &quot;original, num_pts={}&quot;.format(len(c))  
+cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX,  
+   0.9, (0, 255, 0), 2)  
+  
+# show the original contour image  
+print(&quot;[INFO] {}&quot;.format(text))  
+cv2.imshow(&quot;Original Contour&quot;, output)  
+cv2.waitKey(0)  
+  
+# to demonstrate the impact of contour approximation, let's loop  
+# over a number of epsilon sizes  
+for eps in np.linspace(0.001, 0.05, 10):  
+   # approximate the contour  
+   peri = cv2.arcLength(c, True) # 计算周长  
+   approx = cv2.approxPolyDP(c, eps * peri, True)  
+   # draw the approximated contour on the image  
+   output = image.copy()  
+   cv2.drawContours(output, [approx], -1, (0, 255, 0), 3)  
+   text = &quot;eps={:.4f}, num_pts={}&quot;.format(eps, len(approx))  
+   cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX,  
+      0.9, (0, 255, 0), 2)  
+   # show the approximated contour image  
+   print(&quot;[INFO] {}&quot;.format(text))  
+   cv2.imshow(&quot;Approximated Contour&quot;, output)  
+   cv2.waitKey(0)
+</code></pre>
+<p>通过改变eps的值，一步步的近似轮廓边缘。</p>
+<p>参考 <a href="https://pyimagesearch.com/2021/10/06/opencv-contour-approximation/"># OpenCV Contour Approximation</a></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.laffitto.xyz/post/opencv-ji-ben-cao-zuo/" class="post-title gt-a-link">
+                    OpenCV基本操作
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'AnAyH2UNFKN6f5QhPUdWhX0P-MdYXbMMI',
+		appKey: 'WB66M0LovKWi8iGgUlXB5xHM',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: false,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Aspire to inspire until I expire 🎸
+也扯淡，也思考，也生活</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/laffitto" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/LaffitteRat" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+                <a href="https://t.me/laffitto" target="_blank">
+                    <i class="fab fa-telegram gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Copyright © Laffitto 2019|Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://blog.laffitto.xyz/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
